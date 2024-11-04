@@ -59,6 +59,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,18 +69,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.customButton8);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.customButton1);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.customButton7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.customButton6);
             this.panel1.Controls.Add(this.label5);
@@ -170,7 +171,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(132, 962);
+            this.label7.Location = new System.Drawing.Point(131, 27);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 27);
             this.label7.TabIndex = 33;
@@ -188,7 +189,7 @@
             this.customButton7.FlatAppearance.BorderSize = 0;
             this.customButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton7.ForeColor = System.Drawing.Color.White;
-            this.customButton7.Location = new System.Drawing.Point(47, 951);
+            this.customButton7.Location = new System.Drawing.Point(46, 16);
             this.customButton7.Name = "customButton7";
             this.customButton7.Size = new System.Drawing.Size(53, 52);
             this.customButton7.TabIndex = 32;
@@ -481,7 +482,17 @@
             this.panel4.Size = new System.Drawing.Size(1371, 964);
             this.panel4.TabIndex = 22;
             // 
-            // Form1
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.label7);
+            this.panel5.Controls.Add(this.customButton7);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel5.Location = new System.Drawing.Point(0, 939);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(346, 86);
+            this.panel5.TabIndex = 39;
+            // 
+            // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -491,7 +502,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -506,6 +517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -542,6 +555,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         public System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
     }
 }
 

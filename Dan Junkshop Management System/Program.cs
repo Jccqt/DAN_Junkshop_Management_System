@@ -28,7 +28,7 @@ namespace Dan_Junkshop_Management_System
 
     public class ConnectionObjects
     {
-        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\DanDB.mdf"";Integrated Security=True";
+        public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\DanDB.mdf"";Integrated Security=True";
         public static SqlConnection conn = new SqlConnection(connectionString);
         public static SqlCommand cmd;
     }
