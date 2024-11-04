@@ -23,7 +23,8 @@ namespace Dan_Junkshop_Management_System
         private void Form1_Load(object sender, EventArgs e)
         {
           panel3.Controls.Add(dashboard);
-            
+           
+          
            
         }
 
