@@ -33,3 +33,4 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan J
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.CoreCompileInputs.cache
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.exe
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.pdb
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Sales_Reports.resources
