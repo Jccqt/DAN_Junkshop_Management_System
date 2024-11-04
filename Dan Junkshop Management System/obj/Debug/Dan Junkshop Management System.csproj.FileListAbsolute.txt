@@ -17,3 +17,19 @@ D:\adrianne\Dan Junkshop Management System\Dan Junkshop Management System\obj\De
 D:\adrianne\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableContent_ForSaleJunk.resources
 D:\adrianne\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableHeader.resources
 D:\adrianne\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.NewAdminTab.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe.config
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.pdb
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.AssemblyReference.cache
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Dashboard.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Form1.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Inventory.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.LoginPage.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Properties.Resources.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableContent_AvailableScrap.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableContent_ForSaleJunk.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableHeader.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.GenerateResource.cache
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.CoreCompileInputs.cache
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.exe
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.pdb

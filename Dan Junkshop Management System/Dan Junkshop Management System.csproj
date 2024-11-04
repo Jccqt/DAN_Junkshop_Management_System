@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="AdminTab.Designer.cs">
-      <DependentUpon>AdminTab.cs</DependentUpon>
-    </Compile>
     <Compile Include="Components\activeAndInactive.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -74,12 +68,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HeaderWText.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="HeaderWText.Designer.cs">
-      <DependentUpon>HeaderWText.cs</DependentUpon>
-    </Compile>
     <Compile Include="Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,12 +79,6 @@
     </Compile>
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NewAdminTab.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="NewAdminTab.Designer.cs">
-      <DependentUpon>NewAdminTab.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,26 +100,17 @@
     <Compile Include="TableHeader.Designer.cs">
       <DependentUpon>TableHeader.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AdminTab.resx">
-      <DependentUpon>AdminTab.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HeaderWText.resx">
-      <DependentUpon>HeaderWText.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NewAdminTab.resx">
-      <DependentUpon>NewAdminTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

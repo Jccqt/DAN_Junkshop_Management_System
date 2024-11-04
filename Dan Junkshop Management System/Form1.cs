@@ -14,7 +14,7 @@ namespace Dan_Junkshop_Management_System
     {
         
         static Dashboard dashboard;
-        static NewAdminTab adminTab1;
+       
         public Form1()
         {
             InitializeComponent();
@@ -22,18 +22,15 @@ namespace Dan_Junkshop_Management_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            adminTab1 = new NewAdminTab();
-            dashboard = new Dashboard();
-            dashboard.Dock = DockStyle.Fill;
+          panel3.Controls.Add(dashboard);
             
-            adminTab1.Dock = DockStyle.Fill;
-            this.Controls.Add(adminTab1);
-            adminTab1.panel3.Controls.Add(dashboard);
+           
         }
 
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
 
-      
-
+        }
     }
   
 }
