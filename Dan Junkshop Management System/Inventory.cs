@@ -15,6 +15,7 @@ namespace Dan_Junkshop_Management_System
         public Inventory()
         {
             InitializeComponent();
+            this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
         }
 
    
@@ -25,6 +26,11 @@ namespace Dan_Junkshop_Management_System
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

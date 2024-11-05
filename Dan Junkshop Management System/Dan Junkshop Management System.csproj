@@ -103,6 +103,12 @@
     <Compile Include="Sales&amp;Reports.Designer.cs">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="SalesHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SalesHeader.Designer.cs">
+      <DependentUpon>SalesHeader.cs</DependentUpon>
+    </Compile>
     <Compile Include="TableContent_AvailableScrap.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </Compile>
     <EmbeddedResource Include="Sales&amp;Reports.resx">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesHeader.resx">
+      <DependentUpon>SalesHeader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TableContent_AvailableScrap.resx">
       <DependentUpon>TableContent_AvailableScrap.cs</DependentUpon>
@@ -212,6 +221,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\mdi_delete.png" />
+    <None Include="Resources\mdi_money.png" />
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -14,6 +14,8 @@ namespace Dan_Junkshop_Management_System
     {
         
         static Dashboard dashboard;
+        static Sales_Reports sales_Reports;
+        static Inventory inventory;
        
         public Homepage()
         {
@@ -22,10 +24,10 @@ namespace Dan_Junkshop_Management_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          dashboard = new Dashboard();
-
-          panel1.Anchor = AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Right | AnchorStyles.Bottom;
-          panel1.Dock = DockStyle.Fill;
+          
+            inventory = new Inventory();
+            panel3.Controls.Add(inventory);
+          
           
            
         }
@@ -33,6 +35,50 @@ namespace Dan_Junkshop_Management_System
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customButton7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+    
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
   

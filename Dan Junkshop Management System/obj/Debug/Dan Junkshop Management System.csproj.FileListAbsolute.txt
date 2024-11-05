@@ -57,3 +57,4 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\DanDB
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\DanDB_log.ldf
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Homepage.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TopSalesContent.resources
+D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.SalesHeader.resources

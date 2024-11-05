@@ -133,6 +133,26 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mdi_delete {
+            get {
+                object obj = ResourceManager.GetObject("mdi_delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi_money {
+            get {
+                object obj = ResourceManager.GetObject("mdi_money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimizetab {
             get {
                 object obj = ResourceManager.GetObject("minimizetab", resourceCulture);
@@ -146,6 +166,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap reddanjunkshop1 {
             get {
                 object obj = ResourceManager.GetObject("reddanjunkshop1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
