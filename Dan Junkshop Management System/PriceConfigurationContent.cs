@@ -10,16 +10,12 @@ using System.Windows.Forms;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class TopSalesContent : UserControl
+    public partial class PriceConfigurationContent : UserControl
     {
-        public TopSalesContent()
+        public PriceConfigurationContent()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+           
         }
     }
 }

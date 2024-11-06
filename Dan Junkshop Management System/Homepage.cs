@@ -14,9 +14,9 @@ namespace Dan_Junkshop_Management_System
     {
         
         static Dashboard dashboard;
-        static Sales_Reports sales_Reports;
+        static Sales_Reports sales_Reports = new Sales_Reports();
         static Inventory inventory;
-       
+       static PriceConfiguration priceConfiguration = new PriceConfiguration();
         public Homepage()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Dan_Junkshop_Management_System
         {
           
             inventory = new Inventory();
-            panel3.Controls.Add(inventory);
+            panel3.Controls.Add(priceConfiguration);
           
           
            

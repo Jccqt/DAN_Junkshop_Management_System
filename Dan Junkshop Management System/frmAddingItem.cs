@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class TableHeader : UserControl
+    public partial class frmAddingItem : Form
     {
-        public TableHeader()
+        public frmAddingItem()
         {
             InitializeComponent();
         }
