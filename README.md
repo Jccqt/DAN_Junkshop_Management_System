@@ -8,3 +8,11 @@ November 04, 2024
 - Login UI
 - Dashboard UI
 - Homepage panel UI
+
+November 05, 2024
+- Added Normal and Maximized states for windows size
+- Sales and Reports UI
+
+November 06, 2024
+- Price Setup UI
+- Inventory UI
