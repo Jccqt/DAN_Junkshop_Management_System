@@ -203,6 +203,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\group18 %281%29.png" />
+    <None Include="Resources\group17 %281%29.png" />
+    <None Include="Resources\group18.png" />
+    <None Include="Resources\group17.png" />
     <None Include="Resources\dashicons_update.png" />
     <None Include="Resources\exit1.png" />
     <None Include="Resources\mingcute_history_fill.png" />

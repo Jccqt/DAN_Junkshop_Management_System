@@ -42,7 +42,7 @@
             this.Home = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -50,10 +50,10 @@
             this.customButton5 = new OrganizationProfile.CustomButton();
             this.customButton4 = new OrganizationProfile.CustomButton();
             this.customButton8 = new OrganizationProfile.CustomButton();
-            this.customButton6 = new OrganizationProfile.CustomButton();
+            this.priceSetupBtn = new OrganizationProfile.CustomButton();
             this.customButton1 = new OrganizationProfile.CustomButton();
-            this.customButton2 = new OrganizationProfile.CustomButton();
-            this.customButton3 = new OrganizationProfile.CustomButton();
+            this.InventoryBtn = new OrganizationProfile.CustomButton();
+            this.SalesReportsBtn = new OrganizationProfile.CustomButton();
             this.HomeBtn = new OrganizationProfile.CustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -161,7 +161,6 @@
             this.label7.Size = new System.Drawing.Size(70, 23);
             this.label7.TabIndex = 33;
             this.label7.Text = "Logout";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // panel1
             // 
@@ -177,13 +176,13 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.customButton8);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.customButton6);
+            this.panel1.Controls.Add(this.priceSetupBtn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.customButton1);
             this.panel1.Controls.Add(this.Inventory);
-            this.panel1.Controls.Add(this.customButton2);
+            this.panel1.Controls.Add(this.InventoryBtn);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.customButton3);
+            this.panel1.Controls.Add(this.SalesReportsBtn);
             this.panel1.Controls.Add(this.Home);
             this.panel1.Controls.Add(this.HomeBtn);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -224,22 +223,22 @@
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.headerLabel);
             this.panel2.Location = new System.Drawing.Point(328, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 47);
             this.panel2.TabIndex = 23;
             // 
-            // label8
+            // headerLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(12, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(176, 38);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Dashboard";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
+            this.headerLabel.ForeColor = System.Drawing.Color.Red;
+            this.headerLabel.Location = new System.Drawing.Point(12, 5);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(176, 38);
+            this.headerLabel.TabIndex = 0;
+            this.headerLabel.Text = "Dashboard";
             // 
             // pictureBox4
             // 
@@ -295,7 +294,6 @@
             this.customButton7.TabIndex = 32;
             this.customButton7.TextColor = System.Drawing.Color.White;
             this.customButton7.UseVisualStyleBackColor = false;
-            this.customButton7.Click += new System.EventHandler(this.customButton7_Click);
             // 
             // customButton5
             // 
@@ -354,24 +352,25 @@
             this.customButton8.TextColor = System.Drawing.Color.White;
             this.customButton8.UseVisualStyleBackColor = false;
             // 
-            // customButton6
+            // priceSetupBtn
             // 
-            this.customButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton6.BackgroundImage")));
-            this.customButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton6.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton6.BorderRadius = 0;
-            this.customButton6.BorderSize = 0;
-            this.customButton6.FlatAppearance.BorderSize = 0;
-            this.customButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton6.ForeColor = System.Drawing.Color.White;
-            this.customButton6.Location = new System.Drawing.Point(54, 408);
-            this.customButton6.Name = "customButton6";
-            this.customButton6.Size = new System.Drawing.Size(30, 29);
-            this.customButton6.TabIndex = 30;
-            this.customButton6.TextColor = System.Drawing.Color.White;
-            this.customButton6.UseVisualStyleBackColor = false;
+            this.priceSetupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.priceSetupBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.priceSetupBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("priceSetupBtn.BackgroundImage")));
+            this.priceSetupBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.priceSetupBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.priceSetupBtn.BorderRadius = 0;
+            this.priceSetupBtn.BorderSize = 0;
+            this.priceSetupBtn.FlatAppearance.BorderSize = 0;
+            this.priceSetupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.priceSetupBtn.ForeColor = System.Drawing.Color.White;
+            this.priceSetupBtn.Location = new System.Drawing.Point(54, 408);
+            this.priceSetupBtn.Name = "priceSetupBtn";
+            this.priceSetupBtn.Size = new System.Drawing.Size(30, 29);
+            this.priceSetupBtn.TabIndex = 30;
+            this.priceSetupBtn.TextColor = System.Drawing.Color.White;
+            this.priceSetupBtn.UseVisualStyleBackColor = false;
+            this.priceSetupBtn.Click += new System.EventHandler(this.priceSetupBtn_Click);
             // 
             // customButton1
             // 
@@ -391,45 +390,46 @@
             this.customButton1.TabIndex = 34;
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
-            // customButton2
+            // InventoryBtn
             // 
-            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton2.BackgroundImage")));
-            this.customButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton2.BorderRadius = 0;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(54, 264);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(30, 29);
-            this.customButton2.TabIndex = 22;
-            this.customButton2.TextColor = System.Drawing.Color.White;
-            this.customButton2.UseVisualStyleBackColor = false;
+            this.InventoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.InventoryBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.InventoryBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryBtn.BackgroundImage")));
+            this.InventoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.InventoryBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.InventoryBtn.BorderRadius = 0;
+            this.InventoryBtn.BorderSize = 0;
+            this.InventoryBtn.FlatAppearance.BorderSize = 0;
+            this.InventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InventoryBtn.ForeColor = System.Drawing.Color.White;
+            this.InventoryBtn.Location = new System.Drawing.Point(54, 264);
+            this.InventoryBtn.Name = "InventoryBtn";
+            this.InventoryBtn.Size = new System.Drawing.Size(30, 29);
+            this.InventoryBtn.TabIndex = 22;
+            this.InventoryBtn.TextColor = System.Drawing.Color.White;
+            this.InventoryBtn.UseVisualStyleBackColor = false;
+            this.InventoryBtn.Click += new System.EventHandler(this.customButton2_Click);
             // 
-            // customButton3
+            // SalesReportsBtn
             // 
-            this.customButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton3.BackgroundImage")));
-            this.customButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton3.BorderRadius = 0;
-            this.customButton3.BorderSize = 0;
-            this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(54, 199);
-            this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(30, 29);
-            this.customButton3.TabIndex = 24;
-            this.customButton3.TextColor = System.Drawing.Color.White;
-            this.customButton3.UseVisualStyleBackColor = false;
+            this.SalesReportsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.SalesReportsBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.SalesReportsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SalesReportsBtn.BackgroundImage")));
+            this.SalesReportsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SalesReportsBtn.BorderColor = System.Drawing.Color.Transparent;
+            this.SalesReportsBtn.BorderRadius = 0;
+            this.SalesReportsBtn.BorderSize = 0;
+            this.SalesReportsBtn.FlatAppearance.BorderSize = 0;
+            this.SalesReportsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SalesReportsBtn.ForeColor = System.Drawing.Color.White;
+            this.SalesReportsBtn.Location = new System.Drawing.Point(54, 199);
+            this.SalesReportsBtn.Name = "SalesReportsBtn";
+            this.SalesReportsBtn.Size = new System.Drawing.Size(30, 29);
+            this.SalesReportsBtn.TabIndex = 24;
+            this.SalesReportsBtn.TextColor = System.Drawing.Color.White;
+            this.SalesReportsBtn.UseVisualStyleBackColor = false;
+            this.SalesReportsBtn.Click += new System.EventHandler(this.customButton3_Click);
             // 
             // HomeBtn
             // 
@@ -492,15 +492,15 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private OrganizationProfile.CustomButton customButton2;
+        private OrganizationProfile.CustomButton InventoryBtn;
         private System.Windows.Forms.Label Inventory;
-        private OrganizationProfile.CustomButton customButton3;
+        private OrganizationProfile.CustomButton SalesReportsBtn;
         private System.Windows.Forms.Label label3;
         private OrganizationProfile.CustomButton customButton4;
         private System.Windows.Forms.Label label4;
         private OrganizationProfile.CustomButton customButton5;
         private System.Windows.Forms.Label label5;
-        private OrganizationProfile.CustomButton customButton6;
+        private OrganizationProfile.CustomButton priceSetupBtn;
         private System.Windows.Forms.Label label6;
         private OrganizationProfile.CustomButton customButton1;
         private System.Windows.Forms.Label label1;
@@ -515,7 +515,7 @@
         public OrganizationProfile.CustomButton HomeBtn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox3;
     }

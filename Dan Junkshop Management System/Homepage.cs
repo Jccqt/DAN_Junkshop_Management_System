@@ -13,10 +13,10 @@ namespace Dan_Junkshop_Management_System
     public partial class Homepage : Form
     {
         
-        static Dashboard dashboard;
+        static Dashboard dashboard = new Dashboard();
         static Sales_Reports sales_Reports = new Sales_Reports();
-        static Inventory inventory;
-       static PriceConfiguration priceConfiguration = new PriceConfiguration();
+        static Inventory inventory = new Inventory();
+        static PriceConfiguration priceConfiguration = new PriceConfiguration();
         public Homepage()
         {
             InitializeComponent();
@@ -24,39 +24,15 @@ namespace Dan_Junkshop_Management_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
-            inventory = new Inventory();
-            panel3.Controls.Add(priceConfiguration);
-          
-          
-           
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
+            panel3.Controls.Add(dashboard);
 
         }
 
         private void HomeBtn_Click(object sender, EventArgs e)
         {
-
+            panel3.Controls.Clear();
+            panel3.Controls.Add(dashboard);
         }
-
-        private void customButton7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
     
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -79,6 +55,27 @@ namespace Dan_Junkshop_Management_System
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            headerLabel.Text = "Sales and Reports";
+            panel3.Controls.Add(sales_Reports);
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            headerLabel.Text = "Inventory";
+            panel3.Controls.Add(inventory);
+        }
+
+        private void priceSetupBtn_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            headerLabel.Text = "Price Configuration";
+            panel3.Controls.Add(priceConfiguration);
         }
     }
   

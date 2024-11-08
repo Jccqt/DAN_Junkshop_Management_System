@@ -77,3 +77,22 @@ C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfiguration.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfigurationContent.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingItem.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\bin\Debug\DanDB.mdf
+D:\Dan Junkshop Management System\Dan Junkshop Management System\bin\Debug\DanDB_log.ldf
+D:\Dan Junkshop Management System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe.config
+D:\Dan Junkshop Management System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe
+D:\Dan Junkshop Management System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.pdb
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.AssemblyReference.cache
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Dashboard.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingItem.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Homepage.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Inventory.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.LoginPage.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfiguration.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfigurationContent.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Properties.Resources.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Sales_Reports.resources
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.GenerateResource.cache
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.CoreCompileInputs.cache
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.exe
+D:\Dan Junkshop Management System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.pdb

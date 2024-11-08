@@ -178,7 +178,7 @@
         uAfUdJMAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="customButton6.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="priceSetupBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA6CAYAAADspTpvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAklJREFUaEPt2o1N40AQhuGUQAlXAp0cHRwdcB1wHUAH0AklUAIlXAm5GfJiZc2a
@@ -233,7 +233,7 @@
         Vn2orOWmrYLVz+5jEJKzr+nPa/t+FpTrjpfkY5ymTPkfE6LLpavpuCoAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="customButton2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="InventoryBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA6CAYAAADspTpvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAtBJREFUaEPtmt1x20AMhFVCOkhKcAdJJ04HcQdJBy7BJbgElaASWAJfNPp9YADN
@@ -251,7 +251,7 @@
         1319JChj0aJFn0qr1V+R+Q6GntYTLgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="customButton3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SalesReportsBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADwAAAA6CAYAAADspTpvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAb1JREFUaEPtmt1NxEAMhFMCHVAKdAAdQAdXAiVQwpVACSnhSqAEHvMrBRsZKcrN
