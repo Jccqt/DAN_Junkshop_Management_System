@@ -16,3 +16,6 @@ November 05, 2024
 November 06, 2024
 - Price Setup UI
 - Inventory UI
+
+November 08, 2024
+- Updated buttons
