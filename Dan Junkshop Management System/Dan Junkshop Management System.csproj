@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddingSellableItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddingSellableItems.Designer.cs">
+      <DependentUpon>AddingSellableItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\activeAndInactive.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -101,6 +107,12 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="NewTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewTransaction.Designer.cs">
+      <DependentUpon>NewTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="PriceConfiguration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -121,6 +133,21 @@
     <Compile Include="Sales&amp;Reports.Designer.cs">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionSoldItems.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionSoldItems.Designer.cs">
+      <DependentUpon>TransactionSoldItems.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddingSellableItems.resx">
+      <DependentUpon>AddingSellableItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewTransaction.resx">
+      <DependentUpon>NewTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PriceConfiguration.resx">
       <DependentUpon>PriceConfiguration.cs</DependentUpon>
@@ -154,6 +184,12 @@
     </Compile>
     <EmbeddedResource Include="Sales&amp;Reports.resx">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionSoldItems.resx">
+      <DependentUpon>TransactionSoldItems.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -203,6 +239,27 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\NewCancelButton.png" />
+    <None Include="Resources\CancelButton.png" />
+    <None Include="Resources\minusButton.png" />
+    <None Include="Resources\newAddCircle.png" />
+    <None Include="Resources\newRedInventory.png" />
+    <None Include="Resources\newRedTransaction.png" />
+    <None Include="Resources\newRedSales.png" />
+    <None Include="Resources\newRedPriceSetup.png" />
+    <None Include="Resources\newRedPartners.png" />
+    <None Include="Resources\newRedHome.png" />
+    <None Include="Resources\newRedEmployee.png" />
+    <None Include="Resources\newRedDelive.png" />
+    <None Include="Resources\newLogOut.png" />
+    <None Include="Resources\NewDelivery.png" />
+    <None Include="Resources\NewPartners.png" />
+    <None Include="Resources\NewInventory.png" />
+    <None Include="Resources\NewPriceSetup.png" />
+    <None Include="Resources\NewTransaction.png" />
+    <None Include="Resources\NewEmployee.png" />
+    <None Include="Resources\NewSales.png" />
+    <None Include="Resources\NewHome.png" />
     <None Include="Resources\group18 %281%29.png" />
     <None Include="Resources\group17 %281%29.png" />
     <None Include="Resources\group18.png" />

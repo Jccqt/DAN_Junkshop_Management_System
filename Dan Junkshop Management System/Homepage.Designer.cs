@@ -29,178 +29,275 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
-            this.Inventory = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.ContentsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Home = new System.Windows.Forms.Label();
+            this.btnLogout = new OrganizationProfile.CustomButton();
+            this.btnDelivery = new OrganizationProfile.CustomButton();
+            this.btnPartners = new OrganizationProfile.CustomButton();
+            this.btnInventory = new OrganizationProfile.CustomButton();
+            this.btnPriceSetup = new OrganizationProfile.CustomButton();
+            this.btnTransaction = new OrganizationProfile.CustomButton();
+            this.btnEmployee = new OrganizationProfile.CustomButton();
+            this.btnSales = new OrganizationProfile.CustomButton();
+            this.btnHome = new OrganizationProfile.CustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.headerLabel = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.customButton7 = new OrganizationProfile.CustomButton();
-            this.customButton5 = new OrganizationProfile.CustomButton();
-            this.customButton4 = new OrganizationProfile.CustomButton();
-            this.customButton8 = new OrganizationProfile.CustomButton();
-            this.priceSetupBtn = new OrganizationProfile.CustomButton();
-            this.customButton1 = new OrganizationProfile.CustomButton();
-            this.InventoryBtn = new OrganizationProfile.CustomButton();
-            this.SalesReportsBtn = new OrganizationProfile.CustomButton();
-            this.HomeBtn = new OrganizationProfile.CustomButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnWindowSize = new System.Windows.Forms.PictureBox();
+            this.lblPageHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWindowSize)).BeginInit();
             this.SuspendLayout();
             // 
-            // Inventory
+            // ContentsPanel
             // 
-            this.Inventory.AutoSize = true;
-            this.Inventory.Font = new System.Drawing.Font("Arial", 15F);
-            this.Inventory.ForeColor = System.Drawing.Color.White;
-            this.Inventory.Location = new System.Drawing.Point(126, 270);
-            this.Inventory.Name = "Inventory";
-            this.Inventory.Size = new System.Drawing.Size(90, 23);
-            this.Inventory.TabIndex = 23;
-            this.Inventory.Text = "Inventory";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 15F);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(126, 205);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 23);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Sales/Reports";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 15F);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(126, 553);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 23);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Employee";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 15F);
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(126, 625);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 23);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Partners";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 15F);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(126, 414);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 23);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "Price Setup";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(126, 343);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(111, 23);
-            this.label1.TabIndex = 35;
-            this.label1.Text = "Transaction";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(126, 480);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 23);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Delivery";
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ContentsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Location = new System.Drawing.Point(335, 52);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(934, 736);
-            this.panel3.TabIndex = 38;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Arial", 15F);
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(126, 749);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 23);
-            this.label7.TabIndex = 33;
-            this.label7.Text = "Logout";
+            this.ContentsPanel.Location = new System.Drawing.Point(335, 54);
+            this.ContentsPanel.Name = "ContentsPanel";
+            this.ContentsPanel.Size = new System.Drawing.Size(934, 736);
+            this.ContentsPanel.TabIndex = 38;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.customButton7);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.customButton5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.customButton4);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.customButton8);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.priceSetupBtn);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.customButton1);
-            this.panel1.Controls.Add(this.Inventory);
-            this.panel1.Controls.Add(this.InventoryBtn);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.SalesReportsBtn);
-            this.panel1.Controls.Add(this.Home);
-            this.panel1.Controls.Add(this.HomeBtn);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnDelivery);
+            this.panel1.Controls.Add(this.btnPartners);
+            this.panel1.Controls.Add(this.btnInventory);
+            this.panel1.Controls.Add(this.btnPriceSetup);
+            this.panel1.Controls.Add(this.btnTransaction);
+            this.panel1.Controls.Add(this.btnEmployee);
+            this.panel1.Controls.Add(this.btnSales);
+            this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 1025);
             this.panel1.TabIndex = 0;
             // 
-            // Home
+            // btnLogout
             // 
-            this.Home.AutoSize = true;
-            this.Home.Font = new System.Drawing.Font("Arial", 15F);
-            this.Home.ForeColor = System.Drawing.Color.White;
-            this.Home.Location = new System.Drawing.Point(126, 131);
-            this.Home.Name = "Home";
-            this.Home.Size = new System.Drawing.Size(61, 23);
-            this.Home.TabIndex = 21;
-            this.Home.Text = "Home";
+            this.btnLogout.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BorderColor = System.Drawing.Color.Transparent;
+            this.btnLogout.BorderRadius = 40;
+            this.btnLogout.BorderSize = 0;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newLogOut;
+            this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Location = new System.Drawing.Point(27, 725);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(302, 62);
+            this.btnLogout.TabIndex = 28;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextColor = System.Drawing.Color.Transparent;
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnDelivery
+            // 
+            this.btnDelivery.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnDelivery.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnDelivery.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDelivery.BorderRadius = 40;
+            this.btnDelivery.BorderSize = 0;
+            this.btnDelivery.FlatAppearance.BorderSize = 0;
+            this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelivery.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelivery.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDelivery.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
+            this.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelivery.Location = new System.Drawing.Point(27, 585);
+            this.btnDelivery.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDelivery.Name = "btnDelivery";
+            this.btnDelivery.Size = new System.Drawing.Size(302, 62);
+            this.btnDelivery.TabIndex = 27;
+            this.btnDelivery.Text = "Delivery";
+            this.btnDelivery.TextColor = System.Drawing.Color.Transparent;
+            this.btnDelivery.UseVisualStyleBackColor = false;
+            // 
+            // btnPartners
+            // 
+            this.btnPartners.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnPartners.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnPartners.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPartners.BorderRadius = 40;
+            this.btnPartners.BorderSize = 0;
+            this.btnPartners.FlatAppearance.BorderSize = 0;
+            this.btnPartners.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPartners.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPartners.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPartners.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
+            this.btnPartners.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPartners.Location = new System.Drawing.Point(26, 517);
+            this.btnPartners.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPartners.Name = "btnPartners";
+            this.btnPartners.Size = new System.Drawing.Size(302, 62);
+            this.btnPartners.TabIndex = 26;
+            this.btnPartners.Text = "Partners";
+            this.btnPartners.TextColor = System.Drawing.Color.Transparent;
+            this.btnPartners.UseVisualStyleBackColor = false;
+            // 
+            // btnInventory
+            // 
+            this.btnInventory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnInventory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnInventory.BorderColor = System.Drawing.Color.Transparent;
+            this.btnInventory.BorderRadius = 40;
+            this.btnInventory.BorderSize = 0;
+            this.btnInventory.FlatAppearance.BorderSize = 0;
+            this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInventory.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInventory.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
+            this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInventory.Location = new System.Drawing.Point(27, 449);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInventory.Name = "btnInventory";
+            this.btnInventory.Size = new System.Drawing.Size(302, 62);
+            this.btnInventory.TabIndex = 25;
+            this.btnInventory.Text = "Inventory";
+            this.btnInventory.TextColor = System.Drawing.Color.Transparent;
+            this.btnInventory.UseVisualStyleBackColor = false;
+            this.btnInventory.Click += new System.EventHandler(this.btnInventory_Click);
+            // 
+            // btnPriceSetup
+            // 
+            this.btnPriceSetup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnPriceSetup.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnPriceSetup.BorderColor = System.Drawing.Color.Transparent;
+            this.btnPriceSetup.BorderRadius = 40;
+            this.btnPriceSetup.BorderSize = 0;
+            this.btnPriceSetup.FlatAppearance.BorderSize = 0;
+            this.btnPriceSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPriceSetup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPriceSetup.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPriceSetup.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
+            this.btnPriceSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPriceSetup.Location = new System.Drawing.Point(27, 381);
+            this.btnPriceSetup.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPriceSetup.Name = "btnPriceSetup";
+            this.btnPriceSetup.Size = new System.Drawing.Size(302, 62);
+            this.btnPriceSetup.TabIndex = 24;
+            this.btnPriceSetup.Text = "Price Setup";
+            this.btnPriceSetup.TextColor = System.Drawing.Color.Transparent;
+            this.btnPriceSetup.UseVisualStyleBackColor = false;
+            this.btnPriceSetup.Click += new System.EventHandler(this.btnPriceSetup_Click);
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnTransaction.BorderColor = System.Drawing.Color.Transparent;
+            this.btnTransaction.BorderRadius = 40;
+            this.btnTransaction.BorderSize = 0;
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnTransaction.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
+            this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTransaction.Location = new System.Drawing.Point(26, 313);
+            this.btnTransaction.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(302, 62);
+            this.btnTransaction.TabIndex = 23;
+            this.btnTransaction.Text = "Transaction";
+            this.btnTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // btnEmployee
+            // 
+            this.btnEmployee.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnEmployee.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnEmployee.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.BorderRadius = 40;
+            this.btnEmployee.BorderSize = 0;
+            this.btnEmployee.FlatAppearance.BorderSize = 0;
+            this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEmployee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmployee.ForeColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
+            this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEmployee.Location = new System.Drawing.Point(26, 245);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEmployee.Name = "btnEmployee";
+            this.btnEmployee.Size = new System.Drawing.Size(302, 62);
+            this.btnEmployee.TabIndex = 22;
+            this.btnEmployee.Text = "Employee";
+            this.btnEmployee.TextColor = System.Drawing.Color.Transparent;
+            this.btnEmployee.UseVisualStyleBackColor = false;
+            // 
+            // btnSales
+            // 
+            this.btnSales.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnSales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnSales.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSales.BorderRadius = 40;
+            this.btnSales.BorderSize = 0;
+            this.btnSales.FlatAppearance.BorderSize = 0;
+            this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSales.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSales.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSales.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewSales;
+            this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSales.Location = new System.Drawing.Point(26, 177);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(5);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Size = new System.Drawing.Size(302, 62);
+            this.btnSales.TabIndex = 21;
+            this.btnSales.Text = "Sales";
+            this.btnSales.TextColor = System.Drawing.Color.Transparent;
+            this.btnSales.UseVisualStyleBackColor = false;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnHome.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnHome.BorderColor = System.Drawing.Color.Transparent;
+            this.btnHome.BorderRadius = 40;
+            this.btnHome.BorderSize = 0;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHome.ForeColor = System.Drawing.Color.Transparent;
+            this.btnHome.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
+            this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHome.Location = new System.Drawing.Point(26, 109);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(5);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(302, 62);
+            this.btnHome.TabIndex = 20;
+            this.btnHome.Text = "Home";
+            this.btnHome.TextColor = System.Drawing.Color.Transparent;
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // panel4
             // 
@@ -220,248 +317,61 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.headerLabel);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnMinimize);
+            this.panel2.Controls.Add(this.btnWindowSize);
+            this.panel2.Controls.Add(this.lblPageHeader);
             this.panel2.Location = new System.Drawing.Point(328, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 47);
             this.panel2.TabIndex = 23;
             // 
-            // headerLabel
+            // btnExit
             // 
-            this.headerLabel.AutoSize = true;
-            this.headerLabel.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
-            this.headerLabel.ForeColor = System.Drawing.Color.Red;
-            this.headerLabel.Location = new System.Drawing.Point(12, 5);
-            this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(176, 38);
-            this.headerLabel.TabIndex = 0;
-            this.headerLabel.Text = "Dashboard";
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Location = new System.Drawing.Point(909, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // pictureBox4
+            // btnMinimize
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(909, 13);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.Location = new System.Drawing.Point(815, 13);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 21);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
-            // pictureBox3
+            // btnWindowSize
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(815, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
+            this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWindowSize.Location = new System.Drawing.Point(863, 13);
+            this.btnWindowSize.Name = "btnWindowSize";
+            this.btnWindowSize.Size = new System.Drawing.Size(20, 21);
+            this.btnWindowSize.TabIndex = 1;
+            this.btnWindowSize.TabStop = false;
+            this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
             // 
-            // pictureBox2
+            // lblPageHeader
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(863, 13);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // customButton7
-            // 
-            this.customButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton7.BackgroundImage")));
-            this.customButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton7.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton7.BorderRadius = 0;
-            this.customButton7.BorderSize = 0;
-            this.customButton7.FlatAppearance.BorderSize = 0;
-            this.customButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton7.ForeColor = System.Drawing.Color.White;
-            this.customButton7.Location = new System.Drawing.Point(54, 743);
-            this.customButton7.Name = "customButton7";
-            this.customButton7.Size = new System.Drawing.Size(30, 29);
-            this.customButton7.TabIndex = 32;
-            this.customButton7.TextColor = System.Drawing.Color.White;
-            this.customButton7.UseVisualStyleBackColor = false;
-            // 
-            // customButton5
-            // 
-            this.customButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton5.BackgroundImage")));
-            this.customButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton5.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton5.BorderRadius = 0;
-            this.customButton5.BorderSize = 0;
-            this.customButton5.FlatAppearance.BorderSize = 0;
-            this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton5.ForeColor = System.Drawing.Color.White;
-            this.customButton5.Location = new System.Drawing.Point(54, 619);
-            this.customButton5.Name = "customButton5";
-            this.customButton5.Size = new System.Drawing.Size(30, 29);
-            this.customButton5.TabIndex = 28;
-            this.customButton5.TextColor = System.Drawing.Color.White;
-            this.customButton5.UseVisualStyleBackColor = false;
-            // 
-            // customButton4
-            // 
-            this.customButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton4.BackgroundImage")));
-            this.customButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton4.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton4.BorderRadius = 0;
-            this.customButton4.BorderSize = 0;
-            this.customButton4.FlatAppearance.BorderSize = 0;
-            this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton4.ForeColor = System.Drawing.Color.White;
-            this.customButton4.Location = new System.Drawing.Point(54, 547);
-            this.customButton4.Name = "customButton4";
-            this.customButton4.Size = new System.Drawing.Size(30, 29);
-            this.customButton4.TabIndex = 26;
-            this.customButton4.TextColor = System.Drawing.Color.White;
-            this.customButton4.UseVisualStyleBackColor = false;
-            // 
-            // customButton8
-            // 
-            this.customButton8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton8.BackgroundImage")));
-            this.customButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton8.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton8.BorderRadius = 0;
-            this.customButton8.BorderSize = 0;
-            this.customButton8.FlatAppearance.BorderSize = 0;
-            this.customButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton8.ForeColor = System.Drawing.Color.White;
-            this.customButton8.Location = new System.Drawing.Point(54, 474);
-            this.customButton8.Name = "customButton8";
-            this.customButton8.Size = new System.Drawing.Size(30, 29);
-            this.customButton8.TabIndex = 36;
-            this.customButton8.TextColor = System.Drawing.Color.White;
-            this.customButton8.UseVisualStyleBackColor = false;
-            // 
-            // priceSetupBtn
-            // 
-            this.priceSetupBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.priceSetupBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.priceSetupBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("priceSetupBtn.BackgroundImage")));
-            this.priceSetupBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.priceSetupBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.priceSetupBtn.BorderRadius = 0;
-            this.priceSetupBtn.BorderSize = 0;
-            this.priceSetupBtn.FlatAppearance.BorderSize = 0;
-            this.priceSetupBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.priceSetupBtn.ForeColor = System.Drawing.Color.White;
-            this.priceSetupBtn.Location = new System.Drawing.Point(54, 408);
-            this.priceSetupBtn.Name = "priceSetupBtn";
-            this.priceSetupBtn.Size = new System.Drawing.Size(30, 29);
-            this.priceSetupBtn.TabIndex = 30;
-            this.priceSetupBtn.TextColor = System.Drawing.Color.White;
-            this.priceSetupBtn.UseVisualStyleBackColor = false;
-            this.priceSetupBtn.Click += new System.EventHandler(this.priceSetupBtn_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("customButton1.BackgroundImage")));
-            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 0;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(54, 337);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(30, 29);
-            this.customButton1.TabIndex = 34;
-            this.customButton1.TextColor = System.Drawing.Color.White;
-            this.customButton1.UseVisualStyleBackColor = false;
-            // 
-            // InventoryBtn
-            // 
-            this.InventoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.InventoryBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.InventoryBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("InventoryBtn.BackgroundImage")));
-            this.InventoryBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.InventoryBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.InventoryBtn.BorderRadius = 0;
-            this.InventoryBtn.BorderSize = 0;
-            this.InventoryBtn.FlatAppearance.BorderSize = 0;
-            this.InventoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InventoryBtn.ForeColor = System.Drawing.Color.White;
-            this.InventoryBtn.Location = new System.Drawing.Point(54, 264);
-            this.InventoryBtn.Name = "InventoryBtn";
-            this.InventoryBtn.Size = new System.Drawing.Size(30, 29);
-            this.InventoryBtn.TabIndex = 22;
-            this.InventoryBtn.TextColor = System.Drawing.Color.White;
-            this.InventoryBtn.UseVisualStyleBackColor = false;
-            this.InventoryBtn.Click += new System.EventHandler(this.customButton2_Click);
-            // 
-            // SalesReportsBtn
-            // 
-            this.SalesReportsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.SalesReportsBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.SalesReportsBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SalesReportsBtn.BackgroundImage")));
-            this.SalesReportsBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SalesReportsBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.SalesReportsBtn.BorderRadius = 0;
-            this.SalesReportsBtn.BorderSize = 0;
-            this.SalesReportsBtn.FlatAppearance.BorderSize = 0;
-            this.SalesReportsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SalesReportsBtn.ForeColor = System.Drawing.Color.White;
-            this.SalesReportsBtn.Location = new System.Drawing.Point(54, 199);
-            this.SalesReportsBtn.Name = "SalesReportsBtn";
-            this.SalesReportsBtn.Size = new System.Drawing.Size(30, 29);
-            this.SalesReportsBtn.TabIndex = 24;
-            this.SalesReportsBtn.TextColor = System.Drawing.Color.White;
-            this.SalesReportsBtn.UseVisualStyleBackColor = false;
-            this.SalesReportsBtn.Click += new System.EventHandler(this.customButton3_Click);
-            // 
-            // HomeBtn
-            // 
-            this.HomeBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.HomeBtn.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.HomeBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeBtn.BackgroundImage")));
-            this.HomeBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.HomeBtn.BorderColor = System.Drawing.Color.Transparent;
-            this.HomeBtn.BorderRadius = 0;
-            this.HomeBtn.BorderSize = 0;
-            this.HomeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.HomeBtn.FlatAppearance.BorderSize = 0;
-            this.HomeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HomeBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.HomeBtn.Location = new System.Drawing.Point(54, 125);
-            this.HomeBtn.Name = "HomeBtn";
-            this.HomeBtn.Size = new System.Drawing.Size(30, 29);
-            this.HomeBtn.TabIndex = 20;
-            this.HomeBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.HomeBtn.TextColor = System.Drawing.Color.Transparent;
-            this.HomeBtn.UseVisualStyleBackColor = false;
-            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
+            this.lblPageHeader.AutoSize = true;
+            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
+            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
+            this.lblPageHeader.Name = "lblPageHeader";
+            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
+            this.lblPageHeader.TabIndex = 0;
+            this.lblPageHeader.Text = "Dashboard";
             // 
             // Homepage
             // 
@@ -471,20 +381,19 @@
             this.ClientSize = new System.Drawing.Size(1280, 800);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.ContentsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Homepage_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnWindowSize)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -492,32 +401,23 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private OrganizationProfile.CustomButton InventoryBtn;
-        private System.Windows.Forms.Label Inventory;
-        private OrganizationProfile.CustomButton SalesReportsBtn;
-        private System.Windows.Forms.Label label3;
-        private OrganizationProfile.CustomButton customButton4;
-        private System.Windows.Forms.Label label4;
-        private OrganizationProfile.CustomButton customButton5;
-        private System.Windows.Forms.Label label5;
-        private OrganizationProfile.CustomButton priceSetupBtn;
-        private System.Windows.Forms.Label label6;
-        private OrganizationProfile.CustomButton customButton1;
-        private System.Windows.Forms.Label label1;
-        private OrganizationProfile.CustomButton customButton8;
-        private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Panel panel3;
-        private OrganizationProfile.CustomButton customButton7;
-        private System.Windows.Forms.Label label7;
+        public System.Windows.Forms.Panel ContentsPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        public System.Windows.Forms.Label Home;
-        public OrganizationProfile.CustomButton HomeBtn;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox btnWindowSize;
+        private System.Windows.Forms.Label lblPageHeader;
+        private System.Windows.Forms.PictureBox btnExit;
+        private System.Windows.Forms.PictureBox btnMinimize;
+        private OrganizationProfile.CustomButton btnHome;
+        private OrganizationProfile.CustomButton btnSales;
+        private OrganizationProfile.CustomButton btnEmployee;
+        private OrganizationProfile.CustomButton btnTransaction;
+        private OrganizationProfile.CustomButton btnPriceSetup;
+        private OrganizationProfile.CustomButton btnInventory;
+        private OrganizationProfile.CustomButton btnPartners;
+        private OrganizationProfile.CustomButton btnDelivery;
+        private OrganizationProfile.CustomButton btnLogout;
     }
 }
 

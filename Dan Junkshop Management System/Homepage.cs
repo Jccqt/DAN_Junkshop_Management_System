@@ -13,28 +13,20 @@ namespace Dan_Junkshop_Management_System
     public partial class Homepage : Form
     {
         
-        static Dashboard dashboard = new Dashboard();
-        static Sales_Reports sales_Reports = new Sales_Reports();
-        static Inventory inventory = new Inventory();
-        static PriceConfiguration priceConfiguration = new PriceConfiguration();
+        
         public Homepage()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Homepage_Load(object sender, EventArgs e)
         {
-            panel3.Controls.Add(dashboard);
+            ContentsPanel.Controls.Add(HomepageObjects.dashboard);
+            
 
         }
 
-        private void HomeBtn_Click(object sender, EventArgs e)
-        {
-            panel3.Controls.Clear();
-            panel3.Controls.Add(dashboard);
-        }
-    
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void btnWindowSize_Click(object sender, EventArgs e)
         {
             if (this.WindowState == FormWindowState.Maximized)
             {
@@ -47,35 +39,61 @@ namespace Dan_Junkshop_Management_System
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            // will prompt a warning message if the user is trying to exit the app
+            DialogResult exitDialog = MessageBox.Show("Are you sure you want to exit the app?" +
+                                                "\nAny unsaved progress cannot be recovered!", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+            if(exitDialog == DialogResult.Yes)
+            {
+                Application.Exit(); // will terminate the application
+            }
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void btnMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void customButton3_Click(object sender, EventArgs e)
+
+
+        //New buttons
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            headerLabel.Text = "Sales and Reports";
-            panel3.Controls.Add(sales_Reports);
+            this.btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(HomepageObjects.dashboard);
         }
 
-        private void customButton2_Click(object sender, EventArgs e)
+        private void btnSales_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            headerLabel.Text = "Inventory";
-            panel3.Controls.Add(inventory);
+           
+            this.btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedSales;
+            ContentsPanel.Controls.Clear();
+            lblPageHeader.Text = "Sales and Reports";
+            ContentsPanel.Controls.Add(HomepageObjects.sales_Reports);
         }
 
-        private void priceSetupBtn_Click(object sender, EventArgs e)
+        private void btnPriceSetup_Click(object sender, EventArgs e)
         {
-            panel3.Controls.Clear();
-            headerLabel.Text = "Price Configuration";
-            panel3.Controls.Add(priceConfiguration);
+            
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            Transaction transaction = new Transaction();
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(transaction);
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
         }
     }
   
