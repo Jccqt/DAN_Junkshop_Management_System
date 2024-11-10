@@ -76,24 +76,66 @@ namespace Dan_Junkshop_Management_System
 
         private void btnPriceSetup_Click(object sender, EventArgs e)
         {
-            
+            ContentsPanel.Controls.Clear();
+            lblPageHeader.Text = "Price Setup";
+            ContentsPanel.Controls.Add(HomepageObjects.priceConfiguration);
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
-            
+            ContentsPanel.Controls.Clear();
+            lblPageHeader.Text = "Inventory"; 
+            ContentsPanel.Controls.Add(HomepageObjects.inventory);
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-            Transaction transaction = new Transaction();
-            ContentsPanel.Controls.Clear();
-            ContentsPanel.Controls.Add(transaction);
+            
+
+            Form formBackground = new Form();
+            try
+            {
+                using (FrmTypeOfTransaction transactionType = new FrmTypeOfTransaction())
+                {
+                    formBackground.StartPosition = FormStartPosition.Manual;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.Opacity = .80;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.WindowState = FormWindowState.Maximized;
+                    formBackground.TopMost = true;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.Show();
+                    transactionType.Owner = formBackground;
+                    DialogResult ds = transactionType.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { formBackground.Dispose(); }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnEmployee_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            lblPageHeader.Text = "Employee";
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(employee);
+        }
+
+        private void btnDelivery_Click(object sender, EventArgs e)
+        {
+            Delivery delivery = new Delivery();
+            lblPageHeader.Text = "Delivery";
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(delivery);
         }
     }
   

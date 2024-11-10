@@ -28,12 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panelBorder3 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnAddScrapsItem = new OrganizationProfile.CustomButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -42,7 +41,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
-            this.panelBorder3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelBorder1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,46 +63,38 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.panelBorder3);
+            this.panel1.Controls.Add(this.btnAddScrapsItem);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(7, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(924, 47);
+            this.panel1.Size = new System.Drawing.Size(920, 49);
             this.panel1.TabIndex = 8;
             // 
-            // panelBorder3
+            // btnAddScrapsItem
             // 
-            this.panelBorder3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorder3.BackColor = System.Drawing.Color.Transparent;
-            this.panelBorder3.BorderRadius = 30;
-            this.panelBorder3.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder3.Controls.Add(this.customButton1);
-            this.panelBorder3.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder3.Location = new System.Drawing.Point(773, 3);
-            this.panelBorder3.Name = "panelBorder3";
-            this.panelBorder3.Size = new System.Drawing.Size(138, 41);
-            this.panelBorder3.TabIndex = 10;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 36;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial Black", 9.25F, System.Drawing.FontStyle.Bold);
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.group18__1_;
-            this.customButton1.Location = new System.Drawing.Point(0, 1);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(138, 36);
-            this.customButton1.TabIndex = 11;
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnAddScrapsItem.AutoSize = true;
+            this.btnAddScrapsItem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAddScrapsItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddScrapsItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddScrapsItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddScrapsItem.BorderRadius = 30;
+            this.btnAddScrapsItem.BorderSize = 0;
+            this.btnAddScrapsItem.FlatAppearance.BorderSize = 0;
+            this.btnAddScrapsItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddScrapsItem.Font = new System.Drawing.Font("Arial Black", 9.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddScrapsItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddScrapsItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddScrapsItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddScrapsItem.Location = new System.Drawing.Point(797, 10);
+            this.btnAddScrapsItem.Name = "btnAddScrapsItem";
+            this.btnAddScrapsItem.Size = new System.Drawing.Size(107, 30);
+            this.btnAddScrapsItem.TabIndex = 11;
+            this.btnAddScrapsItem.Text = "      Add Item";
+            this.btnAddScrapsItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddScrapsItem.UseVisualStyleBackColor = false;
+            this.btnAddScrapsItem.Click += new System.EventHandler(this.btnAddScrapsItem_Click);
             // 
             // dataGridView1
             // 
@@ -112,20 +102,20 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 130);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 133);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(924, 564);
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView1.Size = new System.Drawing.Size(920, 599);
             this.dataGridView1.TabIndex = 9;
             // 
             // panelBorder1
@@ -140,44 +130,44 @@
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
             this.panelBorder1.Location = new System.Drawing.Point(165, 35);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(445, 43);
+            this.panelBorder1.Size = new System.Drawing.Size(560, 43);
             this.panelBorder1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SearchBox
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.SearchBox.Location = new System.Drawing.Point(25, 8);
+            this.SearchBox.Location = new System.Drawing.Point(77, 9);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(417, 24);
             this.SearchBox.TabIndex = 0;
-            this.SearchBox.Text = "Search";
+            this.SearchBox.Text = "Search Item";
             this.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panelBorder2
             // 
-            this.panelBorder2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorder2.AutoScroll = true;
+            this.panelBorder2.AutoSize = true;
+            this.panelBorder2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelBorder2.BackColor = System.Drawing.Color.White;
             this.panelBorder2.BorderRadius = 30;
             this.panelBorder2.Color = System.Drawing.Color.BurlyWood;
             this.panelBorder2.Controls.Add(this.pictureBox2);
             this.panelBorder2.Controls.Add(this.comboBox1);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(616, 35);
+            this.panelBorder2.Location = new System.Drawing.Point(762, 35);
             this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(169, 43);
+            this.panelBorder2.Size = new System.Drawing.Size(169, 40);
             this.panelBorder2.TabIndex = 3;
             // 
             // pictureBox2
@@ -213,11 +203,9 @@
             this.Controls.Add(this.panelBorder1);
             this.Controls.Add(this.panelBorder2);
             this.Name = "Inventory";
-            this.Size = new System.Drawing.Size(1357, 736);
-            this.Load += new System.EventHandler(this.Inventory_Load);
+            this.Size = new System.Drawing.Size(934, 736);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelBorder3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelBorder1.ResumeLayout(false);
             this.panelBorder1.PerformLayout();
@@ -225,6 +213,7 @@
             this.panelBorder2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -238,7 +227,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder3;
-        private OrganizationProfile.CustomButton customButton1;
+        private OrganizationProfile.CustomButton btnAddScrapsItem;
     }
 }

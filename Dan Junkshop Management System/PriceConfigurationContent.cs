@@ -15,7 +15,7 @@ namespace Dan_Junkshop_Management_System
         public PriceConfigurationContent()
         {
             InitializeComponent();
-            this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
+          
         }
     }
 }

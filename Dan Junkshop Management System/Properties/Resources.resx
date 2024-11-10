@@ -130,11 +130,14 @@
   <data name="add_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dashicons_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dashicons_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="group18" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group18.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mdi_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -159,6 +162,9 @@
   </data>
   <data name="newRedPartners" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedPartners.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NewCancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewCancelButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newRedEmployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedEmployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,6 +205,12 @@
   <data name="hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tabler_dots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler_dots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="scale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CancelButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -232,10 +244,10 @@
   <data name="NewPriceSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewPriceSetup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="dashicons_update" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dashicons_update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NewCancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewCancelButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="NewDelivery1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewDelivery1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
