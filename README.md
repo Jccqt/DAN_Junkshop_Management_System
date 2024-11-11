@@ -19,3 +19,15 @@ November 06, 2024
 
 November 08, 2024
 - Updated buttons
+
+November 10, 2024
+- Transaction UI
+- Deliveries UI
+- Partners UI
+- Added focus on pop-up messages
+
+November 11, 2024
+- Added functionalities on Dashboard
+- Added chart on Dashboard
+- Fixed the color of panel icons when changing pages
+- Fixed the instance of Homepage where the instance name cannot be modified
