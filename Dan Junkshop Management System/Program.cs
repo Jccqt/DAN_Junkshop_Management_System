@@ -18,17 +18,22 @@ namespace Dan_Junkshop_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Homepage());
+            Application.Run(Homepage.getHomepageInstance());
         }
     }
 
     public class HomepageObjects
     {
         // Homepage Objects
-        public static Dashboard dashboard = new Dashboard();
+        public static Homepage homepage = Homepage.getHomepageInstance();
+        public static DashboardPanel dashboard = new DashboardPanel();
         public static Sales_Reports sales_Reports = new Sales_Reports();
         public static Inventory inventory = new Inventory();
         public static PriceConfiguration priceConfiguration = new PriceConfiguration();
+        public static Employee employee = new Employee();
+        public static Delivery delivery = new Delivery();
+        public static Partners partners = new Partners();
+        public static Transaction transaction = new Transaction();
         public static NewTransaction newTransaction = new NewTransaction();
     }
 

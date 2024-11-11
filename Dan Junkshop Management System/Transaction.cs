@@ -23,15 +23,34 @@ namespace Dan_Junkshop_Management_System
             dataGridView1.RowHeadersWidth = 50;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
 
-
-            
-            
         }
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-           HomepageObjects.newTransaction.Show();
-            
+            Form formBackground = new Form();
+            try
+            {
+                using (FrmTypeOfTransaction transactionType = new FrmTypeOfTransaction())
+                {
+                    formBackground.StartPosition = FormStartPosition.Manual;
+                    formBackground.FormBorderStyle = FormBorderStyle.None;
+                    formBackground.Opacity = .80;
+                    formBackground.BackColor = Color.Black;
+                    formBackground.WindowState = FormWindowState.Maximized;
+                    formBackground.TopMost = true;
+                    formBackground.ShowInTaskbar = false;
+                    formBackground.Show();
+                    transactionType.Owner = formBackground;
+                    DialogResult ds = transactionType.ShowDialog();
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally { formBackground.Dispose(); }
+
         }
     }
 }

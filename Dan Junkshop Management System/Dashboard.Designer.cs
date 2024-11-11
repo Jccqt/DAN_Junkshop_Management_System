@@ -1,6 +1,6 @@
 ﻿namespace Dan_Junkshop_Management_System
 {
-    partial class Dashboard
+    partial class DashboardPanel
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,132 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panelBorder7 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panelBorder5 = new WindowsFormsApp2.CustomButton.PanelBorder();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.Report3Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.btnReport3 = new System.Windows.Forms.PictureBox();
+            this.lblReport3Value = new System.Windows.Forms.Label();
+            this.lblReport3 = new System.Windows.Forms.Label();
+            this.ActivityPanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label5 = new System.Windows.Forms.Label();
-            this.panelBorder6 = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.DatePanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label4 = new System.Windows.Forms.Label();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Calendar = new System.Windows.Forms.MonthCalendar();
+            this.Report2Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.btnReport2 = new System.Windows.Forms.PictureBox();
+            this.lblReport2Value = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelBorder3 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panelBorder1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelBorder7.SuspendLayout();
+            this.lblReport2 = new System.Windows.Forms.Label();
+            this.ChartPanel = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.ChartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Report1Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.btnReport1 = new System.Windows.Forms.PictureBox();
+            this.lblReport1Value = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblReport1 = new System.Windows.Forms.Label();
+            this.Report3Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).BeginInit();
+            this.ActivityPanel.SuspendLayout();
+            this.DatePanel.SuspendLayout();
+            this.Report2Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport2)).BeginInit();
+            this.ChartPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ChartReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelBorder5.SuspendLayout();
-            this.panelBorder6.SuspendLayout();
-            this.panelBorder2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.panelBorder3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.Report1Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panelBorder1
+            // Report3Panel
             // 
-            this.panelBorder1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelBorder1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.panelBorder1.BorderRadius = 30;
-            this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder1.Controls.Add(this.pictureBox1);
-            this.panelBorder1.Controls.Add(this.label3);
-            this.panelBorder1.Controls.Add(this.label2);
-            this.panelBorder1.Controls.Add(this.label1);
-            this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(0, 41);
-            this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(212, 134);
-            this.panelBorder1.TabIndex = 6;
+            this.Report3Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Report3Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.Report3Panel.BorderRadius = 30;
+            this.Report3Panel.Color = System.Drawing.Color.BurlyWood;
+            this.Report3Panel.Controls.Add(this.btnReport3);
+            this.Report3Panel.Controls.Add(this.lblReport3Value);
+            this.Report3Panel.Controls.Add(this.lblReport3);
+            this.Report3Panel.ForeColor = System.Drawing.Color.Black;
+            this.Report3Panel.Location = new System.Drawing.Point(454, 41);
+            this.Report3Panel.Name = "Report3Panel";
+            this.Report3Panel.Size = new System.Drawing.Size(212, 134);
+            this.Report3Panel.TabIndex = 7;
             // 
-            // pictureBox1
+            // btnReport3
             // 
-            this.pictureBox1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.pictureBox1.Location = new System.Drawing.Point(178, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.btnReport3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport3.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
+            this.btnReport3.Location = new System.Drawing.Point(178, 3);
+            this.btnReport3.Name = "btnReport3";
+            this.btnReport3.Size = new System.Drawing.Size(23, 23);
+            this.btnReport3.TabIndex = 3;
+            this.btnReport3.TabStop = false;
+            this.btnReport3.Click += new System.EventHandler(this.btnReport3_Click);
             // 
-            // label3
+            // lblReport3Value
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(44, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(136, 38);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "<Value>";
+            this.lblReport3Value.AutoSize = true;
+            this.lblReport3Value.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lblReport3Value.ForeColor = System.Drawing.Color.White;
+            this.lblReport3Value.Location = new System.Drawing.Point(46, 45);
+            this.lblReport3Value.Name = "lblReport3Value";
+            this.lblReport3Value.Size = new System.Drawing.Size(136, 38);
+            this.lblReport3Value.TabIndex = 2;
+            this.lblReport3Value.Text = "<Value>";
             // 
-            // label2
+            // lblReport3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(8, 65);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(30, 15);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "PhP";
+            this.lblReport3.AutoSize = true;
+            this.lblReport3.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReport3.ForeColor = System.Drawing.Color.White;
+            this.lblReport3.Location = new System.Drawing.Point(7, 97);
+            this.lblReport3.Name = "lblReport3";
+            this.lblReport3.Size = new System.Drawing.Size(144, 15);
+            this.lblReport3.TabIndex = 0;
+            this.lblReport3.Text = "Total Sold Items Today";
             // 
-            // label1
+            // ActivityPanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(7, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Total Sales";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panelBorder7
-            // 
-            this.panelBorder7.BackColor = System.Drawing.Color.White;
-            this.panelBorder7.BorderRadius = 30;
-            this.panelBorder7.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder7.Controls.Add(this.pictureBox4);
-            this.panelBorder7.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder7.Location = new System.Drawing.Point(-1, 189);
-            this.panelBorder7.Name = "panelBorder7";
-            this.panelBorder7.Size = new System.Drawing.Size(667, 499);
-            this.panelBorder7.TabIndex = 11;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.expand;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(785, 16);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 31);
-            this.pictureBox4.TabIndex = 9;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panelBorder5
-            // 
-            this.panelBorder5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelBorder5.BackColor = System.Drawing.Color.White;
-            this.panelBorder5.BorderRadius = 30;
-            this.panelBorder5.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder5.Controls.Add(this.label5);
-            this.panelBorder5.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder5.Location = new System.Drawing.Point(684, 278);
-            this.panelBorder5.Name = "panelBorder5";
-            this.panelBorder5.Size = new System.Drawing.Size(243, 410);
-            this.panelBorder5.TabIndex = 8;
+            this.ActivityPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ActivityPanel.BackColor = System.Drawing.Color.White;
+            this.ActivityPanel.BorderRadius = 30;
+            this.ActivityPanel.Color = System.Drawing.Color.BurlyWood;
+            this.ActivityPanel.Controls.Add(this.label5);
+            this.ActivityPanel.ForeColor = System.Drawing.Color.Black;
+            this.ActivityPanel.Location = new System.Drawing.Point(684, 278);
+            this.ActivityPanel.Name = "ActivityPanel";
+            this.ActivityPanel.Size = new System.Drawing.Size(243, 410);
+            this.ActivityPanel.TabIndex = 8;
             // 
             // label5
             // 
@@ -166,19 +138,19 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Latest Activities";
             // 
-            // panelBorder6
+            // DatePanel
             // 
-            this.panelBorder6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panelBorder6.BackColor = System.Drawing.Color.White;
-            this.panelBorder6.BorderRadius = 30;
-            this.panelBorder6.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder6.Controls.Add(this.label4);
-            this.panelBorder6.Controls.Add(this.monthCalendar1);
-            this.panelBorder6.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder6.Location = new System.Drawing.Point(684, 41);
-            this.panelBorder6.Name = "panelBorder6";
-            this.panelBorder6.Size = new System.Drawing.Size(244, 224);
-            this.panelBorder6.TabIndex = 9;
+            this.DatePanel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DatePanel.BackColor = System.Drawing.Color.White;
+            this.DatePanel.BorderRadius = 30;
+            this.DatePanel.Color = System.Drawing.Color.BurlyWood;
+            this.DatePanel.Controls.Add(this.label4);
+            this.DatePanel.Controls.Add(this.Calendar);
+            this.DatePanel.ForeColor = System.Drawing.Color.Black;
+            this.DatePanel.Location = new System.Drawing.Point(684, 41);
+            this.DatePanel.Name = "DatePanel";
+            this.DatePanel.Size = new System.Drawing.Size(244, 224);
+            this.DatePanel.TabIndex = 9;
             // 
             // label4
             // 
@@ -191,47 +163,49 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Date";
             // 
-            // monthCalendar1
+            // Calendar
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(9, 45);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.Calendar.Location = new System.Drawing.Point(9, 45);
+            this.Calendar.Name = "Calendar";
+            this.Calendar.TabIndex = 0;
             // 
-            // panelBorder2
+            // Report2Panel
             // 
-            this.panelBorder2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelBorder2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.panelBorder2.BorderRadius = 30;
-            this.panelBorder2.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder2.Controls.Add(this.pictureBox2);
-            this.panelBorder2.Controls.Add(this.label6);
-            this.panelBorder2.Controls.Add(this.label7);
-            this.panelBorder2.Controls.Add(this.label8);
-            this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(227, 42);
-            this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(212, 134);
-            this.panelBorder2.TabIndex = 7;
+            this.Report2Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Report2Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.Report2Panel.BorderRadius = 30;
+            this.Report2Panel.Color = System.Drawing.Color.BurlyWood;
+            this.Report2Panel.Controls.Add(this.btnReport2);
+            this.Report2Panel.Controls.Add(this.lblReport2Value);
+            this.Report2Panel.Controls.Add(this.label7);
+            this.Report2Panel.Controls.Add(this.lblReport2);
+            this.Report2Panel.ForeColor = System.Drawing.Color.Black;
+            this.Report2Panel.Location = new System.Drawing.Point(227, 42);
+            this.Report2Panel.Name = "Report2Panel";
+            this.Report2Panel.Size = new System.Drawing.Size(212, 134);
+            this.Report2Panel.TabIndex = 7;
             // 
-            // pictureBox2
+            // btnReport2
             // 
-            this.pictureBox2.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.pictureBox2.Location = new System.Drawing.Point(178, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.btnReport2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport2.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
+            this.btnReport2.Location = new System.Drawing.Point(178, 3);
+            this.btnReport2.Name = "btnReport2";
+            this.btnReport2.Size = new System.Drawing.Size(23, 23);
+            this.btnReport2.TabIndex = 3;
+            this.btnReport2.TabStop = false;
+            this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
-            // label6
+            // lblReport2Value
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(48, 45);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 38);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "<Value>";
+            this.lblReport2Value.AutoSize = true;
+            this.lblReport2Value.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lblReport2Value.ForeColor = System.Drawing.Color.White;
+            this.lblReport2Value.Location = new System.Drawing.Point(48, 45);
+            this.lblReport2Value.Name = "lblReport2Value";
+            this.lblReport2Value.Size = new System.Drawing.Size(136, 38);
+            this.lblReport2Value.TabIndex = 2;
+            this.lblReport2Value.Text = "<Value>";
             // 
             // label7
             // 
@@ -244,119 +218,174 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "PhP";
             // 
-            // label8
+            // lblReport2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(8, 97);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(137, 15);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Total Expenses Today";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            this.lblReport2.AutoSize = true;
+            this.lblReport2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReport2.ForeColor = System.Drawing.Color.White;
+            this.lblReport2.Location = new System.Drawing.Point(8, 97);
+            this.lblReport2.Name = "lblReport2";
+            this.lblReport2.Size = new System.Drawing.Size(137, 15);
+            this.lblReport2.TabIndex = 0;
+            this.lblReport2.Text = "Total Expenses Today";
             // 
-            // panelBorder3
+            // ChartPanel
             // 
-            this.panelBorder3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelBorder3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
-            this.panelBorder3.BorderRadius = 30;
-            this.panelBorder3.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder3.Controls.Add(this.pictureBox3);
-            this.panelBorder3.Controls.Add(this.label9);
-            this.panelBorder3.Controls.Add(this.label11);
-            this.panelBorder3.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder3.Location = new System.Drawing.Point(454, 41);
-            this.panelBorder3.Name = "panelBorder3";
-            this.panelBorder3.Size = new System.Drawing.Size(212, 134);
-            this.panelBorder3.TabIndex = 7;
+            this.ChartPanel.BackColor = System.Drawing.Color.White;
+            this.ChartPanel.BorderRadius = 30;
+            this.ChartPanel.Color = System.Drawing.Color.BurlyWood;
+            this.ChartPanel.Controls.Add(this.ChartReport);
+            this.ChartPanel.Controls.Add(this.pictureBox4);
+            this.ChartPanel.ForeColor = System.Drawing.Color.Black;
+            this.ChartPanel.Location = new System.Drawing.Point(-1, 189);
+            this.ChartPanel.Name = "ChartPanel";
+            this.ChartPanel.Size = new System.Drawing.Size(667, 499);
+            this.ChartPanel.TabIndex = 11;
             // 
-            // pictureBox3
+            // ChartReport
             // 
-            this.pictureBox3.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.pictureBox3.Location = new System.Drawing.Point(178, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 23);
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
+            chartArea2.Name = "ChartArea1";
+            this.ChartReport.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.ChartReport.Legends.Add(legend2);
+            this.ChartReport.Location = new System.Drawing.Point(91, 77);
+            this.ChartReport.Name = "ChartReport";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.ChartReport.Series.Add(series2);
+            this.ChartReport.Size = new System.Drawing.Size(491, 335);
+            this.ChartReport.TabIndex = 10;
+            this.ChartReport.Text = " ";
             // 
-            // label9
+            // pictureBox4
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(46, 45);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(136, 38);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "<Value>";
+            this.pictureBox4.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.expand;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(785, 16);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 31);
+            this.pictureBox4.TabIndex = 9;
+            this.pictureBox4.TabStop = false;
             // 
-            // label11
+            // Report1Panel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(7, 97);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(144, 15);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Total Sold Items Today";
+            this.Report1Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.Report1Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.Report1Panel.BorderRadius = 30;
+            this.Report1Panel.Color = System.Drawing.Color.BurlyWood;
+            this.Report1Panel.Controls.Add(this.btnReport1);
+            this.Report1Panel.Controls.Add(this.lblReport1Value);
+            this.Report1Panel.Controls.Add(this.label2);
+            this.Report1Panel.Controls.Add(this.lblReport1);
+            this.Report1Panel.ForeColor = System.Drawing.Color.Black;
+            this.Report1Panel.Location = new System.Drawing.Point(0, 41);
+            this.Report1Panel.Name = "Report1Panel";
+            this.Report1Panel.Size = new System.Drawing.Size(212, 134);
+            this.Report1Panel.TabIndex = 6;
             // 
-            // Dashboard
+            // btnReport1
+            // 
+            this.btnReport1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
+            this.btnReport1.Location = new System.Drawing.Point(178, 4);
+            this.btnReport1.Name = "btnReport1";
+            this.btnReport1.Size = new System.Drawing.Size(23, 23);
+            this.btnReport1.TabIndex = 3;
+            this.btnReport1.TabStop = false;
+            this.btnReport1.Click += new System.EventHandler(this.btnReport1_Click);
+            // 
+            // lblReport1Value
+            // 
+            this.lblReport1Value.AutoSize = true;
+            this.lblReport1Value.Font = new System.Drawing.Font("Arial Black", 20F, System.Drawing.FontStyle.Bold);
+            this.lblReport1Value.ForeColor = System.Drawing.Color.White;
+            this.lblReport1Value.Location = new System.Drawing.Point(44, 45);
+            this.lblReport1Value.Name = "lblReport1Value";
+            this.lblReport1Value.Size = new System.Drawing.Size(136, 38);
+            this.lblReport1Value.TabIndex = 2;
+            this.lblReport1Value.Text = "<Value>";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 8F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(8, 65);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(30, 15);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "PhP";
+            // 
+            // lblReport1
+            // 
+            this.lblReport1.AutoSize = true;
+            this.lblReport1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReport1.ForeColor = System.Drawing.Color.White;
+            this.lblReport1.Location = new System.Drawing.Point(7, 97);
+            this.lblReport1.Name = "lblReport1";
+            this.lblReport1.Size = new System.Drawing.Size(74, 15);
+            this.lblReport1.TabIndex = 0;
+            this.lblReport1.Text = "Total Sales";
+            // 
+            // DashboardPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.panelBorder3);
-            this.Controls.Add(this.panelBorder5);
-            this.Controls.Add(this.panelBorder6);
-            this.Controls.Add(this.panelBorder2);
-            this.Controls.Add(this.panelBorder7);
-            this.Controls.Add(this.panelBorder1);
-            this.Name = "Dashboard";
+            this.Controls.Add(this.Report3Panel);
+            this.Controls.Add(this.ActivityPanel);
+            this.Controls.Add(this.DatePanel);
+            this.Controls.Add(this.Report2Panel);
+            this.Controls.Add(this.ChartPanel);
+            this.Controls.Add(this.Report1Panel);
+            this.Name = "DashboardPanel";
             this.Size = new System.Drawing.Size(937, 737);
             this.Load += new System.EventHandler(this.Dashboard_Load);
-            this.panelBorder1.ResumeLayout(false);
-            this.panelBorder1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelBorder7.ResumeLayout(false);
+            this.Report3Panel.ResumeLayout(false);
+            this.Report3Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).EndInit();
+            this.ActivityPanel.ResumeLayout(false);
+            this.ActivityPanel.PerformLayout();
+            this.DatePanel.ResumeLayout(false);
+            this.DatePanel.PerformLayout();
+            this.Report2Panel.ResumeLayout(false);
+            this.Report2Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport2)).EndInit();
+            this.ChartPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ChartReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelBorder5.ResumeLayout(false);
-            this.panelBorder5.PerformLayout();
-            this.panelBorder6.ResumeLayout(false);
-            this.panelBorder6.PerformLayout();
-            this.panelBorder2.ResumeLayout(false);
-            this.panelBorder2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.panelBorder3.ResumeLayout(false);
-            this.panelBorder3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.Report1Panel.ResumeLayout(false);
+            this.Report1Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnReport1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder1;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
+        private WindowsFormsApp2.CustomButton.PanelBorder Report1Panel;
+        private WindowsFormsApp2.CustomButton.PanelBorder ChartPanel;
+        private System.Windows.Forms.Label lblReport1;
+        private System.Windows.Forms.Label lblReport1Value;
         private System.Windows.Forms.Label label2;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder5;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder6;
+        private WindowsFormsApp2.CustomButton.PanelBorder ActivityPanel;
+        private WindowsFormsApp2.CustomButton.PanelBorder DatePanel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.MonthCalendar Calendar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnReport1;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label6;
+        private WindowsFormsApp2.CustomButton.PanelBorder Report2Panel;
+        private System.Windows.Forms.PictureBox btnReport2;
+        private System.Windows.Forms.Label lblReport2Value;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder3;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblReport2;
+        private WindowsFormsApp2.CustomButton.PanelBorder Report3Panel;
+        private System.Windows.Forms.PictureBox btnReport3;
+        private System.Windows.Forms.Label lblReport3Value;
+        private System.Windows.Forms.Label lblReport3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart ChartReport;
     }
 }

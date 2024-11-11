@@ -18,9 +18,6 @@ namespace Dan_Junkshop_Management_System
         {
             InitializeComponent();
             this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
-
-           
-
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -36,34 +33,34 @@ namespace Dan_Junkshop_Management_System
         private void transactionButton_Click(object sender, EventArgs e)
         { 
            
-            topSaleButton.BackColor = Color.White;
-            topSaleButton.ForeColor = Color.Black;
-            deliveryButton.BackColor = Color.White;
-            deliveryButton.ForeColor = Color.Black;
-            transactionButton.ForeColor = Color.White;
-            transactionButton.BackColor = Color.FromArgb(255, 83, 87);     
+            btnReport1.BackColor = Color.White;
+            btnReport1.ForeColor = Color.Black;
+            btnReport3.BackColor = Color.White;
+            btnReport3.ForeColor = Color.Black;
+            btnReport2.ForeColor = Color.White;
+            btnReport2.BackColor = Color.FromArgb(255, 83, 87);     
         }
 
         private void topSaleButton_Click(object sender, EventArgs e)
         {
             
-            transactionButton.BackColor = Color.White;
-            transactionButton.ForeColor = Color.Black;
-            deliveryButton.BackColor = Color.White;
-            deliveryButton.ForeColor = Color.Black;
-            topSaleButton.ForeColor = Color.White;
-            topSaleButton.BackColor = Color.FromArgb(255, 83, 87);
+            btnReport2.BackColor = Color.White;
+            btnReport2.ForeColor = Color.Black;
+            btnReport3.BackColor = Color.White;
+            btnReport3.ForeColor = Color.Black;
+            btnReport1.ForeColor = Color.White;
+            btnReport1.BackColor = Color.FromArgb(255, 83, 87);
         }
 
         private void deliveryButton_Click(object sender, EventArgs e)
         {
             
-            transactionButton.BackColor = Color.White;
-            transactionButton.ForeColor = Color.Black;
-            topSaleButton.BackColor = Color.White;
-            topSaleButton.ForeColor = Color.Black;
-            deliveryButton.ForeColor = Color.White;
-            deliveryButton.BackColor = Color.FromArgb(255, 83, 87);
+            btnReport2.BackColor = Color.White;
+            btnReport2.ForeColor = Color.Black;
+            btnReport1.BackColor = Color.White;
+            btnReport1.ForeColor = Color.Black;
+            btnReport3.ForeColor = Color.White;
+            btnReport3.BackColor = Color.FromArgb(255, 83, 87);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

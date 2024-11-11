@@ -31,16 +31,11 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan J
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.pdb
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Sales_Reports.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.AssemblyReference.cache
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Dashboard.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Homepage.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Inventory.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.LoginPage.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Properties.Resources.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Sales_Reports.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableContent_AvailableScrap.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableContent_ForSaleJunk.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TableHeader.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TopSalesContent.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.GenerateResource.cache
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.CoreCompileInputs.cache
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.exe
@@ -106,3 +101,19 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_J
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Delivery.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DeliveryMetals.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.AddingSellableItems.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Delivery.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DeliveryMetals.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayEmployee.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Employee.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingItem.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddNewEmployee.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingScrapItem.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.FrmTypeOfTransaction.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.NewTransaction.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfiguration.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfigurationContent.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transaction.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TransactionSoldItems.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DashboardPanel.resources

@@ -7,29 +7,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class Dashboard : UserControl
+    public partial class DashboardPanel : UserControl
     {
-        public Dashboard()
+        public DashboardPanel()
         {
             InitializeComponent();
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            ChartReport.Series["Series1"].Points.AddXY("Tite", 32);
         }
 
-        private void label8_Click(object sender, EventArgs e)
+        private void btnReport1_Click(object sender, EventArgs e)
         {
-
+            HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnReport2_Click(object sender, EventArgs e)
         {
+            HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
+        }
 
+        private void btnReport3_Click(object sender, EventArgs e)
+        {
+            HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
         }
     }
 }

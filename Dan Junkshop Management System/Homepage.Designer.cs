@@ -31,12 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.ContentsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblPageHeader = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.btnMinimize = new System.Windows.Forms.PictureBox();
             this.btnWindowSize = new System.Windows.Forms.PictureBox();
+            this.lblPageHeader = new System.Windows.Forms.Label();
             this.btnLogout = new OrganizationProfile.CustomButton();
             this.btnDelivery = new OrganizationProfile.CustomButton();
             this.btnPartners = new OrganizationProfile.CustomButton();
@@ -46,13 +47,12 @@
             this.btnEmployee = new OrganizationProfile.CustomButton();
             this.btnSales = new OrganizationProfile.CustomButton();
             this.btnHome = new OrganizationProfile.CustomButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnWindowSize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ContentsPanel
@@ -85,6 +85,16 @@
             this.panel1.Size = new System.Drawing.Size(328, 1025);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel4
             // 
             this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -111,17 +121,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 47);
             this.panel2.TabIndex = 23;
-            // 
-            // lblPageHeader
-            // 
-            this.lblPageHeader.AutoSize = true;
-            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
-            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
-            this.lblPageHeader.Name = "lblPageHeader";
-            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
-            this.lblPageHeader.TabIndex = 0;
-            this.lblPageHeader.Text = "Dashboard";
             // 
             // btnExit
             // 
@@ -158,6 +157,17 @@
             this.btnWindowSize.TabIndex = 1;
             this.btnWindowSize.TabStop = false;
             this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
+            // 
+            // lblPageHeader
+            // 
+            this.lblPageHeader.AutoSize = true;
+            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
+            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
+            this.lblPageHeader.Name = "lblPageHeader";
+            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
+            this.lblPageHeader.TabIndex = 0;
+            this.lblPageHeader.Text = "Dashboard";
             // 
             // btnLogout
             // 
@@ -226,6 +236,7 @@
             this.btnPartners.Text = "Partners";
             this.btnPartners.TextColor = System.Drawing.Color.Transparent;
             this.btnPartners.UseVisualStyleBackColor = false;
+            this.btnPartners.Click += new System.EventHandler(this.btnPartners_Click);
             // 
             // btnInventory
             // 
@@ -365,16 +376,6 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -390,12 +391,12 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Homepage_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnWindowSize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,7 +409,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox btnWindowSize;
-        private System.Windows.Forms.Label lblPageHeader;
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.PictureBox btnMinimize;
         private OrganizationProfile.CustomButton btnHome;
@@ -420,6 +420,7 @@
         private OrganizationProfile.CustomButton btnPartners;
         private OrganizationProfile.CustomButton btnDelivery;
         private OrganizationProfile.CustomButton btnLogout;
+        private System.Windows.Forms.Label lblPageHeader;
     }
 }
 

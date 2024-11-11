@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sales_Reports));
-            this.topSaleButton = new System.Windows.Forms.Button();
-            this.transactionButton = new System.Windows.Forms.Button();
-            this.deliveryButton = new System.Windows.Forms.Button();
+            this.btnReport1 = new System.Windows.Forms.Button();
+            this.btnReport2 = new System.Windows.Forms.Button();
+            this.btnReport3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,48 +48,48 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // topSaleButton
+            // btnReport1
             // 
-            this.topSaleButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.topSaleButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.topSaleButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.topSaleButton.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topSaleButton.ForeColor = System.Drawing.Color.White;
-            this.topSaleButton.Location = new System.Drawing.Point(268, 27);
-            this.topSaleButton.Name = "topSaleButton";
-            this.topSaleButton.Size = new System.Drawing.Size(120, 37);
-            this.topSaleButton.TabIndex = 0;
-            this.topSaleButton.Text = "Top Sale";
-            this.topSaleButton.UseVisualStyleBackColor = false;
-            this.topSaleButton.Click += new System.EventHandler(this.topSaleButton_Click);
+            this.btnReport1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReport1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnReport1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReport1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport1.ForeColor = System.Drawing.Color.White;
+            this.btnReport1.Location = new System.Drawing.Point(268, 27);
+            this.btnReport1.Name = "btnReport1";
+            this.btnReport1.Size = new System.Drawing.Size(120, 37);
+            this.btnReport1.TabIndex = 0;
+            this.btnReport1.Text = "Top Sale";
+            this.btnReport1.UseVisualStyleBackColor = false;
+            this.btnReport1.Click += new System.EventHandler(this.topSaleButton_Click);
             // 
-            // transactionButton
+            // btnReport2
             // 
-            this.transactionButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.transactionButton.BackColor = System.Drawing.Color.White;
-            this.transactionButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.transactionButton.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.transactionButton.Location = new System.Drawing.Point(390, 27);
-            this.transactionButton.Name = "transactionButton";
-            this.transactionButton.Size = new System.Drawing.Size(120, 37);
-            this.transactionButton.TabIndex = 1;
-            this.transactionButton.Text = "Transaction";
-            this.transactionButton.UseVisualStyleBackColor = false;
-            this.transactionButton.Click += new System.EventHandler(this.transactionButton_Click);
+            this.btnReport2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReport2.BackColor = System.Drawing.Color.White;
+            this.btnReport2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReport2.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.btnReport2.Location = new System.Drawing.Point(390, 27);
+            this.btnReport2.Name = "btnReport2";
+            this.btnReport2.Size = new System.Drawing.Size(120, 37);
+            this.btnReport2.TabIndex = 1;
+            this.btnReport2.Text = "Transaction";
+            this.btnReport2.UseVisualStyleBackColor = false;
+            this.btnReport2.Click += new System.EventHandler(this.transactionButton_Click);
             // 
-            // deliveryButton
+            // btnReport3
             // 
-            this.deliveryButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.deliveryButton.BackColor = System.Drawing.Color.White;
-            this.deliveryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deliveryButton.Font = new System.Drawing.Font("Arial", 11.25F);
-            this.deliveryButton.Location = new System.Drawing.Point(512, 27);
-            this.deliveryButton.Name = "deliveryButton";
-            this.deliveryButton.Size = new System.Drawing.Size(120, 37);
-            this.deliveryButton.TabIndex = 2;
-            this.deliveryButton.Text = "Delivery";
-            this.deliveryButton.UseVisualStyleBackColor = false;
-            this.deliveryButton.Click += new System.EventHandler(this.deliveryButton_Click);
+            this.btnReport3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnReport3.BackColor = System.Drawing.Color.White;
+            this.btnReport3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReport3.Font = new System.Drawing.Font("Arial", 11.25F);
+            this.btnReport3.Location = new System.Drawing.Point(512, 27);
+            this.btnReport3.Name = "btnReport3";
+            this.btnReport3.Size = new System.Drawing.Size(120, 37);
+            this.btnReport3.TabIndex = 2;
+            this.btnReport3.Text = "Delivery";
+            this.btnReport3.UseVisualStyleBackColor = false;
+            this.btnReport3.Click += new System.EventHandler(this.deliveryButton_Click);
             // 
             // panel1
             // 
@@ -205,9 +205,9 @@
             this.Controls.Add(this.panelBorder2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.deliveryButton);
-            this.Controls.Add(this.transactionButton);
-            this.Controls.Add(this.topSaleButton);
+            this.Controls.Add(this.btnReport3);
+            this.Controls.Add(this.btnReport2);
+            this.Controls.Add(this.btnReport1);
             this.Name = "Sales_Reports";
             this.Size = new System.Drawing.Size(934, 736);
             this.Load += new System.EventHandler(this.Sales_Reports_Load);
@@ -224,9 +224,9 @@
 
         #endregion
 
-        private System.Windows.Forms.Button topSaleButton;
-        private System.Windows.Forms.Button transactionButton;
-        private System.Windows.Forms.Button deliveryButton;
+        private System.Windows.Forms.Button btnReport1;
+        private System.Windows.Forms.Button btnReport2;
+        private System.Windows.Forms.Button btnReport3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;

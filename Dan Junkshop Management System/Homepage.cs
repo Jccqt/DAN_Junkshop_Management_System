@@ -12,18 +12,28 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Homepage : Form
     {
+        public string selectedButton;
+        private static Homepage homepage; // instance for singleton
         
-        
-        public Homepage()
+        private Homepage()
         {
             InitializeComponent();
         }
 
+        // method for singleton
+        public static Homepage getHomepageInstance()
+        {
+            if(homepage == null)
+            {
+                homepage = new Homepage();
+            }
+            return homepage;
+        }
+
         private void Homepage_Load(object sender, EventArgs e)
         {
-            ContentsPanel.Controls.Add(HomepageObjects.dashboard);
-            
-
+            ContentsPanel.Controls.Add(HomepageObjects.dashboard); // will display dashboard
+            selectedButton = lblPageHeader.Text;
         }
 
         private void btnWindowSize_Click(object sender, EventArgs e)
@@ -36,7 +46,6 @@ namespace Dan_Junkshop_Management_System
             {
                 this.WindowState = FormWindowState.Maximized;
             }
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -55,66 +64,55 @@ namespace Dan_Junkshop_Management_System
             this.WindowState = FormWindowState.Minimized;
         }
 
-
-
         //New buttons
         private void btnHome_Click(object sender, EventArgs e)
         {
-            this.btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
+            lblPageHeader.Text = "Dashboard";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
             ContentsPanel.Controls.Clear();
-            ContentsPanel.Controls.Add(HomepageObjects.dashboard);
+            ContentsPanel.Controls.Add(HomepageObjects.dashboard); // will display dashboard
         }
 
-        private void btnSales_Click(object sender, EventArgs e)
+        public void btnSales_Click(object sender, EventArgs e)
         {
-           
-            this.btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedSales;
-            ContentsPanel.Controls.Clear();
             lblPageHeader.Text = "Sales and Reports";
-            ContentsPanel.Controls.Add(HomepageObjects.sales_Reports);
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(HomepageObjects.sales_Reports); // will display sales and reports page
         }
 
         private void btnPriceSetup_Click(object sender, EventArgs e)
         {
-            ContentsPanel.Controls.Clear();
             lblPageHeader.Text = "Price Setup";
-            ContentsPanel.Controls.Add(HomepageObjects.priceConfiguration);
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(HomepageObjects.priceConfiguration); // will display price configuration page
         }
 
         private void btnInventory_Click(object sender, EventArgs e)
         {
+            lblPageHeader.Text = "Inventory";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
             ContentsPanel.Controls.Clear();
-            lblPageHeader.Text = "Inventory"; 
-            ContentsPanel.Controls.Add(HomepageObjects.inventory);
+            ContentsPanel.Controls.Add(HomepageObjects.inventory); // will display inventory page
         }
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
-            
+            lblPageHeader.Text = "Transaction";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
 
-            Form formBackground = new Form();
-            try
-            {
-                using (FrmTypeOfTransaction transactionType = new FrmTypeOfTransaction())
-                {
-                    formBackground.StartPosition = FormStartPosition.Manual;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.Opacity = .80;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.WindowState = FormWindowState.Maximized;
-                    formBackground.TopMost = true;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.Show();
-                    transactionType.Owner = formBackground;
-                    DialogResult ds = transactionType.ShowDialog();
-                    formBackground.Dispose();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { formBackground.Dispose(); }
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(HomepageObjects.transaction); // will display transaction page
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -124,19 +122,96 @@ namespace Dan_Junkshop_Management_System
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
-            Employee employee = new Employee();
             lblPageHeader.Text = "Employee";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
             ContentsPanel.Controls.Clear();
-            ContentsPanel.Controls.Add(employee);
+            ContentsPanel.Controls.Add(HomepageObjects.employee); // will display employee page
+        }
+
+        private void btnPartners_Click(object sender, EventArgs e)
+        {
+            lblPageHeader.Text = "Partners";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(HomepageObjects.partners); // will display partner page
         }
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            Delivery delivery = new Delivery();
             lblPageHeader.Text = "Delivery";
+            resetIconColor(); // will reset the color of homepage icons
+            selectedButton = lblPageHeader.Text;
+            
             ContentsPanel.Controls.Clear();
-            ContentsPanel.Controls.Add(delivery);
+            ContentsPanel.Controls.Add(HomepageObjects.delivery); // will display delivery page
         }
+
+        public void resetIconColor()
+        {
+            // will set the homepage icons color to white
+            switch (selectedButton)
+            {
+                case "Dashboard":
+                    btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.NewHome;
+                    break;
+                case "Sales and Reports":
+                    btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.NewSales;
+                    break;
+                case "Employee":
+                    btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
+                    break;
+                case "Transaction":
+                    btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
+                    break;
+                case "Price Setup":
+                    btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
+                    break;
+                case "Inventory":
+                    btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
+                    break;
+                case "Partners":
+                    btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
+                    break;
+                case "Delivery":
+                    btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
+                    break;
+            }
+
+            // will set the homepage icons color to red
+            switch (lblPageHeader.Text)
+            {
+                case "Dashboard": 
+                    btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
+                    break;
+                case "Sales and Reports": 
+                    btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedSales;
+                    break;
+                case "Employee": 
+                    btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedEmployee;
+                    break;
+                case "Transaction": 
+                    btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedTransaction;
+                    break;
+                case "Price Setup": 
+                    btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPriceSetup;
+                    break;
+                case "Inventory": 
+                    btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedInventory;
+                    break;
+                case "Partners": 
+                    btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPartners;
+                    break;
+                case "Delivery": 
+                    btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedDelive;
+                    break;
+            }
+
+        }
+
     }
   
 }

@@ -38,12 +38,12 @@ namespace Dan_Junkshop_Management_System
                 if(txtUsername.Text.Equals(username) &&  txtPassword.Text.Equals(password))
                 {
                     MessageBox.Show("Login Successfully!");
-                    using(Homepage homepage = new Homepage())
+                    using(Homepage homepage = Homepage.getHomepageInstance())
                     {
-                        homepage.ShowDialog(); // will show the homepage window
-                        this.Hide(); // will hide the login window
+                        homepage.ShowDialog();
+                        this.Hide(); 
                         ConnectionObjects.conn.Close(); // will close the sql connection once the user login was successful
-                        break; // will also break the while loop
+                        break;
                     }
                 }
                 else
