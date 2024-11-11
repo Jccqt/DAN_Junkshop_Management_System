@@ -117,6 +117,7 @@
             this.panel2.Controls.Add(this.btnMinimize);
             this.panel2.Controls.Add(this.btnWindowSize);
             this.panel2.Controls.Add(this.lblPageHeader);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.panel2.Location = new System.Drawing.Point(328, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(952, 47);
@@ -127,6 +128,7 @@
             this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.Location = new System.Drawing.Point(909, 13);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(20, 21);
@@ -139,6 +141,7 @@
             this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
             this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimize.Location = new System.Drawing.Point(815, 13);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(20, 21);
@@ -151,6 +154,7 @@
             this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
             this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWindowSize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnWindowSize.Location = new System.Drawing.Point(863, 13);
             this.btnWindowSize.Name = "btnWindowSize";
             this.btnWindowSize.Size = new System.Drawing.Size(20, 21);
@@ -176,6 +180,7 @@
             this.btnLogout.BorderColor = System.Drawing.Color.Transparent;
             this.btnLogout.BorderRadius = 40;
             this.btnLogout.BorderSize = 0;
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,6 +204,7 @@
             this.btnDelivery.BorderColor = System.Drawing.Color.Transparent;
             this.btnDelivery.BorderRadius = 40;
             this.btnDelivery.BorderSize = 0;
+            this.btnDelivery.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelivery.FlatAppearance.BorderSize = 0;
             this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelivery.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,6 +228,7 @@
             this.btnPartners.BorderColor = System.Drawing.Color.Transparent;
             this.btnPartners.BorderRadius = 40;
             this.btnPartners.BorderSize = 0;
+            this.btnPartners.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPartners.FlatAppearance.BorderSize = 0;
             this.btnPartners.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPartners.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -245,6 +252,7 @@
             this.btnInventory.BorderColor = System.Drawing.Color.Transparent;
             this.btnInventory.BorderRadius = 40;
             this.btnInventory.BorderSize = 0;
+            this.btnInventory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInventory.FlatAppearance.BorderSize = 0;
             this.btnInventory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventory.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,6 +276,7 @@
             this.btnPriceSetup.BorderColor = System.Drawing.Color.Transparent;
             this.btnPriceSetup.BorderRadius = 40;
             this.btnPriceSetup.BorderSize = 0;
+            this.btnPriceSetup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPriceSetup.FlatAppearance.BorderSize = 0;
             this.btnPriceSetup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPriceSetup.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -291,6 +300,7 @@
             this.btnTransaction.BorderColor = System.Drawing.Color.Transparent;
             this.btnTransaction.BorderRadius = 40;
             this.btnTransaction.BorderSize = 0;
+            this.btnTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTransaction.FlatAppearance.BorderSize = 0;
             this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaction.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -314,6 +324,7 @@
             this.btnEmployee.BorderColor = System.Drawing.Color.Transparent;
             this.btnEmployee.BorderRadius = 40;
             this.btnEmployee.BorderSize = 0;
+            this.btnEmployee.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEmployee.FlatAppearance.BorderSize = 0;
             this.btnEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEmployee.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -337,6 +348,7 @@
             this.btnSales.BorderColor = System.Drawing.Color.Transparent;
             this.btnSales.BorderRadius = 40;
             this.btnSales.BorderSize = 0;
+            this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSales.FlatAppearance.BorderSize = 0;
             this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSales.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -360,6 +372,7 @@
             this.btnHome.BorderColor = System.Drawing.Color.Transparent;
             this.btnHome.BorderRadius = 40;
             this.btnHome.BorderSize = 0;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHome.FlatAppearance.BorderSize = 0;
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

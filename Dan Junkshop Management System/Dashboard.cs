@@ -20,7 +20,7 @@ namespace Dan_Junkshop_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            ChartReport.Series["Series1"].Points.AddXY("Tite", 32);
+            ChartReport.Series["Series1"].Points.AddXY("Tite", 32);      
         }
 
         private void btnReport1_Click(object sender, EventArgs e)

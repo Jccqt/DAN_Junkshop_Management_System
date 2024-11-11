@@ -28,14 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Report3Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.btnReport3 = new System.Windows.Forms.PictureBox();
             this.lblReport3Value = new System.Windows.Forms.Label();
             this.lblReport3 = new System.Windows.Forms.Label();
             this.ActivityPanel = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.lblActivity10 = new System.Windows.Forms.Label();
+            this.lblActivity9 = new System.Windows.Forms.Label();
+            this.lblActivity8 = new System.Windows.Forms.Label();
+            this.lblActivity7 = new System.Windows.Forms.Label();
+            this.lblActivity6 = new System.Windows.Forms.Label();
+            this.lblActivity5 = new System.Windows.Forms.Label();
+            this.lblActivity4 = new System.Windows.Forms.Label();
+            this.lblActivity3 = new System.Windows.Forms.Label();
+            this.lblActivity2 = new System.Windows.Forms.Label();
+            this.lblActivity1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.DatePanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label4 = new System.Windows.Forms.Label();
@@ -110,9 +120,9 @@
             this.lblReport3.ForeColor = System.Drawing.Color.White;
             this.lblReport3.Location = new System.Drawing.Point(7, 97);
             this.lblReport3.Name = "lblReport3";
-            this.lblReport3.Size = new System.Drawing.Size(144, 15);
+            this.lblReport3.Size = new System.Drawing.Size(141, 15);
             this.lblReport3.TabIndex = 0;
-            this.lblReport3.Text = "Total Sold Items Today";
+            this.lblReport3.Text = "Total Deliveries Today";
             // 
             // ActivityPanel
             // 
@@ -120,6 +130,16 @@
             this.ActivityPanel.BackColor = System.Drawing.Color.White;
             this.ActivityPanel.BorderRadius = 30;
             this.ActivityPanel.Color = System.Drawing.Color.BurlyWood;
+            this.ActivityPanel.Controls.Add(this.lblActivity10);
+            this.ActivityPanel.Controls.Add(this.lblActivity9);
+            this.ActivityPanel.Controls.Add(this.lblActivity8);
+            this.ActivityPanel.Controls.Add(this.lblActivity7);
+            this.ActivityPanel.Controls.Add(this.lblActivity6);
+            this.ActivityPanel.Controls.Add(this.lblActivity5);
+            this.ActivityPanel.Controls.Add(this.lblActivity4);
+            this.ActivityPanel.Controls.Add(this.lblActivity3);
+            this.ActivityPanel.Controls.Add(this.lblActivity2);
+            this.ActivityPanel.Controls.Add(this.lblActivity1);
             this.ActivityPanel.Controls.Add(this.label5);
             this.ActivityPanel.ForeColor = System.Drawing.Color.Black;
             this.ActivityPanel.Location = new System.Drawing.Point(684, 278);
@@ -127,14 +147,124 @@
             this.ActivityPanel.Size = new System.Drawing.Size(243, 410);
             this.ActivityPanel.TabIndex = 8;
             // 
+            // lblActivity10
+            // 
+            this.lblActivity10.AutoSize = true;
+            this.lblActivity10.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity10.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity10.Location = new System.Drawing.Point(11, 336);
+            this.lblActivity10.Name = "lblActivity10";
+            this.lblActivity10.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity10.TabIndex = 14;
+            this.lblActivity10.Text = "< Activity >";
+            // 
+            // lblActivity9
+            // 
+            this.lblActivity9.AutoSize = true;
+            this.lblActivity9.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity9.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity9.Location = new System.Drawing.Point(11, 304);
+            this.lblActivity9.Name = "lblActivity9";
+            this.lblActivity9.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity9.TabIndex = 13;
+            this.lblActivity9.Text = "< Activity >";
+            // 
+            // lblActivity8
+            // 
+            this.lblActivity8.AutoSize = true;
+            this.lblActivity8.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity8.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity8.Location = new System.Drawing.Point(11, 272);
+            this.lblActivity8.Name = "lblActivity8";
+            this.lblActivity8.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity8.TabIndex = 12;
+            this.lblActivity8.Text = "< Activity >";
+            // 
+            // lblActivity7
+            // 
+            this.lblActivity7.AutoSize = true;
+            this.lblActivity7.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity7.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity7.Location = new System.Drawing.Point(11, 240);
+            this.lblActivity7.Name = "lblActivity7";
+            this.lblActivity7.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity7.TabIndex = 11;
+            this.lblActivity7.Text = "< Activity >";
+            // 
+            // lblActivity6
+            // 
+            this.lblActivity6.AutoSize = true;
+            this.lblActivity6.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity6.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity6.Location = new System.Drawing.Point(11, 206);
+            this.lblActivity6.Name = "lblActivity6";
+            this.lblActivity6.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity6.TabIndex = 10;
+            this.lblActivity6.Text = "< Activity >";
+            // 
+            // lblActivity5
+            // 
+            this.lblActivity5.AutoSize = true;
+            this.lblActivity5.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity5.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity5.Location = new System.Drawing.Point(11, 174);
+            this.lblActivity5.Name = "lblActivity5";
+            this.lblActivity5.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity5.TabIndex = 9;
+            this.lblActivity5.Text = "< Activity >";
+            // 
+            // lblActivity4
+            // 
+            this.lblActivity4.AutoSize = true;
+            this.lblActivity4.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity4.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity4.Location = new System.Drawing.Point(11, 142);
+            this.lblActivity4.Name = "lblActivity4";
+            this.lblActivity4.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity4.TabIndex = 8;
+            this.lblActivity4.Text = "< Activity >";
+            // 
+            // lblActivity3
+            // 
+            this.lblActivity3.AutoSize = true;
+            this.lblActivity3.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity3.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity3.Location = new System.Drawing.Point(11, 112);
+            this.lblActivity3.Name = "lblActivity3";
+            this.lblActivity3.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity3.TabIndex = 7;
+            this.lblActivity3.Text = "< Activity >";
+            // 
+            // lblActivity2
+            // 
+            this.lblActivity2.AutoSize = true;
+            this.lblActivity2.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity2.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity2.Location = new System.Drawing.Point(11, 76);
+            this.lblActivity2.Name = "lblActivity2";
+            this.lblActivity2.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity2.TabIndex = 6;
+            this.lblActivity2.Text = "< Activity >";
+            // 
+            // lblActivity1
+            // 
+            this.lblActivity1.AutoSize = true;
+            this.lblActivity1.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.lblActivity1.ForeColor = System.Drawing.Color.Black;
+            this.lblActivity1.Location = new System.Drawing.Point(11, 45);
+            this.lblActivity1.Name = "lblActivity1";
+            this.lblActivity1.Size = new System.Drawing.Size(97, 19);
+            this.lblActivity1.TabIndex = 5;
+            this.lblActivity1.Text = "< Activity >";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(57, 4);
+            this.label5.Location = new System.Drawing.Point(45, 3);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(136, 19);
+            this.label5.Size = new System.Drawing.Size(155, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Latest Activities";
             // 
@@ -155,11 +285,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial Black", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(96, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 19);
+            this.label4.Size = new System.Drawing.Size(51, 23);
             this.label4.TabIndex = 3;
             this.label4.Text = "Date";
             // 
@@ -225,9 +355,9 @@
             this.lblReport2.ForeColor = System.Drawing.Color.White;
             this.lblReport2.Location = new System.Drawing.Point(8, 97);
             this.lblReport2.Name = "lblReport2";
-            this.lblReport2.Size = new System.Drawing.Size(137, 15);
+            this.lblReport2.Size = new System.Drawing.Size(158, 15);
             this.lblReport2.TabIndex = 0;
-            this.lblReport2.Text = "Total Expenses Today";
+            this.lblReport2.Text = "Total Transactions Today";
             // 
             // ChartPanel
             // 
@@ -244,17 +374,17 @@
             // 
             // ChartReport
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChartReport.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ChartReport.Legends.Add(legend2);
-            this.ChartReport.Location = new System.Drawing.Point(91, 77);
+            chartArea1.Name = "ChartArea1";
+            this.ChartReport.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChartReport.Legends.Add(legend1);
+            this.ChartReport.Location = new System.Drawing.Point(91, 109);
             this.ChartReport.Name = "ChartReport";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.ChartReport.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.ChartReport.Series.Add(series1);
             this.ChartReport.Size = new System.Drawing.Size(491, 335);
             this.ChartReport.TabIndex = 10;
             this.ChartReport.Text = " ";
@@ -387,5 +517,15 @@
         private System.Windows.Forms.Label lblReport3Value;
         private System.Windows.Forms.Label lblReport3;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartReport;
+        private System.Windows.Forms.Label lblActivity10;
+        private System.Windows.Forms.Label lblActivity9;
+        private System.Windows.Forms.Label lblActivity8;
+        private System.Windows.Forms.Label lblActivity7;
+        private System.Windows.Forms.Label lblActivity6;
+        private System.Windows.Forms.Label lblActivity5;
+        private System.Windows.Forms.Label lblActivity4;
+        private System.Windows.Forms.Label lblActivity3;
+        private System.Windows.Forms.Label lblActivity2;
+        private System.Windows.Forms.Label lblActivity1;
     }
 }
