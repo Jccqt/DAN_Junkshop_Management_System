@@ -21,7 +21,7 @@ namespace Dan_Junkshop_Management_System
         }
 
         // method for singleton
-        public static Homepage getHomepageInstance()
+        public static Homepage GetHomepageInstance()
         {
             if(homepage == null)
             {

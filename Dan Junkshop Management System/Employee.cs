@@ -17,7 +17,7 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
             DisplayEmployee displayEmployee = new DisplayEmployee();
 
-            flpDisplayEmp.Controls.Add(displayEmployee);
+            EmployeePanel.Controls.Add(displayEmployee);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -25,31 +25,15 @@ namespace Dan_Junkshop_Management_System
 
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
+        private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            Form formBackground = new Form();
-            try
+            using (frmAddNewEmployee addEmployee = new frmAddNewEmployee())
             {
-                using (frmAddNewEmployee addNewEmployee = new frmAddNewEmployee())
-                {
-                    formBackground.StartPosition = FormStartPosition.Manual;
-                    formBackground.FormBorderStyle = FormBorderStyle.None;
-                    formBackground.Opacity = .80;
-                    formBackground.BackColor = Color.Black;
-                    formBackground.WindowState = FormWindowState.Maximized;
-                    formBackground.TopMost = true;
-                    formBackground.ShowInTaskbar = false;
-                    formBackground.Show();
-                    addNewEmployee.Owner = formBackground;
-                    DialogResult ds = addNewEmployee.ShowDialog();
-                    formBackground.Dispose();
-                }
+                FormAnimation.ShowFocus();
+                addEmployee.Owner = FormAnimation.formBackground;
+                DialogResult addEmployeeDiag = addEmployee.ShowDialog();
+                FormAnimation.formBackground.Close();
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally { formBackground.Dispose(); }
         }
     }
 }

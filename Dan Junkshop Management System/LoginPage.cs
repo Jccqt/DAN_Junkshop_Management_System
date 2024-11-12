@@ -29,7 +29,8 @@ namespace Dan_Junkshop_Management_System
                 "Credentials C JOIN Employees E ON C.EmpID = E.EmpID WHERE Status = 1", ConnectionObjects.conn);
             SqlDataReader reader = ConnectionObjects.cmd.ExecuteReader();
 
-            // will read all values inside the selected attributes on two tables and will stop when all values has been read
+            /* will read all values inside the selected attributes on two tables
+             and will stop when all values has been read */
             while (reader.Read())
             {
                 username = reader.GetValue(0).ToString(); // will assign the username value on username string
@@ -38,7 +39,7 @@ namespace Dan_Junkshop_Management_System
                 if(txtUsername.Text.Equals(username) &&  txtPassword.Text.Equals(password))
                 {
                     MessageBox.Show("Login Successfully!");
-                    using(Homepage homepage = Homepage.getHomepageInstance())
+                    using(Homepage homepage = Homepage.GetHomepageInstance())
                     {
                         homepage.ShowDialog();
                         this.Hide(); 
