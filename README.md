@@ -5,29 +5,37 @@ Change log:
 
 November 04, 2024
 - Development started
-- Login UI
-- Dashboard UI
-- Homepage panel UI
+- Login UI (New)
+- Dashboard UI (New)
+- Homepage panel UI (New)
 
 November 05, 2024
-- Added Normal and Maximized states for windows size
-- Sales and Reports UI
+- Added Normal and Maximized states for windows size (New)
+- Sales and Reports UI (New)
 
 November 06, 2024
-- Price Setup UI
-- Inventory UI
+- Price Setup UI (New)
+- Inventory UI (New)
 
 November 08, 2024
-- Updated buttons
+- Updated buttons (Update)
 
 November 10, 2024
-- Transaction UI
-- Deliveries UI
-- Partners UI
-- Added focus on pop-up messages
+- Transaction UI (New)
+- Deliveries UI (New)
+- Partners UI (New)
+- Added focus background on message dialogs (New)
 
 November 11, 2024
-- Added functionalities on Dashboard
-- Added chart on Dashboard
-- Fixed the color of panel icons when changing pages
-- Fixed the instance of Homepage where the instance name cannot be modified
+- Added functionalities on Dashboard (New)
+- Added chart on Dashboard (New)
+- Fixed the color of side panel icons when changing pages (Update)
+- Fixed the instance of Homepage where the instance name cannot be modified (Update)
+
+November 12, 2024
+- Added functionalities on Employee page (New)
+- Added functionalities on Add Employee page (New)
+- Removed email on employee details when adding an employee (Update)
+- Fixed focus background when changing window state from Normal to Maximized (Update)
+- Fixed focus background size (Update)
+
