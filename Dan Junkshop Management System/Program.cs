@@ -19,23 +19,23 @@ namespace Dan_Junkshop_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(Homepage.GetHomepageInstance());
+            Application.Run(LoginPage.GetLoginInstance());
         }
     }
 
     public class HomepageObjects
     {
         // Homepage Objects
-        public static Homepage homepage = Homepage.GetHomepageInstance();
-        public static DashboardPanel dashboard = new DashboardPanel();
-        public static Sales_Reports sales_Reports = new Sales_Reports();
-        public static Inventory inventory = new Inventory();
-        public static PriceConfiguration priceConfiguration = new PriceConfiguration();
-        public static Employee employee = new Employee();
-        public static Delivery delivery = new Delivery();
-        public static Partners partners = new Partners();
-        public static Transaction transaction = new Transaction();
-        public static NewTransaction newTransaction = new NewTransaction();
+        public static Homepage homepage;
+        public static DashboardPanel dashboard;
+        public static Sales_Reports sales_Reports;
+        public static Inventory inventory;
+        public static PriceConfiguration priceConfiguration;
+        public static Employee employee;
+        public static Delivery delivery;
+        public static Partners partners;
+        public static Transaction transaction;
+        public static NewTransaction newTransaction;
     }
 
     public class ConnectionObjects
@@ -71,6 +71,7 @@ namespace Dan_Junkshop_Management_System
             
             formBackground.Size = new Size(1280, 800);
             formBackground.ShowInTaskbar = false;
+            formBackground.TopMost = true;
             formBackground.Show();
         }
     }

@@ -33,6 +33,7 @@ namespace Dan_Junkshop_Management_System
         private void frmAddNewEmployee_Load(object sender, EventArgs e)
         {
             // will set the maximun date to 18 years old and above for dtBirthDate picker 
+            // and will not show the dates that is below 18 years old
             ConnectionObjects.conn.Open();
 
             var localDate = DateTime.Now.ToString("yyyy-MM-dd");

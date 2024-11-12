@@ -13,10 +13,12 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class DashboardPanel : UserControl
     {
+
         public DashboardPanel()
         {
             InitializeComponent();
         }
+
 
         private void Dashboard_Load(object sender, EventArgs e)
         {

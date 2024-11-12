@@ -13,25 +13,15 @@ namespace Dan_Junkshop_Management_System
     public partial class Homepage : Form
     {
         public string selectedButton;
-        private static Homepage homepage; // instance for singleton
         
-        private Homepage()
+        public Homepage()
         {
             InitializeComponent();
         }
 
-        // method for singleton
-        public static Homepage GetHomepageInstance()
-        {
-            if(homepage == null)
-            {
-                homepage = new Homepage();
-            }
-            return homepage;
-        }
-
         private void Homepage_Load(object sender, EventArgs e)
         {
+            HomepageObjects.dashboard = new DashboardPanel();
             ContentsPanel.Controls.Add(HomepageObjects.dashboard); // will display dashboard
             selectedButton = lblPageHeader.Text;
         }
@@ -52,7 +42,7 @@ namespace Dan_Junkshop_Management_System
         {
             // will prompt a warning message if the user is trying to exit the app
             DialogResult exitDialog = MessageBox.Show("Are you sure you want to exit the app?" +
-                                                "\nAny unsaved progress cannot be recovered!", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                                                "\nAny unsaved changes will be lost!", "Exit application", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
             if(exitDialog == DialogResult.Yes)
             {
                 Application.Exit(); // will terminate the application
@@ -73,6 +63,7 @@ namespace Dan_Junkshop_Management_System
 
             ContentsPanel.Controls.Clear();
             ContentsPanel.Controls.Add(HomepageObjects.dashboard); // will display dashboard
+            
         }
 
         public void btnSales_Click(object sender, EventArgs e)
@@ -117,7 +108,16 @@ namespace Dan_Junkshop_Management_System
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?" +
+                "\nAny unsaved changes will be lost!", "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
+            if(logoutDialog == DialogResult.Yes)
+            {
+                LoginPage loginPage = LoginPage.GetLoginInstance();
+                loginPage.ShowInTaskbar = true;
+                loginPage.Show();
+                this.Close();
+            }
         }
 
         private void btnEmployee_Click(object sender, EventArgs e)
@@ -156,27 +156,35 @@ namespace Dan_Junkshop_Management_System
             switch (selectedButton)
             {
                 case "Dashboard":
+                    HomepageObjects.dashboard.Dispose();
                     btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.NewHome;
                     break;
                 case "Sales and Reports":
+                    HomepageObjects.sales_Reports.Dispose();
                     btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.NewSales;
                     break;
                 case "Employee":
+                    HomepageObjects.employee.Dispose();
                     btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
                     break;
                 case "Transaction":
+                    HomepageObjects.transaction.Dispose();
                     btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
                     break;
                 case "Price Setup":
+                    HomepageObjects.priceConfiguration.Dispose();
                     btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
                     break;
                 case "Inventory":
+                    HomepageObjects.inventory.Dispose();
                     btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
                     break;
                 case "Partners":
+                    HomepageObjects.partners.Dispose();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
                     break;
                 case "Delivery":
+                    HomepageObjects.delivery.Dispose();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
                     break;
             }
@@ -184,28 +192,36 @@ namespace Dan_Junkshop_Management_System
             // will set the homepage icons color to red
             switch (lblPageHeader.Text)
             {
-                case "Dashboard": 
+                case "Dashboard":
+                    HomepageObjects.dashboard = new DashboardPanel();
                     btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
                     break;
-                case "Sales and Reports": 
+                case "Sales and Reports":
+                    HomepageObjects.sales_Reports = new Sales_Reports();
                     btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedSales;
                     break;
-                case "Employee": 
+                case "Employee":
+                    HomepageObjects.employee = new Employee();
                     btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedEmployee;
                     break;
-                case "Transaction": 
+                case "Transaction":
+                    HomepageObjects.transaction = new Transaction();
                     btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedTransaction;
                     break;
-                case "Price Setup": 
+                case "Price Setup":
+                    HomepageObjects.priceConfiguration = new PriceConfiguration();
                     btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPriceSetup;
                     break;
-                case "Inventory": 
+                case "Inventory":
+                    HomepageObjects.inventory = new Inventory();
                     btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedInventory;
                     break;
-                case "Partners": 
+                case "Partners":
+                    HomepageObjects.partners = new Partners();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPartners;
                     break;
-                case "Delivery": 
+                case "Delivery":
+                    HomepageObjects.delivery = new Delivery();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedDelive;
                     break;
             }

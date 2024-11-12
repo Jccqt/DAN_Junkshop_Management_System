@@ -14,10 +14,37 @@ namespace Dan_Junkshop_Management_System
     public partial class LoginPage : Form
     {
         static string username, password;
-
-        public LoginPage()
+        private static LoginPage loginPage; // singleton object for LoginPage
+        private LoginPage()
         {
             InitializeComponent();
+        }
+
+        // singleton method for loginpage
+        public static LoginPage GetLoginInstance()
+        {
+            if(loginPage == null)
+            {
+                loginPage = new LoginPage();
+            }
+
+            return loginPage;
+        }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            DialogResult exitDiag = MessageBox.Show("Are you sure you want to exit the application?",
+                                                "Exit Application", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if(exitDiag == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -38,14 +65,15 @@ namespace Dan_Junkshop_Management_System
 
                 if(txtUsername.Text.Equals(username) &&  txtPassword.Text.Equals(password))
                 {
-                    MessageBox.Show("Login Successfully!");
-                    using(Homepage homepage = Homepage.GetHomepageInstance())
-                    {
-                        homepage.ShowDialog();
-                        this.Hide(); 
-                        ConnectionObjects.conn.Close(); // will close the sql connection once the user login was successful
-                        break;
-                    }
+                    MessageBox.Show("Login Successfully!", "Login Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    HomepageObjects.homepage = new Homepage();
+                    this.ShowInTaskbar = false;
+                    HomepageObjects.homepage.Show();
+                    txtPassword.Clear();
+                    this.Hide(); 
+                    ConnectionObjects.conn.Close(); // will close the sql connection once the user login was successful
+                    break;
+
                 }
                 else
                 {
@@ -54,7 +82,6 @@ namespace Dan_Junkshop_Management_System
                 }
             }
 
-            // will close the sql connection
             ConnectionObjects.conn.Close();
         }
     }

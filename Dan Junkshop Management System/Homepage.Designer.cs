@@ -31,13 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.ContentsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnWindowSize = new System.Windows.Forms.PictureBox();
-            this.lblPageHeader = new System.Windows.Forms.Label();
             this.btnLogout = new OrganizationProfile.CustomButton();
             this.btnDelivery = new OrganizationProfile.CustomButton();
             this.btnPartners = new OrganizationProfile.CustomButton();
@@ -47,6 +40,13 @@
             this.btnEmployee = new OrganizationProfile.CustomButton();
             this.btnSales = new OrganizationProfile.CustomButton();
             this.btnHome = new OrganizationProfile.CustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnWindowSize = new System.Windows.Forms.PictureBox();
+            this.lblPageHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -84,94 +84,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 1025);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.AutoScroll = true;
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.Location = new System.Drawing.Point(0, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(952, 756);
-            this.panel4.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnMinimize);
-            this.panel2.Controls.Add(this.btnWindowSize);
-            this.panel2.Controls.Add(this.lblPageHeader);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(328, -1);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(952, 47);
-            this.panel2.TabIndex = 23;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(909, 13);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 21);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Location = new System.Drawing.Point(815, 13);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(20, 21);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnWindowSize
-            // 
-            this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
-            this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWindowSize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWindowSize.Location = new System.Drawing.Point(863, 13);
-            this.btnWindowSize.Name = "btnWindowSize";
-            this.btnWindowSize.Size = new System.Drawing.Size(20, 21);
-            this.btnWindowSize.TabIndex = 1;
-            this.btnWindowSize.TabStop = false;
-            this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
-            // 
-            // lblPageHeader
-            // 
-            this.lblPageHeader.AutoSize = true;
-            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
-            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
-            this.lblPageHeader.Name = "lblPageHeader";
-            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
-            this.lblPageHeader.TabIndex = 0;
-            this.lblPageHeader.Text = "Dashboard";
             // 
             // btnLogout
             // 
@@ -389,6 +301,94 @@
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.AutoScroll = true;
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Location = new System.Drawing.Point(0, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(952, 756);
+            this.panel4.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnMinimize);
+            this.panel2.Controls.Add(this.btnWindowSize);
+            this.panel2.Controls.Add(this.lblPageHeader);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel2.Location = new System.Drawing.Point(328, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(952, 47);
+            this.panel2.TabIndex = 23;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(909, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Location = new System.Drawing.Point(815, 13);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 21);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnWindowSize
+            // 
+            this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
+            this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWindowSize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWindowSize.Location = new System.Drawing.Point(863, 13);
+            this.btnWindowSize.Name = "btnWindowSize";
+            this.btnWindowSize.Size = new System.Drawing.Size(20, 21);
+            this.btnWindowSize.TabIndex = 1;
+            this.btnWindowSize.TabStop = false;
+            this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
+            // 
+            // lblPageHeader
+            // 
+            this.lblPageHeader.AutoSize = true;
+            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
+            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
+            this.lblPageHeader.Name = "lblPageHeader";
+            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
+            this.lblPageHeader.TabIndex = 0;
+            this.lblPageHeader.Text = "Dashboard";
+            // 
             // Homepage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,7 +401,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "DAN Junkshop System";
             this.Load += new System.EventHandler(this.Homepage_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

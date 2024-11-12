@@ -31,7 +31,7 @@ namespace Dan_Junkshop_Management_System
             {
                 FormAnimation.ShowFocus();
                 addEmployee.Owner = FormAnimation.formBackground;
-                DialogResult addEmployeeDiag = addEmployee.ShowDialog();
+                addEmployee.ShowDialog();
                 FormAnimation.formBackground.Close();
             }
         }
