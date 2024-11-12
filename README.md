@@ -29,13 +29,18 @@ November 10, 2024
 November 11, 2024
 - Added functionalities on Dashboard (New)
 - Added chart on Dashboard (New)
+- Added Singleton implementation on Homepage form (New)
 - Fixed the color of side panel icons when changing pages (Update)
 - Fixed the instance of Homepage where the instance name cannot be modified (Update)
+
 
 November 12, 2024
 - Added functionalities on Employee page (New)
 - Added functionalities on Add Employee page (New)
+- Added functionality for Logout button on Homepage (New)
+- Added Singleton implementation on Login form (New)
 - Removed email on employee details when adding an employee (Update)
+- Removed Singleton implementation on Homepage form (Update)
 - Fixed focus background when changing window state from Normal to Maximized (Update)
 - Fixed focus background size (Update)
-
+- Optimized the creation of user control instances when changing pages using the side panel on Homepage (Update)
