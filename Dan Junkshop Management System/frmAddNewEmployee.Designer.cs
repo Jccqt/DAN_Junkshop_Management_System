@@ -49,12 +49,13 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.roundPictureBox1 = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
-            this.btnSelectImage = new OrganizationProfile.CustomButton();
             this.label12 = new System.Windows.Forms.Label();
             this.cbPosition = new System.Windows.Forms.ComboBox();
-            this.btnSave = new OrganizationProfile.CustomButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAge = new System.Windows.Forms.TextBox();
             this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnSave = new OrganizationProfile.CustomButton();
+            this.roundPictureBox1 = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
@@ -136,6 +137,7 @@
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(274, 26);
             this.dtBirthDate.TabIndex = 6;
+            this.dtBirthDate.ValueChanged += new System.EventHandler(this.dtBirthDate_ValueChanged);
             // 
             // txtAddress
             // 
@@ -268,35 +270,6 @@
             this.txtPassword.Size = new System.Drawing.Size(186, 29);
             this.txtPassword.TabIndex = 9;
             // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.BackColor = System.Drawing.Color.LightGray;
-            this.roundPictureBox1.Location = new System.Drawing.Point(17, 50);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(143, 137);
-            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.roundPictureBox1.TabIndex = 35;
-            this.roundPictureBox1.TabStop = false;
-            // 
-            // btnSelectImage
-            // 
-            this.btnSelectImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.btnSelectImage.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.btnSelectImage.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSelectImage.BorderRadius = 20;
-            this.btnSelectImage.BorderSize = 0;
-            this.btnSelectImage.FlatAppearance.BorderSize = 0;
-            this.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectImage.Font = new System.Drawing.Font("Arial Black", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSelectImage.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSelectImage.Location = new System.Drawing.Point(17, 203);
-            this.btnSelectImage.Name = "btnSelectImage";
-            this.btnSelectImage.Size = new System.Drawing.Size(143, 32);
-            this.btnSelectImage.TabIndex = 11;
-            this.btnSelectImage.Text = "Select Image";
-            this.btnSelectImage.TextColor = System.Drawing.Color.Transparent;
-            this.btnSelectImage.UseVisualStyleBackColor = false;
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -313,32 +286,33 @@
             this.cbPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.cbPosition.FormattingEnabled = true;
             this.cbPosition.Items.AddRange(new object[] {
-            "Cashier",
+            "Admin",
             "Manager",
-            "Worker"});
+            "Cashier"});
             this.cbPosition.Location = new System.Drawing.Point(459, 169);
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Size = new System.Drawing.Size(204, 28);
             this.cbPosition.TabIndex = 5;
             // 
-            // btnSave
+            // label7
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderRadius = 20;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSave.Location = new System.Drawing.Point(17, 289);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(143, 32);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextColor = System.Drawing.Color.Transparent;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(704, 148);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 16);
+            this.label7.TabIndex = 40;
+            this.label7.Text = "Age";
+            // 
+            // txtAge
+            // 
+            this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAge.Enabled = false;
+            this.txtAge.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAge.Location = new System.Drawing.Point(707, 168);
+            this.txtAge.Name = "txtAge";
+            this.txtAge.Size = new System.Drawing.Size(86, 29);
+            this.txtAge.TabIndex = 39;
             // 
             // btnClear
             // 
@@ -360,6 +334,37 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSave.BorderRadius = 20;
+            this.btnSave.BorderSize = 0;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSave.Location = new System.Drawing.Point(17, 289);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(143, 32);
+            this.btnSave.TabIndex = 12;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextColor = System.Drawing.Color.Transparent;
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.BackColor = System.Drawing.Color.LightGray;
+            this.roundPictureBox1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.defaultEmployeeIcon;
+            this.roundPictureBox1.Location = new System.Drawing.Point(17, 50);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(143, 137);
+            this.roundPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.roundPictureBox1.TabIndex = 35;
+            this.roundPictureBox1.TabStop = false;
+            // 
             // frmAddNewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,11 +372,12 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(830, 504);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.txtAge);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cbPosition);
-            this.Controls.Add(this.btnSelectImage);
             this.Controls.Add(this.roundPictureBox1);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.txtPassword);
@@ -432,10 +438,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtPassword;
         private Components.RoundPictureBox roundPictureBox1;
-        private OrganizationProfile.CustomButton btnSelectImage;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbPosition;
         private OrganizationProfile.CustomButton btnSave;
         private OrganizationProfile.CustomButton btnClear;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAge;
     }
 }

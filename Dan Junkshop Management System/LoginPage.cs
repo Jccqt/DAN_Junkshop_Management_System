@@ -71,7 +71,6 @@ namespace Dan_Junkshop_Management_System
                     HomepageObjects.homepage.Show();
                     txtPassword.Clear();
                     this.Hide(); 
-                    ConnectionObjects.conn.Close(); // will close the sql connection once the user login was successful
                     break;
 
                 }

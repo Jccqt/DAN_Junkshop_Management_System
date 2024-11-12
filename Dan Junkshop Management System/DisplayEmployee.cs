@@ -47,5 +47,10 @@ namespace Dan_Junkshop_Management_System
             
             timer1.Start();
         }
+
+        private void DisplayEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
