@@ -44,3 +44,6 @@ November 12, 2024
 - Fixed focus background when changing window state from Normal to Maximized (Update)
 - Fixed focus background size (Update)
 - Optimized the creation of user control instances when changing pages using the side panel on Homepage (Update)
+
+November 13, 2024
+- Added functionality for displaying employee
