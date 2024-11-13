@@ -57,18 +57,19 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(56, 134);
+            this.panel1.Location = new System.Drawing.Point(7, 84);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(837, 52);
+            this.panel1.Size = new System.Drawing.Size(920, 52);
             this.panel1.TabIndex = 12;
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(569, 21);
+            this.label5.Location = new System.Drawing.Point(616, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 18);
             this.label5.TabIndex = 14;
@@ -76,11 +77,12 @@
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(437, 21);
+            this.label4.Location = new System.Drawing.Point(448, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 18);
             this.label4.TabIndex = 13;
@@ -88,11 +90,12 @@
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(723, 21);
+            this.label7.Location = new System.Drawing.Point(794, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 18);
             this.label7.TabIndex = 12;
@@ -100,11 +103,12 @@
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(302, 21);
+            this.label3.Location = new System.Drawing.Point(314, 21);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 18);
             this.label3.TabIndex = 11;
@@ -112,7 +116,8 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
@@ -124,7 +129,6 @@
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
@@ -141,9 +145,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(56, 184);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 136);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(837, 530);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(920, 599);
             this.flowLayoutPanel1.TabIndex = 13;
             // 
             // customButton2
@@ -159,9 +163,9 @@
             this.customButton2.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton2.ForeColor = System.Drawing.Color.White;
             this.customButton2.Image = global::Dan_Junkshop_Management_System.Properties.Resources.group18;
-            this.customButton2.Location = new System.Drawing.Point(605, 59);
+            this.customButton2.Location = new System.Drawing.Point(669, 39);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(139, 39);
+            this.customButton2.Size = new System.Drawing.Size(129, 39);
             this.customButton2.TabIndex = 10;
             this.customButton2.TextColor = System.Drawing.Color.White;
             this.customButton2.UseVisualStyleBackColor = false;
@@ -180,9 +184,9 @@
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("Arial Black", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(751, 59);
+            this.customButton1.Location = new System.Drawing.Point(801, 39);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(130, 39);
+            this.customButton1.Size = new System.Drawing.Size(125, 39);
             this.customButton1.TabIndex = 8;
             this.customButton1.TextColor = System.Drawing.Color.White;
             this.customButton1.UseVisualStyleBackColor = false;
@@ -196,16 +200,16 @@
             this.panelBorder1.Controls.Add(this.pictureBox1);
             this.panelBorder1.Controls.Add(this.SearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(195, 59);
+            this.panelBorder1.Location = new System.Drawing.Point(104, 35);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(404, 39);
+            this.panelBorder1.Size = new System.Drawing.Size(560, 43);
             this.panelBorder1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.TabIndex = 1;
@@ -215,9 +219,9 @@
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.SearchBox.Location = new System.Drawing.Point(44, 8);
+            this.SearchBox.Location = new System.Drawing.Point(44, 9);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(338, 24);
+            this.SearchBox.Size = new System.Drawing.Size(501, 24);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Search";
             this.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -37,6 +37,7 @@
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
+            this.activeAndInactive1 = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -50,6 +51,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -74,12 +76,12 @@
             // 
             // btnAddScrapsItem
             // 
-            this.btnAddScrapsItem.AutoSize = true;
+            this.btnAddScrapsItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddScrapsItem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnAddScrapsItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnAddScrapsItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnAddScrapsItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddScrapsItem.BorderRadius = 30;
+            this.btnAddScrapsItem.BorderRadius = 39;
             this.btnAddScrapsItem.BorderSize = 0;
             this.btnAddScrapsItem.FlatAppearance.BorderSize = 0;
             this.btnAddScrapsItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -87,9 +89,9 @@
             this.btnAddScrapsItem.ForeColor = System.Drawing.Color.Transparent;
             this.btnAddScrapsItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
             this.btnAddScrapsItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddScrapsItem.Location = new System.Drawing.Point(797, 10);
+            this.btnAddScrapsItem.Location = new System.Drawing.Point(771, 7);
             this.btnAddScrapsItem.Name = "btnAddScrapsItem";
-            this.btnAddScrapsItem.Size = new System.Drawing.Size(107, 30);
+            this.btnAddScrapsItem.Size = new System.Drawing.Size(127, 39);
             this.btnAddScrapsItem.TabIndex = 11;
             this.btnAddScrapsItem.Text = "      Add Item";
             this.btnAddScrapsItem.TextColor = System.Drawing.Color.Transparent;
@@ -120,17 +122,16 @@
             // 
             // panelBorder1
             // 
-            this.panelBorder1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelBorder1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panelBorder1.BackColor = System.Drawing.Color.White;
             this.panelBorder1.BorderRadius = 35;
-            this.panelBorder1.Color = System.Drawing.Color.White;
+            this.panelBorder1.Color = System.Drawing.Color.Black;
             this.panelBorder1.Controls.Add(this.pictureBox1);
             this.panelBorder1.Controls.Add(this.SearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(165, 35);
+            this.panelBorder1.Location = new System.Drawing.Point(289, 35);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(560, 43);
+            this.panelBorder1.Size = new System.Drawing.Size(341, 43);
             this.panelBorder1.TabIndex = 1;
             // 
             // pictureBox1
@@ -147,17 +148,34 @@
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.SearchBox.Location = new System.Drawing.Point(77, 9);
+            this.SearchBox.Location = new System.Drawing.Point(44, 8);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(417, 24);
+            this.SearchBox.Size = new System.Drawing.Size(284, 24);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Search Item";
             this.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // activeAndInactive1
+            // 
+            this.activeAndInactive1.BackColor = System.Drawing.Color.DimGray;
+            this.activeAndInactive1.Checked = true;
+            this.activeAndInactive1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.activeAndInactive1.ForeColor = System.Drawing.Color.Transparent;
+            this.activeAndInactive1.Location = new System.Drawing.Point(828, 35);
+            this.activeAndInactive1.MinimumSize = new System.Drawing.Size(45, 22);
+            this.activeAndInactive1.Name = "activeAndInactive1";
+            this.activeAndInactive1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.activeAndInactive1.OffToggleColor = System.Drawing.Color.White;
+            this.activeAndInactive1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.activeAndInactive1.OnToggleColor = System.Drawing.Color.White;
+            this.activeAndInactive1.Size = new System.Drawing.Size(99, 43);
+            this.activeAndInactive1.TabIndex = 10;
+            this.activeAndInactive1.Text = "activeAndInactive1";
+            this.activeAndInactive1.UseVisualStyleBackColor = false;
+            // 
             // panelBorder2
             // 
-            this.panelBorder2.AutoScroll = true;
-            this.panelBorder2.AutoSize = true;
+            this.panelBorder2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelBorder2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelBorder2.BackColor = System.Drawing.Color.White;
             this.panelBorder2.BorderRadius = 30;
@@ -165,16 +183,16 @@
             this.panelBorder2.Controls.Add(this.pictureBox2);
             this.panelBorder2.Controls.Add(this.comboBox1);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(762, 35);
+            this.panelBorder2.Location = new System.Drawing.Point(642, 34);
             this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(169, 40);
-            this.panelBorder2.TabIndex = 3;
+            this.panelBorder2.Size = new System.Drawing.Size(172, 44);
+            this.panelBorder2.TabIndex = 11;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 7);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 32);
             this.pictureBox2.TabIndex = 1;
@@ -182,12 +200,15 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.BackColor = System.Drawing.Color.White;
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comboBox1.Font = new System.Drawing.Font("Arial", 16F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 24;
-            this.comboBox1.Location = new System.Drawing.Point(42, 5);
+            this.comboBox1.Location = new System.Drawing.Point(44, 7);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(124, 32);
             this.comboBox1.TabIndex = 0;
@@ -196,12 +217,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
+            this.Controls.Add(this.panelBorder2);
+            this.Controls.Add(this.activeAndInactive1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBorder1);
-            this.Controls.Add(this.panelBorder2);
             this.Name = "Inventory";
             this.Size = new System.Drawing.Size(934, 736);
             this.panel1.ResumeLayout(false);
@@ -213,7 +234,6 @@
             this.panelBorder2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -221,12 +241,13 @@
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder1;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private OrganizationProfile.CustomButton btnAddScrapsItem;
+        private WindowsFormsApp2.CustomButton.activeAndInactive activeAndInactive1;
+        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
