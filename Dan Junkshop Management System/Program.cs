@@ -44,8 +44,8 @@ namespace Dan_Junkshop_Management_System
         public static string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + @"\DanDB.mdf;Integrated Security=True";
         public static SqlConnection conn = new SqlConnection(connectionString);
         public static SqlCommand cmd;
+        public static SqlDataReader reader;
     }
-
     public class FormAnimation
     {
         public static Form formBackground;

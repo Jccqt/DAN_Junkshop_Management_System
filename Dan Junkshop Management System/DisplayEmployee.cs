@@ -13,6 +13,7 @@ namespace Dan_Junkshop_Management_System
     public partial class DisplayEmployee : UserControl
     {
         public bool IsCollapsed;
+
         public DisplayEmployee()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace Dan_Junkshop_Management_System
             }
         }
 
-        private void customButton1_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             
             timer1.Start();

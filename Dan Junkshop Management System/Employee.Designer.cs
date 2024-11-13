@@ -47,9 +47,9 @@
             this.lblStatus.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Bold);
             this.lblStatus.Location = new System.Drawing.Point(3, 29);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(163, 56);
+            this.lblStatus.Size = new System.Drawing.Size(412, 56);
             this.lblStatus.TabIndex = 1;
-            this.lblStatus.Text = "Active";
+            this.lblStatus.Text = "Active Employees";
             this.lblStatus.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnSwitchStatus
@@ -103,6 +103,7 @@
             this.Controls.Add(this.EmployeePanel);
             this.Name = "Employee";
             this.Size = new System.Drawing.Size(938, 736);
+            this.Load += new System.EventHandler(this.Employee_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

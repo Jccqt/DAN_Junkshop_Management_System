@@ -117,3 +117,34 @@ E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Manage
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transaction.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TransactionSoldItems.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DashboardPanel.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\DanDB.mdf
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\DanDB_log.ldf
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe.config
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.exe
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\Dan Junkshop Management System.pdb
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.AssemblyReference.cache
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.AddingSellableItems.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DashboardPanel.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Delivery.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DeliveryMetals.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayEmployee.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Employee.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingItem.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddNewEmployee.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingScrapItem.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.FrmTypeOfTransaction.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Homepage.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Inventory.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.LoginPage.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.NewTransaction.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfiguration.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfigurationContent.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Properties.Resources.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Sales_Reports.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transaction.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TransactionSoldItems.resources
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.GenerateResource.cache
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.csproj.CoreCompileInputs.cache
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.exe
+C:\Users\calayag.297700\Downloads\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junkshop Management System.pdb

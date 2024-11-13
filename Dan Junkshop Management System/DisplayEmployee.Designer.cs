@@ -30,21 +30,21 @@
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
-            this.lblFullName = new System.Windows.Forms.Label();
-            this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.lblPosition = new System.Windows.Forms.Label();
+            this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.pnlSettings = new System.Windows.Forms.Panel();
             this.customButton3 = new OrganizationProfile.CustomButton();
             this.customButton2 = new OrganizationProfile.CustomButton();
-            this.customButton1 = new OrganizationProfile.CustomButton();
-            this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.lblAddress = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).BeginInit();
-            this.panelBorder2.SuspendLayout();
-            this.pnlSettings.SuspendLayout();
+            this.btnMenu = new OrganizationProfile.CustomButton();
+            this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.lblEmployeeID = new System.Windows.Forms.Label();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.lblFullName = new System.Windows.Forms.Label();
+            this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
             this.panelBorder1.SuspendLayout();
+            this.pnlSettings.SuspendLayout();
+            this.panelBorder2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -52,65 +52,26 @@
             this.timer1.Interval = 5;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // EmployeePicture
+            // panelBorder1
             // 
-            this.EmployeePicture.BackColor = System.Drawing.Color.Gray;
-            this.EmployeePicture.Location = new System.Drawing.Point(10, 10);
-            this.EmployeePicture.Name = "EmployeePicture";
-            this.EmployeePicture.Size = new System.Drawing.Size(81, 77);
-            this.EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.EmployeePicture.TabIndex = 0;
-            this.EmployeePicture.TabStop = false;
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFullName.Location = new System.Drawing.Point(17, 104);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(57, 16);
-            this.lblFullName.TabIndex = 1;
-            this.lblFullName.Text = "<Name>";
-            // 
-            // panelBorder2
-            // 
-            this.panelBorder2.BackColor = System.Drawing.Color.LightGray;
-            this.panelBorder2.BorderRadius = 37;
-            this.panelBorder2.Color = System.Drawing.Color.Transparent;
-            this.panelBorder2.Controls.Add(this.lblAddress);
-            this.panelBorder2.Controls.Add(this.lblContact);
-            this.panelBorder2.Controls.Add(this.lblPosition);
-            this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(8, 157);
-            this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(208, 106);
-            this.panelBorder2.TabIndex = 2;
-            // 
-            // lblContact
-            // 
-            this.lblContact.AutoSize = true;
-            this.lblContact.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(12, 34);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(61, 14);
-            this.lblContact.TabIndex = 3;
-            this.lblContact.Text = "<Contact>";
-            // 
-            // lblPosition
-            // 
-            this.lblPosition.AutoSize = true;
-            this.lblPosition.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPosition.Location = new System.Drawing.Point(12, 10);
-            this.lblPosition.Name = "lblPosition";
-            this.lblPosition.Size = new System.Drawing.Size(64, 14);
-            this.lblPosition.TabIndex = 0;
-            this.lblPosition.Text = "<Position>";
+            this.panelBorder1.BackColor = System.Drawing.Color.White;
+            this.panelBorder1.BorderRadius = 50;
+            this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
+            this.panelBorder1.Controls.Add(this.pnlSettings);
+            this.panelBorder1.Controls.Add(this.panelBorder2);
+            this.panelBorder1.Controls.Add(this.lblFullName);
+            this.panelBorder1.Controls.Add(this.EmployeePicture);
+            this.panelBorder1.ForeColor = System.Drawing.Color.Black;
+            this.panelBorder1.Location = new System.Drawing.Point(11, 4);
+            this.panelBorder1.Name = "panelBorder1";
+            this.panelBorder1.Size = new System.Drawing.Size(225, 272);
+            this.panelBorder1.TabIndex = 0;
             // 
             // pnlSettings
             // 
             this.pnlSettings.Controls.Add(this.customButton3);
             this.pnlSettings.Controls.Add(this.customButton2);
-            this.pnlSettings.Controls.Add(this.customButton1);
+            this.pnlSettings.Controls.Add(this.btnMenu);
             this.pnlSettings.Location = new System.Drawing.Point(97, 10);
             this.pnlSettings.MaximumSize = new System.Drawing.Size(122, 98);
             this.pnlSettings.MinimumSize = new System.Drawing.Size(122, 28);
@@ -152,50 +113,89 @@
             this.customButton2.TextColor = System.Drawing.Color.Transparent;
             this.customButton2.UseVisualStyleBackColor = false;
             // 
-            // customButton1
+            // btnMenu
             // 
-            this.customButton1.BackColor = System.Drawing.Color.White;
-            this.customButton1.BackgroundColor = System.Drawing.Color.White;
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 23;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.tabler_dots;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.customButton1.Location = new System.Drawing.Point(72, 3);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(46, 24);
-            this.customButton1.TabIndex = 0;
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            this.btnMenu.BackColor = System.Drawing.Color.White;
+            this.btnMenu.BackgroundColor = System.Drawing.Color.White;
+            this.btnMenu.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMenu.BorderRadius = 23;
+            this.btnMenu.BorderSize = 0;
+            this.btnMenu.FlatAppearance.BorderSize = 0;
+            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenu.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMenu.Image = global::Dan_Junkshop_Management_System.Properties.Resources.tabler_dots;
+            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMenu.Location = new System.Drawing.Point(72, 3);
+            this.btnMenu.Name = "btnMenu";
+            this.btnMenu.Size = new System.Drawing.Size(46, 24);
+            this.btnMenu.TabIndex = 0;
+            this.btnMenu.TextColor = System.Drawing.Color.Transparent;
+            this.btnMenu.UseVisualStyleBackColor = false;
+            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
             // 
-            // panelBorder1
+            // panelBorder2
             // 
-            this.panelBorder1.BackColor = System.Drawing.Color.White;
-            this.panelBorder1.BorderRadius = 50;
-            this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder1.Controls.Add(this.pnlSettings);
-            this.panelBorder1.Controls.Add(this.panelBorder2);
-            this.panelBorder1.Controls.Add(this.lblFullName);
-            this.panelBorder1.Controls.Add(this.EmployeePicture);
-            this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(11, 4);
-            this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(225, 272);
-            this.panelBorder1.TabIndex = 0;
+            this.panelBorder2.BackColor = System.Drawing.Color.LightGray;
+            this.panelBorder2.BorderRadius = 37;
+            this.panelBorder2.Color = System.Drawing.Color.Transparent;
+            this.panelBorder2.Controls.Add(this.lblEmployeeID);
+            this.panelBorder2.Controls.Add(this.lblContact);
+            this.panelBorder2.Controls.Add(this.lblPosition);
+            this.panelBorder2.ForeColor = System.Drawing.Color.Black;
+            this.panelBorder2.Location = new System.Drawing.Point(8, 157);
+            this.panelBorder2.Name = "panelBorder2";
+            this.panelBorder2.Size = new System.Drawing.Size(208, 106);
+            this.panelBorder2.TabIndex = 2;
             // 
-            // lblAddress
+            // lblEmployeeID
             // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(15, 57);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(67, 14);
-            this.lblAddress.TabIndex = 4;
-            this.lblAddress.Text = "<Address>";
+            this.lblEmployeeID.AutoSize = true;
+            this.lblEmployeeID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeID.Location = new System.Drawing.Point(12, 13);
+            this.lblEmployeeID.Name = "lblEmployeeID";
+            this.lblEmployeeID.Size = new System.Drawing.Size(53, 14);
+            this.lblEmployeeID.TabIndex = 4;
+            this.lblEmployeeID.Text = "<EmpID>";
+            // 
+            // lblContact
+            // 
+            this.lblContact.AutoSize = true;
+            this.lblContact.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.Location = new System.Drawing.Point(12, 57);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(61, 14);
+            this.lblContact.TabIndex = 3;
+            this.lblContact.Text = "<Contact>";
+            // 
+            // lblPosition
+            // 
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPosition.Location = new System.Drawing.Point(12, 35);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(64, 14);
+            this.lblPosition.TabIndex = 0;
+            this.lblPosition.Text = "<Position>";
+            // 
+            // lblFullName
+            // 
+            this.lblFullName.AutoSize = true;
+            this.lblFullName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Location = new System.Drawing.Point(17, 104);
+            this.lblFullName.Name = "lblFullName";
+            this.lblFullName.Size = new System.Drawing.Size(57, 16);
+            this.lblFullName.TabIndex = 1;
+            this.lblFullName.Text = "<Name>";
+            // 
+            // EmployeePicture
+            // 
+            this.EmployeePicture.BackColor = System.Drawing.Color.Gray;
+            this.EmployeePicture.Location = new System.Drawing.Point(10, 10);
+            this.EmployeePicture.Name = "EmployeePicture";
+            this.EmployeePicture.Size = new System.Drawing.Size(81, 77);
+            this.EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.EmployeePicture.TabIndex = 0;
+            this.EmployeePicture.TabStop = false;
             // 
             // DisplayEmployee
             // 
@@ -206,12 +206,12 @@
             this.Name = "DisplayEmployee";
             this.Size = new System.Drawing.Size(244, 281);
             this.Load += new System.EventHandler(this.DisplayEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).EndInit();
-            this.panelBorder2.ResumeLayout(false);
-            this.panelBorder2.PerformLayout();
-            this.pnlSettings.ResumeLayout(false);
             this.panelBorder1.ResumeLayout(false);
             this.panelBorder1.PerformLayout();
+            this.pnlSettings.ResumeLayout(false);
+            this.panelBorder2.ResumeLayout(false);
+            this.panelBorder2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,15 +220,15 @@
 
         private System.Windows.Forms.Timer timer1;
         private Components.RoundPictureBox EmployeePicture;
-        private System.Windows.Forms.Label lblFullName;
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
-        private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.Label lblPosition;
         private System.Windows.Forms.Panel pnlSettings;
         private OrganizationProfile.CustomButton customButton3;
         private OrganizationProfile.CustomButton customButton2;
-        private OrganizationProfile.CustomButton customButton1;
+        private OrganizationProfile.CustomButton btnMenu;
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder1;
-        private System.Windows.Forms.Label lblAddress;
+        public System.Windows.Forms.Label lblFullName;
+        public System.Windows.Forms.Label lblEmployeeID;
+        public System.Windows.Forms.Label lblPosition;
+        public System.Windows.Forms.Label lblContact;
     }
 }
