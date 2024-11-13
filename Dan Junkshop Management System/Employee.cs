@@ -60,6 +60,7 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
+            GC.Collect();
         }
     }
 }
