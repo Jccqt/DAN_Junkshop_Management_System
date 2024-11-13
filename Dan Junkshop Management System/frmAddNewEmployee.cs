@@ -14,9 +14,9 @@ namespace Dan_Junkshop_Management_System
     public partial class frmAddNewEmployee : Form
     {
 
-        static DialogResult saveEmployee;
-        static int empIdCount;
-
+        static DialogResult SaveEmployee;
+        static int EmpIdCount;
+        static bool SaveIndicator;
         public frmAddNewEmployee()
         {
             InitializeComponent();
@@ -83,28 +83,31 @@ namespace Dan_Junkshop_Management_System
             if (txtFirstName.Text.Equals("") || txtLastName.Text.Equals("") || txtMiddleInitial.Text.Equals("") || txtContact.Text.Equals("") ||
                cbPosition.SelectedIndex == -1 || cbGender.SelectedIndex == -1 || txtUsername.Text.Equals("") || txtPassword.Text.Equals("") || txtAddress.Text.Equals("") || txtAge.Text.Equals(""))
             {
+                SaveIndicator = false;
                 MessageBox.Show("Please fill the empty details before saving", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
+               SaveIndicator = false;
 
-                saveEmployee = MessageBox.Show("Do you want to save employee details?", "Save Employee",
+                SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Save Employee",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                SaveIndicator = true;
             }
 
-            if (saveEmployee == DialogResult.Yes)
+            if (SaveIndicator)
             {
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
-                empIdCount = 1000;
+                EmpIdCount = 1000;
 
                 ConnectionObjects.conn.Open();
 
-                ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(EmpID) FROM Employees", ConnectionObjects.conn);
-                empIdCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+                ConnectionObjects.cmd = new SqlCommand($"SELECT COUNT(EmpID) FROM Employees WHERE Position = '{cbPosition.Text}' ", ConnectionObjects.conn);
+                EmpIdCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
                 ConnectionObjects.cmd = new SqlCommand("INSERT INTO Employees VALUES (@EmpID, @Position, @FirstName, @LastName, " +
                                         "@MiddleName, @Age, @Contact, @Address, @HireDate, @Status)", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@EmpID", $"{cbPosition.Text.ToUpper()}{empIdCount + 1}");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@EmpID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
                 ConnectionObjects.cmd.Parameters.AddWithValue("@Position", cbPosition.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
@@ -117,13 +120,13 @@ namespace Dan_Junkshop_Management_System
                 ConnectionObjects.cmd.ExecuteNonQuery();
 
                 ConnectionObjects.cmd = new SqlCommand("SELECT EmpID FROM Employees WHERE EmpID = @empID", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{empIdCount + 1}");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
                 string employeeID = ConnectionObjects.cmd.ExecuteScalar().ToString();
 
                 ConnectionObjects.cmd = new SqlCommand("INSERT INTO Credentials VALUES (@username, @password, @empID)", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{empIdCount + 1}");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
                 ConnectionObjects.cmd.ExecuteNonQuery();
 
                 ConnectionObjects.conn.Close();

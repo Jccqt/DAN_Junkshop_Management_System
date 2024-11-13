@@ -14,6 +14,7 @@ namespace Dan_Junkshop_Management_System
     public partial class LoginPage : Form
     {
         static string username, password;
+        static bool IsLogin;
         private static LoginPage loginPage; // singleton object for LoginPage
         private LoginPage()
         {
@@ -49,6 +50,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            IsLogin = false;
             ConnectionObjects.conn.Open(); // will open sql connection
 
             // will select username, password from credentials table and status from employees table
@@ -70,15 +72,22 @@ namespace Dan_Junkshop_Management_System
                     this.ShowInTaskbar = false;
                     HomepageObjects.homepage.Show();
                     txtPassword.Clear();
-                    this.Hide(); 
+                    this.Hide();
+                    IsLogin = true;
                     break;
 
                 }
                 else
                 {
-                    // will prompt an error message if the credentials was invalid
-                    MessageBox.Show("Invalid credentials! Please try again.", "Invalid Credentials", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    IsLogin = false;
                 }
+            }
+
+            if(IsLogin == false)
+            {
+                // will prompt an error message if the credentials was invalid
+                MessageBox.Show("Invalid credentials! Please try again.", "Invalid Credentials",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             ConnectionObjects.conn.Close();

@@ -13,6 +13,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class DashboardPanel : UserControl
     {
+        public static string ReportLabel;
 
         public DashboardPanel()
         {
@@ -27,17 +28,23 @@ namespace Dan_Junkshop_Management_System
 
         private void btnReport1_Click(object sender, EventArgs e)
         {
+            ReportLabel = "Report1";
             HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
+            ReportLabel = "";
         }
 
         private void btnReport2_Click(object sender, EventArgs e)
         {
+            ReportLabel = "Report2";
             HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
+            ReportLabel = "";
         }
 
         private void btnReport3_Click(object sender, EventArgs e)
         {
+            ReportLabel = "Report3";
             HomepageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
+            ReportLabel = "";
         }
     }
 }

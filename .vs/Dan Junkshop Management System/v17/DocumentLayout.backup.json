@@ -1,42 +1,79 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\",
+  "WorkspaceRootPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|e:\\jc\\app dev junkshop system\\dan_junkshop_management_system\\dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|e:\\jc\\app dev junkshop system\\dan_junkshop_management_system\\dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\frmaddnewemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicol\\AppData\\Local\\Temp\\cg0baso2..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\sales\u0026reports.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\sales\u0026reports.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\sales\u0026reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\sales\u0026reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\sales\u0026reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\sales\u0026reports.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\homepage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\displayemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicol\\AppData\\Local\\Temp\\cg0baso2..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Nicol\\AppData\\Local\\Temp\\cg0baso2..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +83,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 262,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,24 +91,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DisplayEmployee.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs",
-              "RelativeDocumentMoniker": "Dan Junkshop Management System\\DisplayEmployee.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs",
-              "RelativeToolTip": "Dan Junkshop Management System\\DisplayEmployee.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Dashboard.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T15:10:19.525Z",
+              "WhenOpened": "2024-11-12T10:58:04.586Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:23:18.695Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmAddNewEmployee.cs [Design]",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\frmAddNewEmployee.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs [Design]",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs [Design]",
               "RelativeToolTip": "Dan Junkshop Management System\\frmAddNewEmployee.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T11:33:09.472Z",
@@ -79,24 +128,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Dashboard.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs",
-              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Dashboard.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Dashboard.cs",
-              "RelativeToolTip": "Dan Junkshop Management System\\Dashboard.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAkwA4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T10:58:04.586Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "LoginPage.cs [Design]",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\LoginPage.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs [Design]",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs [Design]",
               "RelativeToolTip": "Dan Junkshop Management System\\LoginPage.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T07:41:41.921Z",
@@ -104,51 +140,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Homepage.cs [Design]",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
-              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Homepage.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs [Design]",
-              "RelativeToolTip": "Dan Junkshop Management System\\Homepage.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T07:38:29.617Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "LoginPage.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\LoginPage.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\LoginPage.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\LoginPage.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAawEgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAAAFkAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T00:35:57.672Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Homepage.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
-              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Homepage.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
-              "RelativeToolTip": "Dan Junkshop Management System\\Homepage.cs",
-              "ViewState": "AgIAAH0AAAAAAAAAAAAUwIEAAABfAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "DisplayEmployee.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\DisplayEmployee.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\DisplayEmployee.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T00:35:15.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T05:04:29.468Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "frmAddNewEmployee.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\frmAddNewEmployee.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\frmAddNewEmployee.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\frmAddNewEmployee.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAtwIAAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAGkAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T00:31:18.425Z",
               "EditorCaption": ""
@@ -156,14 +179,115 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Sales\u0026Reports.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.Designer.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Sales\u0026Reports.Designer.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.Designer.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Sales\u0026Reports.Designer.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAAE8AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:31:55.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Sales\u0026Reports.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Sales\u0026Reports.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:29:45.464Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Sales\u0026Reports.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Sales\u0026Reports.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAEsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:29:49.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Homepage.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Homepage.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Homepage.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T00:35:15.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Homepage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Homepage.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Homepage.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Homepage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T07:38:29.617Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Employee.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Employee.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Employee.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Employee.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Employee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T04:47:14.454Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Employee.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Employee.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Employee.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Employee.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAD4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T04:49:46.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\Program.cs",
-              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\Program.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwEkAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAC8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T00:13:18.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DisplayEmployee.cs",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\DisplayEmployee.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\DisplayEmployee.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\DisplayEmployee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T05:03:10.349Z",
               "EditorCaption": ""
             }
           ]
@@ -178,6 +302,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
@@ -189,6 +317,38 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "d105ac92-aac3-4848-af1e-30ec59c6035c",
+        "Display": 0,
+        "X": 579,
+        "Y": 127,
+        "Width": 1002,
+        "Height": 552,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SQLQuery2.sql ",
+              "DocumentMoniker": "C:\\Users\\Nicol\\AppData\\Local\\Temp\\cg0baso2..sql",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\AppData\\Local\\Temp\\cg0baso2..sql",
+              "ToolTip": "SQLQuery2.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-11-13T09:10:47.829Z",
+              "EditorCaption": ""
             }
           ]
         }
