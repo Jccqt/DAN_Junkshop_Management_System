@@ -69,7 +69,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(616, 21);
+            this.label5.Location = new System.Drawing.Point(611, 21);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 18);
             this.label5.TabIndex = 14;
@@ -82,7 +82,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(448, 21);
+            this.label4.Location = new System.Drawing.Point(453, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 18);
             this.label4.TabIndex = 13;
@@ -178,7 +178,7 @@
             this.customButton1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.group17__1_;
             this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 33;
+            this.customButton1.BorderRadius = 30;
             this.customButton1.BorderSize = 0;
             this.customButton1.FlatAppearance.BorderSize = 0;
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -200,16 +200,16 @@
             this.panelBorder1.Controls.Add(this.pictureBox1);
             this.panelBorder1.Controls.Add(this.SearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(104, 35);
+            this.panelBorder1.Location = new System.Drawing.Point(166, 39);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(560, 43);
+            this.panelBorder1.Size = new System.Drawing.Size(492, 39);
             this.panelBorder1.TabIndex = 6;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 10);
+            this.pictureBox1.Location = new System.Drawing.Point(8, 8);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.TabIndex = 1;
@@ -219,9 +219,9 @@
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SearchBox.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.SearchBox.Location = new System.Drawing.Point(44, 9);
+            this.SearchBox.Location = new System.Drawing.Point(39, 8);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(501, 24);
+            this.SearchBox.Size = new System.Drawing.Size(445, 24);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Search";
             this.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

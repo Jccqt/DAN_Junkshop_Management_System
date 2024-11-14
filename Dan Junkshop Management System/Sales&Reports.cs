@@ -18,6 +18,7 @@ namespace Dan_Junkshop_Management_System
         {
             InitializeComponent();
             this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            this.Dock = DockStyle.Fill;
 
         }
 
@@ -37,7 +38,6 @@ namespace Dan_Junkshop_Management_System
             }
         }
 
-        
 
         private void btnReport1_Click(object sender, EventArgs e)
         {

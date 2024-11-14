@@ -64,6 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ActivityLog.Designer.cs">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     <Compile Include="TransactionSoldItems.Designer.cs">
       <DependentUpon>TransactionSoldItems.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ActivityLog.resx">
+      <DependentUpon>ActivityLog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddingSellableItems.resx">
       <DependentUpon>AddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +325,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\logRed.png" />
+    <None Include="Resources\logWhite.png" />
     <None Include="Resources\defaultEmployeeIcon.jpg" />
     <None Include="Resources\NewDelivery1.png" />
     <None Include="Resources\scale.png" />

@@ -17,6 +17,7 @@ namespace Dan_Junkshop_Management_System
         {
             InitializeComponent();
             this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            this.Dock = DockStyle.Fill;
             //setting the height and the background color of the header.
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.ColumnHeadersHeight = 50;

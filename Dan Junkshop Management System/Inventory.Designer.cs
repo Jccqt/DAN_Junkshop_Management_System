@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -89,7 +89,7 @@
             this.btnAddScrapsItem.ForeColor = System.Drawing.Color.Transparent;
             this.btnAddScrapsItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
             this.btnAddScrapsItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddScrapsItem.Location = new System.Drawing.Point(771, 7);
+            this.btnAddScrapsItem.Location = new System.Drawing.Point(784, 5);
             this.btnAddScrapsItem.Name = "btnAddScrapsItem";
             this.btnAddScrapsItem.Size = new System.Drawing.Size(127, 39);
             this.btnAddScrapsItem.TabIndex = 11;
@@ -105,19 +105,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(7, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.Size = new System.Drawing.Size(920, 599);
+            this.dataGridView1.Size = new System.Drawing.Size(920, 575);
             this.dataGridView1.TabIndex = 9;
             // 
             // panelBorder1
@@ -129,16 +129,16 @@
             this.panelBorder1.Controls.Add(this.pictureBox1);
             this.panelBorder1.Controls.Add(this.SearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(289, 35);
+            this.panelBorder1.Location = new System.Drawing.Point(289, 41);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(341, 43);
+            this.panelBorder1.Size = new System.Drawing.Size(341, 37);
             this.panelBorder1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 8);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(25, 24);
             this.pictureBox1.TabIndex = 1;
@@ -147,28 +147,29 @@
             // SearchBox
             // 
             this.SearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.SearchBox.Font = new System.Drawing.Font("Arial", 15.25F);
+            this.SearchBox.Font = new System.Drawing.Font("Arial", 13.25F);
             this.SearchBox.Location = new System.Drawing.Point(44, 8);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Size = new System.Drawing.Size(284, 24);
+            this.SearchBox.Size = new System.Drawing.Size(284, 21);
             this.SearchBox.TabIndex = 0;
             this.SearchBox.Text = "Search Item";
             this.SearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // activeAndInactive1
             // 
+            this.activeAndInactive1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.activeAndInactive1.BackColor = System.Drawing.Color.DimGray;
             this.activeAndInactive1.Checked = true;
             this.activeAndInactive1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.activeAndInactive1.ForeColor = System.Drawing.Color.Transparent;
-            this.activeAndInactive1.Location = new System.Drawing.Point(828, 35);
+            this.activeAndInactive1.Location = new System.Drawing.Point(834, 41);
             this.activeAndInactive1.MinimumSize = new System.Drawing.Size(45, 22);
             this.activeAndInactive1.Name = "activeAndInactive1";
             this.activeAndInactive1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
             this.activeAndInactive1.OffToggleColor = System.Drawing.Color.White;
             this.activeAndInactive1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.activeAndInactive1.OnToggleColor = System.Drawing.Color.White;
-            this.activeAndInactive1.Size = new System.Drawing.Size(99, 43);
+            this.activeAndInactive1.Size = new System.Drawing.Size(84, 37);
             this.activeAndInactive1.TabIndex = 10;
             this.activeAndInactive1.Text = "activeAndInactive1";
             this.activeAndInactive1.UseVisualStyleBackColor = false;
@@ -183,16 +184,16 @@
             this.panelBorder2.Controls.Add(this.pictureBox2);
             this.panelBorder2.Controls.Add(this.comboBox1);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(642, 34);
+            this.panelBorder2.Location = new System.Drawing.Point(642, 41);
             this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(172, 44);
+            this.panelBorder2.Size = new System.Drawing.Size(172, 37);
             this.panelBorder2.TabIndex = 11;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 7);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(34, 32);
             this.pictureBox2.TabIndex = 1;
@@ -208,7 +209,7 @@
             this.comboBox1.Font = new System.Drawing.Font("Arial", 16F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ItemHeight = 24;
-            this.comboBox1.Location = new System.Drawing.Point(44, 7);
+            this.comboBox1.Location = new System.Drawing.Point(44, 4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(124, 32);
             this.comboBox1.TabIndex = 0;
@@ -224,7 +225,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBorder1);
             this.Name = "Inventory";
-            this.Size = new System.Drawing.Size(934, 736);
+            this.Size = new System.Drawing.Size(934, 733);
+            this.Load += new System.EventHandler(this.Inventory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
