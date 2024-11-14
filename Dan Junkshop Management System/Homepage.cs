@@ -21,7 +21,7 @@ namespace Dan_Junkshop_Management_System
 
         private void Homepage_Load(object sender, EventArgs e)
         {
-            HomepageObjects.CreateHomepageInstances();
+            HomepageObjects.dashboard = new DashboardPanel();
             ContentsPanel.Controls.Add(HomepageObjects.dashboard); // will display dashboard
             selectedButton = lblPageHeader.Text;
             GC.Collect();
@@ -157,27 +157,35 @@ namespace Dan_Junkshop_Management_System
             switch (selectedButton)
             {
                 case "Dashboard":
+                    HomepageObjects.dashboard.Dispose();
                     btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.NewHome;
                     break;
                 case "Sales and Reports":
+                    HomepageObjects.sales_Reports.Dispose();
                     btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.NewSales;
                     break;
                 case "Employee":
+                    HomepageObjects.employee.Dispose();
                     btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
                     break;
                 case "Transaction":
+                    HomepageObjects.transaction.Dispose();
                     btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
                     break;
                 case "Price Setup":
+                    HomepageObjects.priceConfiguration.Dispose();
                     btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
                     break;
                 case "Inventory":
+                    HomepageObjects.inventory.Dispose();
                     btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
                     break;
                 case "Partners":
+                    HomepageObjects.partners.Dispose();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
                     break;
                 case "Delivery":
+                    HomepageObjects.delivery.Dispose();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
                     break;
             }
@@ -186,30 +194,39 @@ namespace Dan_Junkshop_Management_System
             switch (lblPageHeader.Text)
             {
                 case "Dashboard":
+                    HomepageObjects.dashboard = new DashboardPanel();
                     btnHome.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
                     break;
                 case "Sales and Reports":
+                    HomepageObjects.sales_Reports = new Sales_Reports();
                     btnSales.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedSales;
                     break;
                 case "Employee":
+                    HomepageObjects.employee = new Employee();
                     btnEmployee.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedEmployee;
                     break;
                 case "Transaction":
+                    HomepageObjects.transaction = new Transaction();
                     btnTransaction.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedTransaction;
                     break;
                 case "Price Setup":
+                    HomepageObjects.priceConfiguration = new PriceConfiguration();
                     btnPriceSetup.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPriceSetup;
                     break;
                 case "Inventory":
+                    HomepageObjects.inventory = new Inventory();
                     btnInventory.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedInventory;
                     break;
                 case "Partners":
+                    HomepageObjects.partners = new Partners();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPartners;
                     break;
                 case "Delivery":
+                    HomepageObjects.delivery = new Delivery();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedDelive;
                     break;
             }
+
 
         }
 

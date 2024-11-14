@@ -36,19 +36,6 @@ namespace Dan_Junkshop_Management_System
         public static Partners partners;
         public static Transaction transaction;
         public static NewTransaction newTransaction;
-
-        public static void CreateHomepageInstances()
-        {
-            homepage = new Homepage();
-            dashboard = new DashboardPanel();
-            sales_Reports = new Sales_Reports();
-            inventory = new Inventory();
-            priceConfiguration = new PriceConfiguration();
-            employee = new Employee();
-            delivery = new Delivery();
-            partners = new Partners();
-            transaction = new Transaction();
-        }
     }
 
     public class ConnectionObjects

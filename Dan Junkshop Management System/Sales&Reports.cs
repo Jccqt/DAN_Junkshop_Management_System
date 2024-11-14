@@ -18,6 +18,7 @@ namespace Dan_Junkshop_Management_System
         {
             InitializeComponent();
             this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)

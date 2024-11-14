@@ -137,7 +137,6 @@ namespace Dan_Junkshop_Management_System
                 HomepageObjects.employee = new Employee();
                 HomepageObjects.homepage.ContentsPanel.Controls.Add(HomepageObjects.employee);
 
-                
             }
         }
 
