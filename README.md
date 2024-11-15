@@ -46,4 +46,13 @@ November 12, 2024
 - Optimized the creation of user control instances when changing pages using the side panel on Homepage (Update)
 
 November 13, 2024
-- Added functionality for displaying employee
+- Added functionality for displaying employee (New)
+
+November 14, 2024
+- Fixed the issue where the components' size became small when changing window state (Update)
+
+November 15, 2024
+- Add scrap item UI (New)
+- Add sellable item UI (New)
+- Added functionalities for Add scrap item page (New)
+- Changed the default window state to Maximized (Update)
