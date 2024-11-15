@@ -16,6 +16,9 @@ namespace Dan_Junkshop_Management_System
         public Employee()
         {
             InitializeComponent();
+            this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
+            this.Dock = DockStyle.Fill;
+        
         }
 
         private void label1_Click(object sender, EventArgs e)

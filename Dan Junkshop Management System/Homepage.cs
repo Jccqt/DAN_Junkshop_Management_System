@@ -230,6 +230,10 @@ namespace Dan_Junkshop_Management_System
 
         }
 
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+         
+        }
     }
   
 }

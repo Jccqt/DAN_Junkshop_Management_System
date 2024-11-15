@@ -17,6 +17,11 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
             this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             this.Dock = DockStyle.Fill;
+
+            dataGridView2.EnableHeadersVisualStyles = false;
+            dataGridView2.ColumnHeadersHeight = 50;
+            dataGridView2.RowHeadersWidth = 50;
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
         }
     }
 }

@@ -65,7 +65,7 @@
             this.panelBorder1.Controls.Add(this.lblFullName);
             this.panelBorder1.Controls.Add(this.EmployeePicture);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(15, 5);
+            this.panelBorder1.Location = new System.Drawing.Point(10, 5);
             this.panelBorder1.Margin = new System.Windows.Forms.Padding(4);
             this.panelBorder1.Name = "panelBorder1";
             this.panelBorder1.Size = new System.Drawing.Size(300, 335);
@@ -81,7 +81,7 @@
             this.pnlSettings.MaximumSize = new System.Drawing.Size(163, 121);
             this.pnlSettings.MinimumSize = new System.Drawing.Size(163, 34);
             this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(163, 40);
+            this.pnlSettings.Size = new System.Drawing.Size(163, 39);
             this.pnlSettings.TabIndex = 1;
             // 
             // customButton3
@@ -93,13 +93,15 @@
             this.customButton3.BorderSize = 1;
             this.customButton3.FlatAppearance.BorderSize = 0;
             this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.ForeColor = System.Drawing.Color.Black;
+            this.customButton3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customButton3.ForeColor = System.Drawing.Color.White;
             this.customButton3.Location = new System.Drawing.Point(4, 79);
             this.customButton3.Margin = new System.Windows.Forms.Padding(4);
             this.customButton3.Name = "customButton3";
             this.customButton3.Size = new System.Drawing.Size(153, 39);
             this.customButton3.TabIndex = 2;
-            this.customButton3.TextColor = System.Drawing.Color.Black;
+            this.customButton3.Text = "Archive";
+            this.customButton3.TextColor = System.Drawing.Color.White;
             this.customButton3.UseVisualStyleBackColor = false;
             // 
             // customButton2
@@ -228,11 +230,11 @@
             // lblFullName
             // 
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFullName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFullName.Location = new System.Drawing.Point(23, 128);
             this.lblFullName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(71, 19);
+            this.lblFullName.Size = new System.Drawing.Size(73, 19);
             this.lblFullName.TabIndex = 1;
             this.lblFullName.Text = "<Name>";
             // 
@@ -256,7 +258,7 @@
             this.Controls.Add(this.panelBorder1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DisplayEmployee";
-            this.Size = new System.Drawing.Size(325, 346);
+            this.Size = new System.Drawing.Size(320, 346);
             this.Load += new System.EventHandler(this.DisplayEmployee_Load);
             this.panelBorder1.ResumeLayout(false);
             this.panelBorder1.PerformLayout();
