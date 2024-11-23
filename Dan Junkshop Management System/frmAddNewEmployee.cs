@@ -20,6 +20,7 @@ namespace Dan_Junkshop_Management_System
         public frmAddNewEmployee()
         {
             InitializeComponent();
+            txtContact.MaxLength = 11;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -91,8 +92,12 @@ namespace Dan_Junkshop_Management_System
                SaveIndicator = false;
 
                 SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Save Employee",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                SaveIndicator = true;
+                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if(SaveEmployee == DialogResult.Yes)
+                {
+                    SaveIndicator = true;
+                }
             }
 
             if (SaveIndicator)
@@ -157,5 +162,33 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.conn.Close();
         }
+
+        #region textboxes input validation
+        private void txtContact_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.WholeNumbersOnly(sender, e);
+        }
+
+        private void txtFirstName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.CharactersOnly(sender, e);
+        }
+
+        private void txtLastName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.CharactersOnly(sender, e);
+        }
+
+        private void txtMiddleInitial_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.CharactersOnly(sender, e);
+        }
+
+        private void txtAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.WholeNumbersOnly(sender, e);
+        }
+
+        #endregion
     }
 }

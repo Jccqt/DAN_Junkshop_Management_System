@@ -16,6 +16,8 @@ namespace Dan_Junkshop_Management_System
         public Employee()
         {
             InitializeComponent();
+
+            // will set the size and position of the components
             this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             this.Dock = DockStyle.Fill;
         

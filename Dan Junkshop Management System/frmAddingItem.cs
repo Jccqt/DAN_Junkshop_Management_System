@@ -62,5 +62,10 @@ namespace Dan_Junkshop_Management_System
                 txtScale.Clear();
             }
         }
+
+        private void txtItemName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.CharactersOnly(sender, e);
+        }
     }
 }

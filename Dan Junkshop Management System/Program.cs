@@ -54,7 +54,7 @@ namespace Dan_Junkshop_Management_System
         {
             formBackground = new Form();
 
-            // will set a background to show a focus for message dialogs
+            // will set and create a background to help show a focus for message dialogs
             formBackground.StartPosition = FormStartPosition.CenterScreen;
             formBackground.FormBorderStyle = FormBorderStyle.None;
             formBackground.Opacity = .80;
@@ -73,6 +73,32 @@ namespace Dan_Junkshop_Management_System
             formBackground.ShowInTaskbar = false;
             formBackground.TopMost = true;
             formBackground.Show();
+        }
+    }
+
+    public class InputValidation
+    {
+        public static void CharactersOnly(object sender, KeyPressEventArgs e)
+        {
+            // will only allow characters on textboxes
+            if (!char.IsControl(e.KeyChar) && char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public static void WholeNumbersOnly(object sender, KeyPressEventArgs e)
+        {
+            // will only allow whole numbers on textboxes
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        public static void FloatingNumbersOnly(object sender, KeyPressEventArgs e)
+        {
+            
         }
     }
 }
