@@ -54,5 +54,10 @@ November 14, 2024
 November 15, 2024
 - Add scrap item UI (New)
 - Add sellable item UI (New)
-- Added functionalities for Add scrap item page (New)
+- Added functionalities for Inventory page (New)
 - Changed the default window state to Maximized (Update)
+
+November 24, 2024
+- Fixed bug on Add Employee page where the save employee will be successful even if the user click the "no" button when saving the employee details (Update)
+- Added some functionalities for Inventory page (New)
+- Added input checker for textboxes on Add Employee page (new)
