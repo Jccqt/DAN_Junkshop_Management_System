@@ -35,7 +35,7 @@ namespace Dan_Junkshop_Management_System
         public static Delivery delivery;
         public static Partners partners;
         public static Transaction transaction;
-        public static NewTransaction newTransaction;
+        public static NewBuyTransaction newTransaction;
     }
 
     public class ConnectionObjects
@@ -98,7 +98,17 @@ namespace Dan_Junkshop_Management_System
 
         public static void FloatingNumbersOnly(object sender, KeyPressEventArgs e)
         {
-            
+            // will only allow whole numbers and dot on textboxes
+            if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // will only allow one dot on textboxes
+            if((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

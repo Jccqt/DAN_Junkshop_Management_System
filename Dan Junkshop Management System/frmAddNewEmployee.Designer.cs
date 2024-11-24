@@ -257,14 +257,14 @@
             this.txtUsername.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(197, 330);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(192, 29);
+            this.txtUsername.Size = new System.Drawing.Size(228, 29);
             this.txtUsername.TabIndex = 8;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(392, 310);
+            this.label11.Location = new System.Drawing.Point(456, 310);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(68, 16);
             this.label11.TabIndex = 34;
@@ -274,9 +274,9 @@
             // 
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(395, 330);
+            this.txtPassword.Location = new System.Drawing.Point(459, 330);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(186, 29);
+            this.txtPassword.Size = new System.Drawing.Size(224, 29);
             this.txtPassword.TabIndex = 9;
             // 
             // label12
@@ -337,7 +337,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.Location = new System.Drawing.Point(17, 327);
+            this.btnClear.Location = new System.Drawing.Point(17, 437);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(143, 32);
             this.btnClear.TabIndex = 13;
@@ -358,7 +358,7 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSave.Location = new System.Drawing.Point(17, 289);
+            this.btnSave.Location = new System.Drawing.Point(17, 399);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(143, 32);
             this.btnSave.TabIndex = 12;

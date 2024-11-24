@@ -24,30 +24,6 @@ namespace Dan_Junkshop_Management_System
             cbType.Text = "Scraps";
         }
 
-        private void btnAddItem_Click(object sender, EventArgs e)
-        {
-            if(cbType.Text == "Scraps")
-            {
-                using(frmAddingItem addScraps = new frmAddingItem())
-                {
-                    FormAnimation.ShowFocus();
-                    addScraps.Owner = FormAnimation.formBackground;
-                    addScraps.ShowDialog();
-                    FormAnimation.formBackground.Close();
-                }
-            }
-            else
-            {
-                using (AddingSellableItems addSellable = new AddingSellableItems())
-                {
-                    FormAnimation.ShowFocus();
-                    addSellable.Owner = FormAnimation.formBackground;
-                    addSellable.ShowDialog();
-                    FormAnimation.formBackground.Close();
-                }
-            }
-        }
-
         private void Inventory_Load(object sender, EventArgs e)
         {
 

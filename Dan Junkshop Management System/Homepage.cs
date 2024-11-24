@@ -17,6 +17,7 @@ namespace Dan_Junkshop_Management_System
         public Homepage()
         {
             InitializeComponent();
+            this.WindowState = FormWindowState.Normal;
         }
 
         private void Homepage_Load(object sender, EventArgs e)

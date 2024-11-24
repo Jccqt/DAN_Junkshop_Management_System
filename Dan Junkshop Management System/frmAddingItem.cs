@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Collections;
 
 namespace Dan_Junkshop_Management_System
 {
     public partial class frmAddingItem : Form
     {
+        static bool SaveIndicator;
+        static bool AlreadyExisting;
+        static int ItemCount;
         public frmAddingItem()
         {
             InitializeComponent();
@@ -40,32 +45,124 @@ namespace Dan_Junkshop_Management_System
                 txtItemName.Clear();
                 txtPrice.Clear();
                 txtScale.Clear();
-                cbScaleType.SelectedIndex = -1;
-                txtScale.Enabled = false;
-            }
-        }
-
-        private void txtScale_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cbScaleType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cbScaleType.Text == "Scallable")
-            {
-                txtScale.Enabled = true;
-            }
-            else
-            {
-                txtScale.Enabled = false;
-                txtScale.Clear();
+                cbClass.SelectedIndex = -1;
             }
         }
 
         private void txtItemName_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputValidation.CharactersOnly(sender, e);
+        }
+
+        private void txtScale_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.FloatingNumbersOnly(sender, e);
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
+            if(txtItemName.Text == "" || txtPrice.Text == "" || cbClass.SelectedIndex == -1 || txtScale.Text == "")
+            {
+                MessageBox.Show("Please fill the empty details before saving", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                SaveIndicator = false;
+            }
+            else
+            {
+                DialogResult saveItem = MessageBox.Show("Do you want to save item details?", "Save item", MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if(saveItem == DialogResult.Yes)
+                {
+                    SaveIndicator = true;
+                }
+                else
+                {
+                    SaveIndicator = false;
+                }
+            }
+
+            if(SaveIndicator)
+            {
+                // will check if the item name is already existing
+                ConnectionObjects.conn.Open();
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT ItemName FROM Items WHERE ItemName = @itemname", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemname", txtItemName.Text);
+                
+                if(ConnectionObjects.cmd.ExecuteScalar().ToString() == "")
+                {
+                    AlreadyExisting = false;
+                }
+                else
+                {
+                    AlreadyExisting = true;
+                }
+
+                ConnectionObjects.conn.Close();
+            }
+
+            if(SaveIndicator && AlreadyExisting)
+            {
+                MessageBox.Show("Item was already existing!", "Item already exists",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            }
+            else if(SaveIndicator && !AlreadyExisting)
+            {
+                ItemCount = 1000;
+                SaveIndicator = false;
+
+                ConnectionObjects.conn.Open();
+
+                ConnectionObjects.cmd = new SqlCommand($"SELECT COUNT(ItemID) FROM Items WHERE ItemID LIKE '{cbClass.Text.Substring(0, cbClass.Text.IndexOf(" "))}'");
+                ItemCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT ClassID FROM Class WHERE ClassName = @classname", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@classname", cbClass.Text);
+                string classID = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+                ConnectionObjects.cmd = new SqlCommand("INSERT INTO Items VALUES(@itemid, @itemname, @classid, @itemtype, @itemquantity, @status)", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemid", $"{cbClass.Text.Substring(0, cbClass.Text.IndexOf(" "))}{ItemCount + 1}");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemname", txtItemName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@classid", classID);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemtype", "Scraps");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemquantity", Convert.ToDouble(txtScale.Text));
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+                ConnectionObjects.cmd.ExecuteNonQuery();
+
+                ConnectionObjects.conn.Close();
+            }
+
+        }
+
+        private void frmAddingItem_Load(object sender, EventArgs e)
+        {
+            cbClass.Items.Clear();
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT ClassName FROM Class", ConnectionObjects.conn);
+            SqlDataReader itemTypeReader = ConnectionObjects.cmd.ExecuteReader();
+
+            while (itemTypeReader.Read())
+            {
+                cbClass.Items.Add(itemTypeReader.GetString(0));
+            }
+
+            itemTypeReader.Close();
+            ConnectionObjects.conn.Close();
+        }
+
+        private void cbClass_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtPrice.Clear();
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT Price FROM Class WHERE ClassName = @classname", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@classname", cbClass.Text);
+            txtPrice.Text = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+            ConnectionObjects.conn.Close();
         }
     }
 }

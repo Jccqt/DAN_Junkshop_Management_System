@@ -89,8 +89,6 @@ namespace Dan_Junkshop_Management_System
             }
             else
             {
-               SaveIndicator = false;
-
                 SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Save Employee",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
@@ -104,6 +102,7 @@ namespace Dan_Junkshop_Management_System
             {
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
                 EmpIdCount = 1000;
+                SaveIndicator = false;
 
                 ConnectionObjects.conn.Open();
 
