@@ -59,5 +59,10 @@ November 15, 2024
 
 November 24, 2024
 - Fixed bug on Add Employee page where the save employee will be successful even if the user click the "no" button when saving the employee details (Update)
-- Added some functionalities for Inventory page (New)
+- Added functionalities for Inventory page (New)
 - Added input checker for textboxes on Add Employee page (new)
+
+November 25, 2024
+- Removed Add Item page on Inventory page (Update)
+- Added functionalities for Add Item page in Transaction page (New)
+- Added input checker for textboxes on Add Item page (New)
