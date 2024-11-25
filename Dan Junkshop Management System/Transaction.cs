@@ -25,11 +25,6 @@ namespace Dan_Junkshop_Management_System
             dataGridView1.ColumnHeadersHeight = 50;
             dataGridView1.RowHeadersWidth = 50;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-
-            
-
-
-
         }
 
         private void customButton1_Click(object sender, EventArgs e)

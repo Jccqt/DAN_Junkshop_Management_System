@@ -70,11 +70,11 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddingSellableItems.cs">
+    <Compile Include="frmAddingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddingSellableItems.Designer.cs">
-      <DependentUpon>AddingSellableItems.cs</DependentUpon>
+    <Compile Include="frmAddingSellableItems.Designer.cs">
+      <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\activeAndInactive.cs">
       <SubType>Component</SubType>
@@ -118,11 +118,11 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingItem.cs">
+    <Compile Include="frmAddingScrapItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingItem.Designer.cs">
-      <DependentUpon>frmAddingItem.cs</DependentUpon>
+    <Compile Include="frmAddingScrapItem.Designer.cs">
+      <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddNewEmployee.cs">
       <SubType>Form</SubType>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddingSellableItems.resx">
-      <DependentUpon>AddingSellableItems.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddingSellableItems.resx">
+      <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -225,8 +225,8 @@
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingItem.resx">
-      <DependentUpon>frmAddingItem.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddingScrapItem.resx">
+      <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddNewEmployee.resx">
       <DependentUpon>frmAddNewEmployee.cs</DependentUpon>

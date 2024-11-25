@@ -1,6 +1,6 @@
 ﻿namespace Dan_Junkshop_Management_System
 {
-    partial class frmAddingItem
+    partial class frmAddingScrapItem
     {
         /// <summary>
         /// Required designer variable.
@@ -205,7 +205,7 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Class";
             // 
-            // frmAddingItem
+            // frmAddingScrapItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +223,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmAddingItem";
+            this.Name = "frmAddingScrapItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddingItem";
             this.TopMost = true;

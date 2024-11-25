@@ -79,6 +79,7 @@ namespace Dan_Junkshop_Management_System
             txtAge.Clear();
         }
 
+        // TODO: Add existing employee checker (JC) 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (txtFirstName.Text.Equals("") || txtLastName.Text.Equals("") || txtMiddleInitial.Text.Equals("") || txtContact.Text.Equals("") ||

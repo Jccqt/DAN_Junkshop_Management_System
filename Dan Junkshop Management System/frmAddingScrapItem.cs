@@ -12,12 +12,12 @@ using System.Collections;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class frmAddingItem : Form
+    public partial class frmAddingScrapItem : Form
     {
         static bool SaveIndicator;
         static bool AlreadyExisting;
         static int ItemCount;
-        public frmAddingItem()
+        public frmAddingScrapItem()
         {
             InitializeComponent();
         }

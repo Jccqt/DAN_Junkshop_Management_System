@@ -34,7 +34,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            // Add ka ng type ng add item dito pre (Scrap or Sellable) ganyan nakalagay
+
         }
     }
 }

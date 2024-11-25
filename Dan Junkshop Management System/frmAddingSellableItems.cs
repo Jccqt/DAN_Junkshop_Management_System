@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class AddingSellableItems : Form
+    public partial class frmAddingSellableItems : Form
     {
-        public AddingSellableItems()
+        public frmAddingSellableItems()
         {
             InitializeComponent();
         }
