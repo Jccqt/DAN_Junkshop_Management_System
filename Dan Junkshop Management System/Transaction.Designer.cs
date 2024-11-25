@@ -64,18 +64,18 @@
             this.Column4});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.IndianRed;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(81, 198);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(61, 161);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 13.25F, System.Drawing.FontStyle.Bold);
@@ -83,7 +83,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightCoral;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.Size = new System.Drawing.Size(1091, 428);
+            this.dataGridView1.Size = new System.Drawing.Size(818, 348);
             this.dataGridView1.TabIndex = 1;
             this.dataGridView1.Tag = "";
             this.dataGridView1.VirtualMode = true;
@@ -130,10 +130,9 @@
             this.customButton1.ForeColor = System.Drawing.Color.Transparent;
             this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.add_circle;
             this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(957, 124);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.customButton1.Location = new System.Drawing.Point(718, 101);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(215, 53);
+            this.customButton1.Size = new System.Drawing.Size(161, 43);
             this.customButton1.TabIndex = 0;
             this.customButton1.Text = "        Add Transaction";
             this.customButton1.TextColor = System.Drawing.Color.Transparent;
@@ -142,14 +141,13 @@
             // 
             // Transaction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.customButton1);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Transaction";
-            this.Size = new System.Drawing.Size(1245, 906);
+            this.Size = new System.Drawing.Size(934, 736);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

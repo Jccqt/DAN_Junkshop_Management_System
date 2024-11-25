@@ -70,6 +70,12 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddingItemSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddingItemSelection.Designer.cs">
+      <DependentUpon>AddingItemSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,12 @@
     </Compile>
     <Compile Include="frmEditingScrapItem.Designer.cs">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditingSellableItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditingSellableItems.Designer.cs">
+      <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTypeOfTransaction.cs">
       <SubType>Form</SubType>
@@ -207,6 +219,9 @@
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddingItemSelection.resx">
+      <DependentUpon>AddingItemSelection.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddingSellableItems.resx">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditingScrapItem.resx">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditingSellableItems.resx">
+      <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTypeOfTransaction.resx">
       <DependentUpon>FrmTypeOfTransaction.cs</DependentUpon>
@@ -325,6 +343,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\greenRecycle.png" />
+    <None Include="Resources\scrap.png" />
+    <None Include="Resources\icon-park-solid_edit.png" />
     <None Include="Resources\logRed.png" />
     <None Include="Resources\logWhite.png" />
     <None Include="Resources\defaultEmployeeIcon.jpg" />

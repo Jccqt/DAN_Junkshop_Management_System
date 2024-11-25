@@ -182,9 +182,9 @@
             this.customButton2.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.customButton2.ForeColor = System.Drawing.Color.Transparent;
             this.customButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton2.Location = new System.Drawing.Point(618, 182);
+            this.customButton2.Location = new System.Drawing.Point(601, 181);
             this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(94, 44);
+            this.customButton2.Size = new System.Drawing.Size(119, 44);
             this.customButton2.TabIndex = 40;
             this.customButton2.Text = "Clear";
             this.customButton2.TextColor = System.Drawing.Color.Transparent;
@@ -202,7 +202,7 @@
             this.customButton1.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.customButton1.ForeColor = System.Drawing.Color.Transparent;
             this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(493, 182);
+            this.customButton1.Location = new System.Drawing.Point(476, 181);
             this.customButton1.Name = "customButton1";
             this.customButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.customButton1.Size = new System.Drawing.Size(119, 44);

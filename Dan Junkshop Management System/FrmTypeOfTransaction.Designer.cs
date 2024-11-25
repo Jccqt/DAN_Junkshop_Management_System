@@ -81,7 +81,7 @@
             this.btnNewSellTransaction.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnNewSellTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnNewSellTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewSellTransaction.Location = new System.Drawing.Point(224, 118);
+            this.btnNewSellTransaction.Location = new System.Drawing.Point(299, 82);
             this.btnNewSellTransaction.Name = "btnNewSellTransaction";
             this.btnNewSellTransaction.Size = new System.Drawing.Size(140, 58);
             this.btnNewSellTransaction.TabIndex = 33;
@@ -101,9 +101,9 @@
             this.btnNewTransaction.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnNewTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnNewTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewTransaction.Location = new System.Drawing.Point(224, 58);
+            this.btnNewTransaction.Location = new System.Drawing.Point(116, 82);
             this.btnNewTransaction.Name = "btnNewTransaction";
-            this.btnNewTransaction.Size = new System.Drawing.Size(140, 54);
+            this.btnNewTransaction.Size = new System.Drawing.Size(140, 58);
             this.btnNewTransaction.TabIndex = 32;
             this.btnNewTransaction.Text = "New Transaction (BUY)";
             this.btnNewTransaction.TextColor = System.Drawing.Color.Transparent;

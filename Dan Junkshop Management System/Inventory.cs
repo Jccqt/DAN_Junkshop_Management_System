@@ -22,6 +22,9 @@ namespace Dan_Junkshop_Management_System
 
             // will set the default item type when the Inventory page was initilized
             cbType.Text = "Scraps";
+            
+            // will remove the border of datagridview header
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
         }
 
         private void Inventory_Load(object sender, EventArgs e)

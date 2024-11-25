@@ -117,13 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column2.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column4.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Column5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pictureBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAHpJREFUWEft1tEJgDAMBNAbwRHcRDfQDXQTR3M0JdCvIERrUqLcg/wmofRoASIi
-        fyuALbgWPfTKDuAILplhSrPIWI4usiY9lD5lLhF+U51uWsMjNYNuWiPNIh7x7XVT+hUrvnKHmrBSc+vB
-        8pBmETl+/ZF5/KkhImrtBNzDj80Eoa9QAAAAAElFTkSuQmCC
+        DAAACwwBP0AiyAAAAHNJREFUWEft1sENQFAQhOFXghJ0Qgd0QCdKUxozBzfJSnZXlsyX/GcvLyY0EZEE
+        K9qSW5BpR0dyfIapzEFGxKvLbELyXTPihD11yC1iNQNyK3OQiPn2SP7Lmi/foVdYq3n0wYpQ5iC8/ruf
+        mSvOU0SkmNZO3MOPzeNbJ6UAAAAASUVORK5CYII=
 </value>
   </data>
 </root>
