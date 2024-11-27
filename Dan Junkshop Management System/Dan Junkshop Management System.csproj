@@ -70,11 +70,11 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddingItemSelection.cs">
+    <Compile Include="frmAddingItemSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddingItemSelection.Designer.cs">
-      <DependentUpon>AddingItemSelection.cs</DependentUpon>
+    <Compile Include="frmAddingItemSelection.Designer.cs">
+      <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddingSellableItems.cs">
       <SubType>Form</SubType>
@@ -148,11 +148,11 @@
     <Compile Include="frmEditingSellableItems.Designer.cs">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmTypeOfTransaction.cs">
+    <Compile Include="frmTypeOfTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmTypeOfTransaction.Designer.cs">
-      <DependentUpon>FrmTypeOfTransaction.cs</DependentUpon>
+    <Compile Include="frmTypeOfTransaction.Designer.cs">
+      <DependentUpon>frmTypeOfTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
       <SubType>Form</SubType>
@@ -172,11 +172,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewBuyTransaction.cs">
+    <Compile Include="frmNewBuyTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewBuyTransaction.Designer.cs">
-      <DependentUpon>NewBuyTransaction.cs</DependentUpon>
+    <Compile Include="frmNewBuyTransaction.Designer.cs">
+      <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Partners.cs">
       <SubType>UserControl</SubType>
@@ -219,8 +219,8 @@
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddingItemSelection.resx">
-      <DependentUpon>AddingItemSelection.cs</DependentUpon>
+    <EmbeddedResource Include="frmAddingItemSelection.resx">
+      <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddingSellableItems.resx">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
@@ -252,8 +252,8 @@
     <EmbeddedResource Include="frmEditingSellableItems.resx">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmTypeOfTransaction.resx">
-      <DependentUpon>FrmTypeOfTransaction.cs</DependentUpon>
+    <EmbeddedResource Include="frmTypeOfTransaction.resx">
+      <DependentUpon>frmTypeOfTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
@@ -264,8 +264,8 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewBuyTransaction.resx">
-      <DependentUpon>NewBuyTransaction.cs</DependentUpon>
+    <EmbeddedResource Include="frmNewBuyTransaction.resx">
+      <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partners.resx">
       <DependentUpon>Partners.cs</DependentUpon>

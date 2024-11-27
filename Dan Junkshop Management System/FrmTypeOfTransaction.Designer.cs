@@ -1,6 +1,6 @@
 ﻿namespace Dan_Junkshop_Management_System
 {
-    partial class FrmTypeOfTransaction
+    partial class frmTypeOfTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnNewSellTransaction = new OrganizationProfile.CustomButton();
-            this.btnNewTransaction = new OrganizationProfile.CustomButton();
+            this.btnNewBuyTransaction = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
@@ -89,41 +89,41 @@
             this.btnNewSellTransaction.TextColor = System.Drawing.Color.Transparent;
             this.btnNewSellTransaction.UseVisualStyleBackColor = false;
             // 
-            // btnNewTransaction
+            // btnNewBuyTransaction
             // 
-            this.btnNewTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnNewTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnNewTransaction.BorderColor = System.Drawing.Color.Transparent;
-            this.btnNewTransaction.BorderRadius = 40;
-            this.btnNewTransaction.BorderSize = 0;
-            this.btnNewTransaction.FlatAppearance.BorderSize = 0;
-            this.btnNewTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNewTransaction.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnNewTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.btnNewTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewTransaction.Location = new System.Drawing.Point(116, 82);
-            this.btnNewTransaction.Name = "btnNewTransaction";
-            this.btnNewTransaction.Size = new System.Drawing.Size(140, 58);
-            this.btnNewTransaction.TabIndex = 32;
-            this.btnNewTransaction.Text = "New Transaction (BUY)";
-            this.btnNewTransaction.TextColor = System.Drawing.Color.Transparent;
-            this.btnNewTransaction.UseVisualStyleBackColor = false;
-            this.btnNewTransaction.Click += new System.EventHandler(this.btnNewTransaction_Click);
+            this.btnNewBuyTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnNewBuyTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnNewBuyTransaction.BorderColor = System.Drawing.Color.Transparent;
+            this.btnNewBuyTransaction.BorderRadius = 40;
+            this.btnNewBuyTransaction.BorderSize = 0;
+            this.btnNewBuyTransaction.FlatAppearance.BorderSize = 0;
+            this.btnNewBuyTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewBuyTransaction.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnNewBuyTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnNewBuyTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNewBuyTransaction.Location = new System.Drawing.Point(116, 82);
+            this.btnNewBuyTransaction.Name = "btnNewBuyTransaction";
+            this.btnNewBuyTransaction.Size = new System.Drawing.Size(140, 58);
+            this.btnNewBuyTransaction.TabIndex = 32;
+            this.btnNewBuyTransaction.Text = "New Transaction (BUY)";
+            this.btnNewBuyTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnNewBuyTransaction.UseVisualStyleBackColor = false;
+            this.btnNewBuyTransaction.Click += new System.EventHandler(this.btnNewTransaction_Click);
             // 
-            // FrmTypeOfTransaction
+            // frmTypeOfTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(552, 188);
             this.Controls.Add(this.btnNewSellTransaction);
-            this.Controls.Add(this.btnNewTransaction);
+            this.Controls.Add(this.btnNewBuyTransaction);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmTypeOfTransaction";
+            this.Name = "frmTypeOfTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmTypeOfTransaction";
-            this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmTypeOfTransaction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
@@ -137,6 +137,6 @@
         private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Label label1;
         private OrganizationProfile.CustomButton btnNewSellTransaction;
-        private OrganizationProfile.CustomButton btnNewTransaction;
+        private OrganizationProfile.CustomButton btnNewBuyTransaction;
     }
 }

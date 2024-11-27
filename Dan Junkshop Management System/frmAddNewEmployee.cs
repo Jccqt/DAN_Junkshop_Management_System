@@ -15,8 +15,8 @@ namespace Dan_Junkshop_Management_System
     {
 
         static DialogResult SaveEmployee;
-        static int EmpIdCount;
-        static bool SaveIndicator;
+        static int EmpIdCount, AccIdCount;
+        static bool SaveIndicator, EmpAlreadyExisting, AccAlreadyExisting;
         public frmAddNewEmployee()
         {
             InitializeComponent();
@@ -79,18 +79,18 @@ namespace Dan_Junkshop_Management_System
             txtAge.Clear();
         }
 
-        // TODO: Add existing employee checker (JC) 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            // will check if the employee details are complete
             if (txtFirstName.Text.Equals("") || txtLastName.Text.Equals("") || txtMiddleInitial.Text.Equals("") || txtContact.Text.Equals("") ||
                cbPosition.SelectedIndex == -1 || cbGender.SelectedIndex == -1 || txtUsername.Text.Equals("") || txtPassword.Text.Equals("") || txtAddress.Text.Equals("") || txtAge.Text.Equals(""))
             {
                 SaveIndicator = false;
-                MessageBox.Show("Please fill the empty details before saving", "Empty details", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill the empty details before saving", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Save Employee",
+                SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Employee Notification",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if(SaveEmployee == DialogResult.Yes)
@@ -99,10 +99,61 @@ namespace Dan_Junkshop_Management_System
                 }
             }
 
+            // will check if both employee name and username was already existing
             if (SaveIndicator)
+            {
+                ConnectionObjects.conn.Open();
+
+                // will check if the employee name was already existing
+                ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, LastName, MiddleName FROM Employees" +
+                    " WHERE FirstName = @firstname AND LastName = @lastname AND MiddleName = @middlename", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@firstname", txtFirstName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@lastname", txtLastName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@middlename", txtMiddleInitial.Text);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+                if (ConnectionObjects.reader.Read())
+                {
+                    if($"{ConnectionObjects.reader.GetString(0).ToUpper()} {ConnectionObjects.reader.GetString(2).ToUpper()}" +
+                        $" {ConnectionObjects.reader.GetString(1).ToUpper()}" == $"{txtFirstName.Text.ToUpper()}" +
+                        $" {txtMiddleInitial.Text.ToUpper()} {txtLastName.Text.ToUpper()}")
+                    {
+                        MessageBox.Show("Employee was already existing!", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        EmpAlreadyExisting = true;
+                    }
+                }
+                else
+                {
+                    EmpAlreadyExisting = false;
+                }
+                ConnectionObjects.reader.Close();
+
+                // will check if the username was already existing
+                ConnectionObjects.cmd = new SqlCommand("SELECT Username FROM Credentials WHERE Username = @username", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+                if (ConnectionObjects.reader.Read())
+                {
+                    MessageBox.Show("Employee username was already exist! Please use another username", "Employee Notification",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    AccAlreadyExisting = true;
+                }
+                else
+                {
+                    AccAlreadyExisting = false;
+                }
+
+                ConnectionObjects.reader.Close();
+                ConnectionObjects.conn.Close();
+            }
+
+            // will proceed to saving employee details if both the employee name and username was not existing
+            if (SaveIndicator && !EmpAlreadyExisting && !AccAlreadyExisting)
             {
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
                 EmpIdCount = 1000;
+                AccIdCount = 1000;
                 SaveIndicator = false;
 
                 ConnectionObjects.conn.Open();
@@ -124,11 +175,11 @@ namespace Dan_Junkshop_Management_System
                 ConnectionObjects.cmd.Parameters.AddWithValue("@Status", 1);
                 ConnectionObjects.cmd.ExecuteNonQuery();
 
-                ConnectionObjects.cmd = new SqlCommand("SELECT EmpID FROM Employees WHERE EmpID = @empID", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
-                string employeeID = ConnectionObjects.cmd.ExecuteScalar().ToString();
+                ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(UserID) FROM Credentials", ConnectionObjects.conn);
+                AccIdCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
-                ConnectionObjects.cmd = new SqlCommand("INSERT INTO Credentials VALUES (@username, @password, @empID)", ConnectionObjects.conn);
+                ConnectionObjects.cmd = new SqlCommand("INSERT INTO Credentials VALUES (@userid, @username, @password, @empID)", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@userid", $"USER{AccIdCount + 1}");
                 ConnectionObjects.cmd.Parameters.AddWithValue("@username", txtUsername.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
@@ -138,9 +189,9 @@ namespace Dan_Junkshop_Management_System
 
                 ClearDetails();
                 MessageBox.Show("Employee has been successfully added!", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HomepageObjects.employee.Dispose();
-                HomepageObjects.employee = new Employee();
-                HomepageObjects.homepage.ContentsPanel.Controls.Add(HomepageObjects.employee);
+                PageObjects.employee.Dispose();
+                PageObjects.employee = new Employee();
+                PageObjects.homepage.ContentsPanel.Controls.Add(PageObjects.employee);
 
             }
         }

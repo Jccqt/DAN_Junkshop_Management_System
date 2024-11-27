@@ -68,9 +68,9 @@ namespace Dan_Junkshop_Management_System
                 if(txtUsername.Text.Equals(username) &&  txtPassword.Text.Equals(password))
                 {
                     MessageBox.Show("Login Successfully!", "Login Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HomepageObjects.homepage = new Homepage();
+                    PageObjects.homepage = new Homepage();
                     this.ShowInTaskbar = false;
-                    HomepageObjects.homepage.Show();
+                    PageObjects.homepage.Show();
                     txtPassword.Clear();
                     this.Hide();
                     IsLogin = true;

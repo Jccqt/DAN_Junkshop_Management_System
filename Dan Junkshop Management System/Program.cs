@@ -23,7 +23,7 @@ namespace Dan_Junkshop_Management_System
         }
     }
 
-    public class HomepageObjects
+    public class PageObjects
     {
         // Homepage Objects
         public static Homepage homepage;
@@ -35,7 +35,11 @@ namespace Dan_Junkshop_Management_System
         public static Delivery delivery;
         public static Partners partners;
         public static Transaction transaction;
-        public static NewBuyTransaction newTransaction;
+
+        // Transaction Objects
+        public static frmNewBuyTransaction newBuyTransaction;
+        public static frmTypeOfTransaction transactionType;
+        public static frmAddingItemSelection addItemSelection;
     }
 
     public class ConnectionObjects
@@ -59,8 +63,9 @@ namespace Dan_Junkshop_Management_System
             formBackground.FormBorderStyle = FormBorderStyle.None;
             formBackground.Opacity = .80;
             formBackground.BackColor = Color.Black;
+            formBackground.Size = new Size(1280, 800);
 
-            if(HomepageObjects.homepage.WindowState == FormWindowState.Maximized)
+            if (PageObjects.homepage.WindowState == FormWindowState.Maximized)
             {
                 formBackground.WindowState = FormWindowState.Maximized;
             }
@@ -69,9 +74,8 @@ namespace Dan_Junkshop_Management_System
                 formBackground.WindowState = FormWindowState.Normal;
             }
             
-            formBackground.Size = new Size(1280, 800);
+            formBackground.Owner = PageObjects.homepage;
             formBackground.ShowInTaskbar = false;
-            formBackground.TopMost = true;
             formBackground.Show();
         }
     }

@@ -10,27 +10,32 @@ using System.Windows.Forms;
 
 namespace Dan_Junkshop_Management_System
 {
-    public partial class FrmTypeOfTransaction : Form
+    public partial class frmTypeOfTransaction : Form
     {
-        public FrmTypeOfTransaction()
+        public frmTypeOfTransaction()
         {
             InitializeComponent();
         }
 
         private void btnNewTransaction_Click(object sender, EventArgs e)
-        {
-            using(NewBuyTransaction newBuyPage = new NewBuyTransaction())
+        {    
+            using (PageObjects.newBuyTransaction = new frmNewBuyTransaction())
             {
-                FormAnimation.ShowFocus();
-                newBuyPage.Owner = FormAnimation.formBackground;
-                newBuyPage.ShowDialog();
-                FormAnimation.formBackground.Close();
-            }
+                this.Hide();
+                PageObjects.newBuyTransaction.ShowInTaskbar = false;
+                PageObjects.newBuyTransaction.ShowDialog();
+                this.Show();
+            }     
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmTypeOfTransaction_Load(object sender, EventArgs e)
+        {
+            this.Owner = FormAnimation.formBackground;
         }
     }
 }

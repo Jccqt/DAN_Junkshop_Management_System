@@ -36,7 +36,7 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnAddTransaction = new OrganizationProfile.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,28 +116,28 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // customButton1
+            // btnAddTransaction
             // 
-            this.customButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.add_circle;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(718, 101);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(161, 43);
-            this.customButton1.TabIndex = 0;
-            this.customButton1.Text = "        Add Transaction";
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            this.btnAddTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddTransaction.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddTransaction.BorderRadius = 40;
+            this.btnAddTransaction.BorderSize = 0;
+            this.btnAddTransaction.FlatAppearance.BorderSize = 0;
+            this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddTransaction.Image = global::Dan_Junkshop_Management_System.Properties.Resources.add_circle;
+            this.btnAddTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddTransaction.Location = new System.Drawing.Point(718, 101);
+            this.btnAddTransaction.Name = "btnAddTransaction";
+            this.btnAddTransaction.Size = new System.Drawing.Size(161, 43);
+            this.btnAddTransaction.TabIndex = 0;
+            this.btnAddTransaction.Text = "        Add Transaction";
+            this.btnAddTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddTransaction.UseVisualStyleBackColor = false;
+            this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
             // Transaction
             // 
@@ -145,7 +145,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.customButton1);
+            this.Controls.Add(this.btnAddTransaction);
             this.Name = "Transaction";
             this.Size = new System.Drawing.Size(934, 736);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -155,7 +155,7 @@
 
         #endregion
 
-        private OrganizationProfile.CustomButton customButton1;
+        private OrganizationProfile.CustomButton btnAddTransaction;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

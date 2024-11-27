@@ -83,12 +83,14 @@ namespace Dan_Junkshop_Management_System
 
             if(SaveIndicator)
             {
-                // will check if the item name is already existing
                 ConnectionObjects.conn.Open();
 
+                // will check if the item name is already existing
                 ConnectionObjects.cmd = new SqlCommand("SELECT ItemName FROM Items WHERE ItemName = @itemname", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@itemname", txtItemName.Text);
                 
+                // TODO: Change ExecuteScalar to ExecuteReader
+
                 if(ConnectionObjects.cmd.ExecuteScalar().ToString() == "")
                 {
                     AlreadyExisting = false;
@@ -104,7 +106,7 @@ namespace Dan_Junkshop_Management_System
             if(SaveIndicator && AlreadyExisting)
             {
                 MessageBox.Show("Item was already existing!", "Item already exists",
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if(SaveIndicator && !AlreadyExisting)
             {
