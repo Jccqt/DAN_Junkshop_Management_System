@@ -89,12 +89,12 @@
             this.btnAddEmployee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddEmployee.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnAddEmployee.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddEmployee.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddEmployee.Image = global::Dan_Junkshop_Management_System.Properties.Resources.add_circle;
             this.btnAddEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmployee.Location = new System.Drawing.Point(934, 60);
+            this.btnAddEmployee.Location = new System.Drawing.Point(920, 60);
             this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(156, 45);
+            this.btnAddEmployee.Size = new System.Drawing.Size(182, 45);
             this.btnAddEmployee.TabIndex = 2;
             this.btnAddEmployee.Text = "       Add Employee";
             this.btnAddEmployee.TextColor = System.Drawing.Color.Transparent;

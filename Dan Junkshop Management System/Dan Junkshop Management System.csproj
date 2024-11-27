@@ -343,6 +343,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\weui_eyes-off-filled.png" />
+    <None Include="Resources\weui_eyes-on-filled.png" />
+    <None Include="Resources\game-icons_pay-money %281%29.png" />
+    <None Include="Resources\game-icons_pay-money.png" />
+    <None Include="Resources\mdi_recycle.png" />
     <None Include="Resources\greenRecycle.png" />
     <None Include="Resources\scrap.png" />
     <None Include="Resources\icon-park-solid_edit.png" />

@@ -48,6 +48,11 @@ namespace Dan_Junkshop_Management_System
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void panelBorder1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             IsLogin = false;

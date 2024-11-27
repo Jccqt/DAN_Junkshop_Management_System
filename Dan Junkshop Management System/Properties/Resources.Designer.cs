@@ -153,6 +153,26 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap game_icons_pay_money {
+            get {
+                object obj = ResourceManager.GetObject("game-icons_pay-money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap game_icons_pay_money__1_ {
+            get {
+                object obj = ResourceManager.GetObject("game-icons_pay-money (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap greenRecycle {
             get {
                 object obj = ResourceManager.GetObject("greenRecycle", resourceCulture);
@@ -266,6 +286,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap mdi_money {
             get {
                 object obj = ResourceManager.GetObject("mdi_money", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi_recycle {
+            get {
+                object obj = ResourceManager.GetObject("mdi_recycle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -556,6 +586,26 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap tabler_dots {
             get {
                 object obj = ResourceManager.GetObject("tabler_dots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weui_eyes_off_filled {
+            get {
+                object obj = ResourceManager.GetObject("weui_eyes-off-filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap weui_eyes_on_filled {
+            get {
+                object obj = ResourceManager.GetObject("weui_eyes-on-filled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -135,7 +135,7 @@ namespace Dan_Junkshop_Management_System
 
                 if (ConnectionObjects.reader.Read())
                 {
-                    MessageBox.Show("Employee username was already exist! Please use another username", "Employee Notification",
+                    MessageBox.Show("Employee username was already existing! Please use another username", "Employee Notification",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     AccAlreadyExisting = true;
                 }
