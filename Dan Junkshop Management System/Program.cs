@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
@@ -40,6 +41,10 @@ namespace Dan_Junkshop_Management_System
         public static frmNewBuyTransaction newBuyTransaction;
         public static frmTypeOfTransaction transactionType;
         public static frmAddingItemSelection addItemSelection;
+
+        // Inventory Objects
+        public static frmAddingScrapItem addScrapItem;
+        public static frmAddingSellableItems addSellableItem;
     }
 
     public class ConnectionObjects
@@ -49,34 +54,33 @@ namespace Dan_Junkshop_Management_System
         public static SqlConnection conn = new SqlConnection(connectionString);
         public static SqlCommand cmd;
         public static SqlDataReader reader;
+        public static SqlDataAdapter adapter;
+        public static DataTable dataTable;
     }
     public class FormAnimation
     {
-        public static Form formBackground;
 
-        public static void ShowFocus()
+        public static void ShowFocus(Form form)
         {
-            formBackground = new Form();
-
             // will set and create a background to help show a focus for message dialogs
-            formBackground.StartPosition = FormStartPosition.CenterScreen;
-            formBackground.FormBorderStyle = FormBorderStyle.None;
-            formBackground.Opacity = .80;
-            formBackground.BackColor = Color.Black;
-            formBackground.Size = new Size(1280, 800);
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Opacity = .80;
+            form.BackColor = Color.Black;
+            form.Size = new Size(1280, 800);
 
             if (PageObjects.homepage.WindowState == FormWindowState.Maximized)
             {
-                formBackground.WindowState = FormWindowState.Maximized;
+                form.WindowState = FormWindowState.Maximized;
             }
             else
             {
-                formBackground.WindowState = FormWindowState.Normal;
+                form.WindowState = FormWindowState.Normal;
             }
             
-            formBackground.Owner = PageObjects.homepage;
-            formBackground.ShowInTaskbar = false;
-            formBackground.Show();
+            form.Owner = PageObjects.homepage;
+            form.ShowInTaskbar = false;
+            form.Show();
         }
     }
 

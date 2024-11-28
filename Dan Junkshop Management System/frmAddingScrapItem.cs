@@ -22,8 +22,9 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
         }
 
-        private void btnCancelAddItem_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
+            // Check Message Consistency : Exit Add Dialog
             // will prompt a warning message if the user close the adding item window
             DialogResult exitAddItem = MessageBox.Show("Are you sure you want to cancel the adding of scrap item?"
                                         + "\nAny unsaved progress will be lost!", "Cancel add", MessageBoxButtons.YesNo,
@@ -37,6 +38,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Check Message Consistency : Clear information
             DialogResult clearItemInfo = MessageBox.Show("Are you sure you want to clear item information?", "Clear item information", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if(clearItemInfo == DialogResult.Yes)
@@ -63,14 +65,10 @@ namespace Dan_Junkshop_Management_System
         #endregion
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            ConnectionObjects.conn.Open();
 
-
-        }
-
-        private void frmAddingItem_Load(object sender, EventArgs e)
-        {
             // will check if the scrap item details is complete
-            if(txtItemName.Text == "" || cbCondition.SelectedIndex == -1 || txtQuantity.Text == "" || txtPrice.Text == "")
+            if (txtItemName.Text == "" || cbCondition.SelectedIndex == -1 || txtQuantity.Text == "" || txtPrice.Text == "")
             {
                 MessageBox.Show("Scrap tem details was incomplete!" +
                     "\nPlease complete the scrap item details.", "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -84,18 +82,22 @@ namespace Dan_Junkshop_Management_System
 
             if (SaveIndicator)
             {
-                ConnectionObjects.conn.Open();
-
                 // will check if the scrap item with specified condition was already existing
                 ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition FROM ScrapItems WHERE ScrapName = @scrapname AND ScrapCondition = @scrapcondition", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtItemName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapcondition", cbCondition.Text);
                 ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
                 if (ConnectionObjects.reader.Read())
                 {
-                    MessageBox.Show($"This scrap item with {cbCondition.Text} condition was already existing!",
+                    if(ConnectionObjects.reader.GetString(0).ToUpper() == txtItemName.Text.ToUpper() 
+                        && ConnectionObjects.reader.GetString(1).ToUpper() == cbCondition.Text.ToUpper())
+                    {
+                        MessageBox.Show($"This scrap item with {cbCondition.Text} condition was already existing!",
                         "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                    ItemAlreadyExisting = true;
+                        ItemAlreadyExisting = true;
+                    }
                 }
                 else
                 {
@@ -104,13 +106,13 @@ namespace Dan_Junkshop_Management_System
 
                 ConnectionObjects.reader.Close();
 
-                if(SaveIndicator && !ItemAlreadyExisting)
+                if (SaveIndicator && !ItemAlreadyExisting)
                 {
                     ItemCount = 1000;
                     SaveIndicator = false;
 
                     // will count the total number of scrap items
-                    ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ScrapID) FROM ScrapItems WHERE Status = 1");
+                    ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ScrapID) FROM ScrapItems WHERE Status = 1", ConnectionObjects.conn);
                     ItemCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
                     // will insert the scrap item details to the database
@@ -123,13 +125,18 @@ namespace Dan_Junkshop_Management_System
                     ConnectionObjects.cmd.Parameters.AddWithValue("@scrapprice", Convert.ToDouble(txtPrice.Text));
                     ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
                     ConnectionObjects.cmd.ExecuteNonQuery();
-                    
-                    ConnectionObjects.conn.Open();
 
                     clearScrapItemDetails();
                     MessageBox.Show("Scrap item has been successfully added!", "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+
+            ConnectionObjects.conn.Close();
+        }
+
+        private void frmAddingItem_Load(object sender, EventArgs e)
+        {
+            
         }
 
         void clearScrapItemDetails()
@@ -139,6 +146,19 @@ namespace Dan_Junkshop_Management_System
             txtPrice.Clear();
             txtQuantity.Clear();
             cbCondition.SelectedIndex = -1;
+        }
+
+        private void cbCondition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbCondition.Text == "Good")
+            {
+                txtPrice.Enabled = true;
+            }
+            else
+            {
+                txtPrice.Enabled = false;
+                txtPrice.Text = "0.00";
+            }
         }
     }
 }

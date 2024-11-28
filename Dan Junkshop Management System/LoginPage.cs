@@ -13,12 +13,13 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class LoginPage : Form
     {
-        static string username, password;
-        static bool IsLogin;
+        string username, password;
+        bool IsLogin, IsPasswordVisible;
         private static LoginPage loginPage; // singleton object for LoginPage
         private LoginPage()
         {
             InitializeComponent();
+            IsPasswordVisible = false;
         }
 
         // singleton method for loginpage
@@ -48,9 +49,27 @@ namespace Dan_Junkshop_Management_System
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panelBorder1_Paint(object sender, PaintEventArgs e)
+        private void LoginPage_Load(object sender, EventArgs e)
         {
+            IsPasswordVisible = false;
+            btnPasswordVisible.Image = Dan_Junkshop_Management_System.Properties.Resources.weui_eyes_off_filled;
+            txtPassword.PasswordChar = '*';
+        }
 
+        private void btnPasswordVisible_Click(object sender, EventArgs e)
+        {
+            if (!IsPasswordVisible)
+            {
+                IsPasswordVisible = true;
+                btnPasswordVisible.Image = Dan_Junkshop_Management_System.Properties.Resources.weui_eyes_on_filled;
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                IsPasswordVisible = false;
+                btnPasswordVisible.Image = Dan_Junkshop_Management_System.Properties.Resources.weui_eyes_off_filled;
+                txtPassword.PasswordChar = '*';
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

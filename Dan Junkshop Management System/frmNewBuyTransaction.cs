@@ -33,17 +33,22 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            // Optimize : frmNewBuyTransaction page need GC.Collect
             using(PageObjects.addItemSelection = new frmAddingItemSelection())
             {
-                this.Hide();
-                PageObjects.addItemSelection.ShowDialog();
-                this.Show();
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.addItemSelection.Owner = form;
+                    PageObjects.addItemSelection.ShowDialog();
+                    form.Close();
+                }
             }
         }
 
         private void NewBuyTransaction_Load(object sender, EventArgs e)
         {
-            this.Owner = FormAnimation.formBackground;
+
         }
     }
 }

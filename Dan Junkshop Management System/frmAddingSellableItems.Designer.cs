@@ -29,40 +29,43 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbClass = new System.Windows.Forms.ComboBox();
+            this.txtScale = new System.Windows.Forms.TextBox();
+            this.txtSellableName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.customButton2 = new OrganizationProfile.CustomButton();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-1, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(550, 41);
+            this.panel1.Size = new System.Drawing.Size(751, 41);
             this.panel1.TabIndex = 12;
             // 
-            // pictureBox1
+            // btnExit
             // 
-            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(516, 9);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 21);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(718, 9);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -75,53 +78,57 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Add New Sellable Item";
             // 
-            // comboBox1
+            // cbClass
             // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(370, 89);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 26);
-            this.comboBox1.TabIndex = 29;
+            this.cbClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbClass.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbClass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbClass.FormattingEnabled = true;
+            this.cbClass.Location = new System.Drawing.Point(190, 90);
+            this.cbClass.Name = "cbClass";
+            this.cbClass.Size = new System.Drawing.Size(213, 26);
+            this.cbClass.TabIndex = 29;
+            this.cbClass.SelectedIndexChanged += new System.EventHandler(this.cbClass_SelectedIndexChanged);
             // 
-            // textBox2
+            // txtScale
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(194, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(149, 26);
-            this.textBox2.TabIndex = 27;
+            this.txtScale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtScale.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtScale.Location = new System.Drawing.Point(592, 90);
+            this.txtScale.Name = "txtScale";
+            this.txtScale.Size = new System.Drawing.Size(136, 26);
+            this.txtScale.TabIndex = 27;
+            this.txtScale.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // txtSellableName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(25, 90);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 26);
-            this.textBox1.TabIndex = 26;
+            this.txtSellableName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSellableName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSellableName.Location = new System.Drawing.Point(25, 90);
+            this.txtSellableName.Name = "txtSellableName";
+            this.txtSellableName.Size = new System.Drawing.Size(145, 26);
+            this.txtSellableName.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(367, 70);
+            this.label5.Location = new System.Drawing.Point(187, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(37, 16);
+            this.label5.Size = new System.Drawing.Size(40, 16);
             this.label5.TabIndex = 25;
-            this.label5.Text = "Type";
+            this.label5.Text = "Class";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(191, 71);
+            this.label3.Location = new System.Drawing.Point(589, 71);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Price";
+            this.label3.Text = "Scale Quantity";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -129,61 +136,84 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(22, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 16);
+            this.label2.Size = new System.Drawing.Size(133, 16);
             this.label2.TabIndex = 22;
-            this.label2.Text = "Item Name";
+            this.label2.Text = "Sellable Item Name";
             // 
-            // customButton2
+            // btnClear
             // 
-            this.customButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.customButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.customButton2.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.customButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton2.Location = new System.Drawing.Point(419, 148);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(94, 44);
-            this.customButton2.TabIndex = 31;
-            this.customButton2.Text = "Clear";
-            this.customButton2.TextColor = System.Drawing.Color.Transparent;
-            this.customButton2.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnClear.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClear.BorderRadius = 40;
+            this.btnClear.BorderSize = 0;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClear.Location = new System.Drawing.Point(634, 148);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(94, 44);
+            this.btnClear.TabIndex = 31;
+            this.btnClear.Text = "Clear";
+            this.btnClear.TextColor = System.Drawing.Color.Transparent;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // customButton1
+            // btnAddItem
             // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(295, 148);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(119, 44);
-            this.customButton1.TabIndex = 30;
-            this.customButton1.Text = "Add Item";
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BorderRadius = 40;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddItem.Location = new System.Drawing.Point(510, 148);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(119, 44);
+            this.btnAddItem.TabIndex = 30;
+            this.btnAddItem.Text = "Add Item";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(428, 90);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(144, 26);
+            this.txtPrice.TabIndex = 33;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(425, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(92, 16);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Price per kilo";
             // 
             // frmAddingSellableItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(547, 204);
-            this.Controls.Add(this.customButton2);
-            this.Controls.Add(this.customButton1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(749, 204);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnAddItem);
+            this.Controls.Add(this.cbClass);
+            this.Controls.Add(this.txtScale);
+            this.Controls.Add(this.txtSellableName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -193,9 +223,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddingSellableItems";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.frmAddingSellableItems_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,15 +235,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Label label1;
-        private OrganizationProfile.CustomButton customButton2;
-        private OrganizationProfile.CustomButton customButton1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private OrganizationProfile.CustomButton btnClear;
+        private OrganizationProfile.CustomButton btnAddItem;
+        private System.Windows.Forms.ComboBox cbClass;
+        private System.Windows.Forms.TextBox txtScale;
+        private System.Windows.Forms.TextBox txtSellableName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label4;
     }
 }

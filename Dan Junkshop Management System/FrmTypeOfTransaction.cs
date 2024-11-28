@@ -19,12 +19,18 @@ namespace Dan_Junkshop_Management_System
 
         private void btnNewTransaction_Click(object sender, EventArgs e)
         {    
+            // Optimize : frmTypeOfTransaction page need GC.Collect
             using (PageObjects.newBuyTransaction = new frmNewBuyTransaction())
             {
-                this.Hide();
-                PageObjects.newBuyTransaction.ShowInTaskbar = false;
-                PageObjects.newBuyTransaction.ShowDialog();
-                this.Show();
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.newBuyTransaction.Owner = form;
+                    PageObjects.newBuyTransaction.ShowInTaskbar = false;
+                    PageObjects.newBuyTransaction.ShowDialog();
+                    form.Close();
+                }
+
             }     
         }
 
@@ -35,7 +41,7 @@ namespace Dan_Junkshop_Management_System
 
         private void frmTypeOfTransaction_Load(object sender, EventArgs e)
         {
-            this.Owner = FormAnimation.formBackground;
+
         }
     }
 }

@@ -29,12 +29,16 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
+            // Optimize: Transaction page need GC.Collect
             using(PageObjects.transactionType = new frmTypeOfTransaction())
             {
-                FormAnimation.ShowFocus();
-                PageObjects.transactionType.ShowInTaskbar = false;
-                PageObjects.transactionType.ShowDialog();
-                FormAnimation.formBackground.Close();
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.transactionType.Owner = form;
+                    PageObjects.transactionType.ShowDialog();
+                    form.Close();
+                }
             }
         } 
     }

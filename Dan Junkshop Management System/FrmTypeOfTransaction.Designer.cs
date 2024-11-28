@@ -121,6 +121,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTypeOfTransaction";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmTypeOfTransaction";
             this.Load += new System.EventHandler(this.frmTypeOfTransaction_Load);

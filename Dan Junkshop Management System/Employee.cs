@@ -30,12 +30,16 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
+            // Optimize: Add employee page need GC.Collect
             using (frmAddNewEmployee addEmployee = new frmAddNewEmployee())
             {
-                FormAnimation.ShowFocus();
-                addEmployee.Owner = FormAnimation.formBackground;
-                addEmployee.ShowDialog();
-                FormAnimation.formBackground.Close();
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    addEmployee.Owner = form;
+                    addEmployee.ShowDialog();
+                    form.Close();
+                }
             }
         }
 

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtItemName = new System.Windows.Forms.TextBox();
@@ -40,44 +41,51 @@
             this.cbCondition = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnCancelAddItem = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelAddItem)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.btnCancelAddItem);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1056, 50);
+            this.panel1.Size = new System.Drawing.Size(792, 41);
             this.panel1.TabIndex = 11;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(653, 10);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(16, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(12, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 32);
+            this.label1.Size = new System.Drawing.Size(212, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add New Scrap Item";
             // 
             // txtQuantity
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQuantity.Enabled = false;
             this.txtQuantity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(504, 114);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(538, 92);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ShortcutsEnabled = false;
-            this.txtQuantity.Size = new System.Drawing.Size(121, 30);
+            this.txtQuantity.Size = new System.Drawing.Size(106, 26);
             this.txtQuantity.TabIndex = 18;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
@@ -85,11 +93,10 @@
             // 
             this.txtItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtItemName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemName.Location = new System.Drawing.Point(36, 114);
-            this.txtItemName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtItemName.Location = new System.Drawing.Point(27, 93);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.ShortcutsEnabled = false;
-            this.txtItemName.Size = new System.Drawing.Size(193, 30);
+            this.txtItemName.Size = new System.Drawing.Size(145, 26);
             this.txtItemName.TabIndex = 16;
             this.txtItemName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtItemName_KeyPress);
             // 
@@ -97,10 +104,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(500, 92);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(535, 74);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 14;
             this.label4.Text = "Quantity";
             // 
@@ -108,10 +114,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(248, 91);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(186, 74);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "Condition";
             // 
@@ -119,12 +124,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(32, 91);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(24, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 19);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Item Name";
+            this.label2.Text = "Scrap Name";
             // 
             // btnClear
             // 
@@ -138,10 +142,9 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.25F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.Location = new System.Drawing.Point(633, 170);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(554, 138);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(159, 54);
+            this.btnClear.Size = new System.Drawing.Size(119, 44);
             this.btnClear.TabIndex = 21;
             this.btnClear.Text = "Clear";
             this.btnClear.TextColor = System.Drawing.Color.Transparent;
@@ -160,10 +163,9 @@
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Location = new System.Drawing.Point(466, 170);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddItem.Location = new System.Drawing.Point(429, 138);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(159, 54);
+            this.btnAddItem.Size = new System.Drawing.Size(119, 44);
             this.btnAddItem.TabIndex = 20;
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
@@ -179,21 +181,21 @@
             this.cbCondition.Items.AddRange(new object[] {
             "Good",
             "Defective"});
-            this.cbCondition.Location = new System.Drawing.Point(252, 113);
+            this.cbCondition.Location = new System.Drawing.Point(189, 92);
+            this.cbCondition.Margin = new System.Windows.Forms.Padding(2);
             this.cbCondition.Name = "cbCondition";
-            this.cbCondition.Size = new System.Drawing.Size(228, 31);
+            this.cbCondition.Size = new System.Drawing.Size(172, 26);
             this.cbCondition.TabIndex = 22;
+            this.cbCondition.SelectedIndexChanged += new System.EventHandler(this.cbCondition_SelectedIndexChanged);
             // 
             // txtPrice
             // 
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(649, 114);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(379, 92);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ShortcutsEnabled = false;
-            this.txtPrice.Size = new System.Drawing.Size(137, 30);
+            this.txtPrice.Size = new System.Drawing.Size(133, 26);
             this.txtPrice.TabIndex = 24;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
@@ -201,32 +203,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(645, 92);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(376, 74);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 19);
+            this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Price";
-            // 
-            // btnCancelAddItem
-            // 
-            this.btnCancelAddItem.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.btnCancelAddItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancelAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelAddItem.Location = new System.Drawing.Point(770, 12);
-            this.btnCancelAddItem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancelAddItem.Name = "btnCancelAddItem";
-            this.btnCancelAddItem.Size = new System.Drawing.Size(27, 26);
-            this.btnCancelAddItem.TabIndex = 1;
-            this.btnCancelAddItem.TabStop = false;
-            this.btnCancelAddItem.Click += new System.EventHandler(this.btnCancelAddItem_Click);
+            this.label5.Text = "Price per pcs";
             // 
             // frmAddingScrapItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(816, 251);
+            this.ClientSize = new System.Drawing.Size(685, 204);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCondition);
@@ -239,7 +227,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAddingScrapItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddingItem";
@@ -247,7 +234,7 @@
             this.Load += new System.EventHandler(this.frmAddingItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCancelAddItem)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,7 +243,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnCancelAddItem;
+        private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Label label1;
         private OrganizationProfile.CustomButton btnClear;
         private OrganizationProfile.CustomButton btnAddItem;
