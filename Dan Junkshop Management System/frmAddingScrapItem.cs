@@ -82,6 +82,8 @@ namespace Dan_Junkshop_Management_System
 
             if (SaveIndicator)
             {
+                txtItemName.Text = txtItemName.Text.ToString().Trim();
+
                 // will check if the scrap item with specified condition was already existing
                 ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition FROM ScrapItems WHERE ScrapName = @scrapname AND ScrapCondition = @scrapcondition", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtItemName.Text);
@@ -90,14 +92,10 @@ namespace Dan_Junkshop_Management_System
 
                 if (ConnectionObjects.reader.Read())
                 {
-                    if(ConnectionObjects.reader.GetString(0).ToUpper() == txtItemName.Text.ToUpper() 
-                        && ConnectionObjects.reader.GetString(1).ToUpper() == cbCondition.Text.ToUpper())
-                    {
-                        MessageBox.Show($"This scrap item with {cbCondition.Text} condition was already existing!",
-                        "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show($"This scrap item with {cbCondition.Text} condition was already existing!",
+                         "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                        ItemAlreadyExisting = true;
-                    }
+                    ItemAlreadyExisting = true;
                 }
                 else
                 {

@@ -37,10 +37,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new OrganizationProfile.CustomButton();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
@@ -98,7 +98,6 @@
             this.txtScale.Name = "txtScale";
             this.txtScale.Size = new System.Drawing.Size(136, 26);
             this.txtScale.TabIndex = 27;
-            this.txtScale.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtSellableName
             // 
@@ -128,7 +127,6 @@
             this.label3.Size = new System.Drawing.Size(100, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Scale Quantity";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -139,6 +137,27 @@
             this.label2.Size = new System.Drawing.Size(133, 16);
             this.label2.TabIndex = 22;
             this.label2.Text = "Sellable Item Name";
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(428, 90);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(144, 26);
+            this.txtPrice.TabIndex = 33;
+            this.txtPrice.Text = "0.00";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(425, 71);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 16);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Price per kilo (Peso)";
             // 
             // btnClear
             // 
@@ -180,26 +199,7 @@
             this.btnAddItem.Text = "Add Item";
             this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
             this.btnAddItem.UseVisualStyleBackColor = false;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrice.Enabled = false;
-            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(428, 90);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(144, 26);
-            this.txtPrice.TabIndex = 33;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(425, 71);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 16);
-            this.label4.TabIndex = 32;
-            this.label4.Text = "Price per kilo";
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // frmAddingSellableItems
             // 

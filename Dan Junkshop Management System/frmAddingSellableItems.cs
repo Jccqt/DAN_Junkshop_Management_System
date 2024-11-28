@@ -13,6 +13,10 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmAddingSellableItems : Form
     {
+        bool saveIndicator, itemAlreadyExist;
+        int itemCount;
+        string itemClass;
+
         public frmAddingSellableItems()
         {
             InitializeComponent();
@@ -28,16 +32,6 @@ namespace Dan_Junkshop_Management_System
             {
                 this.Close();
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void frmAddingSellableItems_Load(object sender, EventArgs e)
@@ -73,18 +67,91 @@ namespace Dan_Junkshop_Management_System
         {
             // will clear sellable item details
             txtSellableName.Clear();
-            cbClass.SelectedIndex = -1;
             txtPrice.Clear();
+            cbClass.SelectedIndex = -1;
             txtScale.Clear();
         }
 
         private void cbClass_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if(cbClass.SelectedIndex == -1)
+            {
+                txtPrice.Text = "0.00";
+            }
+            else
+            {
+                ConnectionObjects.conn.Open();
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPrice FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", cbClass.Text);
+                txtPrice.Text = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+                ConnectionObjects.conn.Close();
+            }
+        }
+
+        private void btnAddItem_Click(object sender, EventArgs e)
+        {
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPrice FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", cbClass.Text);
-            txtPrice.Text = ConnectionObjects.cmd.ExecuteScalar().ToString();
+            if(txtSellableName.Text == "" || cbClass.SelectedIndex == -1 || txtPrice.Text == "" || txtScale.Text == "")
+            {
+                MessageBox.Show("Sellable item details was incomplete!" +
+                    "\nPlease complete the sellable item details", "Sellable Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                saveIndicator = false;
+            }
+            else
+            {
+                saveIndicator = true;
+            }
+
+            if(saveIndicator)
+            {
+                txtSellableName.Text = txtSellableName.Text.ToString().Trim();
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT SellableName FROM SellableItems WHERE SellableName = @sellablename", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", txtSellableName.Text);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+                if (ConnectionObjects.reader.Read())
+                {
+                    MessageBox.Show("Sellable item was already existing!", "Sellable Item Notification",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    itemAlreadyExist = true;
+                }
+                else
+                {
+                    itemAlreadyExist = false;
+                }
+                ConnectionObjects.reader.Close();
+            }
+
+            if(saveIndicator && !itemAlreadyExist)
+            {
+                itemCount = 1000;
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(SellableID) FROM SellableItems WHERE Status = 1", ConnectionObjects.conn);
+                itemCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+                ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassID FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", cbClass.Text);
+                itemClass = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+                ConnectionObjects.cmd = new SqlCommand("INSERT INTO SellableItems VALUES(@sellableid, @sellablename, @itemclassid, @sellablequantity, @status)", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@sellableid", $"SCRAP{itemCount + 1}");
+                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", txtSellableName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", itemClass);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablequantity", Convert.ToDouble(txtScale.Text));
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+                ConnectionObjects.cmd.ExecuteNonQuery();
+
+                clearSellableItemDetails();
+
+                MessageBox.Show("Sellable item has been successfully added!", "Sellable Item Notification",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
             ConnectionObjects.conn.Close();
         }

@@ -35,13 +35,11 @@ namespace Dan_Junkshop_Management_System
 
         void showScrapItems()
         {
-            int counter = 0;
-
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Scrap name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Condition", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Price/qty", typeof(double));
             ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
-            ConnectionObjects.dataTable.Columns.Add("Price", typeof(decimal));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
@@ -61,6 +59,37 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
+            ConnectionObjects.dataTable = null;
+        }
+
+        void showSellableItems()
+        {
+            ConnectionObjects.dataTable = new DataTable();
+            ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Price/kilo", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
+                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID", ConnectionObjects.conn);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while (ConnectionObjects.reader.Read())
+            {
+                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
+                    ConnectionObjects.reader.GetValue(2), ConnectionObjects.reader.GetValue(3), Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+            }
+
+            gridViewInventory.DataSource = ConnectionObjects.dataTable;
+
+            gridViewInventory.AutoResizeColumn(4, DataGridViewAutoSizeColumnMode.AllCells);
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+            ConnectionObjects.dataTable = null;
         }
 
         private void cbType_SelectedIndexChanged(object sender, EventArgs e)
@@ -69,11 +98,13 @@ namespace Dan_Junkshop_Management_System
             {
                 btnSwitchStatus.Checked = true;
                 lblTitle.Text = "Available Scraps";
+                showScrapItems();
             }
             else
             {
                 btnSwitchStatus.Checked = true;
-                lblTitle.Text = "Available Sellable Junks";
+                lblTitle.Text = "Available Sellable Items";
+                showSellableItems();
             }
         }
 
@@ -113,6 +144,7 @@ namespace Dan_Junkshop_Management_System
                         PageObjects.addScrapItem.Owner = form;
                         PageObjects.addScrapItem.ShowDialog();
                         form.Close();
+                        showScrapItems();
                     }
                 }
             }
