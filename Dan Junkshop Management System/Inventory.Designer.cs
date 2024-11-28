@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventory));
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.gridViewInventory = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbType = new System.Windows.Forms.ComboBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
@@ -47,8 +46,6 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInventory)).BeginInit();
-            this.panelBorder2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelBorder1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -81,6 +78,8 @@
             // gridViewInventory
             // 
             this.gridViewInventory.AllowUserToDeleteRows = false;
+            this.gridViewInventory.AllowUserToResizeColumns = false;
+            this.gridViewInventory.AllowUserToResizeRows = false;
             this.gridViewInventory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -118,13 +117,33 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridViewInventory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewInventory.RowHeadersVisible = false;
-            this.gridViewInventory.RowHeadersWidth = 51;
+            this.gridViewInventory.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.gridViewInventory.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridViewInventory.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.gridViewInventory.Size = new System.Drawing.Size(920, 586);
             this.gridViewInventory.TabIndex = 9;
             this.gridViewInventory.VirtualMode = true;
+            // 
+            // cbType
+            // 
+            this.cbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbType.BackColor = System.Drawing.Color.White;
+            this.cbType.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cbType.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.cbType.ForeColor = System.Drawing.Color.Black;
+            this.cbType.FormattingEnabled = true;
+            this.cbType.ItemHeight = 25;
+            this.cbType.Items.AddRange(new object[] {
+            "Scraps",
+            "Sellable"});
+            this.cbType.Location = new System.Drawing.Point(653, 44);
+            this.cbType.Name = "cbType";
+            this.cbType.Size = new System.Drawing.Size(154, 33);
+            this.cbType.TabIndex = 0;
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // dataGridViewImageColumn1
             // 
@@ -133,51 +152,6 @@
             this.dataGridViewImageColumn1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit;
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            // 
-            // panelBorder2
-            // 
-            this.panelBorder2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelBorder2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panelBorder2.BackColor = System.Drawing.Color.White;
-            this.panelBorder2.BorderRadius = 30;
-            this.panelBorder2.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder2.Controls.Add(this.pictureBox2);
-            this.panelBorder2.Controls.Add(this.cbType);
-            this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(642, 41);
-            this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(172, 37);
-            this.panelBorder2.TabIndex = 11;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(34, 32);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // cbType
-            // 
-            this.cbType.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbType.BackColor = System.Drawing.Color.White;
-            this.cbType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbType.Font = new System.Drawing.Font("Arial", 16F);
-            this.cbType.ForeColor = System.Drawing.Color.Black;
-            this.cbType.FormattingEnabled = true;
-            this.cbType.ItemHeight = 24;
-            this.cbType.Items.AddRange(new object[] {
-            "Scraps",
-            "Sellable"});
-            this.cbType.Location = new System.Drawing.Point(44, 2);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(124, 32);
-            this.cbType.TabIndex = 0;
-            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // btnSwitchStatus
             // 
@@ -263,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.panelBorder2);
+            this.Controls.Add(this.cbType);
             this.Controls.Add(this.btnSwitchStatus);
             this.Controls.Add(this.gridViewInventory);
             this.Controls.Add(this.panel1);
@@ -274,8 +248,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInventory)).EndInit();
-            this.panelBorder2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelBorder1.ResumeLayout(false);
             this.panelBorder1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -291,10 +263,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView gridViewInventory;
         private WindowsFormsApp2.CustomButton.activeAndInactive btnSwitchStatus;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private OrganizationProfile.CustomButton btnAddItem;
+        private System.Windows.Forms.Timer timer1;
     }
 }

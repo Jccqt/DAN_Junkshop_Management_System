@@ -13,6 +13,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Inventory : UserControl
     {
+        public bool IsCollapsed;
         public Inventory()
         {
             InitializeComponent();
@@ -164,5 +165,7 @@ namespace Dan_Junkshop_Management_System
 
             GC.Collect();
         }
+
+        
     }
 }
