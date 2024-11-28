@@ -68,7 +68,10 @@ November 27, 2024
 
 November 28, 2024
 - Optimized FormAnimation instantiation (Update)
-- Added functionalities on displaying items in Inventory page (New)
+- Added display scrap items function on Inventory page (New)
 - Added Add Item function on Inventory Page (Update) (Again)
 - Added functionalities on Add Scrap Item page (New)
 - Added functionalities on Add Sellable Item page (New)
+- Added display sellable items function on Inventory page (New)
+- Fixed scrap item exist checker where scrap item name with leading white space will considered as not existing scrap item
+- Fixed sellable item exist checker where sellable item name with leader white space will considered as not existing sellable item
