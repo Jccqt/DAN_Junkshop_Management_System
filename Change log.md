@@ -73,5 +73,7 @@ November 28, 2024
 - Added functionalities on Add Scrap Item page (New)
 - Added functionalities on Add Sellable Item page (New)
 - Added display sellable items function on Inventory page (New)
-- Fixed scrap item exist checker where scrap item name with leading white space will considered as not existing scrap item
-- Fixed sellable item exist checker where sellable item name with leader white space will considered as not existing sellable item
+- Fixed scrap item and sellable item exist checker where scrap item name with leading white space will considered as not existing scrap item (Update)
+
+November 29, 2024
+- Added smart search function for scrap items and sellable items on Inventory page (New)
