@@ -13,7 +13,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Inventory : UserControl
     {
-        public bool IsCollapsed;
+        bool isCollapsed, isSearching;
         public Inventory()
         {
             InitializeComponent();
@@ -45,8 +45,20 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems WHERE Status = 1", ConnectionObjects.conn);
-            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+            if (isSearching)
+            {
+                // if search mode is on, scraps will be displayed based on search box input
+                ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems " +
+                    $"WHERE ScrapName LIKE '%{txtSearchBox.Text}%' AND Status = 1", ConnectionObjects.conn);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+            }
+            else
+            {
+                // if search mode is off, all scraps will be displayed
+                ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems WHERE Status = 1", ConnectionObjects.conn);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+            }
+            
 
             while(ConnectionObjects.reader.Read())
             {
@@ -74,8 +86,20 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
-                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID", ConnectionObjects.conn);
+            if (isSearching)
+            {
+                // if search mode is on, sellable items will be displayed based on search box input
+                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
+                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID " +
+                $"WHERE S.SellableName LIKE '%{txtSearchBox.Text}%' AND Status = 1", ConnectionObjects.conn);
+            }
+            else
+            {
+                // if search mode is off, all sellable items will be displayed
+                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
+                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE Status = 1", ConnectionObjects.conn);
+            }
+           
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while (ConnectionObjects.reader.Read())
@@ -166,6 +190,39 @@ namespace Dan_Junkshop_Management_System
             GC.Collect();
         }
 
-        
+        private void txtSearchBox_Leave(object sender, EventArgs e)
+        {
+            // will leave search mode when the user leave the search box and the search box is empty
+            if(txtSearchBox.Text == "")
+            {
+                isSearching = false;
+                txtSearchBox.Text = "Search item name";
+                txtSearchBox.ForeColor = SystemColors.GrayText;
+            }
+        }
+
+        private void txtSearchBox_Enter(object sender, EventArgs e)
+        {
+            // will enter search mode when the user click the search box
+            if (txtSearchBox.Text == "Search item name")
+            {
+                isSearching = true;
+                txtSearchBox.Text = "";
+                txtSearchBox.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            if (cbType.Text == "Scraps")
+            {
+                showScrapItems();
+            }
+            else
+            {
+                showSellableItems();
+            }
+        }
+
     }
 }
