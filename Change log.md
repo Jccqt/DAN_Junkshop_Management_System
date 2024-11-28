@@ -59,9 +59,16 @@ November 24, 2024
 - Added input checker for textboxes on Add Employee page (New)
 
 November 25, 2024
-- Removed Add Item page on Inventory page (Update)
+- Removed Add Item function on Inventory page (Update)
 - Added functionalities for Add Item page in Transaction page (New)
 - Added input checker for textboxes on Add Item page (New)
 
 November 27, 2024
 - Added employee name and username exist checker on Add Employee page (New)
+
+November 28, 2024
+- Optimized FormAnimation instantiation (Update)
+- Added functionalities on displaying items in Inventory page (New)
+- Added Add Item function on Inventory Page (Update) (Again)
+- Added functionalities on Add Scrap Item page (New)
+- Added functionalities on Add Sellable Item page (New)
