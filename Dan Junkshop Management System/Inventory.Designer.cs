@@ -72,7 +72,7 @@
             this.panel1.Controls.Add(this.btnAddItem);
             this.panel1.Controls.Add(this.lblTitle);
             this.panel1.Location = new System.Drawing.Point(9, 103);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1227, 60);
             this.panel1.TabIndex = 8;
@@ -132,7 +132,7 @@
             this.gridViewInventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewInventory.GridColor = System.Drawing.Color.Black;
             this.gridViewInventory.Location = new System.Drawing.Point(9, 162);
-            this.gridViewInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridViewInventory.Margin = new System.Windows.Forms.Padding(4);
             this.gridViewInventory.Name = "gridViewInventory";
             this.gridViewInventory.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -152,6 +152,8 @@
             this.gridViewInventory.TabIndex = 9;
             this.gridViewInventory.VirtualMode = true;
             this.gridViewInventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellContentClick);
+            this.gridViewInventory.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellMouseEnter);
+            this.gridViewInventory.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellMouseLeave);
             // 
             // cbType
             // 
@@ -167,7 +169,7 @@
             "Scraps",
             "Sellable"});
             this.cbType.Location = new System.Drawing.Point(871, 54);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbType.Margin = new System.Windows.Forms.Padding(4);
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(204, 40);
             this.cbType.TabIndex = 0;
@@ -190,7 +192,7 @@
             this.btnSwitchStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Transparent;
             this.btnSwitchStatus.Location = new System.Drawing.Point(1112, 50);
-            this.btnSwitchStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSwitchStatus.Margin = new System.Windows.Forms.Padding(4);
             this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(60, 27);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -213,7 +215,7 @@
             this.panelBorder1.Controls.Add(this.txtSearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
             this.panelBorder1.Location = new System.Drawing.Point(385, 50);
-            this.panelBorder1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBorder1.Margin = new System.Windows.Forms.Padding(4);
             this.panelBorder1.Name = "panelBorder1";
             this.panelBorder1.Size = new System.Drawing.Size(455, 46);
             this.panelBorder1.TabIndex = 1;
@@ -223,7 +225,7 @@
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(16, 7);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(33, 30);
             this.pictureBox1.TabIndex = 1;
@@ -235,7 +237,7 @@
             this.txtSearchBox.Font = new System.Drawing.Font("Arial", 13.25F);
             this.txtSearchBox.ForeColor = System.Drawing.SystemColors.GrayText;
             this.txtSearchBox.Location = new System.Drawing.Point(57, 11);
-            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearchBox.Name = "txtSearchBox";
             this.txtSearchBox.Size = new System.Drawing.Size(379, 26);
             this.txtSearchBox.TabIndex = 0;
@@ -255,7 +257,7 @@
             this.Controls.Add(this.gridViewInventory);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBorder1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Inventory";
             this.Size = new System.Drawing.Size(1245, 902);
             this.Load += new System.EventHandler(this.Inventory_Load);

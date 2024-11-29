@@ -21,6 +21,52 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult cancelEdit = MessageBox.Show("Are you sure you want to cancel editing this scrap item?" +
+                "\nAny unsaved progress will be lost!", "Scrap Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if(cancelEdit == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DialogResult saveUpdate = MessageBox.Show("Are you sure you want to save changes?", "Scrap Item Notification",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if(saveUpdate == DialogResult.Yes)
+            {
+                ConnectionObjects.conn.Open();
+
+                ConnectionObjects.cmd = new SqlCommand("UPDATE ScrapItems SET ScrapName = @newscrapname, ScrapCondition = @scrapcondition, " +
+                    "ScrapQuantity = @scrapquantity, ScrapPrice = @scrapprice, Status = @status WHERE ScrapName = @currentscrapname", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@newscrapname", txtScrapName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapcondition", cbCondition.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapquantity", Convert.ToInt32(txtQuantity.Text));
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapprice", Convert.ToDouble(txtPrice.Text));
+                
+                if(lblStatus.Text == "Active")
+                {
+                    ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+                }
+                else
+                {
+                    ConnectionObjects.cmd.Parameters.AddWithValue("@status", 0);
+                }
+                
+                ConnectionObjects.cmd.Parameters.AddWithValue("@currentscrapname", PageObjects.inventory.ItemName);
+                ConnectionObjects.cmd.ExecuteNonQuery();
+
+                ConnectionObjects.conn.Close();
+
+                MessageBox.Show("Scrap item details has been updated successfully!", "Scrap Item Notification");
+                this.Close();
+            }
+        }
+
         void displayUpdateBtn()
         {
             // TODO: Fix conditions on update button
@@ -35,7 +81,7 @@ namespace Dan_Junkshop_Management_System
         }
         private void txtQuantity_TextChanged(object sender, EventArgs e)
         {
-            if (txtQuantity.Text == quantity)
+            if (txtQuantity.Text.ToUpper() == quantity.ToUpper())
             {
                 quantityChanged = false;
             }
@@ -48,7 +94,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtPrice_TextChanged(object sender, EventArgs e)
         {
-            if (txtPrice.Text == price)
+            if (txtPrice.Text.ToUpper() == price.ToUpper())
             {
                 priceChanged = false;
             }
@@ -61,7 +107,7 @@ namespace Dan_Junkshop_Management_System
 
         private void cbCondition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCondition.Text == condition)
+            if (cbCondition.Text.ToUpper() == condition.ToUpper())
             {
                 conditionChanged = false;
             }
@@ -74,7 +120,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtScrapName_TextChanged(object sender, EventArgs e)
         {
-            if (txtScrapName.Text == scrapName)
+            if (txtScrapName.Text.ToUpper() == scrapName.ToUpper())
             {
                 scrapNameChanged = false;
             }
@@ -91,20 +137,20 @@ namespace Dan_Junkshop_Management_System
 
             ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice, Status FROM ScrapItems " +
                 "WHERE ScrapName = @scrapname", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", PageObjects.inventory.ScrapName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", PageObjects.inventory.ItemName);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             if (ConnectionObjects.reader.Read())
             {
-                txtScrapName.Text = ConnectionObjects.reader.GetString(0);
-                cbCondition.Text = ConnectionObjects.reader.GetString(1);
-                txtPrice.Text = ConnectionObjects.reader.GetInt32(2).ToString();
-                txtQuantity.Text = ConnectionObjects.reader.GetValue(3).ToString();
+                scrapName = ConnectionObjects.reader.GetString(0);
+                condition = ConnectionObjects.reader.GetString(1);
+                quantity = ConnectionObjects.reader.GetInt32(2).ToString();
+                price = ConnectionObjects.reader.GetValue(3).ToString();
 
-                scrapName = txtScrapName.Text;
-                condition = cbCondition.Text;
-                price = txtPrice.Text;
-                quantity = txtQuantity.Text;
+                txtScrapName.Text = scrapName;
+                cbCondition.Text = condition;
+                txtPrice.Text = price;
+                txtQuantity.Text = quantity;
 
                 if(ConnectionObjects.reader.GetInt32(4) == 1)
                 {
@@ -114,18 +160,13 @@ namespace Dan_Junkshop_Management_System
                 else
                 {
                     btnSwitchStatus.Checked = false;
-                    lblStatus.Text = "False";
+                    lblStatus.Text = "Inactive";
                 }
             }
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
             btnUpdate.Visible = false;
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

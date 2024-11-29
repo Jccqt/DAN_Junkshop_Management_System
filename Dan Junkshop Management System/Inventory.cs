@@ -31,7 +31,7 @@ namespace Dan_Junkshop_Management_System
             gridViewInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
         }
 
-        public string ScrapName { get { return itemNames[rowIndex].ToString(); } }
+        public string ItemName { get { return itemNames[rowIndex].ToString(); } }
 
         private void Inventory_Load(object sender, EventArgs e)
         {
@@ -122,6 +122,7 @@ namespace Dan_Junkshop_Management_System
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
 
                 itemNames.Add(ConnectionObjects.reader.GetString(0));
+                
             }
 
             gridViewInventory.DataSource = ConnectionObjects.dataTable;
@@ -245,9 +246,40 @@ namespace Dan_Junkshop_Management_System
                             PageObjects.editScrapItem.Owner = form;
                             PageObjects.editScrapItem.ShowDialog();
                             form.Close();
+                            showScrapItems();
                         }
                     }
                 }
+                else
+                {
+                    using(PageObjects.editSellableItem = new frmEditingSellableItems())
+                    {
+                        using(Form form = new Form())
+                        {
+                            FormAnimation.ShowFocus(form);
+                            PageObjects.editSellableItem.Owner = form;
+                            PageObjects.editSellableItem.ShowDialog();
+                            form.Close();
+                            showSellableItems();
+                        }
+                    }
+                }
+            }
+        }
+
+        private void gridViewInventory_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 4)
+            {
+                gridViewInventory.Cursor = Cursors.Hand;
+            }
+        }
+
+        private void gridViewInventory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 4)
+            {
+                gridViewInventory.Cursor = Cursors.Default;
             }
         }
 
