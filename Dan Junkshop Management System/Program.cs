@@ -45,6 +45,7 @@ namespace Dan_Junkshop_Management_System
         // Inventory Objects
         public static frmAddingScrapItem addScrapItem;
         public static frmAddingSellableItems addSellableItem;
+        public static frmEditingScrapItem editScrapItem;
     }
 
     public class ConnectionObjects

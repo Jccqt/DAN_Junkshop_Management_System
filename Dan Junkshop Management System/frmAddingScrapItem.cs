@@ -68,7 +68,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Open();
 
             // will check if the scrap item details is complete
-            if (txtItemName.Text == "" || cbCondition.SelectedIndex == -1 || txtQuantity.Text == "" || txtPrice.Text == "")
+            if (txtScrapName.Text == "" || cbCondition.SelectedIndex == -1 || txtQuantity.Text == "" || txtPrice.Text == "")
             {
                 MessageBox.Show("Scrap tem details was incomplete!" +
                     "\nPlease complete the scrap item details.", "Scrap Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -82,11 +82,11 @@ namespace Dan_Junkshop_Management_System
 
             if (SaveIndicator)
             {
-                txtItemName.Text = txtItemName.Text.ToString().Trim();
+                txtScrapName.Text = txtScrapName.Text.ToString().Trim();
 
                 // will check if the scrap item with specified condition was already existing
                 ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition FROM ScrapItems WHERE ScrapName = @scrapname AND ScrapCondition = @scrapcondition", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtItemName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtScrapName.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@scrapcondition", cbCondition.Text);
                 ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -117,7 +117,7 @@ namespace Dan_Junkshop_Management_System
                     ConnectionObjects.cmd = new SqlCommand("INSERT INTO ScrapItems VALUES(@scrapid, @scrapname, @scrapcondition, " +
                         "@scrapquantity, @scrapprice, @status)", ConnectionObjects.conn);
                     ConnectionObjects.cmd.Parameters.AddWithValue("@scrapid", $"SCRAP{ItemCount + 1}");
-                    ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtItemName.Text);
+                    ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", txtScrapName.Text);
                     ConnectionObjects.cmd.Parameters.AddWithValue("@scrapcondition", cbCondition.Text);
                     ConnectionObjects.cmd.Parameters.AddWithValue("@scrapquantity", Convert.ToInt32(txtQuantity.Text));
                     ConnectionObjects.cmd.Parameters.AddWithValue("@scrapprice", Convert.ToDouble(txtPrice.Text));
@@ -140,7 +140,7 @@ namespace Dan_Junkshop_Management_System
         void clearScrapItemDetails()
         {
             // will clear item information
-            txtItemName.Clear();
+            txtScrapName.Clear();
             txtPrice.Clear();
             txtQuantity.Clear();
             cbCondition.SelectedIndex = -1;

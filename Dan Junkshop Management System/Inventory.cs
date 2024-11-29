@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Collections;
+using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace Dan_Junkshop_Management_System
 {
     public partial class Inventory : UserControl
     {
-        bool isCollapsed, isSearching;
+        private bool isCollapsed, isSearching;
+        private int rowIndex;
+        private ArrayList itemNames = new ArrayList();
+
         public Inventory()
         {
             InitializeComponent();
@@ -26,6 +31,8 @@ namespace Dan_Junkshop_Management_System
             gridViewInventory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
         }
 
+        public string ScrapName { get { return itemNames[rowIndex].ToString(); } }
+
         private void Inventory_Load(object sender, EventArgs e)
         {
             cbType.Text = "Scraps";
@@ -36,6 +43,8 @@ namespace Dan_Junkshop_Management_System
 
         void showScrapItems()
         {
+            itemNames.Clear();
+
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Scrap name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Condition", typeof(string));
@@ -65,6 +74,8 @@ namespace Dan_Junkshop_Management_System
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
                     ConnectionObjects.reader.GetString(1), ConnectionObjects.reader.GetInt32(2), ConnectionObjects.reader.GetValue(3), 
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+
+                itemNames.Add(ConnectionObjects.reader.GetString(0));
             }
             gridViewInventory.DataSource = ConnectionObjects.dataTable;
 
@@ -77,6 +88,8 @@ namespace Dan_Junkshop_Management_System
 
         void showSellableItems()
         {
+            itemNames.Clear();
+
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
@@ -105,7 +118,10 @@ namespace Dan_Junkshop_Management_System
             while (ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    ConnectionObjects.reader.GetValue(2), ConnectionObjects.reader.GetValue(3), Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+                    ConnectionObjects.reader.GetValue(2), ConnectionObjects.reader.GetValue(3), 
+                    Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+
+                itemNames.Add(ConnectionObjects.reader.GetString(0));
             }
 
             gridViewInventory.DataSource = ConnectionObjects.dataTable;
@@ -183,6 +199,7 @@ namespace Dan_Junkshop_Management_System
                         PageObjects.addSellableItem.Owner = form;
                         PageObjects.addSellableItem.ShowDialog();
                         form.Close();
+                        showSellableItems();
                     }
                 }
             }
@@ -209,6 +226,28 @@ namespace Dan_Junkshop_Management_System
                 isSearching = true;
                 txtSearchBox.Text = "";
                 txtSearchBox.ForeColor = SystemColors.WindowText;
+            }
+        }
+
+        private void gridViewInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(gridViewInventory.CurrentCell.ColumnIndex == 4)
+            {
+                rowIndex = gridViewInventory.CurrentCell.RowIndex;
+
+                if(cbType.Text == "Scraps")
+                {
+                    using(PageObjects.editScrapItem = new frmEditingScrapItem())
+                    {
+                        using(Form form = new Form())
+                        {
+                            FormAnimation.ShowFocus(form);
+                            PageObjects.editScrapItem.Owner = form;
+                            PageObjects.editScrapItem.ShowDialog();
+                            form.Close();
+                        }
+                    }
+                }
             }
         }
 
