@@ -77,3 +77,4 @@ November 28, 2024
 
 November 29, 2024
 - Added smart search function for scrap items and sellable items on Inventory page (New)
+- Added functionalities for Edit Scrap Item page (New)
