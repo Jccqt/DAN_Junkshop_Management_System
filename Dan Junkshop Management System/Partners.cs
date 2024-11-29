@@ -15,6 +15,7 @@ namespace Dan_Junkshop_Management_System
         public Partners()
         {
             InitializeComponent();
+            //TODO: Adding the display partners on the partners panel.
         }
     }
 }

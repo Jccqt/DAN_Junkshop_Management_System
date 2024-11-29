@@ -73,6 +73,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bi_person_fill {
+            get {
+                object obj = ResourceManager.GetObject("bi_person-fill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CancelButton {
             get {
                 object obj = ResourceManager.GetObject("CancelButton", resourceCulture);
@@ -123,6 +133,26 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap employeeNew {
+            get {
+                object obj = ResourceManager.GetObject("employeeNew", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap EmployeePic {
+            get {
+                object obj = ResourceManager.GetObject("EmployeePic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit {
             get {
                 object obj = ResourceManager.GetObject("exit", resourceCulture);
@@ -156,6 +186,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap expand11 {
             get {
                 object obj = ResourceManager.GetObject("expand11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fluent_person_12_filled {
+            get {
+                object obj = ResourceManager.GetObject("fluent_person-12-filled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +376,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap minusButton {
             get {
                 object obj = ResourceManager.GetObject("minusButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap new_Employee {
+            get {
+                object obj = ResourceManager.GetObject("new_Employee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,6 +603,26 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap partners_Pic {
+            get {
+                object obj = ResourceManager.GetObject("partners_Pic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PartnersPic {
+            get {
+                object obj = ResourceManager.GetObject("PartnersPic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reddanjunkshop1 {
             get {
                 object obj = ResourceManager.GetObject("reddanjunkshop1", resourceCulture);
@@ -596,6 +666,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap tabler_dots {
             get {
                 object obj = ResourceManager.GetObject("tabler_dots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap updateIcon {
+            get {
+                object obj = ResourceManager.GetObject("updateIcon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

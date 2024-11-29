@@ -70,6 +70,12 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisplayPartners.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DisplayPartners.Designer.cs">
+      <DependentUpon>DisplayPartners.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddingItemSelection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DisplayPartners.resx">
+      <DependentUpon>DisplayPartners.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddingItemSelection.resx">
       <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </EmbeddedResource>
@@ -343,6 +352,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\updateIcon.png" />
+    <None Include="Resources\partners_Pic.png" />
+    <None Include="Resources\PartnersPic.png" />
+    <None Include="Resources\EmployeePic.png" />
+    <None Include="Resources\new_Employee.png" />
+    <None Include="Resources\bi_person-fill.png" />
+    <None Include="Resources\fluent_person-12-filled.png" />
+    <None Include="Resources\employeeNew.png" />
     <None Include="Resources\Drop down.png" />
     <None Include="Resources\weui_eyes-off-filled.png" />
     <None Include="Resources\weui_eyes-on-filled.png" />
