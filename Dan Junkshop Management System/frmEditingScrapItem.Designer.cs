@@ -127,6 +127,7 @@
             this.btnSwitchStatus.TabIndex = 41;
             this.btnSwitchStatus.Text = "activeAndInactive1";
             this.btnSwitchStatus.UseVisualStyleBackColor = true;
+            this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
             // 
             // lblStatus
             // 
@@ -139,6 +140,7 @@
             this.lblStatus.Size = new System.Drawing.Size(66, 20);
             this.lblStatus.TabIndex = 42;
             this.lblStatus.Text = "Inactive";
+            this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
             // 
             // txtPrice
             // 
@@ -151,6 +153,7 @@
             this.txtPrice.Size = new System.Drawing.Size(177, 30);
             this.txtPrice.TabIndex = 50;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
+            this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
             // label5
             // 
@@ -190,6 +193,7 @@
             this.txtQuantity.Size = new System.Drawing.Size(141, 30);
             this.txtQuantity.TabIndex = 47;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
+            this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // txtScrapName
             // 

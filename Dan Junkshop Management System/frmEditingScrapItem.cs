@@ -13,8 +13,8 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmEditingScrapItem : Form
     {
-        private string scrapName, condition, price, quantity;
-        bool scrapNameChanged, conditionChanged, priceChanged, quantityChanged;
+        private string scrapName, condition, price, quantity, status;
+        bool scrapNameChanged, conditionChanged, priceChanged, quantityChanged, statusChanged;
 
         public frmEditingScrapItem()
         {
@@ -31,6 +31,32 @@ namespace Dan_Junkshop_Management_System
                 this.Close();
             }
         }
+
+        private void btnSwitchStatus_Click(object sender, EventArgs e)
+        {
+            if(lblStatus.Text == "Active")
+            {
+                btnSwitchStatus.Checked = false;
+                lblStatus.Text = "Inactive";
+            }
+            else
+            {
+                btnSwitchStatus.Checked = true;
+                lblStatus.Text = "Active";
+            }
+        }
+
+        #region Input Validation
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.FloatingNumbersOnly(sender, e);
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.WholeNumbersOnly(sender, e);
+        }
+        #endregion
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
@@ -67,10 +93,51 @@ namespace Dan_Junkshop_Management_System
             }
         }
 
+        private void frmEditingScrapItem_Load(object sender, EventArgs e)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice, Status FROM ScrapItems " +
+                "WHERE ScrapName = @scrapname", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", PageObjects.inventory.ItemName);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if (ConnectionObjects.reader.Read())
+            {
+                scrapName = ConnectionObjects.reader.GetString(0);
+                condition = ConnectionObjects.reader.GetString(1);
+                quantity = ConnectionObjects.reader.GetInt32(2).ToString();
+                price = ConnectionObjects.reader.GetValue(3).ToString();
+
+                
+
+                if(ConnectionObjects.reader.GetInt32(4) == 1)
+                {
+                    btnSwitchStatus.Checked = true;
+                    status = "Active";
+                }
+                else
+                {
+                    btnSwitchStatus.Checked = false;
+                    status = "Inactive";
+                }
+
+                txtScrapName.Text = scrapName;
+                cbCondition.Text = condition;
+                txtPrice.Text = price;
+                txtQuantity.Text = quantity;
+                lblStatus.Text = status;
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+            btnUpdate.Visible = false;
+        }
+
+        #region scrap details changed
         void displayUpdateBtn()
         {
-            // TODO: Fix conditions on update button
-            if(scrapNameChanged ||  conditionChanged || priceChanged || quantityChanged)
+            if (scrapNameChanged || conditionChanged || priceChanged || quantityChanged || statusChanged)
             {
                 btnUpdate.Visible = true;
             }
@@ -131,42 +198,18 @@ namespace Dan_Junkshop_Management_System
             displayUpdateBtn();
         }
 
-        private void frmEditingScrapItem_Load(object sender, EventArgs e)
+        private void lblStatus_TextChanged(object sender, EventArgs e)
         {
-            ConnectionObjects.conn.Open();
-
-            ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice, Status FROM ScrapItems " +
-                "WHERE ScrapName = @scrapname", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@scrapname", PageObjects.inventory.ItemName);
-            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-            if (ConnectionObjects.reader.Read())
+            if (lblStatus.Text == status)
             {
-                scrapName = ConnectionObjects.reader.GetString(0);
-                condition = ConnectionObjects.reader.GetString(1);
-                quantity = ConnectionObjects.reader.GetInt32(2).ToString();
-                price = ConnectionObjects.reader.GetValue(3).ToString();
-
-                txtScrapName.Text = scrapName;
-                cbCondition.Text = condition;
-                txtPrice.Text = price;
-                txtQuantity.Text = quantity;
-
-                if(ConnectionObjects.reader.GetInt32(4) == 1)
-                {
-                    btnSwitchStatus.Checked = true;
-                    lblStatus.Text = "Active";
-                }
-                else
-                {
-                    btnSwitchStatus.Checked = false;
-                    lblStatus.Text = "Inactive";
-                }
+                statusChanged = false;
             }
-
-            ConnectionObjects.reader.Close();
-            ConnectionObjects.conn.Close();
-            btnUpdate.Visible = false;
+            else
+            {
+                statusChanged = true;
+            }
+            displayUpdateBtn();
         }
+        #endregion
     }
 }

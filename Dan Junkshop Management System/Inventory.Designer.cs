@@ -35,14 +35,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.gridViewInventory = new System.Windows.Forms.DataGridView();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.txtSearchBox = new System.Windows.Forms.TextBox();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtSearchBox = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewInventory)).BeginInit();
@@ -56,9 +56,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(353, 7);
+            this.lblTitle.Location = new System.Drawing.Point(471, 9);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(236, 33);
+            this.lblTitle.Size = new System.Drawing.Size(292, 42);
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "Available Scraps";
             // 
@@ -70,13 +71,39 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.btnAddItem);
             this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Location = new System.Drawing.Point(7, 84);
+            this.panel1.Location = new System.Drawing.Point(9, 103);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(920, 49);
+            this.panel1.Size = new System.Drawing.Size(1227, 60);
             this.panel1.TabIndex = 8;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddItem.BorderRadius = 37;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddItem.Location = new System.Drawing.Point(1045, 7);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(165, 46);
+            this.btnAddItem.TabIndex = 4;
+            this.btnAddItem.Text = "     Add Item";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // gridViewInventory
             // 
+            this.gridViewInventory.AllowUserToAddRows = false;
             this.gridViewInventory.AllowUserToDeleteRows = false;
             this.gridViewInventory.AllowUserToResizeColumns = false;
             this.gridViewInventory.AllowUserToResizeRows = false;
@@ -105,7 +132,8 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridViewInventory.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewInventory.GridColor = System.Drawing.Color.Black;
-            this.gridViewInventory.Location = new System.Drawing.Point(7, 132);
+            this.gridViewInventory.Location = new System.Drawing.Point(9, 162);
+            this.gridViewInventory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridViewInventory.Name = "gridViewInventory";
             this.gridViewInventory.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -121,7 +149,7 @@
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.gridViewInventory.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.gridViewInventory.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.gridViewInventory.Size = new System.Drawing.Size(920, 586);
+            this.gridViewInventory.Size = new System.Drawing.Size(1227, 721);
             this.gridViewInventory.TabIndex = 9;
             this.gridViewInventory.VirtualMode = true;
             this.gridViewInventory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellContentClick);
@@ -137,13 +165,14 @@
             this.cbType.Font = new System.Drawing.Font("Arial", 16.25F);
             this.cbType.ForeColor = System.Drawing.Color.Black;
             this.cbType.FormattingEnabled = true;
-            this.cbType.ItemHeight = 25;
+            this.cbType.ItemHeight = 32;
             this.cbType.Items.AddRange(new object[] {
             "Scraps",
             "Sellable"});
-            this.cbType.Location = new System.Drawing.Point(653, 44);
+            this.cbType.Location = new System.Drawing.Point(871, 54);
+            this.cbType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(154, 33);
+            this.cbType.Size = new System.Drawing.Size(204, 40);
             this.cbType.TabIndex = 0;
             this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
@@ -154,14 +183,15 @@
             this.btnSwitchStatus.Checked = true;
             this.btnSwitchStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(834, 41);
-            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
+            this.btnSwitchStatus.Location = new System.Drawing.Point(1112, 50);
+            this.btnSwitchStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(60, 27);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
             this.btnSwitchStatus.OffToggleColor = System.Drawing.Color.White;
             this.btnSwitchStatus.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnSwitchStatus.OnToggleColor = System.Drawing.Color.White;
-            this.btnSwitchStatus.Size = new System.Drawing.Size(84, 37);
+            this.btnSwitchStatus.Size = new System.Drawing.Size(112, 46);
             this.btnSwitchStatus.TabIndex = 10;
             this.btnSwitchStatus.Text = "ActiveInactive";
             this.btnSwitchStatus.UseVisualStyleBackColor = false;
@@ -176,59 +206,38 @@
             this.panelBorder1.Controls.Add(this.pictureBox1);
             this.panelBorder1.Controls.Add(this.txtSearchBox);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(289, 41);
+            this.panelBorder1.Location = new System.Drawing.Point(385, 50);
+            this.panelBorder1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(341, 37);
+            this.panelBorder1.Size = new System.Drawing.Size(455, 46);
             this.panelBorder1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 7);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // txtSearchBox
             // 
             this.txtSearchBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearchBox.Font = new System.Drawing.Font("Arial", 13.25F);
             this.txtSearchBox.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.txtSearchBox.Location = new System.Drawing.Point(43, 9);
+            this.txtSearchBox.Location = new System.Drawing.Point(57, 11);
+            this.txtSearchBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearchBox.Name = "txtSearchBox";
-            this.txtSearchBox.Size = new System.Drawing.Size(284, 21);
+            this.txtSearchBox.Size = new System.Drawing.Size(379, 26);
             this.txtSearchBox.TabIndex = 0;
             this.txtSearchBox.Text = "Search item name";
             this.txtSearchBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             this.txtSearchBox.Enter += new System.EventHandler(this.txtSearchBox_Enter);
             this.txtSearchBox.Leave += new System.EventHandler(this.txtSearchBox_Leave);
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddItem.BorderRadius = 37;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
-            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(784, 6);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(124, 37);
-            this.btnAddItem.TabIndex = 4;
-            this.btnAddItem.Text = "     Add Item";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // dataGridViewImageColumn1
             // 
@@ -237,10 +246,11 @@
             this.dataGridViewImageColumn1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit;
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
             // 
             // Inventory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.cbType);
@@ -248,8 +258,9 @@
             this.Controls.Add(this.gridViewInventory);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelBorder1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Inventory";
-            this.Size = new System.Drawing.Size(934, 733);
+            this.Size = new System.Drawing.Size(1245, 902);
             this.Load += new System.EventHandler(this.Inventory_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
