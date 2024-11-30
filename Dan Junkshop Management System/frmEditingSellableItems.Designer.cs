@@ -38,10 +38,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCancel = new OrganizationProfile.CustomButton();
-            this.btnUpdate = new OrganizationProfile.CustomButton();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
+            this.btnCancel = new OrganizationProfile.CustomButton();
+            this.btnUpdate = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +96,7 @@
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(213, 26);
             this.cbClass.TabIndex = 60;
+            this.cbClass.TextChanged += new System.EventHandler(this.cbClass_TextChanged);
             // 
             // txtScale
             // 
@@ -105,6 +106,8 @@
             this.txtScale.Name = "txtScale";
             this.txtScale.Size = new System.Drawing.Size(136, 26);
             this.txtScale.TabIndex = 59;
+            this.txtScale.TextChanged += new System.EventHandler(this.txtScale_TextChanged);
+            this.txtScale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScale_KeyPress);
             // 
             // txtSellableName
             // 
@@ -114,6 +117,7 @@
             this.txtSellableName.Name = "txtSellableName";
             this.txtSellableName.Size = new System.Drawing.Size(145, 26);
             this.txtSellableName.TabIndex = 58;
+            this.txtSellableName.TextChanged += new System.EventHandler(this.txtSellableName_TextChanged);
             // 
             // label5
             // 
@@ -145,6 +149,34 @@
             this.label2.TabIndex = 55;
             this.label2.Text = "Sellable Item Name";
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(662, 44);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(57, 16);
+            this.lblStatus.TabIndex = 64;
+            this.lblStatus.Text = "Inactive";
+            this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
+            // 
+            // btnSwitchStatus
+            // 
+            this.btnSwitchStatus.ForeColor = System.Drawing.Color.Black;
+            this.btnSwitchStatus.Location = new System.Drawing.Point(665, 64);
+            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
+            this.btnSwitchStatus.Name = "btnSwitchStatus";
+            this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnSwitchStatus.OffToggleColor = System.Drawing.Color.White;
+            this.btnSwitchStatus.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnSwitchStatus.OnToggleColor = System.Drawing.Color.White;
+            this.btnSwitchStatus.Size = new System.Drawing.Size(53, 27);
+            this.btnSwitchStatus.TabIndex = 63;
+            this.btnSwitchStatus.Text = "activeAndInactive1";
+            this.btnSwitchStatus.UseVisualStyleBackColor = true;
+            this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -164,6 +196,7 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.TextColor = System.Drawing.Color.Transparent;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -185,32 +218,7 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextColor = System.Drawing.Color.Transparent;
             this.btnUpdate.UseVisualStyleBackColor = false;
-            // 
-            // lblStatus
-            // 
-            this.lblStatus.AutoSize = true;
-            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Location = new System.Drawing.Point(662, 44);
-            this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(57, 16);
-            this.lblStatus.TabIndex = 64;
-            this.lblStatus.Text = "Inactive";
-            // 
-            // btnSwitchStatus
-            // 
-            this.btnSwitchStatus.ForeColor = System.Drawing.Color.Black;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(665, 64);
-            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
-            this.btnSwitchStatus.Name = "btnSwitchStatus";
-            this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnSwitchStatus.OffToggleColor = System.Drawing.Color.White;
-            this.btnSwitchStatus.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnSwitchStatus.OnToggleColor = System.Drawing.Color.White;
-            this.btnSwitchStatus.Size = new System.Drawing.Size(53, 27);
-            this.btnSwitchStatus.TabIndex = 63;
-            this.btnSwitchStatus.Text = "activeAndInactive1";
-            this.btnSwitchStatus.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmEditingSellableItems
             // 
@@ -233,7 +241,9 @@
             this.Controls.Add(this.btnUpdate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditingSellableItems";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditingSellableItems";
+            this.Load += new System.EventHandler(this.frmEditingSellableItems_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

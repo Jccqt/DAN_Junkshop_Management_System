@@ -49,7 +49,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.dataTable.Columns.Add("Scrap name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Condition", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Price/qty", typeof(double));
-            ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
+            ConnectionObjects.dataTable.Columns.Add("Quantity (pcs)", typeof(int));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
@@ -93,8 +93,8 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Price/kilo", typeof(double));
-            ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(double));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();

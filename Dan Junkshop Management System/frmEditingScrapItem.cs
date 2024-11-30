@@ -14,7 +14,7 @@ namespace Dan_Junkshop_Management_System
     public partial class frmEditingScrapItem : Form
     {
         private string scrapName, condition, price, quantity, status;
-        bool scrapNameChanged, conditionChanged, priceChanged, quantityChanged, statusChanged;
+        private bool scrapNameChanged, conditionChanged, priceChanged, quantityChanged, statusChanged;
 
         public frmEditingScrapItem()
         {
@@ -23,6 +23,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
+            // Check Message Consistency: Cancel editing scrap item
             DialogResult cancelEdit = MessageBox.Show("Are you sure you want to cancel editing this scrap item?" +
                 "\nAny unsaved progress will be lost!", "Scrap Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
@@ -60,6 +61,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            // Check Message Consistency: Save Edit for Scrap Item
             DialogResult saveUpdate = MessageBox.Show("Are you sure you want to save changes?", "Scrap Item Notification",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
@@ -69,7 +71,7 @@ namespace Dan_Junkshop_Management_System
 
                 ConnectionObjects.cmd = new SqlCommand("UPDATE ScrapItems SET ScrapName = @newscrapname, ScrapCondition = @scrapcondition, " +
                     "ScrapQuantity = @scrapquantity, ScrapPrice = @scrapprice, Status = @status WHERE ScrapName = @currentscrapname", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@newscrapname", txtScrapName.Text);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@newscrapname", txtScrapName.Text.ToString().Trim());
                 ConnectionObjects.cmd.Parameters.AddWithValue("@scrapcondition", cbCondition.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@scrapquantity", Convert.ToInt32(txtQuantity.Text));
                 ConnectionObjects.cmd.Parameters.AddWithValue("@scrapprice", Convert.ToDouble(txtPrice.Text));
@@ -174,7 +176,7 @@ namespace Dan_Junkshop_Management_System
 
         private void cbCondition_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbCondition.Text.ToUpper() == condition.ToUpper())
+            if (cbCondition.Text == condition)
             {
                 conditionChanged = false;
             }
@@ -187,7 +189,8 @@ namespace Dan_Junkshop_Management_System
 
         private void txtScrapName_TextChanged(object sender, EventArgs e)
         {
-            if (txtScrapName.Text.ToUpper() == scrapName.ToUpper())
+            txtScrapName.Text = txtScrapName.Text.ToString().TrimStart();
+            if (txtScrapName.Text == scrapName)
             {
                 scrapNameChanged = false;
             }

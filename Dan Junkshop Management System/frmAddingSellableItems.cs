@@ -54,6 +54,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // TODO: Change btnClear to btnCancel
             DialogResult clearInfo = MessageBox.Show("Are you sure you want to clear item information?" +
                 "\nAny unsaved progress will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
