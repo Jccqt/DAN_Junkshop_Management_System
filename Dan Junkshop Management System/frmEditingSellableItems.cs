@@ -111,6 +111,8 @@ namespace Dan_Junkshop_Management_System
             InputValidation.FloatingNumbersOnly(sender, e);
         }
 
+ 
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             // Check Message Consistency: Cancel editing sellable item

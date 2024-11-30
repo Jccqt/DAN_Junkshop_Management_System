@@ -42,6 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.customButton1 = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,7 @@
             this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Transparent;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(587, 164);
+            this.btnClear.Location = new System.Drawing.Point(564, 187);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(119, 44);
             this.btnClear.TabIndex = 40;
@@ -98,7 +99,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(463, 164);
+            this.btnUpdate.Location = new System.Drawing.Point(302, 187);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnUpdate.Size = new System.Drawing.Size(119, 44);
@@ -168,7 +169,7 @@
             "Good",
             "Defective"});
             this.cbCondition.Location = new System.Drawing.Point(201, 121);
-            this.cbCondition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCondition.Margin = new System.Windows.Forms.Padding(2);
             this.cbCondition.Name = "cbCondition";
             this.cbCondition.Size = new System.Drawing.Size(172, 26);
             this.cbCondition.TabIndex = 48;
@@ -227,12 +228,34 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Scrap Name";
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.customButton1.Location = new System.Drawing.Point(436, 187);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.customButton1.Size = new System.Drawing.Size(119, 44);
+            this.customButton1.TabIndex = 66;
+            this.customButton1.Text = "Restore";
+            this.customButton1.TextColor = System.Drawing.Color.Transparent;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
             // frmEditingScrapItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(715, 227);
+            this.ClientSize = new System.Drawing.Size(715, 243);
+            this.Controls.Add(this.customButton1);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCondition);
@@ -275,5 +298,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private OrganizationProfile.CustomButton customButton1;
     }
 }
