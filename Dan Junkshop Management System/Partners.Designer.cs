@@ -28,29 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.activeAndInactive1 = new WindowsFormsApp2.CustomButton.activeAndInactive();
+            this.btnStatusSwitch = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.btnAddPartners = new OrganizationProfile.CustomButton();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.flpDisplayPartners = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // activeAndInactive1
+            // btnStatusSwitch
             // 
-            this.activeAndInactive1.BackColor = System.Drawing.Color.DimGray;
-            this.activeAndInactive1.Checked = true;
-            this.activeAndInactive1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.activeAndInactive1.ForeColor = System.Drawing.Color.Transparent;
-            this.activeAndInactive1.Location = new System.Drawing.Point(825, 42);
-            this.activeAndInactive1.MinimumSize = new System.Drawing.Size(45, 22);
-            this.activeAndInactive1.Name = "activeAndInactive1";
-            this.activeAndInactive1.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.activeAndInactive1.OffToggleColor = System.Drawing.Color.White;
-            this.activeAndInactive1.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.activeAndInactive1.OnToggleColor = System.Drawing.Color.White;
-            this.activeAndInactive1.Size = new System.Drawing.Size(99, 43);
-            this.activeAndInactive1.TabIndex = 6;
-            this.activeAndInactive1.Text = "activeAndInactive1";
-            this.activeAndInactive1.UseVisualStyleBackColor = false;
+            this.btnStatusSwitch.BackColor = System.Drawing.Color.DimGray;
+            this.btnStatusSwitch.Checked = true;
+            this.btnStatusSwitch.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.btnStatusSwitch.ForeColor = System.Drawing.Color.Transparent;
+            this.btnStatusSwitch.Location = new System.Drawing.Point(825, 42);
+            this.btnStatusSwitch.MinimumSize = new System.Drawing.Size(45, 22);
+            this.btnStatusSwitch.Name = "btnStatusSwitch";
+            this.btnStatusSwitch.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnStatusSwitch.OffToggleColor = System.Drawing.Color.White;
+            this.btnStatusSwitch.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnStatusSwitch.OnToggleColor = System.Drawing.Color.White;
+            this.btnStatusSwitch.Size = new System.Drawing.Size(99, 43);
+            this.btnStatusSwitch.TabIndex = 6;
+            this.btnStatusSwitch.Text = "activeAndInactive1";
+            this.btnStatusSwitch.UseVisualStyleBackColor = false;
             // 
             // btnAddPartners
             // 
@@ -72,16 +72,17 @@
             this.btnAddPartners.Text = "       Add Partners";
             this.btnAddPartners.TextColor = System.Drawing.Color.Transparent;
             this.btnAddPartners.UseVisualStyleBackColor = false;
+            this.btnAddPartners.Click += new System.EventHandler(this.btnAddPartners_Click);
             // 
-            // label1
+            // lblStatus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(3, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 56);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Active";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial Black", 30F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(3, 29);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(365, 56);
+            this.lblStatus.TabIndex = 4;
+            this.lblStatus.Text = "Active partners";
             // 
             // flpDisplayPartners
             // 
@@ -96,9 +97,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.flpDisplayPartners);
-            this.Controls.Add(this.activeAndInactive1);
+            this.Controls.Add(this.btnStatusSwitch);
             this.Controls.Add(this.btnAddPartners);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblStatus);
             this.Name = "Partners";
             this.Size = new System.Drawing.Size(938, 736);
             this.ResumeLayout(false);
@@ -108,9 +109,9 @@
 
         #endregion
 
-        private WindowsFormsApp2.CustomButton.activeAndInactive activeAndInactive1;
+        private WindowsFormsApp2.CustomButton.activeAndInactive btnStatusSwitch;
         private OrganizationProfile.CustomButton btnAddPartners;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.FlowLayoutPanel flpDisplayPartners;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnCancel = new OrganizationProfile.CustomButton();
             this.btnUpdate = new OrganizationProfile.CustomButton();
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.lblStatus = new System.Windows.Forms.Label();
@@ -42,7 +42,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnRestoreOriginal = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,26 +66,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Scrap Item";
             // 
-            // btnClear
+            // btnCancel
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClear.BorderRadius = 40;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(564, 187);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(119, 44);
-            this.btnClear.TabIndex = 40;
-            this.btnClear.Text = "Cancel";
-            this.btnClear.TextColor = System.Drawing.Color.Transparent;
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 40;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(537, 187);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(119, 44);
+            this.btnCancel.TabIndex = 40;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -99,7 +99,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(302, 187);
+            this.btnUpdate.Location = new System.Drawing.Point(287, 187);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnUpdate.Size = new System.Drawing.Size(119, 44);
@@ -112,7 +112,7 @@
             // btnSwitchStatus
             // 
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Black;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(624, 64);
+            this.btnSwitchStatus.Location = new System.Drawing.Point(602, 64);
             this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -130,7 +130,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Location = new System.Drawing.Point(621, 44);
+            this.lblStatus.Location = new System.Drawing.Point(599, 44);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(57, 16);
             this.lblStatus.TabIndex = 42;
@@ -228,34 +228,35 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Scrap Name";
             // 
-            // customButton1
+            // btnRestoreOriginal
             // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(436, 187);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.customButton1.Size = new System.Drawing.Size(119, 44);
-            this.customButton1.TabIndex = 66;
-            this.customButton1.Text = "Restore";
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnRestoreOriginal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.btnRestoreOriginal.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.btnRestoreOriginal.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRestoreOriginal.BorderRadius = 40;
+            this.btnRestoreOriginal.BorderSize = 0;
+            this.btnRestoreOriginal.FlatAppearance.BorderSize = 0;
+            this.btnRestoreOriginal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestoreOriginal.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnRestoreOriginal.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRestoreOriginal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRestoreOriginal.Location = new System.Drawing.Point(412, 187);
+            this.btnRestoreOriginal.Name = "btnRestoreOriginal";
+            this.btnRestoreOriginal.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRestoreOriginal.Size = new System.Drawing.Size(119, 44);
+            this.btnRestoreOriginal.TabIndex = 66;
+            this.btnRestoreOriginal.Text = "Restore original details";
+            this.btnRestoreOriginal.TextColor = System.Drawing.Color.Transparent;
+            this.btnRestoreOriginal.UseVisualStyleBackColor = false;
+            this.btnRestoreOriginal.Click += new System.EventHandler(this.btnRestoreDefault_Click);
             // 
             // frmEditingScrapItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(715, 243);
-            this.Controls.Add(this.customButton1);
+            this.ClientSize = new System.Drawing.Size(670, 243);
+            this.Controls.Add(this.btnRestoreOriginal);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCondition);
@@ -266,7 +267,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnSwitchStatus);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -286,7 +287,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private OrganizationProfile.CustomButton btnClear;
+        private OrganizationProfile.CustomButton btnCancel;
         private OrganizationProfile.CustomButton btnUpdate;
         private WindowsFormsApp2.CustomButton.activeAndInactive btnSwitchStatus;
         private System.Windows.Forms.Label lblStatus;
@@ -298,6 +299,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private OrganizationProfile.CustomButton customButton1;
+        private OrganizationProfile.CustomButton btnRestoreOriginal;
     }
 }

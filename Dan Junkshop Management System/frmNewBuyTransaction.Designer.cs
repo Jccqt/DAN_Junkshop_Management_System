@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewBuyTransaction));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -43,8 +41,8 @@
             this.btnAddItem = new OrganizationProfile.CustomButton();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.customButton2 = new OrganizationProfile.CustomButton();
-            this.customButton3 = new OrganizationProfile.CustomButton();
+            this.btnCancelTransaction = new OrganizationProfile.CustomButton();
+            this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCount = new System.Windows.Forms.Label();
@@ -60,7 +58,6 @@
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -73,24 +70,12 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 51);
             this.panel1.TabIndex = 0;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExit.BackgroundImage")));
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Location = new System.Drawing.Point(1211, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(23, 22);
-            this.btnExit.TabIndex = 5;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // headerLabel
             // 
@@ -212,7 +197,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(194, 23);
             this.label8.TabIndex = 0;
-            this.label8.Text = "List of available junk";
+            this.label8.Text = "List of sellable items";
             // 
             // pictureBox1
             // 
@@ -224,45 +209,46 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // customButton2
+            // btnCancelTransaction
             // 
-            this.customButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton2.BackColor = System.Drawing.Color.IndianRed;
-            this.customButton2.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.customButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton2.Location = new System.Drawing.Point(893, 673);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(156, 54);
-            this.customButton2.TabIndex = 16;
-            this.customButton2.Text = "CANCEL TRANSACTION";
-            this.customButton2.TextColor = System.Drawing.Color.Transparent;
-            this.customButton2.UseVisualStyleBackColor = false;
+            this.btnCancelTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelTransaction.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancelTransaction.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.btnCancelTransaction.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelTransaction.BorderRadius = 40;
+            this.btnCancelTransaction.BorderSize = 0;
+            this.btnCancelTransaction.FlatAppearance.BorderSize = 0;
+            this.btnCancelTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancelTransaction.Location = new System.Drawing.Point(1064, 673);
+            this.btnCancelTransaction.Name = "btnCancelTransaction";
+            this.btnCancelTransaction.Size = new System.Drawing.Size(156, 54);
+            this.btnCancelTransaction.TabIndex = 16;
+            this.btnCancelTransaction.Text = "CANCEL TRANSACTION";
+            this.btnCancelTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancelTransaction.UseVisualStyleBackColor = false;
+            this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
             // 
-            // customButton3
+            // btnProcessTransaction
             // 
-            this.customButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.customButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton3.BorderRadius = 40;
-            this.customButton3.BorderSize = 0;
-            this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton3.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton3.Location = new System.Drawing.Point(1064, 673);
-            this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(156, 54);
-            this.customButton3.TabIndex = 17;
-            this.customButton3.Text = " PROCESS";
-            this.customButton3.TextColor = System.Drawing.Color.Transparent;
-            this.customButton3.UseVisualStyleBackColor = false;
+            this.btnProcessTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProcessTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnProcessTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnProcessTransaction.BorderColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.BorderRadius = 40;
+            this.btnProcessTransaction.BorderSize = 0;
+            this.btnProcessTransaction.FlatAppearance.BorderSize = 0;
+            this.btnProcessTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcessTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcessTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.Location = new System.Drawing.Point(890, 673);
+            this.btnProcessTransaction.Name = "btnProcessTransaction";
+            this.btnProcessTransaction.Size = new System.Drawing.Size(156, 54);
+            this.btnProcessTransaction.TabIndex = 17;
+            this.btnProcessTransaction.Text = " PROCESS TRANSACTION";
+            this.btnProcessTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.UseVisualStyleBackColor = false;
             // 
             // flowLayoutPanel1
             // 
@@ -422,8 +408,8 @@
             this.ClientSize = new System.Drawing.Size(1264, 761);
             this.ControlBox = false;
             this.Controls.Add(this.lblTransaction);
-            this.Controls.Add(this.customButton3);
-            this.Controls.Add(this.customButton2);
+            this.Controls.Add(this.btnProcessTransaction);
+            this.Controls.Add(this.btnCancelTransaction);
             this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label9);
@@ -451,7 +437,6 @@
             this.Load += new System.EventHandler(this.NewBuyTransaction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -472,7 +457,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
@@ -481,8 +465,8 @@
         private System.Windows.Forms.Panel panel5;
         private OrganizationProfile.CustomButton btnAddItem;
         private System.Windows.Forms.Label label8;
-        private OrganizationProfile.CustomButton customButton2;
-        private OrganizationProfile.CustomButton customButton3;
+        private OrganizationProfile.CustomButton btnCancelTransaction;
+        private OrganizationProfile.CustomButton btnProcessTransaction;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblCount;

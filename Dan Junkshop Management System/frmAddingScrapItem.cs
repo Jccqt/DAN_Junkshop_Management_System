@@ -22,30 +22,6 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            // Check Message Consistency : Exit Add Dialog
-            // will prompt a warning message if the user close the adding item window
-            DialogResult exitAddItem = MessageBox.Show("Are you sure you want to cancel the adding of scrap item?"
-                                        + "\nAny unsaved progress will be lost!", "Cancel add", MessageBoxButtons.YesNo,
-                                        MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-
-            if(exitAddItem == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            // Check Message Consistency : Clear information
-            DialogResult clearItemInfo = MessageBox.Show("Are you sure you want to clear item information?", "Clear item information", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-            if(clearItemInfo == DialogResult.Yes)
-            {
-                clearScrapItemDetails();
-            }
-        }
 
         #region Input validation for textboxes
         private void txtItemName_KeyPress(object sender, KeyPressEventArgs e)
@@ -156,6 +132,31 @@ namespace Dan_Junkshop_Management_System
             {
                 txtPrice.Enabled = false;
                 txtPrice.Text = "0.00";
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency : Clear textboxes for adding scrap items
+            DialogResult clearItemInfo = MessageBox.Show("Are you sure you want to clear item information?", "Clear item information", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+            if (clearItemInfo == DialogResult.Yes)
+            {
+                clearScrapItemDetails();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency : Cancel adding scrap items
+            // will prompt a warning message if the user close the adding item window
+            DialogResult exitAddItem = MessageBox.Show("Are you sure you want to cancel the adding of scrap item?"
+                                        + "\nAny unsaved progress will be lost!", "Cancel add", MessageBoxButtons.YesNo,
+                                        MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (exitAddItem == DialogResult.Yes)
+            {
+                this.Close();
             }
         }
     }

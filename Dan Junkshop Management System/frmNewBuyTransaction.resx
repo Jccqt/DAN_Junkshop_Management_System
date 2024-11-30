@@ -117,16 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnExit.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAMFJREFUSEvtltENgzAMRD1CN6CbwMZ0o45SdB+WkGXjs2kqVfCkfCT4/EgkFERu
-        rsTTLhR4dPKriHxE5N0Iox455NGHAiEEdFTEe6GOyRZ54GhskBF7QsxpogaRuFofwjZi62iyhtnzNlHj
-        JVg/LVQ8sR1fFSpH4iFCBUdqhRhYH8LPd3okHCL2hJjPwfppcSQc9p2yDdm6lGqjar1Lp0Ekxq2VgrAN
-        ZkLFE1P3KXg1hMpeTP85KHhD6mgC6B3e/D8bb+SkWP7YjZ8AAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="colorDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

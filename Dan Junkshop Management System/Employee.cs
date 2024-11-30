@@ -31,7 +31,7 @@ namespace Dan_Junkshop_Management_System
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             // Optimize: Add employee page need GC.Collect
-            using (frmAddNewEmployee addEmployee = new frmAddNewEmployee())
+            using (frmAddingEmployee addEmployee = new frmAddingEmployee())
             {
                 using(Form form = new Form())
                 {
@@ -39,6 +39,7 @@ namespace Dan_Junkshop_Management_System
                     addEmployee.Owner = form;
                     addEmployee.ShowDialog();
                     form.Close();
+                    displayEmployees(1);
                 }
             }
         }
@@ -47,15 +48,21 @@ namespace Dan_Junkshop_Management_System
         {
             lblStatus.Text = "Active Employees";
             btnAddEmployee.Visible = true;
+            displayEmployees(1);
+        }
 
+        void displayEmployees(int status)
+        {
+ 
             EmployeePanel.Controls.Clear();
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, MiddleName, LastName, EmpID, Position, Contact FROM Employees WHERE Status = 1", ConnectionObjects.conn);
+            ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, MiddleName, LastName, EmpID, Position, Contact FROM Employees WHERE Status = @status", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
-            while(ConnectionObjects.reader.Read())
+            while (ConnectionObjects.reader.Read())
             {
                 DisplayEmployee displayEmployee = new DisplayEmployee();
 

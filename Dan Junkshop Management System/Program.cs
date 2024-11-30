@@ -47,6 +47,9 @@ namespace Dan_Junkshop_Management_System
         public static frmAddingSellableItems addSellableItem;
         public static frmEditingScrapItem editScrapItem;
         public static frmEditingSellableItems editSellableItem;
+
+        // Partner Objects
+        public static frmAddingPartner addPartner;
     }
 
     public class ConnectionObjects

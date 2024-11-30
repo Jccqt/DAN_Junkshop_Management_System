@@ -38,11 +38,13 @@ namespace Dan_Junkshop_Management_System
             cbType.Text = "Scraps";
             btnAddItem.Visible = true;
 
-            showScrapItems();
+            showScrapItems(1);
         }
 
-        void showScrapItems()
+        void showScrapItems(int status)
         {
+            // 1 on status = Active/Available
+            // 0 on status = Inactive/Not Available
             itemNames.Clear();
 
             ConnectionObjects.dataTable = new DataTable();
@@ -58,18 +60,19 @@ namespace Dan_Junkshop_Management_System
             {
                 // if search mode is on, scraps will be displayed based on search box input
                 ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems " +
-                    $"WHERE ScrapName LIKE '%{txtSearchBox.Text}%' AND Status = 1", ConnectionObjects.conn);
-                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+                    $"WHERE ScrapName LIKE '%{txtSearchBox.Text}%' AND Status = @status", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
             else
             {
                 // if search mode is off, all scraps will be displayed
-                ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems WHERE Status = 1", ConnectionObjects.conn);
-                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+                ConnectionObjects.cmd = new SqlCommand("SELECT ScrapName, ScrapCondition, ScrapQuantity, ScrapPrice FROM ScrapItems WHERE Status = @status", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
-            
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
-            while(ConnectionObjects.reader.Read())
+
+            while (ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
                     ConnectionObjects.reader.GetString(1), ConnectionObjects.reader.GetInt32(2), ConnectionObjects.reader.GetValue(3), 
@@ -86,8 +89,10 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.dataTable = null;
         }
 
-        void showSellableItems()
+        void showSellableItems(int status)
         {
+            // 1 on status = Active/Available
+            // 0 on status = Inactive/Not Available
             itemNames.Clear();
 
             ConnectionObjects.dataTable = new DataTable();
@@ -104,13 +109,15 @@ namespace Dan_Junkshop_Management_System
                 // if search mode is on, sellable items will be displayed based on search box input
                 ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
                 "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID " +
-                $"WHERE S.SellableName LIKE '%{txtSearchBox.Text}%' AND Status = 1", ConnectionObjects.conn);
+                $"WHERE S.SellableName LIKE '%{txtSearchBox.Text}%' AND Status = @status", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
             else
             {
                 // if search mode is off, all sellable items will be displayed
                 ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPrice, S.SellableQuantity " +
-                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE Status = 1", ConnectionObjects.conn);
+                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE Status = @status", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
            
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
@@ -140,13 +147,13 @@ namespace Dan_Junkshop_Management_System
             {
                 btnSwitchStatus.Checked = true;
                 lblTitle.Text = "Available Scraps";
-                showScrapItems();
+                showScrapItems(1);
             }
             else
             {
                 btnSwitchStatus.Checked = true;
                 lblTitle.Text = "Available Sellable Items";
-                showSellableItems();
+                showSellableItems(1);
             }
         }
 
@@ -156,21 +163,25 @@ namespace Dan_Junkshop_Management_System
             {
                 btnAddItem.Visible = false;
                 lblTitle.Text = "Not Available Scraps";
+                showScrapItems(0);
             }
             else if (cbType.Text == "Scraps" && btnSwitchStatus.Checked)
             {
                 btnAddItem.Visible = true;
                 lblTitle.Text = "Available Scraps";
+                showScrapItems(1);
             }
             else if(cbType.Text == "Sellable" && !btnSwitchStatus.Checked)
             {
                 btnAddItem.Visible = false;
                 lblTitle.Text = "Not Available Sellable Junks";
+                showSellableItems(0);
             }
             else
             {
                 btnAddItem.Visible = true;
                 lblTitle.Text = "Available Sellable Junks";
+                showSellableItems(1);
             }
         }
 
@@ -186,7 +197,7 @@ namespace Dan_Junkshop_Management_System
                         PageObjects.addScrapItem.Owner = form;
                         PageObjects.addScrapItem.ShowDialog();
                         form.Close();
-                        showScrapItems();
+                        showScrapItems(1);
                     }
                 }
             }
@@ -200,12 +211,12 @@ namespace Dan_Junkshop_Management_System
                         PageObjects.addSellableItem.Owner = form;
                         PageObjects.addSellableItem.ShowDialog();
                         form.Close();
-                        showSellableItems();
+                        showSellableItems(1);
                     }
                 }
             }
 
-            GC.Collect();
+            GC.Collect(); // optimization purposes
         }
 
         private void txtSearchBox_Leave(object sender, EventArgs e)
@@ -246,7 +257,15 @@ namespace Dan_Junkshop_Management_System
                             PageObjects.editScrapItem.Owner = form;
                             PageObjects.editScrapItem.ShowDialog();
                             form.Close();
-                            showScrapItems();
+
+                            if (btnSwitchStatus.Checked)
+                            {
+                                showScrapItems(1);
+                            }
+                            else
+                            {
+                                showScrapItems(0);
+                            }
                         }
                     }
                 }
@@ -260,11 +279,20 @@ namespace Dan_Junkshop_Management_System
                             PageObjects.editSellableItem.Owner = form;
                             PageObjects.editSellableItem.ShowDialog();
                             form.Close();
-                            showSellableItems();
+
+                            if (btnSwitchStatus.Checked)
+                            {
+                                showSellableItems(1);
+                            }
+                            else
+                            {
+                                showSellableItems(0);
+                            }
                         }
                     }
                 }
             }
+            GC.Collect(); // optimization purposes
         }
 
         private void gridViewInventory_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -283,15 +311,24 @@ namespace Dan_Junkshop_Management_System
             }
         }
 
+
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
-            if (cbType.Text == "Scraps")
+            if (cbType.Text == "Scraps" && !btnSwitchStatus.Checked)
             {
-                showScrapItems();
+                showScrapItems(0);
+            }
+            else if (cbType.Text == "Scraps" && btnSwitchStatus.Checked)
+            {
+                showScrapItems(1);
+            }
+            else if (cbType.Text == "Sellable" && !btnSwitchStatus.Checked)
+            {
+                showSellableItems(0);
             }
             else
             {
-                showSellableItems();
+                showSellableItems(1);
             }
         }
 

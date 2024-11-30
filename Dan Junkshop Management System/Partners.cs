@@ -17,5 +17,19 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
             // TODO: Adding the display partners on the partners panel.
         }
+
+        private void btnAddPartners_Click(object sender, EventArgs e)
+        {
+            using(PageObjects.addPartner = new frmAddingPartner())
+            {
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.addPartner.Owner = form;
+                    PageObjects.addPartner.ShowDialog();
+                    form.Close();
+                }
+            }
+        }
     }
 }

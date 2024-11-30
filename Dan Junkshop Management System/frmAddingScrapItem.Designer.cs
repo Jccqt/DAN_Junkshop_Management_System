@@ -29,44 +29,29 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
             this.txtScrapName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnClear = new OrganizationProfile.CustomButton();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.cbCondition = new System.Windows.Forms.ComboBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnCancel = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(792, 41);
             this.panel1.TabIndex = 11;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(653, 10);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 21);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -131,48 +116,6 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Scrap Name";
             // 
-            // btnClear
-            // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnClear.BorderRadius = 40;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.Location = new System.Drawing.Point(554, 148);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(119, 44);
-            this.btnClear.TabIndex = 21;
-            this.btnClear.Text = "Cancel";
-            this.btnClear.TextColor = System.Drawing.Color.Transparent;
-            this.btnClear.UseVisualStyleBackColor = false;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.BorderRadius = 40;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Location = new System.Drawing.Point(304, 148);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(119, 44);
-            this.btnAddItem.TabIndex = 20;
-            this.btnAddItem.Text = "Add Item";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
-            // 
             // cbCondition
             // 
             this.cbCondition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -183,7 +126,7 @@
             "Good",
             "Defective"});
             this.cbCondition.Location = new System.Drawing.Point(189, 92);
-            this.cbCondition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbCondition.Margin = new System.Windows.Forms.Padding(2);
             this.cbCondition.Name = "cbCondition";
             this.cbCondition.Size = new System.Drawing.Size(172, 26);
             this.cbCondition.TabIndex = 22;
@@ -210,38 +153,81 @@
             this.label5.TabIndex = 23;
             this.label5.Text = "Price per qty";
             // 
-            // customButton1
+            // btnClear
             // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Location = new System.Drawing.Point(429, 148);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(119, 44);
-            this.customButton1.TabIndex = 25;
-            this.customButton1.Text = "Clear";
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
+            this.btnClear.BorderColor = System.Drawing.Color.Transparent;
+            this.btnClear.BorderRadius = 40;
+            this.btnClear.BorderSize = 0;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClear.Location = new System.Drawing.Point(402, 148);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(119, 44);
+            this.btnClear.TabIndex = 25;
+            this.btnClear.Text = "Clear";
+            this.btnClear.TextColor = System.Drawing.Color.Transparent;
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancel.BorderRadius = 40;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Location = new System.Drawing.Point(527, 148);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(119, 44);
+            this.btnCancel.TabIndex = 21;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BorderRadius = 40;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.Location = new System.Drawing.Point(277, 148);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(119, 44);
+            this.btnAddItem.TabIndex = 20;
+            this.btnAddItem.Text = "Add Item";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // frmAddingScrapItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(685, 204);
-            this.Controls.Add(this.customButton1);
+            this.ClientSize = new System.Drawing.Size(657, 204);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCondition);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.txtQuantity);
             this.Controls.Add(this.txtScrapName);
@@ -256,7 +242,6 @@
             this.Load += new System.EventHandler(this.frmAddingItem_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +251,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private OrganizationProfile.CustomButton btnClear;
+        private OrganizationProfile.CustomButton btnCancel;
         private OrganizationProfile.CustomButton btnAddItem;
         private System.Windows.Forms.TextBox txtQuantity;
         private System.Windows.Forms.TextBox txtScrapName;
@@ -276,7 +261,6 @@
         private System.Windows.Forms.ComboBox cbCondition;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox btnExit;
-        private OrganizationProfile.CustomButton customButton1;
+        private OrganizationProfile.CustomButton btnClear;
     }
 }

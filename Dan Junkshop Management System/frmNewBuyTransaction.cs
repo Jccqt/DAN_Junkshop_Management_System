@@ -19,13 +19,6 @@ namespace Dan_Junkshop_Management_System
             flowLayoutPanel1.Controls.Add(transactionSoldItems);
         }
 
- 
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            this.Close(); 
-        }
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
             
@@ -33,7 +26,6 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            // Optimize : frmNewBuyTransaction page need GC.Collect
             using(PageObjects.addItemSelection = new frmAddingItemSelection())
             {
                 using(Form form = new Form())
@@ -44,11 +36,17 @@ namespace Dan_Junkshop_Management_System
                     form.Close();
                 }
             }
+            GC.Collect(); // optimization purposes
         }
 
         private void NewBuyTransaction_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCancelTransaction_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

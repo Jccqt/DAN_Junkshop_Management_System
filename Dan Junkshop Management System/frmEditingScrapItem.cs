@@ -59,6 +59,31 @@ namespace Dan_Junkshop_Management_System
         }
         #endregion
 
+        private void btnRestoreDefault_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency: Restore default for edit scrap item
+            DialogResult restoreDefault = MessageBox.Show("Are you sure you want to restore the orignal details?" +
+                "\nAny unsaved changes will be lost!", "Scrap Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (restoreDefault == DialogResult.Yes)
+            {
+                txtScrapName.Text = scrapName;
+                cbCondition.Text = condition;
+                txtPrice.Text = price;
+                txtQuantity.Text = quantity;
+                lblStatus.Text = status;
+
+                if(lblStatus.Text == "Active")
+                {
+                    btnSwitchStatus.Checked = true;
+                }
+                else
+                {
+                    btnSwitchStatus.Checked = false;
+                }
+            }
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             // Check Message Consistency: Save Edit for Scrap Item
@@ -134,6 +159,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
             btnUpdate.Visible = false;
+            btnRestoreOriginal.Visible = false;
         }
 
         #region scrap details changed
@@ -142,10 +168,12 @@ namespace Dan_Junkshop_Management_System
             if (scrapNameChanged || conditionChanged || priceChanged || quantityChanged || statusChanged)
             {
                 btnUpdate.Visible = true;
+                btnRestoreOriginal.Visible = true;
             }
             else
             {
                 btnUpdate.Visible = false;
+                btnRestoreOriginal.Visible = false;
             }
         }
         private void txtQuantity_TextChanged(object sender, EventArgs e)

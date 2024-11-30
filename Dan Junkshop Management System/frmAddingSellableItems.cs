@@ -22,18 +22,6 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            // Check Message Consistency: Exit Add Dialog
-            DialogResult exitAddItem = MessageBox.Show("Are you sure you want to cancel adding sellable item?" +
-                "\nAny unsaved progress will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-
-            if(exitAddItem == DialogResult.Yes)
-            {
-                this.Close();
-            }
-        }
-
         private void frmAddingSellableItems_Load(object sender, EventArgs e)
         {
             cbClass.Items.Clear();
@@ -52,17 +40,6 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Close();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            // TODO: Change btnClear to btnCancel
-            DialogResult clearInfo = MessageBox.Show("Are you sure you want to clear item information?" +
-                "\nAny unsaved progress will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
-
-            if(clearInfo == DialogResult.Yes)
-            {
-                clearSellableItemDetails();
-            }
-        }
 
         void clearSellableItemDetails()
         {
@@ -88,6 +65,30 @@ namespace Dan_Junkshop_Management_System
                 txtPrice.Text = ConnectionObjects.cmd.ExecuteScalar().ToString();
 
                 ConnectionObjects.conn.Close();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency: Cancel adding sellable items
+            DialogResult exitAddItem = MessageBox.Show("Are you sure you want to cancel adding sellable item?" +
+                "\nAny unsaved progress will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (exitAddItem == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency: Clear textboxes for adding sellable items
+            DialogResult clearInfo = MessageBox.Show("Are you sure you want to clear item information?" +
+                "\nAny unsaved progress will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if (clearInfo == DialogResult.Yes)
+            {
+                clearSellableItemDetails();
             }
         }
 

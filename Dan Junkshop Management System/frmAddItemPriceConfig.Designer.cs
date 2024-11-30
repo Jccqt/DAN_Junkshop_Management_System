@@ -31,7 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnClear = new OrganizationProfile.CustomButton();
+            this.btnCancel = new OrganizationProfile.CustomButton();
             this.btnAddItem = new OrganizationProfile.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -71,25 +71,25 @@
             this.textBox4.Size = new System.Drawing.Size(211, 26);
             this.textBox4.TabIndex = 17;
             // 
-            // btnClear
+            // btnCancel
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClear.BorderRadius = 40;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
-            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(595, 158);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(119, 44);
-            this.btnClear.TabIndex = 33;
-            this.btnClear.Text = "Cancel";
-            this.btnClear.TextColor = System.Drawing.Color.Transparent;
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 40;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancel.Location = new System.Drawing.Point(595, 158);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(119, 44);
+            this.btnCancel.TabIndex = 33;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnAddItem
             // 
@@ -190,7 +190,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -210,7 +210,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox4;
-        private OrganizationProfile.CustomButton btnClear;
+        private OrganizationProfile.CustomButton btnCancel;
         private OrganizationProfile.CustomButton btnAddItem;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;

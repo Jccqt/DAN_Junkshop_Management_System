@@ -99,7 +99,6 @@ E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Manage
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DeliveryMetals.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayEmployee.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Employee.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddNewEmployee.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingScrapItem.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.FrmTypeOfTransaction.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
@@ -174,7 +173,8 @@ C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddItemPriceConfig.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayPartners.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddItemPriceConfig.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddPartners.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditEmployee.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditPartners.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditPriceConfigItem.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingEmployee.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingPartner.resources

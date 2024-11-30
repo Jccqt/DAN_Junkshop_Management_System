@@ -13,7 +13,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmEditingSellableItems : Form
     {
-        private string sellableName, className, scaleQuantity, status, newClassID;
+        private string sellableName, className, price, scaleQuantity, status, newClassID;
         private bool sellableNameChanged, classNameChanged, scaleQuantityChanged, statusChanged;
 
         public frmEditingSellableItems()
@@ -43,7 +43,7 @@ namespace Dan_Junkshop_Management_System
 
                 sellableName = ConnectionObjects.reader.GetString(0);
                 className = ConnectionObjects.reader.GetString(1);
-                txtPrice.Text = ConnectionObjects.reader.GetValue(2).ToString();
+                price = ConnectionObjects.reader.GetValue(2).ToString();
                 scaleQuantity = ConnectionObjects.reader.GetValue(3).ToString();
 
                 if(ConnectionObjects.reader.GetInt32(4) == 1)
@@ -60,12 +60,14 @@ namespace Dan_Junkshop_Management_System
 
             txtSellableName.Text = sellableName;
             cbClass.Text = className;
+            txtPrice.Text = price;
             txtScale.Text = scaleQuantity;
             lblStatus.Text = status;
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
             btnUpdate.Visible = false;
+            btnRestoreOriginal.Visible = false;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -111,7 +113,30 @@ namespace Dan_Junkshop_Management_System
             InputValidation.FloatingNumbersOnly(sender, e);
         }
 
- 
+        private void btnRestoreOriginal_Click(object sender, EventArgs e)
+        {
+            // Check Message Consistency: Restore default for edit sellable items
+            DialogResult restoreEdit = MessageBox.Show("Are you sure you want to restore original details?" +
+                "\nAny unsaved changes will be lost!", "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+
+            if(restoreEdit == DialogResult.Yes)
+            {
+                txtSellableName.Text = sellableName;
+                cbClass.Text = className;
+                txtPrice.Text = price;
+                txtScale.Text = scaleQuantity;
+                lblStatus.Text = status;
+
+                if(lblStatus.Text == "Active")
+                {
+                    btnSwitchStatus.Checked = true;
+                }
+                else
+                {
+                    btnSwitchStatus.Checked = false;
+                }
+            }
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -132,10 +157,12 @@ namespace Dan_Junkshop_Management_System
             if(sellableNameChanged || classNameChanged || scaleQuantityChanged || statusChanged)
             {
                 btnUpdate.Visible = true;
+                btnRestoreOriginal.Visible = true;
             }
             else
             {
                 btnUpdate.Visible = false;
+                btnRestoreOriginal.Visible = false;
             }
         }
         private void txtScale_TextChanged(object sender, EventArgs e)
