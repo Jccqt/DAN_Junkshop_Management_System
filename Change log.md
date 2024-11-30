@@ -78,3 +78,14 @@ November 28, 2024
 November 29, 2024
 - Added smart search function for scrap items and sellable items on Inventory page (New)
 - Added functionalities for Edit Scrap Item page (New)
+
+November 30, 2024
+- Added input checker for textboxes on Edit Scrap Item page (New)
+- Added functionalities for Edit Sellable Item page (New)
+- Added input checker for textboxes on Edit Sellable Item page (New)
+- Added new buttons for inventory (New)
+
+December 1, 2024
+- Added functionalities for Partners page (New)
+- Added functionalities for Add Partner page (New)
+- Added input checker for textboxes on Add Partner page (New)
