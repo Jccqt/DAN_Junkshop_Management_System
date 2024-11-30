@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbClass = new System.Windows.Forms.ComboBox();
             this.txtScale = new System.Windows.Forms.TextBox();
@@ -41,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnClear = new OrganizationProfile.CustomButton();
             this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
@@ -54,18 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 41);
             this.panel1.TabIndex = 12;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(718, 9);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 21);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -84,7 +72,7 @@
             this.cbClass.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cbClass.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbClass.FormattingEnabled = true;
-            this.cbClass.Location = new System.Drawing.Point(190, 90);
+            this.cbClass.Location = new System.Drawing.Point(202, 90);
             this.cbClass.Name = "cbClass";
             this.cbClass.Size = new System.Drawing.Size(213, 26);
             this.cbClass.TabIndex = 29;
@@ -105,14 +93,14 @@
             this.txtSellableName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSellableName.Location = new System.Drawing.Point(25, 90);
             this.txtSellableName.Name = "txtSellableName";
-            this.txtSellableName.Size = new System.Drawing.Size(145, 26);
+            this.txtSellableName.Size = new System.Drawing.Size(159, 26);
             this.txtSellableName.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(187, 71);
+            this.label5.Location = new System.Drawing.Point(202, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 16);
             this.label5.TabIndex = 25;
@@ -143,7 +131,7 @@
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(428, 90);
+            this.txtPrice.Location = new System.Drawing.Point(433, 90);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(144, 26);
             this.txtPrice.TabIndex = 33;
@@ -153,7 +141,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(425, 71);
+            this.label4.Location = new System.Drawing.Point(430, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(135, 16);
             this.label4.TabIndex = 32;
@@ -175,7 +163,7 @@
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(94, 44);
             this.btnClear.TabIndex = 31;
-            this.btnClear.Text = "Clear";
+            this.btnClear.Text = "Cancel";
             this.btnClear.TextColor = System.Drawing.Color.Transparent;
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -200,6 +188,18 @@
             this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
             this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(718, 9);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 1;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmAddingSellableItems
             // 

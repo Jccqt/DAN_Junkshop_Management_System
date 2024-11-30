@@ -29,19 +29,15 @@
         private void InitializeComponent()
         {
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pnlSettings = new System.Windows.Forms.Panel();
-            this.customButton3 = new OrganizationProfile.CustomButton();
-            this.customButton2 = new OrganizationProfile.CustomButton();
             this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblEmployeeID = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
-            this.btnMenu = new OrganizationProfile.CustomButton();
             this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
+            this.customButton1 = new OrganizationProfile.CustomButton();
             this.panelBorder1.SuspendLayout();
-            this.pnlSettings.SuspendLayout();
             this.panelBorder2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +47,7 @@
             this.panelBorder1.BackColor = System.Drawing.Color.White;
             this.panelBorder1.BorderRadius = 50;
             this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder1.Controls.Add(this.pnlSettings);
+            this.panelBorder1.Controls.Add(this.customButton1);
             this.panelBorder1.Controls.Add(this.panelBorder2);
             this.panelBorder1.Controls.Add(this.lblFullName);
             this.panelBorder1.Controls.Add(this.EmployeePicture);
@@ -60,54 +56,6 @@
             this.panelBorder1.Name = "panelBorder1";
             this.panelBorder1.Size = new System.Drawing.Size(225, 272);
             this.panelBorder1.TabIndex = 1;
-            // 
-            // pnlSettings
-            // 
-            this.pnlSettings.Controls.Add(this.customButton3);
-            this.pnlSettings.Controls.Add(this.customButton2);
-            this.pnlSettings.Controls.Add(this.btnMenu);
-            this.pnlSettings.Location = new System.Drawing.Point(97, 10);
-            this.pnlSettings.MaximumSize = new System.Drawing.Size(122, 98);
-            this.pnlSettings.MinimumSize = new System.Drawing.Size(122, 28);
-            this.pnlSettings.Name = "pnlSettings";
-            this.pnlSettings.Size = new System.Drawing.Size(122, 32);
-            this.pnlSettings.TabIndex = 1;
-            // 
-            // customButton3
-            // 
-            this.customButton3.BackColor = System.Drawing.Color.IndianRed;
-            this.customButton3.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.customButton3.BorderColor = System.Drawing.Color.Black;
-            this.customButton3.BorderRadius = 0;
-            this.customButton3.BorderSize = 1;
-            this.customButton3.FlatAppearance.BorderSize = 0;
-            this.customButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton3.ForeColor = System.Drawing.Color.White;
-            this.customButton3.Location = new System.Drawing.Point(3, 64);
-            this.customButton3.Name = "customButton3";
-            this.customButton3.Size = new System.Drawing.Size(115, 32);
-            this.customButton3.TabIndex = 2;
-            this.customButton3.Text = "Archive";
-            this.customButton3.TextColor = System.Drawing.Color.White;
-            this.customButton3.UseVisualStyleBackColor = false;
-            // 
-            // customButton2
-            // 
-            this.customButton2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.customButton2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customButton2.BorderColor = System.Drawing.Color.Black;
-            this.customButton2.BorderRadius = 0;
-            this.customButton2.BorderSize = 1;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton2.Location = new System.Drawing.Point(3, 33);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(115, 32);
-            this.customButton2.TabIndex = 1;
-            this.customButton2.TextColor = System.Drawing.Color.Transparent;
-            this.customButton2.UseVisualStyleBackColor = false;
             // 
             // panelBorder2
             // 
@@ -174,35 +122,34 @@
             this.lblFullName.TabIndex = 1;
             this.lblFullName.Text = "<Name>";
             // 
-            // btnMenu
-            // 
-            this.btnMenu.BackColor = System.Drawing.Color.White;
-            this.btnMenu.BackgroundColor = System.Drawing.Color.White;
-            this.btnMenu.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMenu.BorderRadius = 23;
-            this.btnMenu.BorderSize = 0;
-            this.btnMenu.FlatAppearance.BorderSize = 0;
-            this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMenu.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMenu.Image = global::Dan_Junkshop_Management_System.Properties.Resources.tabler_dots;
-            this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMenu.Location = new System.Drawing.Point(72, 3);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(46, 24);
-            this.btnMenu.TabIndex = 0;
-            this.btnMenu.TextColor = System.Drawing.Color.Transparent;
-            this.btnMenu.UseVisualStyleBackColor = false;
-            // 
             // EmployeePicture
             // 
             this.EmployeePicture.BackColor = System.Drawing.SystemColors.Menu;
             this.EmployeePicture.Image = global::Dan_Junkshop_Management_System.Properties.Resources.partners_Pic;
             this.EmployeePicture.Location = new System.Drawing.Point(10, 10);
             this.EmployeePicture.Name = "EmployeePicture";
-            this.EmployeePicture.Size = new System.Drawing.Size(75, 81);
+            this.EmployeePicture.Size = new System.Drawing.Size(81, 81);
             this.EmployeePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EmployeePicture.TabIndex = 0;
             this.EmployeePicture.TabStop = false;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
+            this.customButton1.BorderRadius = 27;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit;
+            this.customButton1.Location = new System.Drawing.Point(184, 12);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(30, 29);
+            this.customButton1.TabIndex = 4;
+            this.customButton1.TextColor = System.Drawing.Color.Transparent;
+            this.customButton1.UseVisualStyleBackColor = false;
             // 
             // DisplayPartners
             // 
@@ -214,7 +161,6 @@
             this.Size = new System.Drawing.Size(240, 281);
             this.panelBorder1.ResumeLayout(false);
             this.panelBorder1.PerformLayout();
-            this.pnlSettings.ResumeLayout(false);
             this.panelBorder2.ResumeLayout(false);
             this.panelBorder2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).EndInit();
@@ -225,10 +171,6 @@
         #endregion
 
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder1;
-        private System.Windows.Forms.Panel pnlSettings;
-        private OrganizationProfile.CustomButton customButton3;
-        private OrganizationProfile.CustomButton customButton2;
-        private OrganizationProfile.CustomButton btnMenu;
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label1;
@@ -236,5 +178,6 @@
         public System.Windows.Forms.Label lblContact;
         public System.Windows.Forms.Label lblFullName;
         private Components.RoundPictureBox EmployeePicture;
+        private OrganizationProfile.CustomButton customButton1;
     }
 }

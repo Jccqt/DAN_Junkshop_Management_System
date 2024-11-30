@@ -370,7 +370,7 @@
             // roundPictureBox1
             // 
             this.roundPictureBox1.BackColor = System.Drawing.SystemColors.Menu;
-            this.roundPictureBox1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.defaultEmployeeIcon;
+            this.roundPictureBox1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.new_Employee;
             this.roundPictureBox1.Location = new System.Drawing.Point(17, 50);
             this.roundPictureBox1.Name = "roundPictureBox1";
             this.roundPictureBox1.Size = new System.Drawing.Size(143, 137);

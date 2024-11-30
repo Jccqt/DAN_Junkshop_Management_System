@@ -50,9 +50,8 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1068, 50);
+            this.panel1.Size = new System.Drawing.Size(801, 41);
             this.panel1.TabIndex = 13;
             // 
             // label1
@@ -60,10 +59,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(17, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 32);
+            this.label1.Size = new System.Drawing.Size(163, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Scrap Item";
             // 
@@ -79,10 +77,9 @@
             this.btnClear.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnClear.ForeColor = System.Drawing.Color.Transparent;
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClear.Location = new System.Drawing.Point(783, 202);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(587, 164);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(159, 54);
+            this.btnClear.Size = new System.Drawing.Size(119, 44);
             this.btnClear.TabIndex = 40;
             this.btnClear.Text = "Cancel";
             this.btnClear.TextColor = System.Drawing.Color.Transparent;
@@ -101,11 +98,10 @@
             this.btnUpdate.Font = new System.Drawing.Font("Arial Black", 7.75F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(617, 202);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(463, 164);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnUpdate.Size = new System.Drawing.Size(159, 54);
+            this.btnUpdate.Size = new System.Drawing.Size(119, 44);
             this.btnUpdate.TabIndex = 39;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextColor = System.Drawing.Color.Transparent;
@@ -115,15 +111,14 @@
             // btnSwitchStatus
             // 
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Black;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(806, 75);
-            this.btnSwitchStatus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(60, 27);
+            this.btnSwitchStatus.Location = new System.Drawing.Point(624, 64);
+            this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
             this.btnSwitchStatus.OffToggleColor = System.Drawing.Color.White;
             this.btnSwitchStatus.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnSwitchStatus.OnToggleColor = System.Drawing.Color.White;
-            this.btnSwitchStatus.Size = new System.Drawing.Size(113, 39);
+            this.btnSwitchStatus.Size = new System.Drawing.Size(53, 27);
             this.btnSwitchStatus.TabIndex = 41;
             this.btnSwitchStatus.Text = "activeAndInactive1";
             this.btnSwitchStatus.UseVisualStyleBackColor = true;
@@ -133,11 +128,10 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.BackColor = System.Drawing.Color.Transparent;
-            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(828, 54);
-            this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.Location = new System.Drawing.Point(621, 44);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(66, 20);
+            this.lblStatus.Size = new System.Drawing.Size(57, 16);
             this.lblStatus.TabIndex = 42;
             this.lblStatus.Text = "Inactive";
             this.lblStatus.TextChanged += new System.EventHandler(this.lblStatus_TextChanged);
@@ -146,11 +140,10 @@
             // 
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(521, 149);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Location = new System.Drawing.Point(391, 121);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.ShortcutsEnabled = false;
-            this.txtPrice.Size = new System.Drawing.Size(177, 30);
+            this.txtPrice.Size = new System.Drawing.Size(133, 26);
             this.txtPrice.TabIndex = 50;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
@@ -159,10 +152,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(517, 127);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(388, 103);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 19);
+            this.label5.Size = new System.Drawing.Size(88, 16);
             this.label5.TabIndex = 49;
             this.label5.Text = "Price per qty";
             // 
@@ -175,10 +167,10 @@
             this.cbCondition.Items.AddRange(new object[] {
             "Good",
             "Defective"});
-            this.cbCondition.Location = new System.Drawing.Point(268, 149);
-            this.cbCondition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCondition.Location = new System.Drawing.Point(201, 121);
+            this.cbCondition.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbCondition.Name = "cbCondition";
-            this.cbCondition.Size = new System.Drawing.Size(228, 31);
+            this.cbCondition.Size = new System.Drawing.Size(172, 26);
             this.cbCondition.TabIndex = 48;
             this.cbCondition.SelectedIndexChanged += new System.EventHandler(this.cbCondition_SelectedIndexChanged);
             // 
@@ -186,11 +178,10 @@
             // 
             this.txtQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQuantity.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(733, 149);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtQuantity.Location = new System.Drawing.Point(550, 121);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ShortcutsEnabled = false;
-            this.txtQuantity.Size = new System.Drawing.Size(141, 30);
+            this.txtQuantity.Size = new System.Drawing.Size(106, 26);
             this.txtQuantity.TabIndex = 47;
             this.txtQuantity.TextChanged += new System.EventHandler(this.txtQuantity_TextChanged);
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
@@ -199,11 +190,10 @@
             // 
             this.txtScrapName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtScrapName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScrapName.Location = new System.Drawing.Point(52, 150);
-            this.txtScrapName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtScrapName.Location = new System.Drawing.Point(39, 122);
             this.txtScrapName.Name = "txtScrapName";
             this.txtScrapName.ShortcutsEnabled = false;
-            this.txtScrapName.Size = new System.Drawing.Size(193, 30);
+            this.txtScrapName.Size = new System.Drawing.Size(145, 26);
             this.txtScrapName.TabIndex = 46;
             this.txtScrapName.TextChanged += new System.EventHandler(this.txtScrapName_TextChanged);
             // 
@@ -211,10 +201,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(729, 127);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(547, 103);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 19);
+            this.label4.Size = new System.Drawing.Size(60, 16);
             this.label4.TabIndex = 45;
             this.label4.Text = "Quantity";
             // 
@@ -222,10 +211,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(264, 127);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(198, 103);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 19);
+            this.label3.Size = new System.Drawing.Size(68, 16);
             this.label3.TabIndex = 44;
             this.label3.Text = "Condition";
             // 
@@ -233,19 +221,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 127);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(36, 103);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(104, 19);
+            this.label2.Size = new System.Drawing.Size(85, 16);
             this.label2.TabIndex = 43;
             this.label2.Text = "Scrap Name";
             // 
             // frmEditingScrapItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(953, 279);
+            this.ClientSize = new System.Drawing.Size(715, 227);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cbCondition);
@@ -260,7 +247,6 @@
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmEditingScrapItem";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
