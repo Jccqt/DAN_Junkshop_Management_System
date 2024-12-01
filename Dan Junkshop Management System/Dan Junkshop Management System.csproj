@@ -70,22 +70,22 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisplayPartners.cs">
+    <Compile Include="Partner\DisplayPartners.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DisplayPartners.Designer.cs">
+    <Compile Include="Partner\DisplayPartners.Designer.cs">
       <DependentUpon>DisplayPartners.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingItemSelection.cs">
+    <Compile Include="Transaction\frmAddingItemSelection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingItemSelection.Designer.cs">
+    <Compile Include="Transaction\frmAddingItemSelection.Designer.cs">
       <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingSellableItems.cs">
+    <Compile Include="Inventory\frmAddingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingSellableItems.Designer.cs">
+    <Compile Include="Inventory\frmAddingSellableItems.Designer.cs">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\activeAndInactive.cs">
@@ -118,76 +118,76 @@
     <Compile Include="DeliveryMetals.Designer.cs">
       <DependentUpon>DeliveryMetals.cs</DependentUpon>
     </Compile>
-    <Compile Include="DisplayEmployee.cs">
+    <Compile Include="Employee\DisplayEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="DisplayEmployee.Designer.cs">
+    <Compile Include="Employee\DisplayEmployee.Designer.cs">
       <DependentUpon>DisplayEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee.cs">
+    <Compile Include="Employee\Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee.Designer.cs">
+    <Compile Include="Employee\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingScrapItem.cs">
+    <Compile Include="Inventory\frmAddingScrapItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingScrapItem.Designer.cs">
+    <Compile Include="Inventory\frmAddingScrapItem.Designer.cs">
       <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddItemPriceConfig.cs">
+    <Compile Include="Price Configuration\frmAddItemPriceConfig.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddItemPriceConfig.Designer.cs">
+    <Compile Include="Price Configuration\frmAddItemPriceConfig.Designer.cs">
       <DependentUpon>frmAddItemPriceConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingEmployee.cs">
+    <Compile Include="Employee\frmAddingEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingEmployee.Designer.cs">
+    <Compile Include="Employee\frmAddingEmployee.Designer.cs">
       <DependentUpon>frmAddingEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddingPartner.cs">
+    <Compile Include="Partner\frmAddingPartner.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingPartner.Designer.cs">
+    <Compile Include="Partner\frmAddingPartner.Designer.cs">
       <DependentUpon>frmAddingPartner.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditEmployee.cs">
+    <Compile Include="Employee\frmEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditEmployee.Designer.cs">
+    <Compile Include="Employee\frmEditEmployee.Designer.cs">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditingScrapItem.cs">
+    <Compile Include="Inventory\frmEditingScrapItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditingScrapItem.Designer.cs">
+    <Compile Include="Inventory\frmEditingScrapItem.Designer.cs">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditingSellableItems.cs">
+    <Compile Include="Inventory\frmEditingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditingSellableItems.Designer.cs">
+    <Compile Include="Inventory\frmEditingSellableItems.Designer.cs">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditPartners.cs">
+    <Compile Include="Partner\frmEditPartners.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditPartners.Designer.cs">
+    <Compile Include="Partner\frmEditPartners.Designer.cs">
       <DependentUpon>frmEditPartners.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditPriceConfigItem.cs">
+    <Compile Include="Price Configuration\frmEditPriceConfigItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditPriceConfigItem.Designer.cs">
+    <Compile Include="Price Configuration\frmEditPriceConfigItem.Designer.cs">
       <DependentUpon>frmEditPriceConfigItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTypeOfTransaction.cs">
+    <Compile Include="Transaction\frmTypeOfTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTypeOfTransaction.Designer.cs">
+    <Compile Include="Transaction\frmTypeOfTransaction.Designer.cs">
       <DependentUpon>frmTypeOfTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Homepage.cs">
@@ -196,10 +196,10 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory.cs">
+    <Compile Include="Inventory\Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inventory.Designer.cs">
+    <Compile Include="Inventory\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
@@ -208,22 +208,22 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmNewBuyTransaction.cs">
+    <Compile Include="Transaction\frmNewBuyTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNewBuyTransaction.Designer.cs">
+    <Compile Include="Transaction\frmNewBuyTransaction.Designer.cs">
       <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="Partners.cs">
+    <Compile Include="Partner\Partners.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Partners.Designer.cs">
+    <Compile Include="Partner\Partners.Designer.cs">
       <DependentUpon>Partners.cs</DependentUpon>
     </Compile>
-    <Compile Include="PriceConfiguration.cs">
+    <Compile Include="Price Configuration\PriceConfiguration.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PriceConfiguration.Designer.cs">
+    <Compile Include="Price Configuration\PriceConfiguration.Designer.cs">
       <DependentUpon>PriceConfiguration.cs</DependentUpon>
     </Compile>
     <Compile Include="PriceConfigurationContent.cs">
@@ -240,28 +240,28 @@
     <Compile Include="Sales&amp;Reports.Designer.cs">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transaction.cs">
+    <Compile Include="Transaction\Transaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Transaction.Designer.cs">
+    <Compile Include="Transaction\Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransactionSoldItems.cs">
+    <Compile Include="Transaction\TransactionSoldItems.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="TransactionSoldItems.Designer.cs">
+    <Compile Include="Transaction\TransactionSoldItems.Designer.cs">
       <DependentUpon>TransactionSoldItems.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DisplayPartners.resx">
+    <EmbeddedResource Include="Partner\DisplayPartners.resx">
       <DependentUpon>DisplayPartners.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingItemSelection.resx">
+    <EmbeddedResource Include="Transaction\frmAddingItemSelection.resx">
       <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingSellableItems.resx">
+    <EmbeddedResource Include="Inventory\frmAddingSellableItems.resx">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
@@ -273,58 +273,58 @@
     <EmbeddedResource Include="DeliveryMetals.resx">
       <DependentUpon>DeliveryMetals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DisplayEmployee.resx">
+    <EmbeddedResource Include="Employee\DisplayEmployee.resx">
       <DependentUpon>DisplayEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee.resx">
+    <EmbeddedResource Include="Employee\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingScrapItem.resx">
+    <EmbeddedResource Include="Inventory\frmAddingScrapItem.resx">
       <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddItemPriceConfig.resx">
+    <EmbeddedResource Include="Price Configuration\frmAddItemPriceConfig.resx">
       <DependentUpon>frmAddItemPriceConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingEmployee.resx">
+    <EmbeddedResource Include="Employee\frmAddingEmployee.resx">
       <DependentUpon>frmAddingEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingPartner.resx">
+    <EmbeddedResource Include="Partner\frmAddingPartner.resx">
       <DependentUpon>frmAddingPartner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditEmployee.resx">
+    <EmbeddedResource Include="Employee\frmEditEmployee.resx">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditingScrapItem.resx">
+    <EmbeddedResource Include="Inventory\frmEditingScrapItem.resx">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditingSellableItems.resx">
+    <EmbeddedResource Include="Inventory\frmEditingSellableItems.resx">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditPartners.resx">
+    <EmbeddedResource Include="Partner\frmEditPartners.resx">
       <DependentUpon>frmEditPartners.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditPriceConfigItem.resx">
+    <EmbeddedResource Include="Price Configuration\frmEditPriceConfigItem.resx">
       <DependentUpon>frmEditPriceConfigItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTypeOfTransaction.resx">
+    <EmbeddedResource Include="Transaction\frmTypeOfTransaction.resx">
       <DependentUpon>frmTypeOfTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory.resx">
+    <EmbeddedResource Include="Inventory\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmNewBuyTransaction.resx">
+    <EmbeddedResource Include="Transaction\frmNewBuyTransaction.resx">
       <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Partners.resx">
+    <EmbeddedResource Include="Partner\Partners.resx">
       <DependentUpon>Partners.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PriceConfiguration.resx">
+    <EmbeddedResource Include="Price Configuration\PriceConfiguration.resx">
       <DependentUpon>PriceConfiguration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PriceConfigurationContent.resx">
@@ -343,10 +343,10 @@
     <EmbeddedResource Include="Sales&amp;Reports.resx">
       <DependentUpon>Sales&amp;Reports.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transaction.resx">
+    <EmbeddedResource Include="Transaction\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransactionSoldItems.resx">
+    <EmbeddedResource Include="Transaction\TransactionSoldItems.resx">
       <DependentUpon>TransactionSoldItems.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

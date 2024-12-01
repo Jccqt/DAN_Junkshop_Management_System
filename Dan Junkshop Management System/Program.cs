@@ -53,6 +53,9 @@ namespace Dan_Junkshop_Management_System
 
         // Partner Objects
         public static frmAddingPartner addPartner;
+
+        // Price Config Objects
+        public static frmAddItemPriceConfig addItemPrice;
     }
 
     public class ConnectionObjects
