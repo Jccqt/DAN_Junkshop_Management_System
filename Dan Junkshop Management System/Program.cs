@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dan_Junkshop_Management_System.Employees;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -24,6 +25,11 @@ namespace Dan_Junkshop_Management_System
         }
     }
 
+    public class Queries
+    {
+        public static EmployeeCRUD EmployeeQuery = new EmployeeCRUD();
+    }
+
     public class PageObjects
     {
         // Homepage Objects
@@ -39,6 +45,7 @@ namespace Dan_Junkshop_Management_System
 
         // Employee Objects
         public static frmEditEmployee editEmployee;
+        public static frmAddingEmployee addEmployee;
 
         // Transaction Objects
         public static frmNewBuyTransaction newBuyTransaction;
@@ -65,7 +72,6 @@ namespace Dan_Junkshop_Management_System
         public static SqlConnection conn = new SqlConnection(connectionString);
         public static SqlCommand cmd;
         public static SqlDataReader reader;
-        public static SqlDataAdapter adapter;
         public static DataTable dataTable;
     }
     public class FormAnimation

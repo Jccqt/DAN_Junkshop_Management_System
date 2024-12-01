@@ -70,6 +70,8 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees\EmployeeCRUD.cs" />
+    <Compile Include="Employees\EmployeeDetails.cs" />
     <Compile Include="Partner\DisplayPartners.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,16 +120,16 @@
     <Compile Include="DeliveryMetals.Designer.cs">
       <DependentUpon>DeliveryMetals.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\DisplayEmployee.cs">
+    <Compile Include="Employees\DisplayEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee\DisplayEmployee.Designer.cs">
+    <Compile Include="Employees\DisplayEmployee.Designer.cs">
       <DependentUpon>DisplayEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\Employee.cs">
+    <Compile Include="Employees\Employee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Employee\Employee.Designer.cs">
+    <Compile Include="Employees\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\frmAddingScrapItem.cs">
@@ -142,10 +144,10 @@
     <Compile Include="Price Configuration\frmAddItemPriceConfig.Designer.cs">
       <DependentUpon>frmAddItemPriceConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\frmAddingEmployee.cs">
+    <Compile Include="Employees\frmAddingEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\frmAddingEmployee.Designer.cs">
+    <Compile Include="Employees\frmAddingEmployee.Designer.cs">
       <DependentUpon>frmAddingEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Partner\frmAddingPartner.cs">
@@ -154,10 +156,10 @@
     <Compile Include="Partner\frmAddingPartner.Designer.cs">
       <DependentUpon>frmAddingPartner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Employee\frmEditEmployee.cs">
+    <Compile Include="Employees\frmEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Employee\frmEditEmployee.Designer.cs">
+    <Compile Include="Employees\frmEditEmployee.Designer.cs">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventory\frmEditingScrapItem.cs">
@@ -273,10 +275,10 @@
     <EmbeddedResource Include="DeliveryMetals.resx">
       <DependentUpon>DeliveryMetals.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\DisplayEmployee.resx">
+    <EmbeddedResource Include="Employees\DisplayEmployee.resx">
       <DependentUpon>DisplayEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\Employee.resx">
+    <EmbeddedResource Include="Employees\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\frmAddingScrapItem.resx">
@@ -285,13 +287,13 @@
     <EmbeddedResource Include="Price Configuration\frmAddItemPriceConfig.resx">
       <DependentUpon>frmAddItemPriceConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\frmAddingEmployee.resx">
+    <EmbeddedResource Include="Employees\frmAddingEmployee.resx">
       <DependentUpon>frmAddingEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partner\frmAddingPartner.resx">
       <DependentUpon>frmAddingPartner.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Employee\frmEditEmployee.resx">
+    <EmbeddedResource Include="Employees\frmEditEmployee.resx">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventory\frmEditingScrapItem.resx">
