@@ -25,6 +25,7 @@ namespace Dan_Junkshop_Management_System
         
         }
 
+        public string EmployeeID { get { return empId; } }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -32,7 +33,6 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
-            // Optimize: Add employee page need GC.Collect
             using (frmAddingEmployee addEmployee = new frmAddingEmployee())
             {
                 using(Form form = new Form())
@@ -44,6 +44,7 @@ namespace Dan_Junkshop_Management_System
                     displayEmployees(1);
                 }
             }
+            GC.Collect();
         }
 
         private void Employee_Load(object sender, EventArgs e)

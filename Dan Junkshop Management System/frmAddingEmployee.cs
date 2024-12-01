@@ -39,6 +39,7 @@ namespace Dan_Junkshop_Management_System
         {
             // will set the maximun date to 18 years old and above for dtBirthDate picker 
             // and will not show the dates that is below 18 years old
+
             ConnectionObjects.conn.Open();
 
             var localDate = DateTime.Now.ToString("yyyy-MM-dd");
@@ -81,7 +82,6 @@ namespace Dan_Junkshop_Management_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ConnectionObjects.conn.Open();
 
             // will check if the employee details are complete
             if (txtFirstName.Text.Equals("") || txtLastName.Text.Equals("") || txtMiddleInitial.Text.Equals("") || txtContact.Text.Equals("") ||
@@ -105,6 +105,7 @@ namespace Dan_Junkshop_Management_System
             // will check if both employee name and username was already existing
             if (SaveIndicator)
             {
+                ConnectionObjects.conn.Open();
                 // will check if the employee name was already existing
                 ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, LastName, MiddleName FROM Employees" +
                     " WHERE FirstName = @firstname AND LastName = @lastname AND MiddleName = @middlename", ConnectionObjects.conn);
@@ -146,11 +147,13 @@ namespace Dan_Junkshop_Management_System
                 }
 
                 ConnectionObjects.reader.Close();
+                ConnectionObjects.conn.Close();
             }
 
             // will proceed to saving employee details if both the employee name and username was not existing
             if (SaveIndicator && !EmpAlreadyExisting && !AccAlreadyExisting)
             {
+                ConnectionObjects.conn.Open();
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
                 EmpIdCount = 1000;
                 AccIdCount = 1000;
@@ -160,13 +163,13 @@ namespace Dan_Junkshop_Management_System
                 EmpIdCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
                 ConnectionObjects.cmd = new SqlCommand("INSERT INTO Employees VALUES (@EmpID, @Position, @FirstName, @LastName, " +
-                                        "@MiddleName, @Age, @Contact, @Address, @HireDate, @Status)", ConnectionObjects.conn);
+                                        "@MiddleName, @Birthdate, @Contact, @Address, @HireDate, @Status)", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@EmpID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
                 ConnectionObjects.cmd.Parameters.AddWithValue("@Position", cbPosition.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@FirstName", txtFirstName.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@LastName", txtLastName.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@MiddleName", txtMiddleInitial.Text);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@Age", Convert.ToInt32(txtAge.Text));
+                ConnectionObjects.cmd.Parameters.AddWithValue("@Birthdate", dtBirthDate.Value);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@Contact", txtContact.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@Address", txtAddress.Text);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@HireDate", localDate);
@@ -183,18 +186,18 @@ namespace Dan_Junkshop_Management_System
                 ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{cbPosition.Text.ToUpper()}{EmpIdCount + 1}");
                 ConnectionObjects.cmd.ExecuteNonQuery();
 
+                ConnectionObjects.conn.Close();
                 ClearDetails();
                 MessageBox.Show("Employee has been successfully added!", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            ConnectionObjects.conn.Close();
+                this.Close();
+            }         
         }
 
         private void dtBirthDate_ValueChanged(object sender, EventArgs e)
         {
-            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
-
             ConnectionObjects.conn.Open();
+
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
 
             // will get the total months of age based on the birth date
             ConnectionObjects.cmd = new SqlCommand("SELECT DATEDIFF(month, @birthDate, @currentDate)", ConnectionObjects.conn);
