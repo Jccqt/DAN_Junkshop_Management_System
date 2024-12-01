@@ -37,6 +37,9 @@ namespace Dan_Junkshop_Management_System
         public static Partners partners;
         public static Transaction transaction;
 
+        // Employee Objects
+        public static frmEditEmployee editEmployee;
+
         // Transaction Objects
         public static frmNewBuyTransaction newBuyTransaction;
         public static frmTypeOfTransaction transactionType;

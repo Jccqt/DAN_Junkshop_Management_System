@@ -19,6 +19,6 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
         }
 
-  
+        public Button EditButton { get { return btnEdit; } }
     }
 }

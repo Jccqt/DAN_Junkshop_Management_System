@@ -16,5 +16,10 @@ namespace Dan_Junkshop_Management_System
         {
             InitializeComponent();
         }
+
+        private void frmEditEmployee_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
