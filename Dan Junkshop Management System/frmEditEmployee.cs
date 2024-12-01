@@ -13,6 +13,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmEditEmployee : Form
     {
+        private string birthdateHolder;
         public frmEditEmployee()
         {
             InitializeComponent();
@@ -22,8 +23,11 @@ namespace Dan_Junkshop_Management_System
         {
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, LastName, MiddleName, Birthdate, Contact, Address, Status FROM " +
-                "Employees WHERE EmpID = @empid", ConnectionObjects.conn);
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT E.FirstName, E.LastName, E.MiddleName, E.Birthdate, " +
+                "E.Contact, E.Address, E.Status, C.Username, C.Password FROM Employees E JOIN Credentials C " +
+                "ON E.EmpID = C.EmpID WHERE E.EmpID = @empid", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -33,7 +37,7 @@ namespace Dan_Junkshop_Management_System
                 txtFirstName.Text = ConnectionObjects.reader.GetString(0);
                 txtLastName.Text = ConnectionObjects.reader.GetString(1);
                 txtMiddleInitial.Text = ConnectionObjects.reader.GetString(2);
-                dtBirthDate.Value = Convert.ToDateTime(ConnectionObjects.reader.GetDateTime(3).ToString("yyyy-MM-dd"));
+                birthdateHolder = ConnectionObjects.reader.GetDateTime(3).ToString("yyyy-MM-dd");
                 txtContact.Text = ConnectionObjects.reader.GetString(4);
                 txtAddress.Text = ConnectionObjects.reader.GetString(5);
 
@@ -45,14 +49,43 @@ namespace Dan_Junkshop_Management_System
                 {
                     btnSwitchStatus.Checked = false;
                 }
+
+                txtUsername.Text = ConnectionObjects.reader.GetString(7);
+                txtPassword.Text = ConnectionObjects.reader.GetString(8);
             }
             ConnectionObjects.reader.Close();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT DATEADD(year, -18, @birthdate)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@birthdate", localDate);
+            var legalAge = Convert.ToDateTime(ConnectionObjects.cmd.ExecuteScalar());
             ConnectionObjects.conn.Close();
+
+            dtBirthDate.MaxDate = legalAge;
+            dtBirthDate.Value = Convert.ToDateTime(birthdateHolder);
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtBirthDate_ValueChanged(object sender, EventArgs e)
+        {
+            ConnectionObjects.conn.Open();
+
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+
+            // will get the total months of age based on the birth date
+            ConnectionObjects.cmd = new SqlCommand("SELECT DATEDIFF(month, @birthDate, @currentDate)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@birthDate", Convert.ToDateTime(dtBirthDate.Value.Date.ToString("yyyy-MM-dd")));
+            ConnectionObjects.cmd.Parameters.AddWithValue("@currentDate", localDate);
+            int yearDifferent = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+            yearDifferent /= 12;
+
+            txtAge.Text = yearDifferent.ToString();
+
+            ConnectionObjects.conn.Close();
         }
     }
 }

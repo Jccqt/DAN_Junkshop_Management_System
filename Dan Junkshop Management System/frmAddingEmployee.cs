@@ -14,7 +14,7 @@ namespace Dan_Junkshop_Management_System
     public partial class frmAddingEmployee : Form
     {
 
-        static DialogResult SaveEmployee;
+
         static int EmpIdCount, AccIdCount;
         static bool SaveIndicator, EmpAlreadyExisting, AccAlreadyExisting;
         public frmAddingEmployee()
@@ -93,10 +93,10 @@ namespace Dan_Junkshop_Management_System
             }
             else
             {
-                SaveEmployee = MessageBox.Show("Do you want to save employee details?", "Employee Notification",
+                DialogResult saveEmployee = MessageBox.Show("Do you want to save employee details?", "Employee Notification",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                if(SaveEmployee == DialogResult.Yes)
+                if(saveEmployee == DialogResult.Yes)
                 {
                     SaveIndicator = true;
                 }
