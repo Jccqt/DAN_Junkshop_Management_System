@@ -188,11 +188,11 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Transactions\frmNewBuyTransaction.cs">
+    <Compile Include="Transactions\frmNewTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transactions\frmNewBuyTransaction.Designer.cs">
-      <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
+    <Compile Include="Transactions\frmNewTransaction.Designer.cs">
+      <DependentUpon>frmNewTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Partner\Partners.cs">
       <SubType>UserControl</SubType>
@@ -287,8 +287,8 @@
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transactions\frmNewBuyTransaction.resx">
-      <DependentUpon>frmNewBuyTransaction.cs</DependentUpon>
+    <EmbeddedResource Include="Transactions\frmNewTransaction.resx">
+      <DependentUpon>frmNewTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partner\Partners.resx">
       <DependentUpon>Partners.cs</DependentUpon>

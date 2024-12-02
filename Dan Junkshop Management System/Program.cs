@@ -52,7 +52,7 @@ namespace Dan_Junkshop_Management_System
         public static frmAddingEmployee addEmployee;
 
         // Transaction Objects
-        public static frmNewBuyTransaction newBuyTransaction;
+        public static frmNewTransaction newBuyTransaction;
 
         // Inventory Objects
         public static frmAddingSellableItems addSellableItem;

@@ -29,7 +29,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
-            using(PageObjects.newBuyTransaction = new frmNewBuyTransaction())
+            using(PageObjects.newBuyTransaction = new frmNewTransaction())
             {
                 using(Form form = new Form())
                 {
