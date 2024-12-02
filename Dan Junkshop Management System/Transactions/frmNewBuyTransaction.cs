@@ -18,8 +18,7 @@ namespace Dan_Junkshop_Management_System
         public frmNewBuyTransaction()
         {
             InitializeComponent();
-            TransactionSoldItems transactionSoldItems = new TransactionSoldItems();
-            flowLayoutPanel1.Controls.Add(transactionSoldItems);
+           
         }
 
         public DataGridView ItemsGrid { get { return gridViewItems; } }

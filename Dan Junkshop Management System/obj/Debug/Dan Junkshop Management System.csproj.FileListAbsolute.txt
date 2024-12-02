@@ -87,10 +87,8 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_J
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.PriceConfigurationContent.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transaction.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TransactionSoldItems.resources
-D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingScrapItem.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayEmployee.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Employee.resources
-D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.FrmTypeOfTransaction.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Delivery.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DeliveryMetals.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
@@ -150,7 +148,6 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_J
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.ActivityLog.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.ActivityLog.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingSellableItems.resources
-D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingScrapItem.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingSellableItems.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingSellableItems.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingScrapItem.resources
@@ -160,7 +157,6 @@ E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Manage
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingSellableItems.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmEditingSellableItems.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmNewBuyTransaction.resources
-D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddingItemSelection.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmNewBuyTransaction.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayPartners.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DisplayPartners.resources
