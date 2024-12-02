@@ -366,6 +366,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\add_item_circle.png" />
     <None Include="Resources\stash_arrows-switch-solid.png" />
     <None Include="Resources\whiteSwitch.png" />
     <None Include="Resources\newCancel.png" />

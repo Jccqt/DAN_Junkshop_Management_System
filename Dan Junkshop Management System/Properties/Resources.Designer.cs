@@ -83,6 +83,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add_item_circle {
+            get {
+                object obj = ResourceManager.GetObject("add_item_circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bi_person_fill {
             get {
                 object obj = ResourceManager.GetObject("bi_person-fill", resourceCulture);

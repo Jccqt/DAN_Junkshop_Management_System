@@ -130,8 +130,8 @@
   <data name="hide" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scrap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scrap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="stash_arrows-switch-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stash_arrows-switch-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newRedDelive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedDelive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -144,9 +144,6 @@
   </data>
   <data name="CancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CancelButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mdi_money" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_money.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,8 +172,14 @@
   <data name="new_Employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_Employee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="weui_eyes-off-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weui_eyes-off-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NewDelivery1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewDelivery1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="game-icons_pay-money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game-icons_pay-money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reddanjunkshop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reddanjunkshop1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,9 +214,6 @@
   <data name="newRedTransaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedTransaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mdi_recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -241,8 +241,8 @@
   <data name="expand11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expand11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="game-icons_pay-money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\game-icons_pay-money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizetab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizetab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -277,14 +277,17 @@
   <data name="newRedHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NewEmployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewEmployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="newRedSales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedSales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PartnersPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PartnersPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weui_eyes-off-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weui_eyes-off-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scrap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NewSales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewSales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,13 +316,13 @@
   <data name="defaultEmployeeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defaultEmployeeIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NewEmployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewEmployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="stash_arrows-switch-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\stash_arrows-switch-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add_item_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add_item_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
