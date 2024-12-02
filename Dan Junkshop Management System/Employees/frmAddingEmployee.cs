@@ -16,7 +16,6 @@ namespace Dan_Junkshop_Management_System
     public partial class frmAddingEmployee : Form
     {
         private int empIdCount, accIdCount;
-        private bool saveIndicator, nameExist, accExist;
         public frmAddingEmployee()
         {
             InitializeComponent();
@@ -86,41 +85,16 @@ namespace Dan_Junkshop_Management_System
             };
 
             // will check if the employee details are complete
-            if (txtFirstName.Text.Equals("") || txtLastName.Text.Equals("") || txtMiddleInitial.Text.Equals("") || txtContact.Text.Equals("") ||
-               cbPosition.SelectedIndex == -1 || cbGender.SelectedIndex == -1 || txtUsername.Text.Equals("") || txtPassword.Text.Equals("") || txtAddress.Text.Equals("") || txtAge.Text.Equals(""))
-            {
-                saveIndicator = false;
-                MessageBox.Show("Employee details was incomplete!" +
-                    "\nPlease complete the employee details to save", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                DialogResult saveEmployee = MessageBox.Show("Do you want to save employee details?", "Employee Notification",
-                                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-                if(saveEmployee == DialogResult.Yes)
-                {
-                    saveIndicator = true;
-                }
-            }
-
-            if (saveIndicator)
-            {
-                // will check if both employee name and username was already existing
-                nameExist = Queries.EmployeeQuery.EmployeeExistChecker(details);
-                accExist = Queries.EmployeeQuery.AccExistChecker(details);
-            }
-
+            // will check if both employee name and username was already existing
             // will proceed to saving employee details if both the employee name and username was not existing
-            if (saveIndicator && !nameExist && !accExist)
-            {
+            if (Queries.EmployeeQuery.DetailsCompleteChecker(details) && !Queries.EmployeeQuery.EmployeeExistChecker(details) && !Queries.EmployeeQuery.AccExistChecker(details)) 
+            { 
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
                 empIdCount = 1000;
                 accIdCount = 1000;
-                saveIndicator = false;
 
-                empIdCount += Queries.EmployeeQuery.GetEmpIDCount(details); // will get the current employee ID count
-                accIdCount += Queries.EmployeeQuery.GetAccIDCount(); // will get the current acc ID count
+                Queries.EmployeeQuery.GetEmpIDCount(details); // will get the current employee ID count
+                Queries.EmployeeQuery.GetAccIDCount(); // will get the current acc ID count
                 Queries.EmployeeQuery.AddEmployee(details);
                 Queries.EmployeeQuery.AddAccount(details);
                 

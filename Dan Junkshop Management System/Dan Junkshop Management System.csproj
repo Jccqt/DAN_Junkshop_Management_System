@@ -72,6 +72,9 @@
     </Compile>
     <Compile Include="Employees\EmployeeCRUD.cs" />
     <Compile Include="Employees\EmployeeDetails.cs" />
+    <Compile Include="Inventories\Scraps\ScrapCRUD.cs" />
+    <Compile Include="Inventories\Scraps\ScrapDetails.cs" />
+    <Compile Include="Inventories\Sellable\SellableDetails.cs" />
     <Compile Include="Partner\DisplayPartners.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -84,10 +87,10 @@
     <Compile Include="Transaction\frmAddingItemSelection.Designer.cs">
       <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\frmAddingSellableItems.cs">
+    <Compile Include="Inventories\Sellable\frmAddingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\frmAddingSellableItems.Designer.cs">
+    <Compile Include="Inventories\Sellable\frmAddingSellableItems.Designer.cs">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\activeAndInactive.cs">
@@ -132,10 +135,10 @@
     <Compile Include="Employees\Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\frmAddingScrapItem.cs">
+    <Compile Include="Inventories\Scraps\frmAddingScrapItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\frmAddingScrapItem.Designer.cs">
+    <Compile Include="Inventories\Scraps\frmAddingScrapItem.Designer.cs">
       <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </Compile>
     <Compile Include="Price Configuration\frmAddItemPriceConfig.cs">
@@ -162,16 +165,16 @@
     <Compile Include="Employees\frmEditEmployee.Designer.cs">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\frmEditingScrapItem.cs">
+    <Compile Include="Inventories\Scraps\frmEditingScrapItem.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\frmEditingScrapItem.Designer.cs">
+    <Compile Include="Inventories\Scraps\frmEditingScrapItem.Designer.cs">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\frmEditingSellableItems.cs">
+    <Compile Include="Inventories\Sellable\frmEditingSellableItems.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inventory\frmEditingSellableItems.Designer.cs">
+    <Compile Include="Inventories\Sellable\frmEditingSellableItems.Designer.cs">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Partner\frmEditPartners.cs">
@@ -198,10 +201,10 @@
     <Compile Include="Homepage.Designer.cs">
       <DependentUpon>Homepage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inventory\Inventory.cs">
+    <Compile Include="Inventories\Inventory.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Inventory\Inventory.Designer.cs">
+    <Compile Include="Inventories\Inventory.Designer.cs">
       <DependentUpon>Inventory.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.cs">
@@ -263,7 +266,7 @@
     <EmbeddedResource Include="Transaction\frmAddingItemSelection.resx">
       <DependentUpon>frmAddingItemSelection.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\frmAddingSellableItems.resx">
+    <EmbeddedResource Include="Inventories\Sellable\frmAddingSellableItems.resx">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
@@ -281,7 +284,7 @@
     <EmbeddedResource Include="Employees\Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\frmAddingScrapItem.resx">
+    <EmbeddedResource Include="Inventories\Scraps\frmAddingScrapItem.resx">
       <DependentUpon>frmAddingScrapItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Price Configuration\frmAddItemPriceConfig.resx">
@@ -296,10 +299,10 @@
     <EmbeddedResource Include="Employees\frmEditEmployee.resx">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\frmEditingScrapItem.resx">
+    <EmbeddedResource Include="Inventories\Scraps\frmEditingScrapItem.resx">
       <DependentUpon>frmEditingScrapItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\frmEditingSellableItems.resx">
+    <EmbeddedResource Include="Inventories\Sellable\frmEditingSellableItems.resx">
       <DependentUpon>frmEditingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partner\frmEditPartners.resx">
@@ -314,7 +317,7 @@
     <EmbeddedResource Include="Homepage.resx">
       <DependentUpon>Homepage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inventory\Inventory.resx">
+    <EmbeddedResource Include="Inventories\Inventory.resx">
       <DependentUpon>Inventory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">

@@ -1,4 +1,5 @@
 ﻿using Dan_Junkshop_Management_System.Employees;
+using Dan_Junkshop_Management_System.Inventories.Scraps;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,6 +29,7 @@ namespace Dan_Junkshop_Management_System
     public class Queries
     {
         public static EmployeeCRUD EmployeeQuery = new EmployeeCRUD();
+        public static ScrapCRUD ScrapQuery = new ScrapCRUD();
     }
 
     public class PageObjects

@@ -17,8 +17,8 @@ namespace Dan_Junkshop_Management_System
     {
         static EmployeeDetails Details;
         private bool firstNameChanged, lastNameChanged, middleNameChanged, genderChanged, birthdateChanged,
-            contactChanged, addressChanged, usernameChanged, passwordChanged, statusChanged, needCancel;
-
+            contactChanged, addressChanged, usernameChanged, passwordChanged, statusChanged, needCancel, nameExist, accExist;
+        private int empIDCount, accIDCount;
         public frmEditEmployee()
         {
             InitializeComponent();
@@ -36,11 +36,11 @@ namespace Dan_Junkshop_Management_System
             cbGender.Text = Details.Gender;
             dtBirthDate.Value = Convert.ToDateTime(Details.Birthdate);
             txtContact.Text = Details.Contact;
-            txtAddress.Text = Details.Address;  
+            txtAddress.Text = Details.Address;
             txtUsername.Text = Details.Username;
             txtPassword.Text = Details.Password;
 
-            if(Details.Status == "Active")
+            if (Details.Status == "Active")
             {
                 btnSwitchStatus.Checked = true;
                 lblStatus.Text = "Active";
@@ -79,7 +79,58 @@ namespace Dan_Junkshop_Management_System
                 Details = null;
                 this.Close();
             }
-            
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DialogResult updateEmp = MessageBox.Show("Are you sure you want to update details for this employee?",
+                "Employee Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (updateEmp == DialogResult.Yes)
+            {
+                Details.FirstName = txtFirstName.Text;
+                Details.LastName = txtLastName.Text;
+                Details.MiddleName = txtMiddleInitial.Text;
+                Details.Contact = txtContact.Text;
+                Details.Birthdate = dtBirthDate.Value.ToString("yyyy-MM-dd");
+                Details.Gender = cbGender.Text;
+                Details.Username = txtUsername.Text;
+                Details.Password = txtPassword.Text;
+                Details.Address = txtAddress.Text;
+
+                // will check if the employee details are complete
+                // will check if both employee name and username was already existing
+                if (firstNameChanged || lastNameChanged || middleNameChanged)
+                {
+                    nameExist = Queries.EmployeeQuery.EmployeeExistChecker(Details);
+                }
+                else
+                {
+                    nameExist = false;
+                }
+
+                if (usernameChanged)
+                {
+                    accExist = Queries.EmployeeQuery.AccExistChecker(Details);
+                }
+                else
+                {
+                    accExist = false;
+                }
+
+                // will proceed to updating employee details if both the employee name and username was not existing
+                if (Queries.EmployeeQuery.DetailsCompleteChecker(Details) && !nameExist && !accExist)
+                {
+                    Queries.EmployeeQuery.UpdateEmployee(Details);
+                    Queries.EmployeeQuery.UpdateCredential(Details);
+
+                    MessageBox.Show("Employee details has been successfully updated!", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    Details = null;
+                    this.Close();
+                }
+            }
         }
 
         #region Functions to display button

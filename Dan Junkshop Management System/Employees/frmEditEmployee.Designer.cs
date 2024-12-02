@@ -379,6 +379,7 @@
             this.btnUpdate.Text = "Update";
             this.btnUpdate.TextColor = System.Drawing.Color.Transparent;
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnRestoreOriginal
             // 

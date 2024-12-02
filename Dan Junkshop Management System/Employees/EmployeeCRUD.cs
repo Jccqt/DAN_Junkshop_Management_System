@@ -10,7 +10,7 @@ namespace Dan_Junkshop_Management_System.Employees
 {
     public class EmployeeCRUD
     {
-        private bool nameExist, accExist;
+        private bool nameExist, accExist, detailsComplete;
         private int empIDCount, accIDCount;
         public void DisplayEmployee(int status)
         {
@@ -94,7 +94,7 @@ namespace Dan_Junkshop_Management_System.Employees
             return accExist;
         }
 
-        public int GetEmpIDCount(EmployeeDetails details)
+        public void GetEmpIDCount(EmployeeDetails details)
         {
             ConnectionObjects.conn.Open();
 
@@ -102,20 +102,15 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd.Parameters.AddWithValue("@position", details.Position);
             empIDCount = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
             ConnectionObjects.conn.Close();
-
-            return empIDCount;
         }
 
-        public int GetAccIDCount()
+        public void GetAccIDCount()
         {
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(UserID) FROM Credentials", ConnectionObjects.conn);
             accIDCount = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
             ConnectionObjects.conn.Close();
-
-            return accIDCount;
-
         }
 
         public void AddEmployee(EmployeeDetails details)
@@ -138,6 +133,38 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd.Parameters.AddWithValue("@Address", details.Address);
             ConnectionObjects.cmd.Parameters.AddWithValue("@HireDate", localDate);
             ConnectionObjects.cmd.Parameters.AddWithValue("@Status", 1);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.conn.Close();
+        }
+
+        public void UpdateEmployee(EmployeeDetails details)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("UPDATE Employees SET FirstName = @firstname, LastName = @lastname, MiddleName = @middlename, " +
+                "Contact = @contact, Birthdate = @birthdate, Gender = @gender, Address = @address WHERE EmpID = @empid", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@firstname", details.FirstName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@lastname", details.LastName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@middlename", details.MiddleName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@contact", details.Contact);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@birthdate", Convert.ToDateTime(details.Birthdate));
+            ConnectionObjects.cmd.Parameters.AddWithValue("@gender", details.Gender);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@address", details.Address);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.conn.Close();
+        }
+
+        public void UpdateCredential(EmployeeDetails details)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("UPDATE Credentials SET Username = @username, Password = @password WHERE EmpID = @empid", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@password", details.Password);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -222,6 +249,22 @@ namespace Dan_Junkshop_Management_System.Employees
 
             ConnectionObjects.conn.Close();
             return yearDifferent /= 12;
+        }
+
+        public bool DetailsCompleteChecker(EmployeeDetails details)
+        {
+            if(details.Position == "" || details.FirstName == "" || details.LastName == "" || details.MiddleName == "" || 
+                details.Gender == "" || details.Contact == "" || details.Address == "" || details.Username == "" || details.Password == "")
+            {
+                MessageBox.Show("Employee details was incomplete!" +
+                    "\nPlease complete the employee details to save", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                detailsComplete = false;
+            }
+            else
+            {
+                detailsComplete = true;
+            }
+            return detailsComplete;
         }
     }
 }
