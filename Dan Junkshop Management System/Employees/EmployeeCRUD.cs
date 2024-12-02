@@ -137,7 +137,21 @@ namespace Dan_Junkshop_Management_System.Employees
 
             ConnectionObjects.conn.Close();
         }
+        public void AddAccount(EmployeeDetails details)
+        {
+            accIDCount += 1000;
 
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO Credentials VALUES (@userid, @username, @password, @empID)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@userid", $"USER{accIDCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@password", details.Password);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{details.Position.ToUpper()}{empIDCount + 1}");
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.conn.Close();
+        }
         public void UpdateEmployee(EmployeeDetails details)
         {
             ConnectionObjects.conn.Open();
@@ -156,7 +170,6 @@ namespace Dan_Junkshop_Management_System.Employees
 
             ConnectionObjects.conn.Close();
         }
-
         public void UpdateCredential(EmployeeDetails details)
         {
             ConnectionObjects.conn.Open();
@@ -169,23 +182,6 @@ namespace Dan_Junkshop_Management_System.Employees
 
             ConnectionObjects.conn.Close();
         }
-
-        public void AddAccount(EmployeeDetails details)
-        {
-            accIDCount += 1000;
-
-            ConnectionObjects.conn.Open();
-
-            ConnectionObjects.cmd = new SqlCommand("INSERT INTO Credentials VALUES (@userid, @username, @password, @empID)", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@userid", $"USER{accIDCount + 1}");
-            ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@password", details.Password);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{details.Position.ToUpper()}{empIDCount + 1}");
-            ConnectionObjects.cmd.ExecuteNonQuery();
-
-            ConnectionObjects.conn.Close();
-        }
-
         public void GetEmployee(EmployeeDetails details)
         {
             ConnectionObjects.conn.Open();
@@ -234,7 +230,6 @@ namespace Dan_Junkshop_Management_System.Employees
 
             return legalAge;
         }
-
         public int GetAge(DateTime Birthdate)
         {
             ConnectionObjects.conn.Open();
@@ -250,7 +245,6 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.conn.Close();
             return yearDifferent /= 12;
         }
-
         public bool DetailsCompleteChecker(EmployeeDetails details)
         {
             if(details.Position == "" || details.FirstName == "" || details.LastName == "" || details.MiddleName == "" || 

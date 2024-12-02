@@ -1,5 +1,6 @@
 ﻿using Dan_Junkshop_Management_System.Employees;
-using Dan_Junkshop_Management_System.Inventories.Scraps;
+using Dan_Junkshop_Management_System.Inventories;
+using Dan_Junkshop_Management_System.Transactions;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -29,7 +30,8 @@ namespace Dan_Junkshop_Management_System
     public class Queries
     {
         public static EmployeeCRUD EmployeeQuery = new EmployeeCRUD();
-        public static ScrapCRUD ScrapQuery = new ScrapCRUD();
+        public static SellableCRUD SellableQuery = new SellableCRUD();
+        public static TransactionCRUD TransactionQuery = new TransactionCRUD();
     }
 
     public class PageObjects
@@ -51,13 +53,9 @@ namespace Dan_Junkshop_Management_System
 
         // Transaction Objects
         public static frmNewBuyTransaction newBuyTransaction;
-        public static frmTypeOfTransaction transactionType;
-        public static frmAddingItemSelection addItemSelection;
 
         // Inventory Objects
-        public static frmAddingScrapItem addScrapItem;
         public static frmAddingSellableItems addSellableItem;
-        public static frmEditingScrapItem editScrapItem;
         public static frmEditingSellableItems editSellableItem;
 
         // Partner Objects
