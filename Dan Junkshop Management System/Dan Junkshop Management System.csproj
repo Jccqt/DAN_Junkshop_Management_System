@@ -402,6 +402,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\stash_arrows-switch-solid.png" />
+    <None Include="Resources\whiteSwitch.png" />
+    <None Include="Resources\newCancel.png" />
+    <None Include="Resources\switch.png" />
     <None Include="Resources\updateIcon.png" />
     <None Include="Resources\partners_Pic.png" />
     <None Include="Resources\PartnersPic.png" />

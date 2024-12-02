@@ -63,6 +63,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _switch {
+            get {
+                object obj = ResourceManager.GetObject("switch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_circle {
             get {
                 object obj = ResourceManager.GetObject("add_circle", resourceCulture);
@@ -403,6 +413,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap newCancel {
+            get {
+                object obj = ResourceManager.GetObject("newCancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap NewCancelButton {
             get {
                 object obj = ResourceManager.GetObject("NewCancelButton", resourceCulture);
@@ -663,6 +683,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stash_arrows_switch_solid {
+            get {
+                object obj = ResourceManager.GetObject("stash_arrows-switch-solid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tabler_dots {
             get {
                 object obj = ResourceManager.GetObject("tabler_dots", resourceCulture);
@@ -696,6 +726,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap weui_eyes_on_filled {
             get {
                 object obj = ResourceManager.GetObject("weui_eyes-on-filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap whiteSwitch {
+            get {
+                object obj = ResourceManager.GetObject("whiteSwitch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

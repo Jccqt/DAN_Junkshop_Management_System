@@ -38,9 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelTransaction = new OrganizationProfile.CustomButton();
             this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -57,13 +55,16 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
+            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,10 +95,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 206);
+            this.dataGridView1.Location = new System.Drawing.Point(22, 206);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(571, 531);
+            this.dataGridView1.Size = new System.Drawing.Size(595, 531);
             this.dataGridView1.TabIndex = 2;
             // 
             // panel4
@@ -109,16 +110,16 @@
             this.panel4.Controls.Add(this.lblTotalItems);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Location = new System.Drawing.Point(634, 479);
+            this.panel4.Location = new System.Drawing.Point(644, 534);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(586, 148);
+            this.panel4.Size = new System.Drawing.Size(586, 119);
             this.panel4.TabIndex = 8;
             // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
             this.lblTotalPrice.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(365, 89);
+            this.lblTotalPrice.Location = new System.Drawing.Point(367, 76);
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(145, 24);
             this.lblTotalPrice.TabIndex = 3;
@@ -128,7 +129,7 @@
             // 
             this.lblTotalItems.AutoSize = true;
             this.lblTotalItems.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalItems.Location = new System.Drawing.Point(365, 33);
+            this.lblTotalItems.Location = new System.Drawing.Point(367, 20);
             this.lblTotalItems.Name = "lblTotalItems";
             this.lblTotalItems.Size = new System.Drawing.Size(147, 24);
             this.lblTotalItems.TabIndex = 2;
@@ -138,7 +139,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(38, 89);
+            this.label5.Location = new System.Drawing.Point(40, 76);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(109, 24);
             this.label5.TabIndex = 1;
@@ -148,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(38, 33);
+            this.label3.Location = new System.Drawing.Point(40, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 24);
             this.label3.TabIndex = 0;
@@ -159,34 +160,13 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.panel5.Controls.Add(this.customButton1);
             this.panel5.Controls.Add(this.btnAddItem);
             this.panel5.Controls.Add(this.label8);
-            this.panel5.Location = new System.Drawing.Point(46, 166);
+            this.panel5.Location = new System.Drawing.Point(22, 166);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(571, 41);
+            this.panel5.Size = new System.Drawing.Size(595, 41);
             this.panel5.TabIndex = 7;
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.BorderRadius = 35;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
-            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(440, 3);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(119, 35);
-            this.btnAddItem.TabIndex = 1;
-            this.btnAddItem.Text = "     ADD ITEM";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // label8
             // 
@@ -198,16 +178,6 @@
             this.label8.Size = new System.Drawing.Size(194, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "List of sellable items";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.reddanjunkshop1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 240);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // btnCancelTransaction
             // 
@@ -254,9 +224,9 @@
             // 
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(634, 206);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(644, 206);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 216);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(586, 267);
             this.flowLayoutPanel1.TabIndex = 5;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -265,7 +235,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel2.Controls.Add(this.lblCount);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(634, 166);
+            this.panel2.Location = new System.Drawing.Point(644, 166);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(586, 41);
             this.panel2.TabIndex = 6;
@@ -296,7 +266,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel3.Controls.Add(this.label4);
-            this.panel3.Location = new System.Drawing.Point(634, 439);
+            this.panel3.Location = new System.Drawing.Point(644, 494);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(586, 41);
             this.panel3.TabIndex = 7;
@@ -317,7 +287,7 @@
             this.cbSupplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbSupplier.AutoSize = true;
             this.cbSupplier.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cbSupplier.Location = new System.Drawing.Point(420, 112);
+            this.cbSupplier.Location = new System.Drawing.Point(420, 102);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(95, 23);
             this.cbSupplier.TabIndex = 9;
@@ -329,7 +299,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(329, 79);
+            this.label6.Location = new System.Drawing.Point(329, 69);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 18);
             this.label6.TabIndex = 10;
@@ -341,7 +311,7 @@
             this.cbWalkin.AutoSize = true;
             this.cbWalkin.Checked = true;
             this.cbWalkin.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cbWalkin.Location = new System.Drawing.Point(332, 112);
+            this.cbWalkin.Location = new System.Drawing.Point(332, 102);
             this.cbWalkin.Name = "cbWalkin";
             this.cbWalkin.Size = new System.Drawing.Size(82, 23);
             this.cbWalkin.TabIndex = 11;
@@ -353,7 +323,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(954, 79);
+            this.label7.Location = new System.Drawing.Point(954, 69);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 18);
             this.label7.TabIndex = 12;
@@ -363,7 +333,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(954, 114);
+            this.label9.Location = new System.Drawing.Point(954, 104);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 18);
             this.label9.TabIndex = 13;
@@ -373,7 +343,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(1015, 79);
+            this.lblDate.Location = new System.Drawing.Point(1015, 69);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(60, 18);
             this.lblDate.TabIndex = 14;
@@ -383,7 +353,7 @@
             // 
             this.lblTime.AutoSize = true;
             this.lblTime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(1015, 114);
+            this.lblTime.Location = new System.Drawing.Point(1015, 104);
             this.lblTime.Name = "lblTime";
             this.lblTime.Size = new System.Drawing.Size(60, 18);
             this.lblTime.TabIndex = 15;
@@ -394,11 +364,62 @@
             this.lblTransaction.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTransaction.AutoSize = true;
             this.lblTransaction.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTransaction.Location = new System.Drawing.Point(446, 79);
+            this.lblTransaction.Location = new System.Drawing.Point(446, 69);
             this.lblTransaction.Name = "lblTransaction";
             this.lblTransaction.Size = new System.Drawing.Size(114, 18);
             this.lblTransaction.TabIndex = 18;
             this.lblTransaction.Text = "< Transaction >";
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
+            this.customButton1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.stash_arrows_switch_solid;
+            this.customButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.customButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.customButton1.BorderRadius = 26;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
+            this.customButton1.Location = new System.Drawing.Point(239, 5);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(31, 31);
+            this.customButton1.TabIndex = 2;
+            this.customButton1.TextColor = System.Drawing.Color.Transparent;
+            this.customButton1.UseVisualStyleBackColor = false;
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BorderRadius = 35;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddItem.Location = new System.Drawing.Point(449, 3);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(135, 35);
+            this.btnAddItem.TabIndex = 1;
+            this.btnAddItem.Text = "      ADD NEW ITEM";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.reddanjunkshop1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(8, -16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 240);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // frmNewBuyTransaction
             // 
@@ -442,11 +463,11 @@
             this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -483,5 +504,6 @@
         private System.Windows.Forms.Label lblTransaction;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblTotalItems;
+        private OrganizationProfile.CustomButton customButton1;
     }
 }
