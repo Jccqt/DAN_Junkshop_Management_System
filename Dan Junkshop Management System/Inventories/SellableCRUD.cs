@@ -23,8 +23,9 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(double));
-            ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(decimal));
+            ConnectionObjects.dataTable.Columns.Add("Total cost", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
@@ -50,7 +51,8 @@ namespace Dan_Junkshop_Management_System.Inventories
             while (ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), ConnectionObjects.reader.GetValue(4),
+                    "PHP " +(ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), ConnectionObjects.reader.GetValue(4),
+                    "PHP " + ((ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)) * ConnectionObjects.reader.GetDecimal(4)),
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
 
                 PageObjects.inventory.ItemNameArray.Add(ConnectionObjects.reader.GetString(0));
@@ -59,7 +61,7 @@ namespace Dan_Junkshop_Management_System.Inventories
 
             PageObjects.inventory.InventoryGrid.DataSource = ConnectionObjects.dataTable;
 
-            PageObjects.inventory.InventoryGrid.AutoResizeColumn(4, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.inventory.InventoryGrid.AutoResizeColumn(5, DataGridViewAutoSizeColumnMode.AllCells);
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();

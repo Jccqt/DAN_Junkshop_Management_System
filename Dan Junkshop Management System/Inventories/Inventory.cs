@@ -106,7 +106,7 @@ namespace Dan_Junkshop_Management_System
 
         private void gridViewInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gridViewInventory.CurrentCell.ColumnIndex == 4)
+            if(gridViewInventory.CurrentCell.ColumnIndex == 5)
             {
                 rowIndex = gridViewInventory.CurrentCell.RowIndex;
 

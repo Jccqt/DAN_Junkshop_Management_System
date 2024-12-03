@@ -16,6 +16,7 @@ namespace Dan_Junkshop_Management_System
         private ArrayList itemList = new ArrayList();
         private ArrayList orderList = new ArrayList();
         private int rowIndex;
+        private bool isSupplier;
         public frmNewTransaction()
         {
             InitializeComponent();
@@ -78,7 +79,7 @@ namespace Dan_Junkshop_Management_System
                 else
                 {
                     orderList.Add(itemList[rowIndex]);
-                    Queries.TransactionQuery.DisplayOrders(orderList);
+                    Queries.TransactionQuery.DisplayOrders(orderList, isSupplier);
                 }
            
             }
@@ -92,8 +93,30 @@ namespace Dan_Junkshop_Management_System
                 rowIndex = gridViewOrder.CurrentCell.RowIndex;
 
                 orderList.Remove(orderList[rowIndex]);
-                Queries.TransactionQuery.DisplayOrders(orderList);
+                Queries.TransactionQuery.DisplayOrders(orderList, isSupplier);
             }
+            else if(gridViewOrder.CurrentCell.ColumnIndex == 2)
+            {
+                gridViewOrder.CurrentCell.ReadOnly = false;
+            }
+        }
+
+        private void cbSupplier_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!cbSupplier.Checked)
+            {
+                isSupplier = true;
+            }
+            else
+            {
+                isSupplier = false;
+            }
+            Queries.TransactionQuery.DisplayOrders(orderList, isSupplier);
+        }
+
+        private void cbWalkin_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

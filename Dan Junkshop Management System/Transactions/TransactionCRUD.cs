@@ -21,7 +21,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Add", typeof(Image));
 
             ConnectionObjects.conn.Open();
@@ -34,7 +34,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             while (ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)),
+                    "PHP " + (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)),
                     Dan_Junkshop_Management_System.Properties.Resources.add);
 
                 PageObjects.newBuyTransaction.ItemNamesArray.Add(ConnectionObjects.reader.GetString(0));
@@ -49,12 +49,12 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.conn.Close();
             ConnectionObjects.dataTable = null;
         }
-        public void DisplayOrders(ArrayList orderNames)
+        public void DisplayOrders(ArrayList orderNames, bool isSupplier)
         {
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Scale (kg)", typeof(decimal));
             ConnectionObjects.dataTable.Columns.Add("Remove", typeof(Image));
 
@@ -70,7 +70,7 @@ namespace Dan_Junkshop_Management_System.Transactions
                 if (ConnectionObjects.reader.Read())
                 {
                     ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                        (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), 0,
+                        "PHP " + (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), 0,
                         Dan_Junkshop_Management_System.Properties.Resources.remove);
                 }
                 ConnectionObjects.reader.Close();
@@ -80,6 +80,23 @@ namespace Dan_Junkshop_Management_System.Transactions
             PageObjects.newBuyTransaction.OrdersGrid.DataSource = ConnectionObjects.dataTable;
 
             PageObjects.newBuyTransaction.OrdersGrid.AutoResizeColumn(4, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.newBuyTransaction.OrdersGrid.Columns[0].ReadOnly = true;
+            PageObjects.newBuyTransaction.OrdersGrid.Columns[1].ReadOnly = true;
+
+            if (isSupplier)
+            {
+                PageObjects.newBuyTransaction.OrdersGrid.Columns[2].ReadOnly = false;
+            }
+            else
+            {
+                PageObjects.newBuyTransaction.OrdersGrid.Columns[2].ReadOnly = true;
+            }
+
+            PageObjects.newBuyTransaction.OrdersGrid.Columns[4].ReadOnly = true;
+            PageObjects.newBuyTransaction.OrdersGrid.EditMode = DataGridViewEditMode.EditOnEnter;
+            
+
+ 
 
        
             ConnectionObjects.conn.Close();

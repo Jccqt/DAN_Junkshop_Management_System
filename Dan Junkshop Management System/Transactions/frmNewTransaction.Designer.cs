@@ -42,7 +42,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.btnCancelTransaction = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
             this.panel4.SuspendLayout();
@@ -84,7 +84,7 @@
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1685, 62);
             this.panel1.TabIndex = 0;
@@ -131,7 +131,7 @@
             this.gridViewItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewItems.EnableHeadersVisualStyles = false;
             this.gridViewItems.Location = new System.Drawing.Point(29, 306);
-            this.gridViewItems.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridViewItems.Margin = new System.Windows.Forms.Padding(4);
             this.gridViewItems.Name = "gridViewItems";
             this.gridViewItems.ReadOnly = true;
             this.gridViewItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -151,7 +151,7 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Location = new System.Drawing.Point(859, 657);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(781, 146);
             this.panel4.TabIndex = 8;
@@ -208,33 +208,10 @@
             this.panel5.Controls.Add(this.btnAddItem);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Location = new System.Drawing.Point(29, 257);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(793, 50);
             this.panel5.TabIndex = 7;
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.BorderRadius = 35;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
-            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(599, 4);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(180, 43);
-            this.btnAddItem.TabIndex = 1;
-            this.btnAddItem.Text = "      ADD NEW ITEM";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // label8
             // 
@@ -253,7 +230,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(859, 204);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(781, 50);
             this.panel2.TabIndex = 6;
@@ -275,7 +252,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(859, 608);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(781, 50);
             this.panel3.TabIndex = 7;
@@ -298,12 +275,13 @@
             this.cbSupplier.AutoSize = true;
             this.cbSupplier.Font = new System.Drawing.Font("Arial", 12.25F);
             this.cbSupplier.Location = new System.Drawing.Point(560, 126);
-            this.cbSupplier.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSupplier.Margin = new System.Windows.Forms.Padding(4);
             this.cbSupplier.Name = "cbSupplier";
             this.cbSupplier.Size = new System.Drawing.Size(117, 28);
             this.cbSupplier.TabIndex = 9;
             this.cbSupplier.Text = "Suppliers";
             this.cbSupplier.UseVisualStyleBackColor = true;
+            this.cbSupplier.CheckedChanged += new System.EventHandler(this.cbSupplier_CheckedChanged);
             // 
             // label6
             // 
@@ -324,13 +302,14 @@
             this.cbWalkin.Checked = true;
             this.cbWalkin.Font = new System.Drawing.Font("Arial", 12.25F);
             this.cbWalkin.Location = new System.Drawing.Point(443, 126);
-            this.cbWalkin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbWalkin.Margin = new System.Windows.Forms.Padding(4);
             this.cbWalkin.Name = "cbWalkin";
             this.cbWalkin.Size = new System.Drawing.Size(100, 28);
             this.cbWalkin.TabIndex = 11;
             this.cbWalkin.TabStop = true;
             this.cbWalkin.Text = "Walk-in";
             this.cbWalkin.UseVisualStyleBackColor = true;
+            this.cbWalkin.CheckedChanged += new System.EventHandler(this.cbWalkin_CheckedChanged);
             // 
             // label7
             // 
@@ -417,9 +396,8 @@
             this.gridViewOrder.EnableHeadersVisualStyles = false;
             this.gridViewOrder.GridColor = System.Drawing.Color.Black;
             this.gridViewOrder.Location = new System.Drawing.Point(859, 255);
-            this.gridViewOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridViewOrder.Margin = new System.Windows.Forms.Padding(4);
             this.gridViewOrder.Name = "gridViewOrder";
-            this.gridViewOrder.ReadOnly = true;
             this.gridViewOrder.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.gridViewOrder.RowHeadersVisible = false;
             this.gridViewOrder.RowHeadersWidth = 51;
@@ -432,7 +410,7 @@
             this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.reddanjunkshop1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(11, -20);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(389, 295);
             this.pictureBox1.TabIndex = 1;
@@ -446,7 +424,7 @@
             this.panelBorder1.Controls.Add(this.panelBorder2);
             this.panelBorder1.ForeColor = System.Drawing.Color.Black;
             this.panelBorder1.Location = new System.Drawing.Point(183, 201);
-            this.panelBorder1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBorder1.Margin = new System.Windows.Forms.Padding(4);
             this.panelBorder1.Name = "panelBorder1";
             this.panelBorder1.Size = new System.Drawing.Size(487, 49);
             this.panelBorder1.TabIndex = 20;
@@ -460,7 +438,7 @@
             this.panelBorder2.Controls.Add(this.textBox1);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
             this.panelBorder2.Location = new System.Drawing.Point(0, 0);
-            this.panelBorder2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBorder2.Margin = new System.Windows.Forms.Padding(4);
             this.panelBorder2.Name = "panelBorder2";
             this.panelBorder2.Size = new System.Drawing.Size(485, 48);
             this.panelBorder2.TabIndex = 21;
@@ -470,7 +448,7 @@
             this.pictureBox2.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Location = new System.Drawing.Point(11, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(33, 30);
             this.pictureBox2.TabIndex = 2;
@@ -481,7 +459,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.textBox1.Location = new System.Drawing.Point(52, 10);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(407, 29);
             this.textBox1.TabIndex = 0;
@@ -501,7 +479,7 @@
             this.btnProcessTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProcessTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnProcessTransaction.Location = new System.Drawing.Point(1187, 828);
-            this.btnProcessTransaction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnProcessTransaction.Margin = new System.Windows.Forms.Padding(4);
             this.btnProcessTransaction.Name = "btnProcessTransaction";
             this.btnProcessTransaction.Size = new System.Drawing.Size(208, 66);
             this.btnProcessTransaction.TabIndex = 17;
@@ -522,7 +500,7 @@
             this.btnCancelTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnCancelTransaction.Location = new System.Drawing.Point(1419, 828);
-            this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelTransaction.Name = "btnCancelTransaction";
             this.btnCancelTransaction.Size = new System.Drawing.Size(208, 66);
             this.btnCancelTransaction.TabIndex = 16;
@@ -530,6 +508,29 @@
             this.btnCancelTransaction.TextColor = System.Drawing.Color.Transparent;
             this.btnCancelTransaction.UseVisualStyleBackColor = false;
             this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
+            // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BorderRadius = 35;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddItem.Location = new System.Drawing.Point(599, 4);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(180, 43);
+            this.btnAddItem.TabIndex = 1;
+            this.btnAddItem.Text = "      ADD NEW ITEM";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // frmNewTransaction
             // 
@@ -558,7 +559,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmNewTransaction";

@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\transactions\\frmnewtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\transactions\\transactioncrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\transactions\\transactioncrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\transactions\\frmnewtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\transactions\\frmnewtransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\transactions\\transactionsolditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\transactions\\transactionsolditems.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\transactions\\transactioncrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\transactions\\transactioncrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,13 +35,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmNewTransaction.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
-              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs [Design]",
-              "RelativeToolTip": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs [Design]",
+              "Title": "TransactionSoldItems.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\TransactionSoldItems.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Transactions\\TransactionSoldItems.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\TransactionSoldItems.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Transactions\\TransactionSoldItems.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T05:30:06.207Z",
+              "WhenOpened": "2024-12-03T07:40:10.01Z",
               "EditorCaption": " [Design]"
             },
             {
@@ -48,20 +52,32 @@
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
               "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAwwF4AAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAjwHYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T05:29:52.748Z",
+              "WhenOpened": "2024-12-03T06:52:18.863Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmNewTransaction.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs",
+              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs [Design]",
+              "RelativeToolTip": "Dan Junkshop Management System\\Transactions\\frmNewTransaction.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T06:46:12.039Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "TransactionCRUD.cs",
               "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\TransactionCRUD.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\Transactions\\TransactionCRUD.cs",
               "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Transactions\\TransactionCRUD.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\Transactions\\TransactionCRUD.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAYwFEAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAYwF0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T05:29:22.1Z",
               "EditorCaption": ""
