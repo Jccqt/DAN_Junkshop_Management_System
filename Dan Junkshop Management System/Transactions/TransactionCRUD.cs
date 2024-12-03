@@ -34,7 +34,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
                     (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)),
-                    Dan_Junkshop_Management_System.Properties.Resources.add_item_circle);
+                    Dan_Junkshop_Management_System.Properties.Resources.add);
 
                 PageObjects.newBuyTransaction.ItemNamesArray.Add(ConnectionObjects.reader.GetString(0));
 
@@ -69,7 +69,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
                     (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)),
-                    Dan_Junkshop_Management_System.Properties.Resources.newCancel);
+                    Dan_Junkshop_Management_System.Properties.Resources.remove);
             }
 
             PageObjects.newBuyTransaction.OrdersGrid.DataSource = ConnectionObjects.dataTable;

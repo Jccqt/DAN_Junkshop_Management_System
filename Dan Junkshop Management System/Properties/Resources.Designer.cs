@@ -73,6 +73,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap add_circle {
             get {
                 object obj = ResourceManager.GetObject("add_circle", resourceCulture);
@@ -663,6 +673,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap remove {
+            get {
+                object obj = ResourceManager.GetObject("remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap scale {
             get {
                 object obj = ResourceManager.GetObject("scale", resourceCulture);
@@ -706,6 +726,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap tabler_dots {
             get {
                 object obj = ResourceManager.GetObject("tabler_dots", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap UpdatedAddItem {
+            get {
+                object obj = ResourceManager.GetObject("UpdatedAddItem", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
