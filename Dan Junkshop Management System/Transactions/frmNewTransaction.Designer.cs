@@ -40,9 +40,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +58,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.btnCancelTransaction = new OrganizationProfile.CustomButton();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
             this.panel4.SuspendLayout();
@@ -103,13 +106,18 @@
             this.gridViewItems.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 10.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridViewItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewItems.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Class,
+            this.Column2,
+            this.Column3});
             this.gridViewItems.EnableHeadersVisualStyles = false;
             this.gridViewItems.Location = new System.Drawing.Point(22, 206);
             this.gridViewItems.Name = "gridViewItems";
@@ -187,6 +195,28 @@
             this.panel5.Size = new System.Drawing.Size(595, 41);
             this.panel5.TabIndex = 7;
             // 
+            // btnAddItem
+            // 
+            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.BorderRadius = 35;
+            this.btnAddItem.BorderSize = 0;
+            this.btnAddItem.FlatAppearance.BorderSize = 0;
+            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddItem.Location = new System.Drawing.Point(449, 3);
+            this.btnAddItem.Name = "btnAddItem";
+            this.btnAddItem.Size = new System.Drawing.Size(135, 35);
+            this.btnAddItem.TabIndex = 1;
+            this.btnAddItem.Text = "      ADD NEW ITEM";
+            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddItem.UseVisualStyleBackColor = false;
+            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -201,23 +231,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel2.Controls.Add(this.lblCount);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(644, 166);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(586, 41);
             this.panel2.TabIndex = 6;
-            // 
-            // lblCount
-            // 
-            this.lblCount.AutoSize = true;
-            this.lblCount.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.lblCount.ForeColor = System.Drawing.Color.White;
-            this.lblCount.Location = new System.Drawing.Point(91, 10);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(83, 23);
-            this.lblCount.TabIndex = 1;
-            this.lblCount.Text = "<count>";
             // 
             // label1
             // 
@@ -226,9 +244,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 23);
+            this.label1.Size = new System.Drawing.Size(147, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Item -";
+            this.label1.Text = "Order Overview";
             // 
             // panel3
             // 
@@ -409,27 +427,31 @@
             this.btnCancelTransaction.UseVisualStyleBackColor = false;
             this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
             // 
-            // btnAddItem
+            // Column1
             // 
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.BorderRadius = 35;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
-            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(449, 3);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(135, 35);
-            this.btnAddItem.TabIndex = 1;
-            this.btnAddItem.Text = "      ADD NEW ITEM";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
-            this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
+            this.Column1.HeaderText = "Item Name";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Class
+            // 
+            this.Class.HeaderText = "Class";
+            this.Class.Name = "Class";
+            this.Class.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Price/kg";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column3.HeaderText = "Add";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 48;
             // 
             // frmNewTransaction
             // 
@@ -500,7 +522,6 @@
         private OrganizationProfile.CustomButton btnCancelTransaction;
         private OrganizationProfile.CustomButton btnProcessTransaction;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblCount;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
@@ -515,5 +536,9 @@
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblTotalItems;
         private System.Windows.Forms.DataGridView gridViewOrder;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewImageColumn Column3;
     }
 }
