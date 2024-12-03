@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Dan_Junkshop_Management_System.Inventories;
 
 namespace Dan_Junkshop_Management_System
 {
     public partial class frmAddingSellableItems : Form
     {
-        bool saveIndicator, itemAlreadyExist;
         int itemCount;
         string itemClass;
 
@@ -24,20 +24,7 @@ namespace Dan_Junkshop_Management_System
 
         private void frmAddingSellableItems_Load(object sender, EventArgs e)
         {
-            cbClass.Items.Clear();
-
-            ConnectionObjects.conn.Open();
-
-            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassName FROM ItemClass", ConnectionObjects.conn);
-            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-            while(ConnectionObjects.reader.Read())
-            {
-                cbClass.Items.Add(ConnectionObjects.reader.GetString(0));
-            }
-
-            ConnectionObjects.reader.Close();
-            ConnectionObjects.conn.Close();
+            Queries.SellableQuery.GetItemClasses(cbClass); // will load all ItemClass and insert it to cbClass collection
         }
 
 
@@ -58,18 +45,7 @@ namespace Dan_Junkshop_Management_System
             }
             else
             {
-                ConnectionObjects.conn.Open();
-
-                ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPlantPrice, ItemClassCapital FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", cbClass.Text);
-                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-                if (ConnectionObjects.reader.Read())
-                {
-                    txtPrice.Text = (ConnectionObjects.reader.GetDecimal(0) + ConnectionObjects.reader.GetDecimal(1)).ToString();
-                }
-
-                ConnectionObjects.conn.Close();
+                txtPrice.Text = Queries.SellableQuery.GetItemPrice(cbClass.Text).ToString();
             }
         }
 
@@ -99,68 +75,31 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            ConnectionObjects.conn.Open();
-
-            if(txtSellableName.Text == "" || cbClass.SelectedIndex == -1 || txtPrice.Text == "" || txtScale.Text == "")
+            SellableDetails details = new SellableDetails
             {
-                MessageBox.Show("Sellable item details was incomplete!" +
-                    "\nPlease complete the sellable item details", "Sellable Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                saveIndicator = false;
-            }
-            else
+                SellableName = txtSellableName.Text,
+                ItemClassName = cbClass.Text,
+                SellableQuantity = Convert.ToDecimal(txtScale.Text)
+            };
+            
+            if(Queries.SellableQuery.ItemDetailsChecker(details) && !Queries.SellableQuery.ItemExistChecker(cbClass.Text))
             {
-                saveIndicator = true;
-            }
-
-            if(saveIndicator)
-            {
-                txtSellableName.Text = txtSellableName.Text.ToString().Trim();
-
-                ConnectionObjects.cmd = new SqlCommand("SELECT SellableName FROM SellableItems WHERE SellableName = @sellablename", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", txtSellableName.Text);
-                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-                if (ConnectionObjects.reader.Read())
-                {
-                    MessageBox.Show("Sellable item was already existing!", "Sellable Item Notification",
-                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                    itemAlreadyExist = true;
-                }
-                else
-                {
-                    itemAlreadyExist = false;
-                }
-                ConnectionObjects.reader.Close();
-            }
-
-            if(saveIndicator && !itemAlreadyExist)
-            {
-                itemCount = 1000;
-
-                ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(SellableID) FROM SellableItems WHERE Status = 1", ConnectionObjects.conn);
-                itemCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
-
-                ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassID FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", cbClass.Text);
-                itemClass = ConnectionObjects.cmd.ExecuteScalar().ToString();
-
-                ConnectionObjects.cmd = new SqlCommand("INSERT INTO SellableItems VALUES(@sellableid, @sellablename, @itemclassid, @sellablequantity, @status)", ConnectionObjects.conn);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@sellableid", $"SCRAP{itemCount + 1}");
-                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", txtSellableName.Text);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", itemClass);
-                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablequantity", Convert.ToDouble(txtScale.Text));
-                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
-                ConnectionObjects.cmd.ExecuteNonQuery();
+                Queries.SellableQuery.GetItemIDCount();
+                Queries.SellableQuery.GetClassID(details.ItemClassName);
+                Queries.SellableQuery.AddItem(details);
 
                 clearSellableItemDetails();
 
                 MessageBox.Show("Sellable item has been successfully added!", "Sellable Item Notification",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
+                details = null;
+                this.Close();
             }
+        }
 
-            ConnectionObjects.conn.Close();
+        private void txtScale_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

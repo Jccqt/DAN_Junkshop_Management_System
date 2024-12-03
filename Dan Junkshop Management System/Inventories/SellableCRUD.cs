@@ -12,6 +12,10 @@ namespace Dan_Junkshop_Management_System.Inventories
 {
     public class SellableCRUD
     {
+        private decimal itemPrice;
+        private bool detailsComplete, itemExist;
+        private int idCount;
+        private string classID;
         public void DisplayItems(int status, bool isSearching)
         {
             PageObjects.inventory.ItemNameArray.Clear();
@@ -61,21 +65,105 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.conn.Close();
             ConnectionObjects.dataTable = null;
         }
-        public void GetItemClasses()
+        public void GetItemClasses(ComboBox cbClass)
         {
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassName FROM ItemClass", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
-            PageObjects.inventory.ItemTypes.Items.Clear();
-            PageObjects.inventory.ItemTypes.Items.Add("All");
+            cbClass.Items.Clear();
 
             while (ConnectionObjects.reader.Read())
             {
-                PageObjects.inventory.ItemTypes.Items.Add(ConnectionObjects.reader.GetString(0));
+                cbClass.Items.Add(ConnectionObjects.reader.GetString(0));
             }
             ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+        public decimal GetItemPrice(string className)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPlantPrice, ItemClassCapital FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", className);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if (ConnectionObjects.reader.Read())
+            {
+                itemPrice = (ConnectionObjects.reader.GetDecimal(0) + ConnectionObjects.reader.GetDecimal(1));
+            }
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+            return itemPrice;
+        }
+        public bool ItemDetailsChecker(SellableDetails details)
+        {
+            if(details.SellableName == "" || details.ItemClassName == "" || details.SellableQuantity.ToString() == "")
+            {
+                detailsComplete = false;
+            }
+            else
+            {
+                detailsComplete = true;
+            }
+            return detailsComplete;
+        }
+        
+        public bool ItemExistChecker(string itemName)
+        {
+            ConnectionObjects.conn.Open();
+            ConnectionObjects.cmd = new SqlCommand("SELECT SellableName FROM SellableItems WHERE SellableName = @sellablename", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", itemName);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if (ConnectionObjects.reader.Read())
+            {
+                MessageBox.Show("Sellable item was already existing!", "Sellable Item Notification",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                itemExist = true;
+            }
+            else
+            {
+                itemExist = false;
+            }
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+            return itemExist;
+        }
+        public void GetItemIDCount()
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(SellableID) FROM SellableItems WHERE Status = 1", ConnectionObjects.conn);
+            idCount = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+            ConnectionObjects.conn.Close();
+        }
+        public void GetClassID(string className)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassID FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", className);
+            classID = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+            ConnectionObjects.conn.Close();
+        }
+        public void AddItem(SellableDetails details)
+        {
+            idCount += 1000;
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO SellableItems VALUES(@sellableid, @sellablename, @itemclassid, @sellablequantity, @status)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellableid", $"SCRAP{idCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", details.SellableName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", classID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablequantity", Convert.ToDecimal(details.SellableQuantity));
+            ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
             ConnectionObjects.conn.Close();
         }
 

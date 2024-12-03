@@ -41,8 +41,6 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnCancelTransaction = new OrganizationProfile.CustomButton();
-            this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,16 +54,18 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTime = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.gridViewOrder = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnProcessTransaction = new OrganizationProfile.CustomButton();
+            this.btnCancelTransaction = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,6 +93,8 @@
             // 
             // gridViewItems
             // 
+            this.gridViewItems.AllowUserToAddRows = false;
+            this.gridViewItems.AllowUserToDeleteRows = false;
             this.gridViewItems.AllowUserToResizeColumns = false;
             this.gridViewItems.AllowUserToResizeRows = false;
             this.gridViewItems.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -111,11 +113,13 @@
             this.gridViewItems.EnableHeadersVisualStyles = false;
             this.gridViewItems.Location = new System.Drawing.Point(22, 206);
             this.gridViewItems.Name = "gridViewItems";
+            this.gridViewItems.ReadOnly = true;
             this.gridViewItems.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.gridViewItems.RowHeadersVisible = false;
             this.gridViewItems.RowHeadersWidth = 51;
             this.gridViewItems.Size = new System.Drawing.Size(595, 531);
             this.gridViewItems.TabIndex = 2;
+            this.gridViewItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewItems_CellContentClick);
             // 
             // panel4
             // 
@@ -193,47 +197,6 @@
             this.label8.Size = new System.Drawing.Size(194, 23);
             this.label8.TabIndex = 0;
             this.label8.Text = "List of sellable items";
-            // 
-            // btnCancelTransaction
-            // 
-            this.btnCancelTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelTransaction.BackColor = System.Drawing.Color.IndianRed;
-            this.btnCancelTransaction.BackgroundColor = System.Drawing.Color.IndianRed;
-            this.btnCancelTransaction.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCancelTransaction.BorderRadius = 40;
-            this.btnCancelTransaction.BorderSize = 0;
-            this.btnCancelTransaction.FlatAppearance.BorderSize = 0;
-            this.btnCancelTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCancelTransaction.Location = new System.Drawing.Point(1064, 673);
-            this.btnCancelTransaction.Name = "btnCancelTransaction";
-            this.btnCancelTransaction.Size = new System.Drawing.Size(156, 54);
-            this.btnCancelTransaction.TabIndex = 16;
-            this.btnCancelTransaction.Text = "CANCEL TRANSACTION";
-            this.btnCancelTransaction.TextColor = System.Drawing.Color.Transparent;
-            this.btnCancelTransaction.UseVisualStyleBackColor = false;
-            this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
-            // 
-            // btnProcessTransaction
-            // 
-            this.btnProcessTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnProcessTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnProcessTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnProcessTransaction.BorderColor = System.Drawing.Color.Transparent;
-            this.btnProcessTransaction.BorderRadius = 40;
-            this.btnProcessTransaction.BorderSize = 0;
-            this.btnProcessTransaction.FlatAppearance.BorderSize = 0;
-            this.btnProcessTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProcessTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcessTransaction.ForeColor = System.Drawing.Color.Transparent;
-            this.btnProcessTransaction.Location = new System.Drawing.Point(890, 673);
-            this.btnProcessTransaction.Name = "btnProcessTransaction";
-            this.btnProcessTransaction.Size = new System.Drawing.Size(156, 54);
-            this.btnProcessTransaction.TabIndex = 17;
-            this.btnProcessTransaction.Text = " PROCESS TRANSACTION";
-            this.btnProcessTransaction.TextColor = System.Drawing.Color.Transparent;
-            this.btnProcessTransaction.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -375,11 +338,11 @@
             this.lblTransaction.TabIndex = 18;
             this.lblTransaction.Text = "< Transaction >";
             // 
-            // dataGridView1
+            // gridViewOrder
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridViewOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridViewOrder.BackgroundColor = System.Drawing.Color.White;
+            this.gridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -387,13 +350,64 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(644, 207);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 262);
-            this.dataGridView1.TabIndex = 19;
+            this.gridViewOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridViewOrder.GridColor = System.Drawing.Color.Black;
+            this.gridViewOrder.Location = new System.Drawing.Point(644, 207);
+            this.gridViewOrder.Name = "gridViewOrder";
+            this.gridViewOrder.RowHeadersVisible = false;
+            this.gridViewOrder.Size = new System.Drawing.Size(586, 262);
+            this.gridViewOrder.TabIndex = 19;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.reddanjunkshop1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(8, -16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 240);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnProcessTransaction
+            // 
+            this.btnProcessTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProcessTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnProcessTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnProcessTransaction.BorderColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.BorderRadius = 40;
+            this.btnProcessTransaction.BorderSize = 0;
+            this.btnProcessTransaction.FlatAppearance.BorderSize = 0;
+            this.btnProcessTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProcessTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProcessTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.Location = new System.Drawing.Point(890, 673);
+            this.btnProcessTransaction.Name = "btnProcessTransaction";
+            this.btnProcessTransaction.Size = new System.Drawing.Size(156, 54);
+            this.btnProcessTransaction.TabIndex = 17;
+            this.btnProcessTransaction.Text = " PROCESS TRANSACTION";
+            this.btnProcessTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnProcessTransaction.UseVisualStyleBackColor = false;
+            // 
+            // btnCancelTransaction
+            // 
+            this.btnCancelTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancelTransaction.BackColor = System.Drawing.Color.IndianRed;
+            this.btnCancelTransaction.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.btnCancelTransaction.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCancelTransaction.BorderRadius = 40;
+            this.btnCancelTransaction.BorderSize = 0;
+            this.btnCancelTransaction.FlatAppearance.BorderSize = 0;
+            this.btnCancelTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelTransaction.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelTransaction.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancelTransaction.Location = new System.Drawing.Point(1064, 673);
+            this.btnCancelTransaction.Name = "btnCancelTransaction";
+            this.btnCancelTransaction.Size = new System.Drawing.Size(156, 54);
+            this.btnCancelTransaction.TabIndex = 16;
+            this.btnCancelTransaction.Text = "CANCEL TRANSACTION";
+            this.btnCancelTransaction.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancelTransaction.UseVisualStyleBackColor = false;
+            this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
             // 
             // btnAddItem
             // 
@@ -417,16 +431,6 @@
             this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.reddanjunkshop1;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(8, -16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 240);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // frmNewTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -434,7 +438,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(1264, 761);
             this.ControlBox = false;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridViewOrder);
             this.Controls.Add(this.lblTransaction);
             this.Controls.Add(this.btnProcessTransaction);
             this.Controls.Add(this.btnCancelTransaction);
@@ -473,7 +477,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -510,6 +514,6 @@
         private System.Windows.Forms.Label lblTransaction;
         private System.Windows.Forms.Label lblTotalPrice;
         private System.Windows.Forms.Label lblTotalItems;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridViewOrder;
     }
 }

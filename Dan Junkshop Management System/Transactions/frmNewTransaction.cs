@@ -14,6 +14,7 @@ namespace Dan_Junkshop_Management_System
     public partial class frmNewTransaction : Form
     {
         private ArrayList itemNames = new ArrayList();
+        private ArrayList orderNames = new ArrayList();
         private int rowIndex;
         public frmNewTransaction()
         {
@@ -22,7 +23,9 @@ namespace Dan_Junkshop_Management_System
         }
 
         public DataGridView ItemsGrid { get { return gridViewItems; } }
+        public DataGridView OrdersGrid { get { return gridViewOrder; } }
         public string ItemName { get { return itemNames[rowIndex].ToString(); } }
+        public string OrderName { get { return orderNames[rowIndex].ToString(); } }
         public ArrayList ItemNamesArray { get { return itemNames; } }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -43,6 +46,11 @@ namespace Dan_Junkshop_Management_System
         private void btnCancelTransaction_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

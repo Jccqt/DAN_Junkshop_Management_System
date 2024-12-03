@@ -91,7 +91,7 @@
             this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
             this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddItem.Location = new System.Drawing.Point(784, 6);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddItem.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(124, 37);
             this.btnAddItem.TabIndex = 4;
@@ -171,7 +171,6 @@
             this.cbType.Name = "cbType";
             this.cbType.Size = new System.Drawing.Size(154, 33);
             this.cbType.TabIndex = 0;
-            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // btnSwitchStatus
             // 
@@ -191,7 +190,7 @@
             this.btnSwitchStatus.TabIndex = 10;
             this.btnSwitchStatus.Text = "ActiveInactive";
             this.btnSwitchStatus.UseVisualStyleBackColor = false;
-            this.btnSwitchStatus.CheckedChanged += new System.EventHandler(this.btnSwitchStatus_CheckedChanged);
+            this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
             // 
             // panelBorder1
             // 

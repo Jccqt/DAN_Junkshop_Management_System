@@ -32,7 +32,6 @@ namespace Dan_Junkshop_Management_System
         }
 
         public string ItemName { get { return itemNames[rowIndex].ToString(); } }
-        public ComboBox ItemTypes { get { return cbType; } }
         public ArrayList ItemNameArray { get { return itemNames; } }
         public DataGridView InventoryGrid { get { return gridViewInventory; } }
         public string SearchBox { get { return txtSearchBox.Text; } }
@@ -43,20 +42,14 @@ namespace Dan_Junkshop_Management_System
             btnAddItem.Visible = true;
 
             Queries.SellableQuery.DisplayItems(1, isSearching);
-            Queries.SellableQuery.GetItemClasses();
+            Queries.SellableQuery.GetItemClasses(cbType);
             cbType.Text = "All";
         }
 
-        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-              btnSwitchStatus.Checked = true;
-              lblTitle.Text = "Available Sellable Items";
-              Queries.SellableQuery.DisplayItems(1, isSearching);
-        }
 
-        private void btnSwitchStatus_CheckedChanged(object sender, EventArgs e)
+        private void btnSwitchStatus_Click(object sender, EventArgs e)
         {
-            if(btnSwitchStatus.Checked)
+            if (!btnSwitchStatus.Checked)
             {
                 btnAddItem.Visible = false;
                 lblTitle.Text = "Not Available Sellable Items";
@@ -69,6 +62,8 @@ namespace Dan_Junkshop_Management_System
                 Queries.SellableQuery.DisplayItems(1, isSearching);
             }
         }
+
+
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
@@ -140,14 +135,15 @@ namespace Dan_Junkshop_Management_System
 
         private void gridViewInventory_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
+            // Mouse cursor will change to hand if edit row was hovered
             if(e.ColumnIndex == 4)
             {
                 gridViewInventory.Cursor = Cursors.Hand;
             }
         }
-
         private void gridViewInventory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
+            // Mouse cursor will change to default if edit row was not hovered
             if(e.ColumnIndex == 4)
             {
                 gridViewInventory.Cursor = Cursors.Default;
@@ -157,13 +153,13 @@ namespace Dan_Junkshop_Management_System
 
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
         {
-            if (cbType.Text == "Sellable" && !btnSwitchStatus.Checked)
+            if (btnSwitchStatus.Checked)
             {
-                Queries.SellableQuery.DisplayItems(0, isSearching);
+                Queries.SellableQuery.DisplayItems(1, isSearching);
             }
             else
             {
-                Queries.SellableQuery.DisplayItems(1, isSearching);
+                Queries.SellableQuery.DisplayItems(0, isSearching);
             }
         }
 

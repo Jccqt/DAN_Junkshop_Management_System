@@ -21,7 +21,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(double));
             ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(double));
-            ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
+            ConnectionObjects.dataTable.Columns.Add("Add", typeof(Image));
 
             ConnectionObjects.conn.Open();
 
@@ -35,7 +35,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
                     (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), ConnectionObjects.reader.GetValue(4),
-                    Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+                    Dan_Junkshop_Management_System.Properties.Resources.add_item_circle);
 
                 PageObjects.newBuyTransaction.ItemNamesArray.Add(ConnectionObjects.reader.GetString(0));
 
@@ -48,6 +48,11 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
             ConnectionObjects.dataTable = null;
+        }
+        public void AddItemToOrders()
+        {
+            ConnectionObjects.conn.Open();
+
         }
     }
 }
