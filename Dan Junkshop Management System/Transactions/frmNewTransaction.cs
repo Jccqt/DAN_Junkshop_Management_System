@@ -13,8 +13,8 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmNewTransaction : Form
     {
-        private ArrayList itemNames = new ArrayList();
-        private ArrayList orderNames = new ArrayList();
+        private ArrayList itemList = new ArrayList();
+        private ArrayList orderList = new ArrayList();
         private int rowIndex;
         public frmNewTransaction()
         {
@@ -24,10 +24,10 @@ namespace Dan_Junkshop_Management_System
 
         public DataGridView ItemsGrid { get { return gridViewItems; } }
         public DataGridView OrdersGrid { get { return gridViewOrder; } }
-        public string ItemName { get { return itemNames[rowIndex].ToString(); } }
-        public string OrderName { get { return orderNames[rowIndex].ToString(); } }
-        public ArrayList ItemNamesArray { get { return itemNames; } }
-        public ArrayList OrderNamesArray { get { return orderNames; } }
+        public string ItemName { get { return itemList[rowIndex].ToString(); } }
+        public string OrderName { get { return orderList[rowIndex].ToString(); } }
+        public ArrayList ItemNamesArray { get { return itemList; } }
+        public ArrayList OrderNamesArray { get { return orderList; } }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -41,12 +41,27 @@ namespace Dan_Junkshop_Management_System
 
         private void NewBuyTransaction_Load(object sender, EventArgs e)
         {
+            orderList.Clear();
             Queries.TransactionQuery.DisplayItems(1);
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(orderList.Count == 0)
+            {
+                this.Close();
+            }
+            else
+            {
+                DialogResult cancelTransaction = MessageBox.Show("Are you sure you want to cancel transaction?", "Transaction Notification", 
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if(cancelTransaction == DialogResult.Yes)
+                {
+                    this.Close();
+                }
+            }
+            
         }
 
         private void gridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -54,7 +69,30 @@ namespace Dan_Junkshop_Management_System
             if(gridViewItems.CurrentCell.ColumnIndex == 3)
             {
                 rowIndex = gridViewItems.CurrentCell.RowIndex;
-                Queries.TransactionQuery.AddItemToOrders(itemNames[rowIndex].ToString());
+
+                if (orderList.Contains(itemList[rowIndex]))
+                {
+                    MessageBox.Show("Item was already exist on order overview!", "Transaction Notification", 
+                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+                else
+                {
+                    orderList.Add(itemList[rowIndex]);
+                    Queries.TransactionQuery.DisplayOrders(orderList);
+                }
+           
+            }
+            GC.Collect(); // optimization purposes
+        }
+
+        private void gridViewOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(gridViewOrder.CurrentCell.ColumnIndex == 4)
+            {
+                rowIndex = gridViewOrder.CurrentCell.RowIndex;
+
+                orderList.Remove(orderList[rowIndex]);
+                Queries.TransactionQuery.DisplayOrders(orderList);
             }
         }
     }
