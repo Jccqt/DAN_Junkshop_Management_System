@@ -27,6 +27,7 @@ namespace Dan_Junkshop_Management_System
         public string ItemName { get { return itemNames[rowIndex].ToString(); } }
         public string OrderName { get { return orderNames[rowIndex].ToString(); } }
         public ArrayList ItemNamesArray { get { return itemNames; } }
+        public ArrayList OrderNamesArray { get { return orderNames; } }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -50,7 +51,11 @@ namespace Dan_Junkshop_Management_System
 
         private void gridViewItems_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(gridViewItems.CurrentCell.ColumnIndex == 3)
+            {
+                rowIndex = gridViewItems.CurrentCell.RowIndex;
+                Queries.TransactionQuery.AddItemToOrders(itemNames[rowIndex].ToString());
+            }
         }
     }
 }

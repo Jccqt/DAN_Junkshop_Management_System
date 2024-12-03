@@ -99,8 +99,10 @@ namespace Dan_Junkshop_Management_System.Inventories
         }
         public bool ItemDetailsChecker(SellableDetails details)
         {
-            if(details.SellableName == "" || details.ItemClassName == "" || details.SellableQuantity.ToString() == "")
+            if(details.SellableName == "" || details.ItemClassName == "" || details.SellableQuantity == 0)
             {
+                MessageBox.Show("Item details was incomplete!" +
+                    "\nPlease complete the item details to save", "Sellable Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 detailsComplete = false;
             }
             else
