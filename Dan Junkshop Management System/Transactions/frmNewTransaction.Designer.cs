@@ -292,6 +292,7 @@
             this.cbSupplier.TabIndex = 9;
             this.cbSupplier.Text = "Suppliers";
             this.cbSupplier.UseVisualStyleBackColor = true;
+            this.cbSupplier.CheckedChanged += new System.EventHandler(this.cbSupplier_CheckedChanged);
             // 
             // label6
             // 

@@ -72,6 +72,7 @@
             this.txtPrice.TabIndex = 2;
             this.txtPrice.Text = "PRICE/kg";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrice.Leave += new System.EventHandler(this.txtPrice_Leave);
             // 
             // txtSubtotal
             // 
@@ -122,10 +123,10 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSubtotal;
         public OrganizationProfile.CustomButton btnRemove;
         public System.Windows.Forms.TextBox txtItemName;
         public System.Windows.Forms.TextBox txtPrice;
         public System.Windows.Forms.TextBox txtScale;
+        public System.Windows.Forms.TextBox txtSubtotal;
     }
 }

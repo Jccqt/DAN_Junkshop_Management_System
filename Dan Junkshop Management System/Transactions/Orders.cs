@@ -22,10 +22,11 @@ namespace Dan_Junkshop_Management_System
         {
             // will get the index of this user control from orders arraylist
             index = PageObjects.newBuyTransaction.OrderNamesArray.IndexOf(this.Tag);
-            Console.WriteLine(this.Tag);
 
            if(txtScale.Text != "")
-            {                
+            {   
+                txtSubtotal.Text = PageObjects.newBuyTransaction.SubTotalArray[index].ToString();
+
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text); // will subtract the subtotal of this order to the total cost
                 txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString(); // will set the new subtotal based on new scale
                 PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text); // will add the new subtotal to the total cost
@@ -45,6 +46,9 @@ namespace Dan_Junkshop_Management_System
                 PageObjects.newBuyTransaction.ScaleArray.RemoveAt(index);
                 PageObjects.newBuyTransaction.ScaleArray.Insert(index, 0);
             }
+
+            PageObjects.newBuyTransaction.SubTotalArray.RemoveAt(index);
+            PageObjects.newBuyTransaction.SubTotalArray.Insert(index, Convert.ToDecimal(txtSubtotal.Text));
         }
 
         private void txtScale_KeyPress(object sender, KeyPressEventArgs e)
@@ -69,10 +73,21 @@ namespace Dan_Junkshop_Management_System
             PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
             PageObjects.newBuyTransaction.OriginalPriceArray.RemoveAt(index);
             PageObjects.newBuyTransaction.ScaleArray.RemoveAt(index);
+            PageObjects.newBuyTransaction.SubTotalArray.RemoveAt(index);
             PageObjects.newBuyTransaction.OrderNamesArray.RemoveAt(index);
 
             PageObjects.newBuyTransaction.ItemCountLabel.Text = PageObjects.newBuyTransaction.OrderNamesArray.Count.ToString();
             this.Dispose();
+        }
+
+        private void txtPrice_Leave(object sender, EventArgs e)
+        {
+            index = PageObjects.newBuyTransaction.OrderNamesArray.IndexOf(this.Tag);
+
+            if (txtPrice.Text == "")
+            {
+                txtPrice.Text = PageObjects.newBuyTransaction.OriginalPriceArray[index].ToString();
+            }
         }
     }
 }

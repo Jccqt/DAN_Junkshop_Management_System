@@ -19,6 +19,7 @@ namespace Dan_Junkshop_Management_System
         private ArrayList scaleList = new ArrayList();
         private ArrayList priceList = new ArrayList();
         private ArrayList originalPriceList = new ArrayList();
+        private ArrayList subtotalList = new ArrayList();
         private int rowIndex;
         private bool isSupplier;
         private decimal totalCost;
@@ -39,6 +40,7 @@ namespace Dan_Junkshop_Management_System
         public ArrayList ScaleArray { get { return scaleList; } }
         public ArrayList PriceArray { get { return priceList; } }
         public ArrayList OriginalPriceArray { get { return originalPriceList; } }
+        public ArrayList SubTotalArray { get { return subtotalList; } }
         public Label TotalCostLabel { get { return lblTotalCost; } }
         public Label ItemCountLabel { get { return lblTotalItems; } }
 
@@ -86,6 +88,7 @@ namespace Dan_Junkshop_Management_System
                 else
                 {
                     Queries.TransactionQuery.AddOrder(itemList[rowIndex].ToString());
+                    Queries.TransactionQuery.DisplayOrders(isSupplier);
                     lblTotalItems.Text = orderList.Count.ToString();
                 }
 
@@ -99,5 +102,17 @@ namespace Dan_Junkshop_Management_System
 
         }
 
+        private void cbSupplier_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!cbSupplier.Checked)
+            {
+                isSupplier = true;
+            }
+            else
+            {
+                isSupplier = false;
+            }
+            Queries.TransactionQuery.DisplayOrders(isSupplier);
+        }
     }
 }
