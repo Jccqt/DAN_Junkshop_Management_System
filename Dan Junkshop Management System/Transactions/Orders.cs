@@ -36,7 +36,7 @@ namespace Dan_Junkshop_Management_System
                 PageObjects.newBuyTransaction.ScaleArray.RemoveAt(index);
                 PageObjects.newBuyTransaction.ScaleArray.Insert(index, Convert.ToDecimal(txtScale.Text));
             }
-            else if (txtScale.Text == "" || txtScale.Text == "0.00")
+            else if (txtScale.Text == "" || Convert.ToDecimal(txtScale.Text) == 0)
             {
                 // same process on first condition
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text);
@@ -88,6 +88,44 @@ namespace Dan_Junkshop_Management_System
             {
                 txtPrice.Text = PageObjects.newBuyTransaction.OriginalPriceArray[index].ToString();
             }
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
+            index = PageObjects.newBuyTransaction.OrderNamesArray.IndexOf(this.Tag);
+
+            if(txtPrice.Text != "")
+            {
+                txtSubtotal.Text = PageObjects.newBuyTransaction.SubTotalArray[index].ToString();
+
+                PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text); // will subtract the subtotal of this order to the total cost
+                txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString(); // will set the new subtotal based on new scale
+                PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text); // will add the new subtotal to the total cost
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString(); // will change the total cost label
+
+                // will remove and update the scale of this order on array list
+                PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
+                PageObjects.newBuyTransaction.PriceArray.Insert(index, Convert.ToDecimal(txtPrice.Text));
+            }
+            else if (txtPrice.Text == "" || Convert.ToDecimal(txtPrice.Text) == 0)
+            {
+                // same process on first condition
+                PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text);
+                txtSubtotal.Text = "0.00"; // will set subtotal to 0.00
+                PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text);
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString();
+
+                PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
+                PageObjects.newBuyTransaction.PriceArray.Insert(index, PageObjects.newBuyTransaction.OriginalPriceArray[index]);
+            }
+
+            PageObjects.newBuyTransaction.SubTotalArray.RemoveAt(index);
+            PageObjects.newBuyTransaction.SubTotalArray.Insert(index, Convert.ToDecimal(txtSubtotal.Text));
+        }
+
+        private void txtPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            InputValidation.FloatingNumbersOnly(sender, e);
         }
     }
 }

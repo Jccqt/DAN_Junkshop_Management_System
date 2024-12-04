@@ -52,6 +52,7 @@ namespace Dan_Junkshop_Management_System
         private void NewBuyTransaction_Load(object sender, EventArgs e)
         {
             orderList.Clear();
+            isSupplier = false;
             Queries.TransactionQuery.DisplayItems(1);
         }
 
@@ -104,7 +105,7 @@ namespace Dan_Junkshop_Management_System
 
         private void cbSupplier_CheckedChanged(object sender, EventArgs e)
         {
-            if (!cbSupplier.Checked)
+            if (cbSupplier.Checked)
             {
                 isSupplier = true;
             }

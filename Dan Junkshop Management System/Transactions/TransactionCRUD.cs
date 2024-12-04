@@ -84,12 +84,12 @@ namespace Dan_Junkshop_Management_System.Transactions
 
                 if (isSupplier)
                 {
-                    order.txtPrice.Enabled = false;
+                    order.txtPrice.Enabled = true;
                     order.txtPrice.Text = PageObjects.newBuyTransaction.PriceArray[i].ToString();
                 }
                 else
                 {
-                    order.txtPrice.Enabled = true;
+                    order.txtPrice.Enabled = false;
                     order.txtPrice.Text = PageObjects.newBuyTransaction.OriginalPriceArray[i].ToString();
                 }
                 
