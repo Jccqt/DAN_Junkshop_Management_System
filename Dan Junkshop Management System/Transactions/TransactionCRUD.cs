@@ -38,7 +38,6 @@ namespace Dan_Junkshop_Management_System.Transactions
                     Dan_Junkshop_Management_System.Properties.Resources.add);
 
                 PageObjects.newBuyTransaction.ItemNamesArray.Add(ConnectionObjects.reader.GetString(0));
-
             }
 
             PageObjects.newBuyTransaction.ItemsGrid.DataSource = ConnectionObjects.dataTable;
@@ -79,7 +78,10 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.conn.Close();
         }
 
+        public void DisplayOrders()
+        {
 
+        }
 
     }
 }

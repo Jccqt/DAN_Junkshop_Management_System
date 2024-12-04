@@ -40,12 +40,8 @@ namespace Dan_Junkshop_Management_System
         public ArrayList PriceArray { get { return priceList; } }
         public ArrayList OriginalPriceArray { get { return originalPriceList; } }
         public Label TotalCostLabel { get { return lblTotalCost; } }
+        public Label ItemCountLabel { get { return lblTotalItems; } }
 
-        
-        private void RemoveOrder_Click(object sender, EventArgs e)
-        {
-            Button removeBtn = (Button)sender;
-        }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
 

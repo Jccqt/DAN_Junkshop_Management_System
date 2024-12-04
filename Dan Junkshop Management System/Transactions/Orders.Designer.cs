@@ -102,6 +102,7 @@
             this.btnRemove.TabIndex = 4;
             this.btnRemove.TextColor = System.Drawing.Color.Transparent;
             this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // Orders
             // 
