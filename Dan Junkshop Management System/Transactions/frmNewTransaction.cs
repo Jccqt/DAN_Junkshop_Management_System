@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,25 +16,36 @@ namespace Dan_Junkshop_Management_System
     {
         private ArrayList itemList = new ArrayList();
         private ArrayList orderList = new ArrayList();
+        private ArrayList scaleList = new ArrayList();
+        private ArrayList priceList = new ArrayList();
+        private ArrayList originalPriceList = new ArrayList();
         private int rowIndex;
         private bool isSupplier;
+        private decimal totalCost;
         public frmNewTransaction()
         {
             InitializeComponent();
 
         }
+        
 
         public DataGridView ItemsGrid { get { return gridViewItems; } }
+        public FlowLayoutPanel OrdersFLP { get { return OrdersPanel; } }
         public string ItemName { get { return itemList[rowIndex].ToString(); } }
         public string OrderName { get { return orderList[rowIndex].ToString(); } }
+        public decimal TotalCost { get { return totalCost; } set { totalCost = value; } }
         public ArrayList ItemNamesArray { get { return itemList; } }
         public ArrayList OrderNamesArray { get { return orderList; } }
+        public ArrayList ScaleArray { get { return scaleList; } }
+        public ArrayList PriceArray { get { return priceList; } }
+        public ArrayList OriginalPriceArray { get { return originalPriceList; } }
+        public Label TotalCostLabel { get { return lblTotalCost; } }
 
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        
+        private void RemoveOrder_Click(object sender, EventArgs e)
         {
-
+            Button removeBtn = (Button)sender;
         }
-
         private void btnAddItem_Click(object sender, EventArgs e)
         {
 
@@ -77,8 +89,8 @@ namespace Dan_Junkshop_Management_System
                 }
                 else
                 {
-                    orderList.Add(itemList[rowIndex]);
-
+                    Queries.TransactionQuery.AddOrder(itemList[rowIndex].ToString());
+                    lblTotalItems.Text = orderList.Count.ToString();
                 }
 
             }
@@ -91,9 +103,5 @@ namespace Dan_Junkshop_Management_System
 
         }
 
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

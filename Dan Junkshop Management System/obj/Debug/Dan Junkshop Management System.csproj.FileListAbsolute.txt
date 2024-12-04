@@ -142,7 +142,6 @@ C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Employee.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Partners.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transaction.resources
-C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.TransactionSoldItems.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.DashboardPanel.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.ActivityLog.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.ActivityLog.resources
@@ -180,3 +179,4 @@ D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_J
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmNewTransaction.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmNewTransaction.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmDescription.resources
+C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Orders.resources

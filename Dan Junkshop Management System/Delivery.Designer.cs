@@ -54,9 +54,9 @@
             this.label1.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(38, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 38);
+            this.label1.Size = new System.Drawing.Size(165, 38);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Metals";
+            this.label1.Text = "To Deliver";
             // 
             // label2
             // 
@@ -64,9 +64,9 @@
             this.label2.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(38, 384);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 38);
+            this.label2.Size = new System.Drawing.Size(141, 38);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Plastics";
+            this.label2.Text = "In Stock";
             // 
             // Delivery
             // 

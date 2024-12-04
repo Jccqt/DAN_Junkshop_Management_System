@@ -233,11 +233,11 @@
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Transactions\TransactionCRUD.cs" />
-    <Compile Include="Transactions\TransactionSoldItems.cs">
+    <Compile Include="Transactions\Orders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Transactions\TransactionSoldItems.Designer.cs">
-      <DependentUpon>TransactionSoldItems.cs</DependentUpon>
+    <Compile Include="Transactions\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
@@ -324,8 +324,8 @@
     <EmbeddedResource Include="Transactions\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Transactions\TransactionSoldItems.resx">
-      <DependentUpon>TransactionSoldItems.cs</DependentUpon>
+    <EmbeddedResource Include="Transactions\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

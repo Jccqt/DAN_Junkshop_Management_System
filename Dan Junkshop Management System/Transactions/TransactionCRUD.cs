@@ -50,6 +50,36 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable = null;
         }
       
+        public void AddOrder(string itemName)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassPlantPrice, I.ItemClassCapital FROM " +
+                "SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE SellableName = @sellablename", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", itemName);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if(ConnectionObjects.reader.Read())
+            {
+                PageObjects.newBuyTransaction.OrderNamesArray.Add(ConnectionObjects.reader.GetString(0));
+                PageObjects.newBuyTransaction.PriceArray.Add(ConnectionObjects.reader.GetDecimal(1) + ConnectionObjects.reader.GetDecimal(2));
+                PageObjects.newBuyTransaction.OriginalPriceArray.Add(ConnectionObjects.reader.GetDecimal(1) + ConnectionObjects.reader.GetDecimal(2));
+                PageObjects.newBuyTransaction.ScaleArray.Add(0);
+
+                Orders order = new Orders();
+
+                order.Tag = ConnectionObjects.reader.GetString(0);
+                order.txtItemName.Text = ConnectionObjects.reader.GetString(0);
+                order.txtPrice.Text = (ConnectionObjects.reader.GetDecimal(1) + ConnectionObjects.reader.GetDecimal(2)).ToString();
+                order.txtScale.Text = "0.00";
+
+                PageObjects.newBuyTransaction.OrdersFLP.Controls.Add(order);
+            }
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+
+
 
     }
 }
