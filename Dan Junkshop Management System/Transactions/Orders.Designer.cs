@@ -40,7 +40,7 @@
             this.txtItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtItemName.Enabled = false;
             this.txtItemName.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.txtItemName.Location = new System.Drawing.Point(12, 13);
+            this.txtItemName.Location = new System.Drawing.Point(12, 5);
             this.txtItemName.Name = "txtItemName";
             this.txtItemName.Size = new System.Drawing.Size(135, 23);
             this.txtItemName.TabIndex = 0;
@@ -51,7 +51,7 @@
             // 
             this.txtScale.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtScale.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.txtScale.Location = new System.Drawing.Point(292, 11);
+            this.txtScale.Location = new System.Drawing.Point(292, 5);
             this.txtScale.Name = "txtScale";
             this.txtScale.Size = new System.Drawing.Size(87, 23);
             this.txtScale.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.txtPrice.Location = new System.Drawing.Point(167, 13);
+            this.txtPrice.Location = new System.Drawing.Point(167, 5);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(102, 23);
             this.txtPrice.TabIndex = 2;
@@ -81,7 +81,7 @@
             this.txtSubtotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Arial", 10.25F, System.Drawing.FontStyle.Bold);
-            this.txtSubtotal.Location = new System.Drawing.Point(401, 13);
+            this.txtSubtotal.Location = new System.Drawing.Point(401, 5);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(102, 23);
             this.txtSubtotal.TabIndex = 3;
@@ -99,7 +99,7 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.ForeColor = System.Drawing.Color.Transparent;
             this.btnRemove.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newCancel;
-            this.btnRemove.Location = new System.Drawing.Point(533, 7);
+            this.btnRemove.Location = new System.Drawing.Point(533, 1);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(29, 29);
             this.btnRemove.TabIndex = 4;
@@ -118,7 +118,7 @@
             this.Controls.Add(this.txtScale);
             this.Controls.Add(this.txtItemName);
             this.Name = "Orders";
-            this.Size = new System.Drawing.Size(586, 48);
+            this.Size = new System.Drawing.Size(586, 33);
             this.ResumeLayout(false);
             this.PerformLayout();
 

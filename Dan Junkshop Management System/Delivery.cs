@@ -17,9 +17,7 @@ namespace Dan_Junkshop_Management_System
             InitializeComponent();
             this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             this.Dock = DockStyle.Fill;
-            DeliveryMetals metals = new DeliveryMetals();   
-
-            flpMetalsStatus.Controls.Add(metals);
+          
         }
     }
 }

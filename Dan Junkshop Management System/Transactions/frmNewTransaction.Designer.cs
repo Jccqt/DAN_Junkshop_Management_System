@@ -378,7 +378,7 @@
             this.panelBorder2.Controls.Add(this.pictureBox2);
             this.panelBorder2.Controls.Add(this.textBox1);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(0, 0);
+            this.panelBorder2.Location = new System.Drawing.Point(1, 0);
             this.panelBorder2.Name = "panelBorder2";
             this.panelBorder2.Size = new System.Drawing.Size(364, 39);
             this.panelBorder2.TabIndex = 21;

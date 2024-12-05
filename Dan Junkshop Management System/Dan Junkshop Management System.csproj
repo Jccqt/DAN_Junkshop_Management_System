@@ -194,6 +194,7 @@
     <Compile Include="LoginPage.Designer.cs">
       <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecieptClass.cs" />
     <Compile Include="Transactions\frmNewTransaction.cs">
       <SubType>Form</SubType>
     </Compile>
