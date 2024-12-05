@@ -113,6 +113,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blackDeliver {
+            get {
+                object obj = ResourceManager.GetObject("blackDeliver", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CancelButton {
             get {
                 object obj = ResourceManager.GetObject("CancelButton", resourceCulture);
@@ -643,6 +653,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap overview {
+            get {
+                object obj = ResourceManager.GetObject("overview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap partners_Pic {
             get {
                 object obj = ResourceManager.GetObject("partners_Pic", resourceCulture);
@@ -766,6 +786,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap weui_eyes_on_filled {
             get {
                 object obj = ResourceManager.GetObject("weui_eyes-on-filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap white_exit {
+            get {
+                object obj = ResourceManager.GetObject("white_exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

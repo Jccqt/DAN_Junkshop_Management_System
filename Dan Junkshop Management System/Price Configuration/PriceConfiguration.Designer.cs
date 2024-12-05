@@ -74,6 +74,8 @@
             // 
             this.gridViewItemClass.AllowUserToAddRows = false;
             this.gridViewItemClass.AllowUserToDeleteRows = false;
+            this.gridViewItemClass.AllowUserToResizeColumns = false;
+            this.gridViewItemClass.AllowUserToResizeRows = false;
             this.gridViewItemClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridViewItemClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;

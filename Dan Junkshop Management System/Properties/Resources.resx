@@ -133,9 +133,6 @@
   <data name="stash_arrows-switch-solid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stash_arrows-switch-solid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="scrap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\scrap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="newRedDelive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedDelive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,11 +142,11 @@
   <data name="exit1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="overview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\overview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CancelButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CancelButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Drop down" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drop down.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +178,14 @@
   <data name="new_Employee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_Employee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="weui_eyes-off-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weui_eyes-off-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="NewDelivery1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewDelivery1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="game-icons_pay-money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\game-icons_pay-money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="reddanjunkshop1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\reddanjunkshop1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,9 +220,6 @@
   <data name="newRedTransaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedTransaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="mdi_recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,8 +250,8 @@
   <data name="expand11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expand11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="game-icons_pay-money (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\game-icons_pay-money (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minimizetab" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimizetab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -264,6 +264,9 @@
   </data>
   <data name="newRedPriceSetup" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedPriceSetup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\white_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tabler_dots" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabler_dots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,14 +289,17 @@
   <data name="newRedHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="NewEmployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NewEmployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="newRedSales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedSales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PartnersPic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PartnersPic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weui_eyes-off-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weui_eyes-off-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="scrap" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\scrap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NewSales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewSales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -316,6 +322,9 @@
   <data name="fluent_person-12-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fluent_person-12-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add_item_circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add_item_circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -325,13 +334,13 @@
   <data name="defaultEmployeeIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\defaultEmployeeIcon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="NewEmployee" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\NewEmployee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blackDeliver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackDeliver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

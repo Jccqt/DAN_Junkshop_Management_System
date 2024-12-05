@@ -73,11 +73,29 @@
     <Compile Include="Deliveries\DeliveryCRUD.cs" />
     <Compile Include="Employees\EmployeeCRUD.cs" />
     <Compile Include="Employees\EmployeeDetails.cs" />
+    <Compile Include="frmAddingVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddingVehicle.Designer.cs">
+      <DependentUpon>frmAddingVehicle.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDescription.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDescription.Designer.cs">
       <DependentUpon>frmDescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPriceHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceHistory.Designer.cs">
+      <DependentUpon>frmPriceHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTransactionOverview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTransactionOverview.Designer.cs">
+      <DependentUpon>frmTransactionOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventories\SellableCRUD.cs" />
     <Compile Include="Inventories\SellableDetails.cs" />
@@ -244,8 +262,17 @@
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddingVehicle.resx">
+      <DependentUpon>frmAddingVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDescription.resx">
       <DependentUpon>frmDescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceHistory.resx">
+      <DependentUpon>frmPriceHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTransactionOverview.resx">
+      <DependentUpon>frmTransactionOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partner\DisplayPartners.resx">
       <DependentUpon>DisplayPartners.cs</DependentUpon>
@@ -377,6 +404,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DanDB.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\blackDeliver.png" />
+    <None Include="Resources\overview.png" />
+    <None Include="Resources\white_exit.png" />
     <None Include="Resources\remove.png" />
     <None Include="Resources\add.png" />
     <None Include="Resources\UpdatedAddItem.png" />
