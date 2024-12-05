@@ -35,7 +35,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             while (ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    "PHP " + (ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)),
+                    "PHP " + (ConnectionObjects.reader.GetDecimal(2) - ConnectionObjects.reader.GetDecimal(3)),
                     Dan_Junkshop_Management_System.Properties.Resources.add);
 
                 PageObjects.newBuyTransaction.ItemNamesArray.Add(ConnectionObjects.reader.GetString(0));
@@ -62,8 +62,8 @@ namespace Dan_Junkshop_Management_System.Transactions
             if(ConnectionObjects.reader.Read())
             {
                 PageObjects.newBuyTransaction.OrderNamesArray.Add(ConnectionObjects.reader.GetString(0));
-                PageObjects.newBuyTransaction.PriceArray.Add(ConnectionObjects.reader.GetDecimal(1) + ConnectionObjects.reader.GetDecimal(2));
-                PageObjects.newBuyTransaction.OriginalPriceArray.Add(ConnectionObjects.reader.GetDecimal(1) + ConnectionObjects.reader.GetDecimal(2));
+                PageObjects.newBuyTransaction.PriceArray.Add(ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2));
+                PageObjects.newBuyTransaction.OriginalPriceArray.Add(ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2));
                 PageObjects.newBuyTransaction.ScaleArray.Add(0);
                 PageObjects.newBuyTransaction.SubTotalArray.Add(0);
               
@@ -155,7 +155,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.cmd.ExecuteNonQuery();
             ConnectionObjects.conn.Close();
 
-            MessageBox.Show("Items has been successfully processed!");
+            MessageBox.Show("Items has been successfully processed!", "Transaction Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         public void AddToInventory()
@@ -177,6 +177,37 @@ namespace Dan_Junkshop_Management_System.Transactions
                 ConnectionObjects.cmd.ExecuteNonQuery();
             }
             ConnectionObjects.conn.Close();
+        }
+
+        public void DisplayTransactions()
+        {
+            ConnectionObjects.dataTable = new DataTable();
+
+            ConnectionObjects.dataTable.Columns.Add("TransactID", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("EmpID", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Type", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
+            ConnectionObjects.dataTable.Columns.Add("Amount", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Date", typeof(DateTime));
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT TransactionID, EmpID, TransactionType, TransactionQuantity, TransactionAmount, " +
+                "TransactionDate FROM Transactions", ConnectionObjects.conn);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while(ConnectionObjects.reader.Read())
+            {
+                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
+                    ConnectionObjects.reader.GetString(2), ConnectionObjects.reader.GetInt32(3), "PHP " + ConnectionObjects.reader.GetDecimal(4),
+                    ConnectionObjects.reader.GetValue(5));
+            }
+
+            PageObjects.transaction.TransactionGrid.DataSource = ConnectionObjects.dataTable;
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+            ConnectionObjects.dataTable = null;
         }
 
     }

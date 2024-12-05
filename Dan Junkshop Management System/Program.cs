@@ -1,4 +1,5 @@
-﻿using Dan_Junkshop_Management_System.Employees;
+﻿using Dan_Junkshop_Management_System.Deliveries;
+using Dan_Junkshop_Management_System.Employees;
 using Dan_Junkshop_Management_System.Inventories;
 using Dan_Junkshop_Management_System.Transactions;
 using System;
@@ -32,6 +33,7 @@ namespace Dan_Junkshop_Management_System
         public static EmployeeCRUD EmployeeQuery = new EmployeeCRUD();
         public static SellableCRUD SellableQuery = new SellableCRUD();
         public static TransactionCRUD TransactionQuery = new TransactionCRUD();
+        public static DeliveryCRUD DeliveryQuery = new DeliveryCRUD();
     }
 
     public class PageObjects
@@ -43,7 +45,6 @@ namespace Dan_Junkshop_Management_System
         public static Inventory inventory;
         public static PriceConfiguration priceConfiguration;
         public static Employee employee;
-        public static Delivery delivery;
         public static Partners partners;
         public static Transaction transaction;
 
@@ -63,6 +64,9 @@ namespace Dan_Junkshop_Management_System
 
         // Price Config Objects
         public static frmAddItemPriceConfig addItemPrice;
+
+        // Delivers Objects
+        public static Delivery delivery;
     }
 
     public class ConnectionObjects

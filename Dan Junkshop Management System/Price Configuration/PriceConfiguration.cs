@@ -52,23 +52,25 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.dataTable.Columns.Add("Class Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Plant Price", typeof(double));
             ConnectionObjects.dataTable.Columns.Add("Capital", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Required scale for delivery", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassName, ItemClassPlantPrice, " +
-                "ItemClassCapital FROM ItemClass", ConnectionObjects.conn);
+                "ItemClassCapital, ItemClassRequiredScale FROM ItemClass", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while(ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
-                    ConnectionObjects.reader.GetDecimal(1), ConnectionObjects.reader.GetDecimal(2), Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+                    ConnectionObjects.reader.GetDecimal(1), ConnectionObjects.reader.GetDecimal(2), ConnectionObjects.reader.GetDecimal(3) + "kg",
+                    Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
             }
 
             gridViewItemClass.DataSource = ConnectionObjects.dataTable;
 
-            gridViewItemClass.AutoResizeColumn(3, DataGridViewAutoSizeColumnMode.AllCells);
+            gridViewItemClass.AutoResizeColumn(4, DataGridViewAutoSizeColumnMode.AllCells);
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();

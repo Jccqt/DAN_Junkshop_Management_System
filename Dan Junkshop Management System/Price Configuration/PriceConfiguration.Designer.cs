@@ -72,6 +72,8 @@
             // 
             // gridViewItemClass
             // 
+            this.gridViewItemClass.AllowUserToAddRows = false;
+            this.gridViewItemClass.AllowUserToDeleteRows = false;
             this.gridViewItemClass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gridViewItemClass.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -99,6 +101,7 @@
             this.gridViewItemClass.GridColor = System.Drawing.Color.Black;
             this.gridViewItemClass.Location = new System.Drawing.Point(7, 132);
             this.gridViewItemClass.Name = "gridViewItemClass";
+            this.gridViewItemClass.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

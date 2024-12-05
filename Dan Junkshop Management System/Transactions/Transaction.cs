@@ -14,6 +14,9 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Transaction : UserControl
     {
+
+        public DataGridView TransactionGrid { get { return gridTransactions; } }
+
         public Transaction()
         {
             InitializeComponent();
@@ -21,10 +24,10 @@ namespace Dan_Junkshop_Management_System
             this.Dock = DockStyle.Fill;
             //setting the height and the background color of the header.
             
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.ColumnHeadersHeight = 50;
-            dataGridView1.RowHeadersWidth = 50;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            gridTransactions.EnableHeadersVisualStyles = false;
+            gridTransactions.ColumnHeadersHeight = 50;
+            gridTransactions.RowHeadersWidth = 50;
+            gridTransactions.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
@@ -39,6 +42,16 @@ namespace Dan_Junkshop_Management_System
                     form.Close();
                 }
             }
-        } 
+        }
+
+        private void gridTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Transaction_Load(object sender, EventArgs e)
+        {
+            Queries.TransactionQuery.DisplayTransactions();
+        }
     }
 }

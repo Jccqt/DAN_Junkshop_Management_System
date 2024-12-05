@@ -21,10 +21,11 @@ namespace Dan_Junkshop_Management_System.Inventories
             PageObjects.inventory.ItemNameArray.Clear();
 
             ConnectionObjects.dataTable = new DataTable();
+            ConnectionObjects.dataTable.Columns.Add("ID", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(decimal));
+            ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Total cost", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
@@ -33,15 +34,15 @@ namespace Dan_Junkshop_Management_System.Inventories
             if (isSearching)
             {
                 // if search mode is on, sellable items will be displayed based on search box input
-                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, I.ItemClassCapital, S.SellableQuantity " +
+                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableID, S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, S.SellableQuantity " +
                 "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID " +
-                $"WHERE S.SellableName LIKE '%{PageObjects.inventory.SearchBox}%' AND Status = @status", ConnectionObjects.conn);
+                $"WHERE S.SellableName LIKE '%{PageObjects.inventory.SearchBox}%' OR S.SellableID LIKE '%{PageObjects.inventory.SearchBox}%' AND Status = @status ORDER BY SellableID", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
             else
             {
                 // if search mode is off, all sellable items will be displayed
-                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, I.ItemClassCapital, S.SellableQuantity " +
+                ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableID, S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, S.SellableQuantity " +
                 "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE Status = @status", ConnectionObjects.conn);
                 ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             }
@@ -50,18 +51,23 @@ namespace Dan_Junkshop_Management_System.Inventories
 
             while (ConnectionObjects.reader.Read())
             {
-                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    "PHP " +(ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)), ConnectionObjects.reader.GetValue(4),
-                    "PHP " + ((ConnectionObjects.reader.GetDecimal(2) + ConnectionObjects.reader.GetDecimal(3)) * ConnectionObjects.reader.GetDecimal(4)),
+                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1), ConnectionObjects.reader.GetString(2),
+                    "PHP " + ConnectionObjects.reader.GetDecimal(3) , ConnectionObjects.reader.GetValue(4) + "kg",
+                    "PHP " + (ConnectionObjects.reader.GetDecimal(3) * ConnectionObjects.reader.GetDecimal(4)),
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
 
-                PageObjects.inventory.ItemNameArray.Add(ConnectionObjects.reader.GetString(0));
+                PageObjects.inventory.ItemNameArray.Add(ConnectionObjects.reader.GetString(1));
 
             }
 
             PageObjects.inventory.InventoryGrid.DataSource = ConnectionObjects.dataTable;
 
-            PageObjects.inventory.InventoryGrid.AutoResizeColumn(5, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.inventory.InventoryGrid.AutoResizeColumn(6, DataGridViewAutoSizeColumnMode.AllCells);
+
+            foreach(DataGridViewColumn column in PageObjects.inventory.InventoryGrid.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
@@ -87,13 +93,13 @@ namespace Dan_Junkshop_Management_System.Inventories
         {
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPlantPrice, ItemClassCapital FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
+            ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassPlantPrice FROM ItemClass WHERE ItemClassName = @itemclassname", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", className);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             if (ConnectionObjects.reader.Read())
             {
-                itemPrice = (ConnectionObjects.reader.GetDecimal(0) + ConnectionObjects.reader.GetDecimal(1));
+                itemPrice = (ConnectionObjects.reader.GetDecimal(0));
             }
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
@@ -101,7 +107,7 @@ namespace Dan_Junkshop_Management_System.Inventories
         }
         public bool ItemDetailsChecker(SellableDetails details)
         {
-            if(details.SellableName == "" || details.ItemClassName == "" || details.SellableQuantity == 0)
+            if(details.SellableName == "" || details.ItemClassName == "")
             {
                 MessageBox.Show("Item details was incomplete!" +
                     "\nPlease complete the item details to save", "Sellable Item Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);

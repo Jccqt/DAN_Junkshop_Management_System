@@ -106,7 +106,7 @@ namespace Dan_Junkshop_Management_System
 
         private void gridViewInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gridViewInventory.CurrentCell.ColumnIndex == 5)
+            if(gridViewInventory.CurrentCell.ColumnIndex == 6)
             {
                 rowIndex = gridViewInventory.CurrentCell.RowIndex;
 
@@ -136,7 +136,7 @@ namespace Dan_Junkshop_Management_System
         private void gridViewInventory_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
         {
             // Mouse cursor will change to hand if edit row was hovered
-            if(e.ColumnIndex == 4)
+            if(e.ColumnIndex == 6)
             {
                 gridViewInventory.Cursor = Cursors.Hand;
             }
@@ -144,7 +144,7 @@ namespace Dan_Junkshop_Management_System
         private void gridViewInventory_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
         {
             // Mouse cursor will change to default if edit row was not hovered
-            if(e.ColumnIndex == 4)
+            if(e.ColumnIndex == 6)
             {
                 gridViewInventory.Cursor = Cursors.Default;
             }

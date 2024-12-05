@@ -55,6 +55,7 @@ namespace Dan_Junkshop_Management_System
             isSupplier = false;
             Queries.TransactionQuery.DisplayItems(1);
             lblTransaction.Text =  $"TRANSACT{Queries.TransactionQuery.GetTransactionIDCount()}";
+            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
@@ -121,7 +122,7 @@ namespace Dan_Junkshop_Management_System
         {
             if(totalCost == 0 || lblTotalItems.Text == "0")
             {
-                MessageBox.Show("Item count is 0, cannot proceed to process transaction");
+                MessageBox.Show("Item count is 0, cannot proceed to process transaction", "Transaction Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
