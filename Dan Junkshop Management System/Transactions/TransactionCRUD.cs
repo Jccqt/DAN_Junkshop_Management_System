@@ -189,6 +189,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
             ConnectionObjects.dataTable.Columns.Add("Amount", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Date", typeof(DateTime));
+            ConnectionObjects.dataTable.Columns.Add("View", typeof(Image));
 
             ConnectionObjects.conn.Open();
 
@@ -200,10 +201,13 @@ namespace Dan_Junkshop_Management_System.Transactions
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
                     ConnectionObjects.reader.GetString(2), ConnectionObjects.reader.GetInt32(3), "PHP " + ConnectionObjects.reader.GetDecimal(4),
-                    ConnectionObjects.reader.GetValue(5));
+                    ConnectionObjects.reader.GetValue(5), Dan_Junkshop_Management_System.Properties.Resources.overview); ;
             }
 
             PageObjects.transaction.TransactionGrid.DataSource = ConnectionObjects.dataTable;
+
+            PageObjects.transaction.TransactionGrid.AutoResizeColumn(0, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.transaction.TransactionGrid.AutoResizeColumn(6, DataGridViewAutoSizeColumnMode.AllCells);
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();

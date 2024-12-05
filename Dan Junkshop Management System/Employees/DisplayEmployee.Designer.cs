@@ -39,6 +39,8 @@
             this.lblPosition = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblDate = new System.Windows.Forms.Label();
             this.panelBorder1.SuspendLayout();
             this.panelBorder2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).BeginInit();
@@ -82,6 +84,8 @@
             this.panelBorder2.BackColor = System.Drawing.Color.LightGray;
             this.panelBorder2.BorderRadius = 37;
             this.panelBorder2.Color = System.Drawing.Color.Transparent;
+            this.panelBorder2.Controls.Add(this.label4);
+            this.panelBorder2.Controls.Add(this.lblDate);
             this.panelBorder2.Controls.Add(this.label3);
             this.panelBorder2.Controls.Add(this.label2);
             this.panelBorder2.Controls.Add(this.label1);
@@ -175,6 +179,26 @@
             this.EmployeePicture.TabIndex = 0;
             this.EmployeePicture.TabStop = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(10, 79);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(59, 14);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Hire Date:";
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            this.lblDate.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDate.Location = new System.Drawing.Point(74, 79);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Size = new System.Drawing.Size(43, 14);
+            this.lblDate.TabIndex = 8;
+            this.lblDate.Text = "<Date>";
+            // 
             // DisplayEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,5 +228,7 @@
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.Label label3;
         private OrganizationProfile.CustomButton btnEdit;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label lblDate;
     }
 }

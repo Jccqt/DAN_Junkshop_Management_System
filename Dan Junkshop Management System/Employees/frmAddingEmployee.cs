@@ -87,7 +87,7 @@ namespace Dan_Junkshop_Management_System
             // will check if the employee details are complete
             // will check if both employee name and username was already existing
             // will proceed to saving employee details if both the employee name and username was not existing
-            if (Queries.EmployeeQuery.DetailsCompleteChecker(details) && !Queries.EmployeeQuery.EmployeeExistChecker(details) && !Queries.EmployeeQuery.AccExistChecker(details)) 
+            if (Queries.EmployeeQuery.EmployeeDetailsChecker(details) && !Queries.EmployeeQuery.EmployeeExistChecker(details) && !Queries.EmployeeQuery.AccExistChecker(details)) 
             { 
                 var localDate = DateTime.Now.ToString("yyyy-MM-dd");
                 empIdCount = 1000;

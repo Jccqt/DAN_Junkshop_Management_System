@@ -40,7 +40,7 @@ namespace Dan_Junkshop_Management_System.Deliveries
                 }
 
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetDecimal(1) + "kg",
-                    ConnectionObjects.reader.GetDecimal(2) + "kg", toDeliver, Dan_Junkshop_Management_System.Properties.Resources.NewDelivery);
+                    ConnectionObjects.reader.GetDecimal(2) + "kg", toDeliver, Dan_Junkshop_Management_System.Properties.Resources.blackDeliver);
             }
 
             PageObjects.delivery.DeliveryGrid.DataSource = ConnectionObjects.dataTable;

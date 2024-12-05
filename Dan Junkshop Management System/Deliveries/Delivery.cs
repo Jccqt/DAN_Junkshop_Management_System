@@ -13,6 +13,7 @@ namespace Dan_Junkshop_Management_System
     public partial class Delivery : UserControl
     {
         public DataGridView DeliveryGrid { get { return gridDeliverables; } }
+        public DataGridView VehicleGrid { get { return gridVehicles; } }
 
         public Delivery()
         {

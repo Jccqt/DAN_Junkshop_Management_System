@@ -18,7 +18,7 @@ namespace Dan_Junkshop_Management_System.Employees
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT EmpID, FirstName, MiddleName, LastName, EmpID, Position, Contact FROM Employees WHERE Status = @status", ConnectionObjects.conn);
+            ConnectionObjects.cmd = new SqlCommand("SELECT EmpID, FirstName, MiddleName, LastName, EmpID, Position, Contact, HireDate FROM Employees WHERE Status = @status", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -31,6 +31,7 @@ namespace Dan_Junkshop_Management_System.Employees
                 displayEmployee.lblEmployeeID.Text = ConnectionObjects.reader.GetValue(4).ToString();
                 displayEmployee.lblPosition.Text = ConnectionObjects.reader.GetValue(5).ToString();
                 displayEmployee.lblContact.Text = ConnectionObjects.reader.GetValue(6).ToString();
+                displayEmployee.lblDate.Text = ConnectionObjects.reader.GetDateTime(7).ToString("yyyy-MM-dd");
 
                 PageObjects.employee.EmpFLP.Controls.Add(displayEmployee);
 
@@ -245,7 +246,7 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.conn.Close();
             return yearDifferent /= 12;
         }
-        public bool DetailsCompleteChecker(EmployeeDetails details)
+        public bool EmployeeDetailsChecker(EmployeeDetails details)
         {
             if(details.Position == "" || details.FirstName == "" || details.LastName == "" || details.MiddleName == "" || 
                 details.Gender == "" || details.Contact == "" || details.Address == "" || details.Username == "" || details.Password == "")

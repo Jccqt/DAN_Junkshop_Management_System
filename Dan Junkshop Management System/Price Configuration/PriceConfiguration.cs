@@ -50,8 +50,9 @@ namespace Dan_Junkshop_Management_System
         {
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Class Name", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Plant Price", typeof(double));
-            ConnectionObjects.dataTable.Columns.Add("Capital", typeof(double));
+            ConnectionObjects.dataTable.Columns.Add("Plant Price", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Capital", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Buy price", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Required scale for delivery", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
@@ -64,8 +65,8 @@ namespace Dan_Junkshop_Management_System
             while(ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
-                    ConnectionObjects.reader.GetDecimal(1), ConnectionObjects.reader.GetDecimal(2), ConnectionObjects.reader.GetDecimal(3) + "kg",
-                    Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+                    "PHP " + ConnectionObjects.reader.GetDecimal(1), "PHP " + ConnectionObjects.reader.GetDecimal(2), "PHP " + (ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2)),
+                    ConnectionObjects.reader.GetDecimal(3) + "kg", Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
             }
 
             gridViewItemClass.DataSource = ConnectionObjects.dataTable;

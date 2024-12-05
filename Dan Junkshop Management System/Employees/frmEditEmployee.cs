@@ -120,7 +120,7 @@ namespace Dan_Junkshop_Management_System
                 }
 
                 // will proceed to updating employee details if both the employee name and username was not existing
-                if (Queries.EmployeeQuery.DetailsCompleteChecker(Details) && !nameExist && !accExist)
+                if (Queries.EmployeeQuery.EmployeeDetailsChecker(Details) && !nameExist && !accExist)
                 {
                     Queries.EmployeeQuery.UpdateEmployee(Details);
                     Queries.EmployeeQuery.UpdateCredential(Details);

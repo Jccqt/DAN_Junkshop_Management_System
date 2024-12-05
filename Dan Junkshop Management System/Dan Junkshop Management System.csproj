@@ -73,10 +73,10 @@
     <Compile Include="Deliveries\DeliveryCRUD.cs" />
     <Compile Include="Employees\EmployeeCRUD.cs" />
     <Compile Include="Employees\EmployeeDetails.cs" />
-    <Compile Include="frmAddingVehicle.cs">
+    <Compile Include="Vehicles\frmAddingVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddingVehicle.Designer.cs">
+    <Compile Include="Vehicles\frmAddingVehicle.Designer.cs">
       <DependentUpon>frmAddingVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDescription.cs">
@@ -85,16 +85,16 @@
     <Compile Include="frmDescription.Designer.cs">
       <DependentUpon>frmDescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPriceHistory.cs">
+    <Compile Include="Price Configuration\frmPriceHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPriceHistory.Designer.cs">
+    <Compile Include="Price Configuration\frmPriceHistory.Designer.cs">
       <DependentUpon>frmPriceHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmTransactionOverview.cs">
+    <Compile Include="Transactions\frmTransactionOverview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTransactionOverview.Designer.cs">
+    <Compile Include="Transactions\frmTransactionOverview.Designer.cs">
       <DependentUpon>frmTransactionOverview.cs</DependentUpon>
     </Compile>
     <Compile Include="Inventories\SellableCRUD.cs" />
@@ -259,19 +259,21 @@
     <Compile Include="Transactions\Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vehicles\VehicleCRUD.cs" />
+    <Compile Include="Vehicles\VehicleDetails.cs" />
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddingVehicle.resx">
+    <EmbeddedResource Include="Vehicles\frmAddingVehicle.resx">
       <DependentUpon>frmAddingVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDescription.resx">
       <DependentUpon>frmDescription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPriceHistory.resx">
+    <EmbeddedResource Include="Price Configuration\frmPriceHistory.resx">
       <DependentUpon>frmPriceHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTransactionOverview.resx">
+    <EmbeddedResource Include="Transactions\frmTransactionOverview.resx">
       <DependentUpon>frmTransactionOverview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Partner\DisplayPartners.resx">
