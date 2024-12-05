@@ -14,6 +14,7 @@ namespace Dan_Junkshop_Management_System.Transactions
 {
     public class TransactionCRUD
     {
+        private int idcount;
         public void DisplayItems(int status)
         {
             PageObjects.newBuyTransaction.ItemNamesArray.Clear();
@@ -97,6 +98,61 @@ namespace Dan_Junkshop_Management_System.Transactions
 
                 PageObjects.newBuyTransaction.OrdersFLP.Controls.Add(order);
             }
+        }
+
+        public void GetTransactionIDCount()
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(TransactionID) FROM Transactions", ConnectionObjects.conn);
+            idcount = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.conn.Close();
+        }
+
+        public void ProcessTransaction(bool isSupplier)
+        {
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+            idcount += 1000;
+
+            ConnectionObjects.conn.Open();
+
+            string items = @"{""Items"": [";
+
+            for(int i = 0; i < PageObjects.newBuyTransaction.OrderNamesArray.Count; i++)
+            {
+                items = items + @"{""Item"":  """+ PageObjects.newBuyTransaction.OrderNamesArray[i] +@""", ""Scale"": "+ PageObjects.newBuyTransaction.ScaleArray[i] +@", ""Subtotal"": "+ PageObjects.newBuyTransaction.SubTotalArray[i] +"}";
+
+                if(i != PageObjects.newBuyTransaction.OrderNamesArray.Count  - 1)
+                {
+                    items = items + ", ";
+                }
+            }
+            items = items + "]}";
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO Transactions VALUES (@transactid, @empid, @items, " +
+                "@transactiontype, @transactionquantity, @transactionamount, @transactiondate)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@transactid", $"TRANSACT{idcount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@items", items);
+
+            if(isSupplier )
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@transactiontype", "Supplier");
+            }
+            else
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@transactiontype", "Walk-in");
+            }
+
+            ConnectionObjects.cmd.Parameters.AddWithValue("@transactionquantity", Convert.ToInt32(PageObjects.newBuyTransaction.ItemCountLabel.Text));
+            ConnectionObjects.cmd.Parameters.AddWithValue("@transactionamount", PageObjects.newBuyTransaction.TotalCost);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@transactiondate", localDate);
+
+            ConnectionObjects.cmd.ExecuteNonQuery();
+            ConnectionObjects.conn.Close();
+
+            MessageBox.Show("Items has been successfully processed!");
         }
 
     }

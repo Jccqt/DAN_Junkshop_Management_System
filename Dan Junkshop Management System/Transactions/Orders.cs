@@ -28,9 +28,9 @@ namespace Dan_Junkshop_Management_System
                 txtSubtotal.Text = PageObjects.newBuyTransaction.SubTotalArray[index].ToString();
 
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text); // will subtract the subtotal of this order to the total cost
-                txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString(); // will set the new subtotal based on new scale
+                txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString("0.00"); // will set the new subtotal based on new scale
                 PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text); // will add the new subtotal to the total cost
-                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString(); // will change the total cost label
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString("0.00"); // will change the total cost label
                 
                 // will remove and update the scale of this order on array list
                 PageObjects.newBuyTransaction.ScaleArray.RemoveAt(index);
@@ -42,11 +42,12 @@ namespace Dan_Junkshop_Management_System
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text);
                 txtSubtotal.Text = "0.00"; // will set subtotal to 0.00
                 PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text);
-                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString();
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString("0.00");
                 PageObjects.newBuyTransaction.ScaleArray.RemoveAt(index);
                 PageObjects.newBuyTransaction.ScaleArray.Insert(index, 0);
             }
 
+            // will remove and update the subtotal of this order on array list
             PageObjects.newBuyTransaction.SubTotalArray.RemoveAt(index);
             PageObjects.newBuyTransaction.SubTotalArray.Insert(index, Convert.ToDecimal(txtSubtotal.Text));
         }
@@ -67,7 +68,7 @@ namespace Dan_Junkshop_Management_System
         private void btnRemove_Click(object sender, EventArgs e)
         {
             PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text);
-            PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString();
+            PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString("0.00");
            
             index = PageObjects.newBuyTransaction.OrderNamesArray.IndexOf(this.Tag);
             PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
@@ -99,11 +100,11 @@ namespace Dan_Junkshop_Management_System
                 txtSubtotal.Text = PageObjects.newBuyTransaction.SubTotalArray[index].ToString();
 
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text); // will subtract the subtotal of this order to the total cost
-                txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString(); // will set the new subtotal based on new scale
+                txtSubtotal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToDecimal(txtScale.Text)).ToString("0.00"); // will set the new subtotal based on new price
                 PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text); // will add the new subtotal to the total cost
-                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString(); // will change the total cost label
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString("0.00"); // will change the total cost label
 
-                // will remove and update the scale of this order on array list
+                // will remove and update the price of this order on array list
                 PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
                 PageObjects.newBuyTransaction.PriceArray.Insert(index, Convert.ToDecimal(txtPrice.Text));
             }
@@ -113,12 +114,14 @@ namespace Dan_Junkshop_Management_System
                 PageObjects.newBuyTransaction.TotalCost -= Convert.ToDecimal(txtSubtotal.Text);
                 txtSubtotal.Text = "0.00"; // will set subtotal to 0.00
                 PageObjects.newBuyTransaction.TotalCost += Convert.ToDecimal(txtSubtotal.Text);
-                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString();
+                PageObjects.newBuyTransaction.TotalCostLabel.Text = PageObjects.newBuyTransaction.TotalCost.ToString("0.00");
 
+                // will set the price to original price if the value of textprice is empty or 0
                 PageObjects.newBuyTransaction.PriceArray.RemoveAt(index);
                 PageObjects.newBuyTransaction.PriceArray.Insert(index, PageObjects.newBuyTransaction.OriginalPriceArray[index]);
             }
 
+            // will remove and update the subtotal of this order on array list
             PageObjects.newBuyTransaction.SubTotalArray.RemoveAt(index);
             PageObjects.newBuyTransaction.SubTotalArray.Insert(index, Convert.ToDecimal(txtSubtotal.Text));
         }

@@ -134,6 +134,12 @@ namespace Dan_Junkshop_Management_System
             {
                 e.Handled = true;
             }
+
+            // will not allow dot as first character on a textbox
+            if (((sender as TextBox).Text.Length == 0) && e.KeyChar == '.')
+            {
+                e.Handled = true;
+            }
         }
     }
 }

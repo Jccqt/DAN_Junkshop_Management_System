@@ -30,7 +30,7 @@
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.Report3Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.btnReport3 = new System.Windows.Forms.PictureBox();
             this.lblReport3Value = new System.Windows.Forms.Label();
@@ -378,16 +378,15 @@
             this.ChartReport.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.ChartReport.Legends.Add(legend1);
-            this.ChartReport.Location = new System.Drawing.Point(91, 109);
+            this.ChartReport.Location = new System.Drawing.Point(52, 47);
             this.ChartReport.Name = "ChartReport";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.ChartReport.Series.Add(series1);
-            this.ChartReport.Size = new System.Drawing.Size(491, 335);
+            this.ChartReport.Size = new System.Drawing.Size(551, 397);
             this.ChartReport.TabIndex = 10;
             this.ChartReport.Text = " ";
+            title1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "Top Sales for the month of <Month>";
+            this.ChartReport.Titles.Add(title1);
             // 
             // pictureBox4
             // 

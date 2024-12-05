@@ -445,6 +445,7 @@
             this.btnProcessTransaction.Text = " PROCESS TRANSACTION";
             this.btnProcessTransaction.TextColor = System.Drawing.Color.Transparent;
             this.btnProcessTransaction.UseVisualStyleBackColor = false;
+            this.btnProcessTransaction.Click += new System.EventHandler(this.btnProcessTransaction_Click);
             // 
             // btnCancelTransaction
             // 

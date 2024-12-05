@@ -13,8 +13,9 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class LoginPage : Form
     {
-        string username, password;
-        bool IsLogin, IsPasswordVisible;
+        private string username, password, empID;
+        private bool IsLogin, IsPasswordVisible;
+
         private static LoginPage loginPage; // singleton object for LoginPage
         private LoginPage()
         {
@@ -32,6 +33,8 @@ namespace Dan_Junkshop_Management_System
 
             return loginPage;
         }
+
+        public string EmpID { get { return empID; } }
 
         private void btExit_Click(object sender, EventArgs e)
         {
@@ -78,7 +81,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Open(); // will open sql connection
 
             // will select username, password from credentials table and status from employees table
-            ConnectionObjects.cmd = new SqlCommand("SELECT Username, Password, Status FROM " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT C.Username, C.Password, C.EmpID FROM " +
                 "Credentials C JOIN Employees E ON C.EmpID = E.EmpID WHERE Status = 1", ConnectionObjects.conn);
             SqlDataReader reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -93,9 +96,12 @@ namespace Dan_Junkshop_Management_System
                 {
                     MessageBox.Show("Login Successfully!", "Login Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     PageObjects.homepage = new Homepage();
+                    PageObjects.homepage.EmpID = reader.GetString(2);
                     this.ShowInTaskbar = false;
                     PageObjects.homepage.Show();
                     txtPassword.Clear();
+                    reader.Close();
+                    ConnectionObjects.conn.Close();
                     this.Hide();
                     IsLogin = true;
                     break;

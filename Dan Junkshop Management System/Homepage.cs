@@ -13,12 +13,15 @@ namespace Dan_Junkshop_Management_System
     public partial class Homepage : Form
     {
         public string selectedButton;
+        private string empID;
         
         public Homepage()
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
         }
+
+        public string EmpID { get { return empID; } set { empID = value; } }
 
         private void Homepage_Load(object sender, EventArgs e)
         {
