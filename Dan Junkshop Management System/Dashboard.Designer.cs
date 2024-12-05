@@ -378,9 +378,9 @@
             this.ChartReport.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.ChartReport.Legends.Add(legend1);
-            this.ChartReport.Location = new System.Drawing.Point(52, 47);
+            this.ChartReport.Location = new System.Drawing.Point(12, 39);
             this.ChartReport.Name = "ChartReport";
-            this.ChartReport.Size = new System.Drawing.Size(551, 397);
+            this.ChartReport.Size = new System.Drawing.Size(644, 445);
             this.ChartReport.TabIndex = 10;
             this.ChartReport.Text = " ";
             title1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

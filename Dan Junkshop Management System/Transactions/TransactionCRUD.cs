@@ -100,20 +100,23 @@ namespace Dan_Junkshop_Management_System.Transactions
             }
         }
 
-        public void GetTransactionIDCount()
+        public int GetTransactionIDCount()
         {
+            idcount = 1000;
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(TransactionID) FROM Transactions", ConnectionObjects.conn);
-            idcount = Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+            idcount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
             ConnectionObjects.conn.Close();
+
+            idcount += 1;
+            return idcount;
         }
 
         public void ProcessTransaction(bool isSupplier)
         {
             var localDate = DateTime.Now.ToString("yyyy-MM-dd");
-            idcount += 1000;
 
             ConnectionObjects.conn.Open();
 
@@ -132,7 +135,7 @@ namespace Dan_Junkshop_Management_System.Transactions
 
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO Transactions VALUES (@transactid, @empid, @items, " +
                 "@transactiontype, @transactionquantity, @transactionamount, @transactiondate)", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@transactid", $"TRANSACT{idcount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@transactid", PageObjects.newBuyTransaction.TransactionID.Text);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@items", items);
 
@@ -153,6 +156,27 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.conn.Close();
 
             MessageBox.Show("Items has been successfully processed!");
+        }
+
+        public void AddToInventory()
+        {
+            ConnectionObjects.conn.Open();
+
+            for(int i = 0; i < PageObjects.newBuyTransaction.OrderNamesArray.Count; i++)
+            {
+                ConnectionObjects.cmd = new SqlCommand("BEGIN" +
+                "\nBEGIN TRANSACTION" +
+                "\n DECLARE @Quantity AS DECIMAL(18,2);" +
+                "\n SET @Quantity = (SELECT SellableQuantity FROM SellableItems WHERE Sellablename = @sellablename)" +
+                "\n SET @Quantity = @Quantity + @newquantity " +
+                "\n UPDATE SellableItems SET SellableQuantity = @Quantity WHERE SellableName = @sellablename" +
+                "\nCOMMIT" +
+                "\nEND", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", PageObjects.newBuyTransaction.OrderNamesArray[i]);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@newquantity", PageObjects.newBuyTransaction.ScaleArray[i]);
+                ConnectionObjects.cmd.ExecuteNonQuery();
+            }
+            ConnectionObjects.conn.Close();
         }
 
     }

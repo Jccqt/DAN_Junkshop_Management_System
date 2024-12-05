@@ -29,7 +29,6 @@ namespace Dan_Junkshop_Management_System
 
         }
         
-
         public DataGridView ItemsGrid { get { return gridViewItems; } }
         public FlowLayoutPanel OrdersFLP { get { return OrdersPanel; } }
         public string ItemName { get { return itemList[rowIndex].ToString(); } }
@@ -43,6 +42,7 @@ namespace Dan_Junkshop_Management_System
         public ArrayList SubTotalArray { get { return subtotalList; } }
         public Label TotalCostLabel { get { return lblTotalCost; } }
         public Label ItemCountLabel { get { return lblTotalItems; } }
+        public Label TransactionID { get { return lblTransaction; } }
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,7 @@ namespace Dan_Junkshop_Management_System
             orderList.Clear();
             isSupplier = false;
             Queries.TransactionQuery.DisplayItems(1);
+            lblTransaction.Text =  $"TRANSACT{Queries.TransactionQuery.GetTransactionIDCount()}";
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
@@ -124,8 +125,24 @@ namespace Dan_Junkshop_Management_System
             }
             else
             {
-                Queries.TransactionQuery.GetTransactionIDCount();
-                Queries.TransactionQuery.ProcessTransaction(isSupplier);
+                DialogResult processTransaction = MessageBox.Show("Do you want to process this transaction?", "Transaction Notification",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if(processTransaction == DialogResult.Yes)
+                {
+                    Queries.TransactionQuery.ProcessTransaction(isSupplier);
+                    Queries.TransactionQuery.AddToInventory();
+                    orderList.Clear();
+                    scaleList.Clear();
+                    priceList.Clear();
+                    originalPriceList.Clear();
+                    subtotalList.Clear();
+                    OrdersPanel.Controls.Clear();
+                    totalCost = 0;
+                    lblTotalCost.Text = "0.00";
+                    lblTotalItems.Text = "0.00";
+                    lblTransaction.Text = $"TRANSACT{Queries.TransactionQuery.GetTransactionIDCount()}";
+                }
             }
             
         }

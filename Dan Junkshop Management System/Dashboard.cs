@@ -24,22 +24,25 @@ namespace Dan_Junkshop_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+
             Series series = ChartReport.Series.Add("Sales");
             series.ChartType = SeriesChartType.Pie;
-            series.Font = new System.Drawing.Font("Arial", 12);
+            series.Font = new System.Drawing.Font("Arial", 8);
 
             ConnectionObjects.conn.Close();
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT I.ItemName, I.Subtotal FROM Transactions " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT I.ItemName, SUM(I.Subtotal) FROM Transactions " +
                 "CROSS APPLY OPENJSON(Items, '$.Items') " +
-                "WITH (ItemName NVARCHAR(50) '$.Item', Subtotal decimal(18,2) '$.Subtotal') I", ConnectionObjects.conn);
+                "WITH (ItemName NVARCHAR(50) '$.Item', Subtotal decimal(18,2) '$.Subtotal') I GROUP BY Itemname", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while (ConnectionObjects.reader.Read())
-            {
-                series.Points.AddXY(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetDecimal(1));
+            {             
+                series.Points.AddXY($"{ConnectionObjects.reader.GetString(0)}",ConnectionObjects.reader.GetDecimal(1));
+                series.IsValueShownAsLabel = false;
             }
+            
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
         }

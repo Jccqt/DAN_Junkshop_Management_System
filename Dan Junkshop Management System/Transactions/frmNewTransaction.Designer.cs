@@ -50,9 +50,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cbWalkin = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
-            this.lblTime = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
@@ -329,16 +327,6 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Date:";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(954, 104);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(50, 18);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Time: ";
-            // 
             // lblDate
             // 
             this.lblDate.AutoSize = true;
@@ -348,16 +336,6 @@
             this.lblDate.Size = new System.Drawing.Size(60, 18);
             this.lblDate.TabIndex = 14;
             this.lblDate.Text = "<Date>";
-            // 
-            // lblTime
-            // 
-            this.lblTime.AutoSize = true;
-            this.lblTime.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTime.Location = new System.Drawing.Point(1015, 104);
-            this.lblTime.Name = "lblTime";
-            this.lblTime.Size = new System.Drawing.Size(60, 18);
-            this.lblTime.TabIndex = 15;
-            this.lblTime.Text = "<Time>";
             // 
             // lblTransaction
             // 
@@ -555,9 +533,7 @@
             this.Controls.Add(this.lblTransaction);
             this.Controls.Add(this.btnProcessTransaction);
             this.Controls.Add(this.btnCancelTransaction);
-            this.Controls.Add(this.lblTime);
             this.Controls.Add(this.lblDate);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.cbWalkin);
@@ -625,9 +601,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton cbWalkin;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblDate;
-        private System.Windows.Forms.Label lblTime;
         private System.Windows.Forms.Label lblTransaction;
         private System.Windows.Forms.Label lblTotalCost;
         private System.Windows.Forms.Label lblTotalItems;
