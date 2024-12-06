@@ -15,38 +15,52 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class frmEditEmployee : Form
     {
-        static EmployeeDetails Details;
+        static EmployeeDetails EmployeeDetails;
         private bool firstNameChanged, lastNameChanged, middleNameChanged, genderChanged, birthdateChanged,
             contactChanged, addressChanged, usernameChanged, passwordChanged, statusChanged, needCancel, nameExist, accExist;
         private int empIDCount, accIDCount;
+        private string firstName, lastName, middleName, gender, birthdate, contact, address, username, password, status;
         public frmEditEmployee()
         {
             InitializeComponent();
-            Details = new EmployeeDetails();
+            EmployeeDetails = new EmployeeDetails();
         }
 
         private void frmEditEmployee_Load(object sender, EventArgs e)
         {
-            Queries.EmployeeQuery.GetEmployee(Details);
+            Queries.EmployeeQuery.GetEmployee(EmployeeDetails);
 
-            cbPosition.Text = Details.Position;
-            txtFirstName.Text = Details.FirstName;
-            txtLastName.Text = Details.LastName;
-            txtMiddleInitial.Text = Details.MiddleName;
-            cbGender.Text = Details.Gender;
-            dtBirthDate.Value = Convert.ToDateTime(Details.Birthdate);
-            txtContact.Text = Details.Contact;
-            txtAddress.Text = Details.Address;
-            txtUsername.Text = Details.Username;
-            txtPassword.Text = Details.Password;
+            firstName = EmployeeDetails.FirstName;
+            lastName = EmployeeDetails.LastName;
+            middleName = EmployeeDetails.MiddleName;
+            gender = EmployeeDetails.Gender;
+            birthdate = EmployeeDetails.Birthdate;
+            contact = EmployeeDetails.Contact;
+            address = EmployeeDetails.Address;
+            username = EmployeeDetails.Username;
+            password = EmployeeDetails.Password;
 
-            if (Details.Status == "Active")
+
+            cbPosition.Text = EmployeeDetails.Position;
+            txtFirstName.Text = EmployeeDetails.FirstName;
+            txtLastName.Text = EmployeeDetails.LastName;
+            txtMiddleInitial.Text = EmployeeDetails.MiddleName;
+            cbGender.Text = EmployeeDetails.Gender;
+            dtBirthDate.Value = Convert.ToDateTime(EmployeeDetails.Birthdate);
+            txtContact.Text = EmployeeDetails.Contact;
+            txtAddress.Text = EmployeeDetails.Address;
+            txtUsername.Text = EmployeeDetails.Username;
+            txtPassword.Text = EmployeeDetails.Password;
+
+            if (EmployeeDetails.Status == "Active")
             {
+                status = "Active";
                 btnSwitchStatus.Checked = true;
                 lblStatus.Text = "Active";
             }
             else
             {
+                status = "Inactive";
                 btnSwitchStatus.Checked = false;
                 lblStatus.Text = "Inactive";
             }
@@ -69,14 +83,14 @@ namespace Dan_Junkshop_Management_System
 
                 if (cancelEdit == DialogResult.Yes)
                 {
-                    Details = null;
+                    EmployeeDetails = null;
                     this.Close();
                 }
             }
             else
             {
                 // will proceed to cancel directly if there's no changes in employee details
-                Details = null;
+                EmployeeDetails = null;
                 this.Close();
             }
 
@@ -89,21 +103,21 @@ namespace Dan_Junkshop_Management_System
 
             if (updateEmp == DialogResult.Yes)
             {
-                Details.FirstName = txtFirstName.Text;
-                Details.LastName = txtLastName.Text;
-                Details.MiddleName = txtMiddleInitial.Text;
-                Details.Contact = txtContact.Text;
-                Details.Birthdate = dtBirthDate.Value.ToString("yyyy-MM-dd");
-                Details.Gender = cbGender.Text;
-                Details.Username = txtUsername.Text;
-                Details.Password = txtPassword.Text;
-                Details.Address = txtAddress.Text;
+                EmployeeDetails.FirstName = txtFirstName.Text;
+                EmployeeDetails.LastName = txtLastName.Text;
+                EmployeeDetails.MiddleName = txtMiddleInitial.Text;
+                EmployeeDetails.Contact = txtContact.Text;
+                EmployeeDetails.Birthdate = dtBirthDate.Value.ToString("yyyy-MM-dd");
+                EmployeeDetails.Gender = cbGender.Text;
+                EmployeeDetails.Username = txtUsername.Text;
+                EmployeeDetails.Password = txtPassword.Text;
+                EmployeeDetails.Address = txtAddress.Text;
 
                 // will check if the employee details are complete
                 // will check if both employee name and username was already existing
                 if (firstNameChanged || lastNameChanged || middleNameChanged)
                 {
-                    nameExist = Queries.EmployeeQuery.EmployeeExistChecker(Details);
+                    nameExist = Queries.EmployeeQuery.EmployeeExistChecker(EmployeeDetails);
                 }
                 else
                 {
@@ -112,7 +126,7 @@ namespace Dan_Junkshop_Management_System
 
                 if (usernameChanged)
                 {
-                    accExist = Queries.EmployeeQuery.AccExistChecker(Details);
+                    accExist = Queries.EmployeeQuery.AccExistChecker(EmployeeDetails);
                 }
                 else
                 {
@@ -120,14 +134,14 @@ namespace Dan_Junkshop_Management_System
                 }
 
                 // will proceed to updating employee details if both the employee name and username was not existing
-                if (Queries.EmployeeQuery.EmployeeDetailsChecker(Details) && !nameExist && !accExist)
+                if (Queries.EmployeeQuery.EmployeeDetailsChecker(EmployeeDetails) && !nameExist && !accExist)
                 {
-                    Queries.EmployeeQuery.UpdateEmployee(Details);
-                    Queries.EmployeeQuery.UpdateCredential(Details);
+                    Queries.EmployeeQuery.UpdateEmployee(EmployeeDetails);
+                    Queries.EmployeeQuery.UpdateCredential(EmployeeDetails);
 
                     MessageBox.Show("Employee details has been successfully updated!", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Details = null;
+                    EmployeeDetails = null;
                     this.Close();
                 }
             }
@@ -154,7 +168,7 @@ namespace Dan_Junkshop_Management_System
         {
             txtAge.Text = Queries.EmployeeQuery.GetAge(dtBirthDate.Value).ToString();
 
-            if(dtBirthDate.Value.ToString("yyyy-MM-dd") == Details.Birthdate)
+            if(dtBirthDate.Value.ToString("yyyy-MM-dd") == birthdate)
             {
                 birthdateChanged = false;
             }
@@ -167,7 +181,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtFirstName_TextChanged(object sender, EventArgs e)
         {
-            if(txtFirstName.Text == Details.FirstName)
+            if(txtFirstName.Text == firstName)
             {
                 firstNameChanged = false;
             }
@@ -180,7 +194,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
-            if(txtLastName.Text == Details.LastName)
+            if(txtLastName.Text == lastName)
             {
                 lastNameChanged = false;
             }
@@ -192,7 +206,7 @@ namespace Dan_Junkshop_Management_System
         }
         private void txtContact_TextChanged(object sender, EventArgs e)
         {
-            if (txtContact.Text == Details.Contact)
+            if (txtContact.Text == contact)
             {
                 contactChanged = false;
             }
@@ -205,7 +219,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            if (txtPassword.Text == Details.Password)
+            if (txtPassword.Text == password)
             {
                 passwordChanged = false;
             }
@@ -233,7 +247,7 @@ namespace Dan_Junkshop_Management_System
 
         private void lblStatus_TextChanged(object sender, EventArgs e)
         {
-            if (lblStatus.Text == Details.Status)
+            if (lblStatus.Text == status)
             {
                 statusChanged = false;
             }
@@ -246,7 +260,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
         {
-            if (txtAddress.Text == Details.Address)
+            if (txtAddress.Text == address)
             {
                 addressChanged = false;
             }
@@ -259,7 +273,7 @@ namespace Dan_Junkshop_Management_System
 
         private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbGender.Text == Details.Gender)
+            if (cbGender.Text == gender)
             {
                 genderChanged = false;
             }
@@ -272,7 +286,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
-            if (txtUsername.Text == Details.Username)
+            if (txtUsername.Text == username)
             {
                 usernameChanged = false;
             }
@@ -285,7 +299,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtMiddleInitial_TextChanged(object sender, EventArgs e)
         {
-            if (txtMiddleInitial.Text == Details.MiddleName)
+            if (txtMiddleInitial.Text == middleName)
             {
                 middleNameChanged = false;
             }

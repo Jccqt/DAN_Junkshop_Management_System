@@ -51,7 +51,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Class Name", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Plant Price", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Capital", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Profit", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Buy price", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Required scale for delivery", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
@@ -59,7 +59,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassName, ItemClassPlantPrice, " +
-                "ItemClassCapital, ItemClassRequiredScale FROM ItemClass", ConnectionObjects.conn);
+                "ItemClassProfit, ItemClassRequiredScale FROM ItemClass", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while(ConnectionObjects.reader.Read())

@@ -88,7 +88,7 @@ namespace Dan_Junkshop_Management_System
             if(txtSearchBox.Text == "")
             {
                 isSearching = false;
-                txtSearchBox.Text = "Search item name";
+                txtSearchBox.Text = "Search item name or id";
                 txtSearchBox.ForeColor = SystemColors.GrayText;
             }
         }
@@ -96,7 +96,7 @@ namespace Dan_Junkshop_Management_System
         private void txtSearchBox_Enter(object sender, EventArgs e)
         {
             // will enter search mode when the user click the search box
-            if (txtSearchBox.Text == "Search item name")
+            if (txtSearchBox.Text == "Search item name or id")
             {
                 isSearching = true;
                 txtSearchBox.Text = "";
@@ -106,26 +106,29 @@ namespace Dan_Junkshop_Management_System
 
         private void gridViewInventory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(gridViewInventory.CurrentCell.ColumnIndex == 6)
+            if(gridViewInventory.Rows.Count > 0)
             {
-                rowIndex = gridViewInventory.CurrentCell.RowIndex;
-
-                using (PageObjects.editSellableItem = new frmEditingSellableItems())
+                if (gridViewInventory.CurrentCell.ColumnIndex == 6)
                 {
-                    using (Form form = new Form())
-                    {
-                        FormAnimation.ShowFocus(form);
-                        PageObjects.editSellableItem.Owner = form;
-                        PageObjects.editSellableItem.ShowDialog();
-                        form.Close();
+                    rowIndex = gridViewInventory.CurrentCell.RowIndex;
 
-                        if (btnSwitchStatus.Checked)
+                    using (PageObjects.editSellableItem = new frmEditingSellableItems())
+                    {
+                        using (Form form = new Form())
                         {
-                            Queries.SellableQuery.DisplayItems(1, isSearching);
-                        }
-                        else
-                        {
-                            Queries.SellableQuery.DisplayItems(0, isSearching);
+                            FormAnimation.ShowFocus(form);
+                            PageObjects.editSellableItem.Owner = form;
+                            PageObjects.editSellableItem.ShowDialog();
+                            form.Close();
+
+                            if (btnSwitchStatus.Checked)
+                            {
+                                Queries.SellableQuery.DisplayItems(1, isSearching);
+                            }
+                            else
+                            {
+                                Queries.SellableQuery.DisplayItems(0, isSearching);
+                            }
                         }
                     }
                 }

@@ -27,7 +27,7 @@ namespace Dan_Junkshop_Management_System.Transactions
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, I.ItemClassCapital " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, I.ItemClassPlantPrice, I.ItemClassProfit " +
                 "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE Status = @status", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
@@ -54,7 +54,7 @@ namespace Dan_Junkshop_Management_System.Transactions
         {
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassPlantPrice, I.ItemClassCapital FROM " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassPlantPrice, I.ItemClassProfit FROM " +
                 "SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE SellableName = @sellablename", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", itemName);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();

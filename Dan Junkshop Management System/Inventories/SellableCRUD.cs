@@ -26,7 +26,7 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.dataTable.Columns.Add("Class", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Price/kg", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Total scale (kg)", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Total cost", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Plant price (Total)", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
@@ -72,6 +72,35 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
             ConnectionObjects.dataTable = null;
+        }
+
+        public void GetItemToEdit(SellableDetails details)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, S.SellableQuantity, S.Status " +
+                "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE SellableName = @sellablename", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", PageObjects.inventory.ItemName);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if (ConnectionObjects.reader.Read())
+            {
+                details.SellableName = ConnectionObjects.reader.GetString(0);
+                details.ItemClassName = ConnectionObjects.reader.GetString(1);
+                details.SellableQuantity = ConnectionObjects.reader.GetDecimal(2);
+                
+                if(ConnectionObjects.reader.GetInt32(3) == 1)
+                {
+                    details.Status = "Active";
+                }
+                else
+                {
+                    details.Status = "Inactive";
+                }
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
         }
         public void GetItemClasses(ComboBox cbClass)
         {
@@ -177,5 +206,28 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.conn.Close();
         }
 
+        public void UpdateItem(SellableDetails details)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("UPDATE SellableItems SET SellableName = @sellablename, ItemClassID = @itemclassid, " +
+                "SellableQuantity = @sellablequantity, Status = @status", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", details.SellableName);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", classID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablequantity", details.SellableQuantity);
+
+            if(details.Status == "Active")
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+            }
+            else
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 0);
+            }
+
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.conn.Close();
+        }
     }
 }

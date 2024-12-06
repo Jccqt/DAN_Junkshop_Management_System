@@ -75,6 +75,11 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            if(txtScale.Text == "")
+            {
+                txtScale.Text = "0.00";
+            }
+
             SellableDetails details = new SellableDetails
             {
                 SellableName = txtSellableName.Text,

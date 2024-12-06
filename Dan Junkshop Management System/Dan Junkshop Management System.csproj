@@ -73,10 +73,10 @@
     <Compile Include="Deliveries\DeliveryCRUD.cs" />
     <Compile Include="Employees\EmployeeCRUD.cs" />
     <Compile Include="Employees\EmployeeDetails.cs" />
-    <Compile Include="Vehicles\frmAddingVehicle.cs">
+    <Compile Include="Deliveries\frmAddingVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vehicles\frmAddingVehicle.Designer.cs">
+    <Compile Include="Deliveries\frmAddingVehicle.Designer.cs">
       <DependentUpon>frmAddingVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDescription.cs">
@@ -259,12 +259,12 @@
     <Compile Include="Transactions\Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vehicles\VehicleCRUD.cs" />
-    <Compile Include="Vehicles\VehicleDetails.cs" />
+    <Compile Include="Deliveries\VehicleCRUD.cs" />
+    <Compile Include="Deliveries\VehicleDetails.cs" />
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vehicles\frmAddingVehicle.resx">
+    <EmbeddedResource Include="Deliveries\frmAddingVehicle.resx">
       <DependentUpon>frmAddingVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDescription.resx">

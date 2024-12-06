@@ -34,15 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridDeliverables = new System.Windows.Forms.DataGridView();
             this.gridVehicles = new System.Windows.Forms.DataGridView();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAddVehicle = new OrganizationProfile.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridDeliverables)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVehicles)).BeginInit();
             this.panel2.SuspendLayout();
@@ -68,6 +64,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridDeliverables.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridDeliverables.ColumnHeadersHeight = 29;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -78,11 +75,13 @@
             this.gridDeliverables.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridDeliverables.EnableHeadersVisualStyles = false;
             this.gridDeliverables.GridColor = System.Drawing.Color.Black;
-            this.gridDeliverables.Location = new System.Drawing.Point(50, 82);
+            this.gridDeliverables.Location = new System.Drawing.Point(67, 101);
+            this.gridDeliverables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridDeliverables.Name = "gridDeliverables";
             this.gridDeliverables.ReadOnly = true;
             this.gridDeliverables.RowHeadersVisible = false;
-            this.gridDeliverables.Size = new System.Drawing.Size(839, 301);
+            this.gridDeliverables.RowHeadersWidth = 51;
+            this.gridDeliverables.Size = new System.Drawing.Size(1119, 370);
             this.gridDeliverables.TabIndex = 5;
             // 
             // gridVehicles
@@ -106,11 +105,6 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridVehicles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridVehicles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,69 +115,23 @@
             this.gridVehicles.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridVehicles.EnableHeadersVisualStyles = false;
             this.gridVehicles.GridColor = System.Drawing.Color.Black;
-            this.gridVehicles.Location = new System.Drawing.Point(50, 460);
+            this.gridVehicles.Location = new System.Drawing.Point(67, 566);
+            this.gridVehicles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridVehicles.Name = "gridVehicles";
             this.gridVehicles.ReadOnly = true;
             this.gridVehicles.RowHeadersVisible = false;
-            this.gridVehicles.Size = new System.Drawing.Size(839, 257);
+            this.gridVehicles.RowHeadersWidth = 51;
+            this.gridVehicles.Size = new System.Drawing.Size(1119, 316);
             this.gridVehicles.TabIndex = 6;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Vehicle Type";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Plate Number";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Vehicle Scale";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column9.HeaderText = "Edit";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 43;
-            // 
-            // btnAddItem
-            // 
-            this.btnAddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnAddItem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnAddItem.BorderRadius = 37;
-            this.btnAddItem.BorderSize = 0;
-            this.btnAddItem.FlatAppearance.BorderSize = 0;
-            this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddItem.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
-            this.btnAddItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddItem.Location = new System.Drawing.Point(685, 6);
-            this.btnAddItem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(143, 37);
-            this.btnAddItem.TabIndex = 7;
-            this.btnAddItem.Text = "     Add Vehicle";
-            this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
-            this.btnAddItem.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(50, 35);
+            this.panel2.Location = new System.Drawing.Point(67, 43);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(839, 49);
+            this.panel2.Size = new System.Drawing.Size(1119, 60);
             this.panel2.TabIndex = 8;
             // 
             // label3
@@ -191,9 +139,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 10);
+            this.label3.Location = new System.Drawing.Point(33, 12);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 28);
+            this.label3.Size = new System.Drawing.Size(183, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "Deliverables";
             // 
@@ -201,10 +150,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnAddItem);
-            this.panel1.Location = new System.Drawing.Point(50, 411);
+            this.panel1.Controls.Add(this.btnAddVehicle);
+            this.panel1.Location = new System.Drawing.Point(67, 506);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(839, 66);
+            this.panel1.Size = new System.Drawing.Size(1119, 81);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -212,23 +162,50 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 10);
+            this.label1.Location = new System.Drawing.Point(33, 12);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 28);
+            this.label1.Size = new System.Drawing.Size(131, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vehicles";
             // 
+            // btnAddVehicle
+            // 
+            this.btnAddVehicle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddVehicle.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnAddVehicle.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnAddVehicle.BorderRadius = 37;
+            this.btnAddVehicle.BorderSize = 0;
+            this.btnAddVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddVehicle.FlatAppearance.BorderSize = 0;
+            this.btnAddVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddVehicle.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddVehicle.ForeColor = System.Drawing.Color.Transparent;
+            this.btnAddVehicle.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
+            this.btnAddVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddVehicle.Location = new System.Drawing.Point(913, 7);
+            this.btnAddVehicle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddVehicle.Name = "btnAddVehicle";
+            this.btnAddVehicle.Size = new System.Drawing.Size(191, 46);
+            this.btnAddVehicle.TabIndex = 7;
+            this.btnAddVehicle.Text = "     Add Vehicle";
+            this.btnAddVehicle.TextColor = System.Drawing.Color.Transparent;
+            this.btnAddVehicle.UseVisualStyleBackColor = false;
+            this.btnAddVehicle.Click += new System.EventHandler(this.btnAddVehicle_Click);
+            // 
             // Delivery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gridVehicles);
             this.Controls.Add(this.gridDeliverables);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Delivery";
-            this.Size = new System.Drawing.Size(938, 736);
+            this.Size = new System.Drawing.Size(1251, 906);
             this.Load += new System.EventHandler(this.Delivery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridDeliverables)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVehicles)).EndInit();
@@ -243,11 +220,7 @@
         #endregion
         private System.Windows.Forms.DataGridView gridDeliverables;
         private System.Windows.Forms.DataGridView gridVehicles;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewImageColumn Column9;
-        private OrganizationProfile.CustomButton btnAddItem;
+        private OrganizationProfile.CustomButton btnAddVehicle;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;

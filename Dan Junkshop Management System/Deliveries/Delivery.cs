@@ -26,6 +26,23 @@ namespace Dan_Junkshop_Management_System
         private void Delivery_Load(object sender, EventArgs e)
         {
             Queries.DeliveryQuery.DisplayDeliverables();
+            Queries.VehicleQuery.DisplayVehicles();
+        }
+
+        private void btnAddVehicle_Click(object sender, EventArgs e)
+        {
+            using(PageObjects.addVehicle = new frmAddingVehicle())
+            {
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.addVehicle.Owner = form;
+                    PageObjects.addVehicle.ShowDialog();
+                    form.Close();
+                }
+            }
+            Queries.VehicleQuery.DisplayVehicles();
+            GC.Collect(); // optimization purposes
         }
     }
 }

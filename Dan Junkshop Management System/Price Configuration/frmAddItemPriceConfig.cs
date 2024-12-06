@@ -84,11 +84,11 @@ namespace Dan_Junkshop_Management_System
                     ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ItemClassID) FROM ItemClass", ConnectionObjects.conn);
                     idCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
-                    ConnectionObjects.cmd = new SqlCommand("INSERT INTO ItemClass VALUES(@itemclassid, @itemclassname, @itemclassplantprice, @itemclasscapital, @itemclassrequiredscale)", ConnectionObjects.conn);
+                    ConnectionObjects.cmd = new SqlCommand("INSERT INTO ItemClass VALUES(@itemclassid, @itemclassname, @itemclassplantprice, @itemclassprofit, @itemclassrequiredscale)", ConnectionObjects.conn);
                     ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", $"ITEMCLASS{idCount + 1}");
                     ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassname", txtClassName.Text);
                     ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassplantprice", Convert.ToDecimal(txtPlantPrice.Text));
-                    ConnectionObjects.cmd.Parameters.AddWithValue("@itemclasscapital", Convert.ToDecimal(txtCapital.Text));
+                    ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassprofit", Convert.ToDecimal(txtCapital.Text));
                     ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassrequiredscale", Convert.ToDecimal(txtScale.Text));
                     ConnectionObjects.cmd.ExecuteNonQuery();
 

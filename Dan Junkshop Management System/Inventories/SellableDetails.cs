@@ -11,5 +11,6 @@ namespace Dan_Junkshop_Management_System.Inventories
         public string SellableName { get; set; }
         public string ItemClassName { get; set; }
         public decimal SellableQuantity { get; set; }
+        public string Status { get; set; }
     }
 }

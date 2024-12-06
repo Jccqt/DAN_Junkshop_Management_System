@@ -34,6 +34,7 @@ namespace Dan_Junkshop_Management_System
         public static SellableCRUD SellableQuery = new SellableCRUD();
         public static TransactionCRUD TransactionQuery = new TransactionCRUD();
         public static DeliveryCRUD DeliveryQuery = new DeliveryCRUD();
+        public static VehicleCRUD VehicleQuery = new VehicleCRUD();
     }
 
     public class PageObjects
@@ -67,6 +68,9 @@ namespace Dan_Junkshop_Management_System
 
         // Delivers Objects
         public static Delivery delivery;
+
+        // Vehicle Objects
+        public static frmAddingVehicle addVehicle;
     }
 
     public class ConnectionObjects
