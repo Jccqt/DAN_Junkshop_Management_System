@@ -133,6 +133,16 @@ namespace Dan_Junkshop_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cancell {
+            get {
+                object obj = ResourceManager.GetObject("cancell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap DanLogo {
             get {
                 object obj = ResourceManager.GetObject("DanLogo", resourceCulture);
@@ -156,6 +166,36 @@ namespace Dan_Junkshop_Management_System.Properties {
         internal static System.Drawing.Bitmap defaultEmployeeIcon {
             get {
                 object obj = ResourceManager.GetObject("defaultEmployeeIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delivery {
+            get {
+                object obj = ResourceManager.GetObject("Delivery", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delivery1 {
+            get {
+                object obj = ResourceManager.GetObject("Delivery1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap deliveryy {
+            get {
+                object obj = ResourceManager.GetObject("deliveryy", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

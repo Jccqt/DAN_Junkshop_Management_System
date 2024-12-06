@@ -124,6 +124,9 @@
   <data name="newAddCircle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newAddCircle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cancell" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancell.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mdi_delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi_delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -199,6 +202,9 @@
   <data name="NewHome" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewHome.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="mdi_recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mdi_recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="line13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\line13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -214,14 +220,17 @@
   <data name="scale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\scale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="weui_eyes-on-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\weui_eyes-on-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Delivery1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delivery1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bi_person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bi_person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newRedTransaction" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newRedTransaction.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mdi_recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mdi_recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="blackDeliver" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blackDeliver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="group17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\group17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,6 +243,9 @@
   </data>
   <data name="UpdatedAddItem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UpdatedAddItem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="weui_eyes-on-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\weui_eyes-on-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="NewDelivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\NewDelivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -249,6 +261,9 @@
   </data>
   <data name="expand11" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expand11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delivery" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delivery.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DanLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DanLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -276,9 +291,6 @@
   </data>
   <data name="greenRecycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\greenRecycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bi_person-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bi_person-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="newLogOut" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\newLogOut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -340,7 +352,7 @@
   <data name="logWhite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logWhite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="blackDeliver" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blackDeliver.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="deliveryy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\deliveryy.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
