@@ -31,13 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.ContentsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new System.Windows.Forms.PictureBox();
-            this.btnWindowSize = new System.Windows.Forms.PictureBox();
-            this.lblPageHeader = new System.Windows.Forms.Label();
             this.customButton1 = new OrganizationProfile.CustomButton();
             this.btnLogout = new OrganizationProfile.CustomButton();
             this.btnDelivery = new OrganizationProfile.CustomButton();
@@ -48,6 +41,13 @@
             this.btnEmployee = new OrganizationProfile.CustomButton();
             this.btnSales = new OrganizationProfile.CustomButton();
             this.btnHome = new OrganizationProfile.CustomButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
+            this.btnMinimize = new System.Windows.Forms.PictureBox();
+            this.btnWindowSize = new System.Windows.Forms.PictureBox();
+            this.lblPageHeader = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,10 +61,9 @@
             this.ContentsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ContentsPanel.Location = new System.Drawing.Point(449, 68);
-            this.ContentsPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.ContentsPanel.Location = new System.Drawing.Point(337, 55);
             this.ContentsPanel.Name = "ContentsPanel";
-            this.ContentsPanel.Size = new System.Drawing.Size(1244, 906);
+            this.ContentsPanel.Size = new System.Drawing.Size(933, 736);
             this.ContentsPanel.TabIndex = 38;
             // 
             // panel1
@@ -84,105 +83,9 @@
             this.panel1.Controls.Add(this.btnHome);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 1262);
+            this.panel1.Size = new System.Drawing.Size(328, 1025);
             this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(120, -33);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(196, 133);
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.AutoScroll = true;
-            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.panel4.Location = new System.Drawing.Point(0, 57);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1269, 930);
-            this.panel4.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.btnExit);
-            this.panel2.Controls.Add(this.btnMinimize);
-            this.panel2.Controls.Add(this.btnWindowSize);
-            this.panel2.Controls.Add(this.lblPageHeader);
-            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.panel2.Location = new System.Drawing.Point(437, -1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1269, 58);
-            this.panel2.TabIndex = 23;
-            // 
-            // btnExit
-            // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(1212, 16);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(27, 26);
-            this.btnExit.TabIndex = 3;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
-            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Location = new System.Drawing.Point(1087, 16);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(27, 26);
-            this.btnMinimize.TabIndex = 2;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnWindowSize
-            // 
-            this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
-            this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnWindowSize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnWindowSize.Location = new System.Drawing.Point(1151, 16);
-            this.btnWindowSize.Margin = new System.Windows.Forms.Padding(4);
-            this.btnWindowSize.Name = "btnWindowSize";
-            this.btnWindowSize.Size = new System.Drawing.Size(27, 26);
-            this.btnWindowSize.TabIndex = 1;
-            this.btnWindowSize.TabStop = false;
-            this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
-            // 
-            // lblPageHeader
-            // 
-            this.lblPageHeader.AutoSize = true;
-            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
-            this.lblPageHeader.Location = new System.Drawing.Point(16, 6);
-            this.lblPageHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPageHeader.Name = "lblPageHeader";
-            this.lblPageHeader.Size = new System.Drawing.Size(221, 48);
-            this.lblPageHeader.TabIndex = 0;
-            this.lblPageHeader.Text = "Dashboard";
             // 
             // customButton1
             // 
@@ -198,10 +101,10 @@
             this.customButton1.ForeColor = System.Drawing.Color.Transparent;
             this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.logWhite;
             this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(34, 796);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.customButton1.Location = new System.Drawing.Point(26, 647);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(403, 76);
+            this.customButton1.Size = new System.Drawing.Size(302, 62);
             this.customButton1.TabIndex = 29;
             this.customButton1.Text = "Activity Log";
             this.customButton1.TextColor = System.Drawing.Color.Transparent;
@@ -222,10 +125,10 @@
             this.btnLogout.ForeColor = System.Drawing.Color.Transparent;
             this.btnLogout.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newLogOut;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Location = new System.Drawing.Point(36, 907);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnLogout.Location = new System.Drawing.Point(27, 737);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(403, 76);
+            this.btnLogout.Size = new System.Drawing.Size(302, 62);
             this.btnLogout.TabIndex = 28;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextColor = System.Drawing.Color.Transparent;
@@ -246,12 +149,12 @@
             this.btnDelivery.ForeColor = System.Drawing.Color.Transparent;
             this.btnDelivery.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
             this.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelivery.Location = new System.Drawing.Point(39, 708);
-            this.btnDelivery.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnDelivery.Location = new System.Drawing.Point(29, 575);
+            this.btnDelivery.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnDelivery.Name = "btnDelivery";
-            this.btnDelivery.Size = new System.Drawing.Size(403, 76);
+            this.btnDelivery.Size = new System.Drawing.Size(302, 62);
             this.btnDelivery.TabIndex = 27;
-            this.btnDelivery.Text = "Delivery";
+            this.btnDelivery.Text = "To Pick-Up";
             this.btnDelivery.TextColor = System.Drawing.Color.Transparent;
             this.btnDelivery.UseVisualStyleBackColor = false;
             this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
@@ -270,10 +173,10 @@
             this.btnPartners.ForeColor = System.Drawing.Color.Transparent;
             this.btnPartners.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
             this.btnPartners.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPartners.Location = new System.Drawing.Point(37, 624);
-            this.btnPartners.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnPartners.Location = new System.Drawing.Point(28, 507);
+            this.btnPartners.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnPartners.Name = "btnPartners";
-            this.btnPartners.Size = new System.Drawing.Size(403, 76);
+            this.btnPartners.Size = new System.Drawing.Size(302, 62);
             this.btnPartners.TabIndex = 26;
             this.btnPartners.Text = "Partners";
             this.btnPartners.TextColor = System.Drawing.Color.Transparent;
@@ -294,10 +197,10 @@
             this.btnInventory.ForeColor = System.Drawing.Color.Transparent;
             this.btnInventory.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(39, 540);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnInventory.Location = new System.Drawing.Point(29, 439);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnInventory.Name = "btnInventory";
-            this.btnInventory.Size = new System.Drawing.Size(403, 76);
+            this.btnInventory.Size = new System.Drawing.Size(302, 62);
             this.btnInventory.TabIndex = 25;
             this.btnInventory.Text = "Inventory";
             this.btnInventory.TextColor = System.Drawing.Color.Transparent;
@@ -318,10 +221,10 @@
             this.btnPriceSetup.ForeColor = System.Drawing.Color.Transparent;
             this.btnPriceSetup.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
             this.btnPriceSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriceSetup.Location = new System.Drawing.Point(39, 457);
-            this.btnPriceSetup.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnPriceSetup.Location = new System.Drawing.Point(29, 371);
+            this.btnPriceSetup.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnPriceSetup.Name = "btnPriceSetup";
-            this.btnPriceSetup.Size = new System.Drawing.Size(403, 76);
+            this.btnPriceSetup.Size = new System.Drawing.Size(302, 62);
             this.btnPriceSetup.TabIndex = 24;
             this.btnPriceSetup.Text = "Price Setup";
             this.btnPriceSetup.TextColor = System.Drawing.Color.Transparent;
@@ -342,10 +245,10 @@
             this.btnTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnTransaction.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
             this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.Location = new System.Drawing.Point(37, 373);
-            this.btnTransaction.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnTransaction.Location = new System.Drawing.Point(28, 303);
+            this.btnTransaction.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(403, 76);
+            this.btnTransaction.Size = new System.Drawing.Size(302, 62);
             this.btnTransaction.TabIndex = 23;
             this.btnTransaction.Text = "Transaction";
             this.btnTransaction.TextColor = System.Drawing.Color.Transparent;
@@ -366,10 +269,10 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.Transparent;
             this.btnEmployee.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(37, 289);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnEmployee.Location = new System.Drawing.Point(28, 235);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnEmployee.Name = "btnEmployee";
-            this.btnEmployee.Size = new System.Drawing.Size(403, 76);
+            this.btnEmployee.Size = new System.Drawing.Size(302, 62);
             this.btnEmployee.TabIndex = 22;
             this.btnEmployee.Text = "Employee";
             this.btnEmployee.TextColor = System.Drawing.Color.Transparent;
@@ -390,10 +293,10 @@
             this.btnSales.ForeColor = System.Drawing.Color.Transparent;
             this.btnSales.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewSales;
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(37, 206);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnSales.Location = new System.Drawing.Point(28, 167);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnSales.Name = "btnSales";
-            this.btnSales.Size = new System.Drawing.Size(403, 76);
+            this.btnSales.Size = new System.Drawing.Size(302, 62);
             this.btnSales.TabIndex = 21;
             this.btnSales.Text = "Sales";
             this.btnSales.TextColor = System.Drawing.Color.Transparent;
@@ -414,27 +317,114 @@
             this.btnHome.ForeColor = System.Drawing.Color.Transparent;
             this.btnHome.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(37, 122);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btnHome.Location = new System.Drawing.Point(28, 99);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(403, 76);
+            this.btnHome.Size = new System.Drawing.Size(302, 62);
             this.btnHome.TabIndex = 20;
             this.btnHome.Text = "Home";
             this.btnHome.TextColor = System.Drawing.Color.Transparent;
             this.btnHome.UseVisualStyleBackColor = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(90, -27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 108);
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.AutoScroll = true;
+            this.panel4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel4.Location = new System.Drawing.Point(0, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(952, 756);
+            this.panel4.TabIndex = 22;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnMinimize);
+            this.panel2.Controls.Add(this.btnWindowSize);
+            this.panel2.Controls.Add(this.lblPageHeader);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.panel2.Location = new System.Drawing.Point(328, -1);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(952, 47);
+            this.panel2.TabIndex = 23;
+            // 
+            // btnExit
+            // 
+            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(909, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 3;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.hide;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimize.Location = new System.Drawing.Point(815, 13);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(20, 21);
+            this.btnMinimize.TabIndex = 2;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnWindowSize
+            // 
+            this.btnWindowSize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnWindowSize.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.minimizetab;
+            this.btnWindowSize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnWindowSize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnWindowSize.Location = new System.Drawing.Point(863, 13);
+            this.btnWindowSize.Name = "btnWindowSize";
+            this.btnWindowSize.Size = new System.Drawing.Size(20, 21);
+            this.btnWindowSize.TabIndex = 1;
+            this.btnWindowSize.TabStop = false;
+            this.btnWindowSize.Click += new System.EventHandler(this.btnWindowSize_Click);
+            // 
+            // lblPageHeader
+            // 
+            this.lblPageHeader.AutoSize = true;
+            this.lblPageHeader.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPageHeader.ForeColor = System.Drawing.Color.Red;
+            this.lblPageHeader.Location = new System.Drawing.Point(12, 5);
+            this.lblPageHeader.Name = "lblPageHeader";
+            this.lblPageHeader.Size = new System.Drawing.Size(176, 38);
+            this.lblPageHeader.TabIndex = 0;
+            this.lblPageHeader.Text = "Dashboard";
+            // 
             // Homepage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(1707, 985);
+            this.ClientSize = new System.Drawing.Size(1280, 800);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ContentsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Homepage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DAN Junkshop System";

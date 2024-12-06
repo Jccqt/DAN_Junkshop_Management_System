@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,10 +50,11 @@
             this.cbPlateNumber = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.btnCancel = new OrganizationProfile.CustomButton();
-            this.btnAddItem = new OrganizationProfile.CustomButton();
             this.lblItemClass = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.btnCancel = new OrganizationProfile.CustomButton();
+            this.btnAddItem = new OrganizationProfile.CustomButton();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
@@ -69,18 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1185, 46);
             this.panel1.TabIndex = 13;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(651, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 21);
-            this.btnExit.TabIndex = 43;
-            this.btnExit.TabStop = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -309,6 +297,28 @@
             this.label14.TabIndex = 44;
             this.label14.Text = "Partner:";
             // 
+            // lblItemClass
+            // 
+            this.lblItemClass.AutoSize = true;
+            this.lblItemClass.Font = new System.Drawing.Font("Arial", 10F);
+            this.lblItemClass.Location = new System.Drawing.Point(111, 91);
+            this.lblItemClass.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblItemClass.Name = "lblItemClass";
+            this.lblItemClass.Size = new System.Drawing.Size(96, 16);
+            this.lblItemClass.TabIndex = 47;
+            this.lblItemClass.Text = "< Item Class >";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 10F);
+            this.label16.Location = new System.Drawing.Point(22, 91);
+            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(76, 16);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Item Class:";
+            // 
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -352,27 +362,17 @@
             this.btnAddItem.TextColor = System.Drawing.Color.Transparent;
             this.btnAddItem.UseVisualStyleBackColor = false;
             // 
-            // lblItemClass
+            // btnExit
             // 
-            this.lblItemClass.AutoSize = true;
-            this.lblItemClass.Font = new System.Drawing.Font("Arial", 10F);
-            this.lblItemClass.Location = new System.Drawing.Point(111, 91);
-            this.lblItemClass.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.lblItemClass.Name = "lblItemClass";
-            this.lblItemClass.Size = new System.Drawing.Size(96, 16);
-            this.lblItemClass.TabIndex = 47;
-            this.lblItemClass.Text = "< Item Class >";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 10F);
-            this.label16.Location = new System.Drawing.Point(22, 91);
-            this.label16.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(76, 16);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "Item Class:";
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(651, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(20, 21);
+            this.btnExit.TabIndex = 43;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmDeliveryDetails
             // 
