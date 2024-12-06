@@ -33,7 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gridTransactions = new System.Windows.Forms.DataGridView();
             this.btnAddTransaction = new OrganizationProfile.CustomButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridTransactions)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gridTransactions
@@ -67,7 +70,7 @@
             this.gridTransactions.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridTransactions.EnableHeadersVisualStyles = false;
             this.gridTransactions.GridColor = System.Drawing.Color.Black;
-            this.gridTransactions.Location = new System.Drawing.Point(6, 107);
+            this.gridTransactions.Location = new System.Drawing.Point(6, 111);
             this.gridTransactions.Name = "gridTransactions";
             this.gridTransactions.ReadOnly = true;
             this.gridTransactions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -91,7 +94,7 @@
             this.btnAddTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnAddTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.btnAddTransaction.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAddTransaction.BorderRadius = 40;
+            this.btnAddTransaction.BorderRadius = 36;
             this.btnAddTransaction.BorderSize = 0;
             this.btnAddTransaction.FlatAppearance.BorderSize = 0;
             this.btnAddTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -99,26 +102,54 @@
             this.btnAddTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnAddTransaction.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
             this.btnAddTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddTransaction.Location = new System.Drawing.Point(758, 44);
+            this.btnAddTransaction.Location = new System.Drawing.Point(733, 6);
             this.btnAddTransaction.Name = "btnAddTransaction";
-            this.btnAddTransaction.Size = new System.Drawing.Size(168, 45);
+            this.btnAddTransaction.Size = new System.Drawing.Size(173, 36);
             this.btnAddTransaction.TabIndex = 0;
             this.btnAddTransaction.Text = "        Add Transaction";
             this.btnAddTransaction.TextColor = System.Drawing.Color.Transparent;
             this.btnAddTransaction.UseVisualStyleBackColor = false;
             this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.btnAddTransaction);
+            this.panel1.Controls.Add(this.lblTitle);
+            this.panel1.Location = new System.Drawing.Point(6, 61);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(920, 49);
+            this.panel1.TabIndex = 9;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Arial Black", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(371, 9);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(187, 33);
+            this.lblTitle.TabIndex = 3;
+            this.lblTitle.Text = "Transactions";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Transaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.gridTransactions);
-            this.Controls.Add(this.btnAddTransaction);
             this.Name = "Transaction";
             this.Size = new System.Drawing.Size(934, 736);
             this.Load += new System.EventHandler(this.Transaction_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridTransactions)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -127,5 +158,7 @@
 
         private OrganizationProfile.CustomButton btnAddTransaction;
         private System.Windows.Forms.DataGridView gridTransactions;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
