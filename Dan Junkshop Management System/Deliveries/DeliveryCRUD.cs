@@ -12,7 +12,9 @@ namespace Dan_Junkshop_Management_System.Deliveries
 {
     public class DeliveryCRUD
     {
-        string toDeliver;
+        private string toDeliver;
+        private int idCount;
+
         public void DisplayDeliverables()
         {
             ConnectionObjects.dataTable = new DataTable();
@@ -52,5 +54,20 @@ namespace Dan_Junkshop_Management_System.Deliveries
             ConnectionObjects.dataTable = null;
 
         }
+
+        public int GetDeliverIDCount()
+        {
+            idCount = 1000;
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(DeliverID) FROM Deliveries", ConnectionObjects.conn);
+            idCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.conn.Close();
+
+            idCount += 1;
+            return idCount;
+        }
+
     }
 }

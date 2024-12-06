@@ -46,7 +46,18 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-
+            using(PageObjects.addSellableItem = new frmAddingSellableItems())
+            {
+                using(Form form = new Form())
+                {
+                    FormAnimation.ShowFocus(form);
+                    PageObjects.addSellableItem.Owner = form;
+                    PageObjects.addSellableItem.ShowDialog();
+                    form.Close();
+                }
+            }
+            Queries.TransactionQuery.DisplayItems(1);
+            GC.Collect(); // optimization purposes
         }
 
         private void NewBuyTransaction_Load(object sender, EventArgs e)
@@ -55,7 +66,7 @@ namespace Dan_Junkshop_Management_System
             isSupplier = false;
             Queries.TransactionQuery.DisplayItems(1);
             lblTransaction.Text =  $"TRANSACT{Queries.TransactionQuery.GetTransactionIDCount()}";
-            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd");
+            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
@@ -85,7 +96,7 @@ namespace Dan_Junkshop_Management_System
 
                 if (orderList.Contains(itemList[rowIndex]))
                 {
-                    MessageBox.Show("Item was already exist on order overview!", "Transaction Notification",
+                    MessageBox.Show("Item was already exist on items overview!", "Transaction Notification",
                         MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -97,12 +108,6 @@ namespace Dan_Junkshop_Management_System
 
             }
             GC.Collect(); // optimization purposes
-        }
-
-        private void gridViewOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-
         }
 
         private void cbSupplier_CheckedChanged(object sender, EventArgs e)
@@ -146,6 +151,11 @@ namespace Dan_Junkshop_Management_System
                 }
             }
             
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

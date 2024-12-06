@@ -68,9 +68,11 @@ namespace Dan_Junkshop_Management_System
 
         // Delivers Objects
         public static Delivery delivery;
+        public static frmDeliveryDetails deliveryDetails;
 
         // Vehicle Objects
         public static frmAddingVehicle addVehicle;
+
     }
 
     public class ConnectionObjects

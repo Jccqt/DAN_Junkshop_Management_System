@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
             this.gridViewItems = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -44,11 +45,11 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbWalkin = new System.Windows.Forms.RadioButton();
+            this.cbSupplier = new System.Windows.Forms.RadioButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.cbSupplier = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbWalkin = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
@@ -67,6 +68,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OrdersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,12 +85,25 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.headerLabel);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1264, 51);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExit.Location = new System.Drawing.Point(1225, 11);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(26, 23);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.TabStop = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // headerLabel
             // 
@@ -243,6 +258,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.cbWalkin);
+            this.panel2.Controls.Add(this.cbSupplier);
             this.panel2.Location = new System.Drawing.Point(644, 166);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(586, 41);
@@ -255,9 +272,38 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(25, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 23);
+            this.label1.Size = new System.Drawing.Size(148, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Order Overview";
+            this.label1.Text = "Items Overview";
+            // 
+            // cbWalkin
+            // 
+            this.cbWalkin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbWalkin.AutoSize = true;
+            this.cbWalkin.Checked = true;
+            this.cbWalkin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbWalkin.ForeColor = System.Drawing.Color.White;
+            this.cbWalkin.Location = new System.Drawing.Point(387, 8);
+            this.cbWalkin.Name = "cbWalkin";
+            this.cbWalkin.Size = new System.Drawing.Size(82, 23);
+            this.cbWalkin.TabIndex = 11;
+            this.cbWalkin.TabStop = true;
+            this.cbWalkin.Text = "Walk-in";
+            this.cbWalkin.UseVisualStyleBackColor = true;
+            // 
+            // cbSupplier
+            // 
+            this.cbSupplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbSupplier.AutoSize = true;
+            this.cbSupplier.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSupplier.ForeColor = System.Drawing.Color.White;
+            this.cbSupplier.Location = new System.Drawing.Point(475, 8);
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.Size = new System.Drawing.Size(100, 23);
+            this.cbSupplier.TabIndex = 9;
+            this.cbSupplier.Text = "Suppliers";
+            this.cbSupplier.UseVisualStyleBackColor = true;
+            this.cbSupplier.CheckedChanged += new System.EventHandler(this.cbSupplier_CheckedChanged);
             // 
             // panel3
             // 
@@ -279,19 +325,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Summary";
             // 
-            // cbSupplier
-            // 
-            this.cbSupplier.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbSupplier.AutoSize = true;
-            this.cbSupplier.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cbSupplier.Location = new System.Drawing.Point(420, 102);
-            this.cbSupplier.Name = "cbSupplier";
-            this.cbSupplier.Size = new System.Drawing.Size(95, 23);
-            this.cbSupplier.TabIndex = 9;
-            this.cbSupplier.Text = "Suppliers";
-            this.cbSupplier.UseVisualStyleBackColor = true;
-            this.cbSupplier.CheckedChanged += new System.EventHandler(this.cbSupplier_CheckedChanged);
-            // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -302,20 +335,6 @@
             this.label6.Size = new System.Drawing.Size(111, 18);
             this.label6.TabIndex = 10;
             this.label6.Text = "Transaction ID:";
-            // 
-            // cbWalkin
-            // 
-            this.cbWalkin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbWalkin.AutoSize = true;
-            this.cbWalkin.Checked = true;
-            this.cbWalkin.Font = new System.Drawing.Font("Arial", 12.25F);
-            this.cbWalkin.Location = new System.Drawing.Point(332, 102);
-            this.cbWalkin.Name = "cbWalkin";
-            this.cbWalkin.Size = new System.Drawing.Size(82, 23);
-            this.cbWalkin.TabIndex = 11;
-            this.cbWalkin.TabStop = true;
-            this.cbWalkin.Text = "Walk-in";
-            this.cbWalkin.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -536,9 +555,7 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.cbWalkin);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cbSupplier);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -557,6 +574,7 @@
             this.Load += new System.EventHandler(this.NewBuyTransaction_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewItems)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -616,5 +634,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel OrdersPanel;
+        private System.Windows.Forms.PictureBox btnExit;
     }
 }

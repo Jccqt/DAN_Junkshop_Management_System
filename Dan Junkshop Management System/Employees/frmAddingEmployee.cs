@@ -57,7 +57,7 @@ namespace Dan_Junkshop_Management_System
         {
             txtFirstName.Clear();
             txtLastName.Clear();
-            txtMiddleInitial.Clear();
+            txtMiddleName.Clear();
             txtContact.Clear();
             cbPosition.SelectedIndex = -1;
             dtBirthDate.Value = dtBirthDate.MaxDate;
@@ -70,18 +70,24 @@ namespace Dan_Junkshop_Management_System
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            txtFirstName.Text = txtFirstName.Text.Trim();
+            txtLastName.Text = txtLastName.Text.Trim();
+            txtMiddleName.Text = txtMiddleName.Text.Trim();
+            txtUsername.Text = txtUsername.Text.Trim();
+            txtPassword.Text = txtPassword.Text.Trim();
+
             EmployeeDetails details = new EmployeeDetails
             {
                 Position = cbPosition.Text,
-                FirstName = txtFirstName.Text.Trim(),
-                LastName = txtLastName.Text.Trim(),
-                MiddleName = txtMiddleInitial.Text.Trim(),
+                FirstName = txtFirstName.Text,
+                LastName = txtLastName.Text,
+                MiddleName = txtMiddleName.Text,
                 Gender = cbGender.Text,
                 Birthdate = dtBirthDate.Value.ToString(),
                 Contact = txtContact.Text,
                 Address = txtAddress.Text,
-                Username = txtUsername.Text.Trim(),
-                Password = txtPassword.Text.Trim(),
+                Username = txtUsername.Text,
+                Password = txtPassword.Text,
             };
 
             // will check if the employee details are complete

@@ -75,14 +75,14 @@
             this.gridDeliverables.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridDeliverables.EnableHeadersVisualStyles = false;
             this.gridDeliverables.GridColor = System.Drawing.Color.Black;
-            this.gridDeliverables.Location = new System.Drawing.Point(67, 101);
-            this.gridDeliverables.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridDeliverables.Location = new System.Drawing.Point(50, 82);
             this.gridDeliverables.Name = "gridDeliverables";
             this.gridDeliverables.ReadOnly = true;
             this.gridDeliverables.RowHeadersVisible = false;
             this.gridDeliverables.RowHeadersWidth = 51;
-            this.gridDeliverables.Size = new System.Drawing.Size(1119, 370);
+            this.gridDeliverables.Size = new System.Drawing.Size(839, 301);
             this.gridDeliverables.TabIndex = 5;
+            this.gridDeliverables.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridDeliverables_CellContentClick);
             // 
             // gridVehicles
             // 
@@ -115,23 +115,21 @@
             this.gridVehicles.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridVehicles.EnableHeadersVisualStyles = false;
             this.gridVehicles.GridColor = System.Drawing.Color.Black;
-            this.gridVehicles.Location = new System.Drawing.Point(67, 566);
-            this.gridVehicles.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridVehicles.Location = new System.Drawing.Point(50, 460);
             this.gridVehicles.Name = "gridVehicles";
             this.gridVehicles.ReadOnly = true;
             this.gridVehicles.RowHeadersVisible = false;
             this.gridVehicles.RowHeadersWidth = 51;
-            this.gridVehicles.Size = new System.Drawing.Size(1119, 316);
+            this.gridVehicles.Size = new System.Drawing.Size(839, 257);
             this.gridVehicles.TabIndex = 6;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(67, 43);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(50, 35);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1119, 60);
+            this.panel2.Size = new System.Drawing.Size(839, 49);
             this.panel2.TabIndex = 8;
             // 
             // label3
@@ -139,10 +137,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(33, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(25, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(183, 36);
+            this.label3.Size = new System.Drawing.Size(146, 28);
             this.label3.TabIndex = 0;
             this.label3.Text = "Deliverables";
             // 
@@ -151,10 +148,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.btnAddVehicle);
-            this.panel1.Location = new System.Drawing.Point(67, 506);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(50, 411);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1119, 81);
+            this.panel1.Size = new System.Drawing.Size(839, 66);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -162,10 +158,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 12);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(25, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 36);
+            this.label1.Size = new System.Drawing.Size(104, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vehicles";
             // 
@@ -184,10 +179,10 @@
             this.btnAddVehicle.ForeColor = System.Drawing.Color.Transparent;
             this.btnAddVehicle.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newAddCircle;
             this.btnAddVehicle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddVehicle.Location = new System.Drawing.Point(913, 7);
-            this.btnAddVehicle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddVehicle.Location = new System.Drawing.Point(685, 6);
+            this.btnAddVehicle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddVehicle.Name = "btnAddVehicle";
-            this.btnAddVehicle.Size = new System.Drawing.Size(191, 46);
+            this.btnAddVehicle.Size = new System.Drawing.Size(143, 37);
             this.btnAddVehicle.TabIndex = 7;
             this.btnAddVehicle.Text = "     Add Vehicle";
             this.btnAddVehicle.TextColor = System.Drawing.Color.Transparent;
@@ -196,16 +191,15 @@
             // 
             // Delivery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.gridVehicles);
             this.Controls.Add(this.gridDeliverables);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Delivery";
-            this.Size = new System.Drawing.Size(1251, 906);
+            this.Size = new System.Drawing.Size(938, 736);
             this.Load += new System.EventHandler(this.Delivery_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridDeliverables)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridVehicles)).EndInit();

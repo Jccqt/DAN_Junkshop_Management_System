@@ -80,24 +80,24 @@ namespace Dan_Junkshop_Management_System
                 txtScale.Text = "0.00";
             }
 
-            SellableDetails details = new SellableDetails
+            SellableDetails ItemDetails = new SellableDetails
             {
                 SellableName = txtSellableName.Text,
                 ItemClassName = cbClass.Text,
                 SellableQuantity = Convert.ToDecimal(txtScale.Text)
             };
             
-            if(Queries.SellableQuery.ItemDetailsChecker(details) && !Queries.SellableQuery.ItemExistChecker(cbClass.Text))
+            if(Queries.SellableQuery.ItemDetailsChecker(ItemDetails) && !Queries.SellableQuery.ItemExistChecker(ItemDetails.SellableName))
             {
                 Queries.SellableQuery.GetItemIDCount();
-                Queries.SellableQuery.GetClassID(details.ItemClassName);
-                Queries.SellableQuery.AddItem(details);
+                Queries.SellableQuery.GetClassID(ItemDetails.ItemClassName);
+                Queries.SellableQuery.AddItem(ItemDetails);
 
                 clearSellableItemDetails();
 
                 MessageBox.Show("Sellable item has been successfully added!", "Sellable Item Notification",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                details = null;
+                ItemDetails = null;
                 this.Close();
             }
         }

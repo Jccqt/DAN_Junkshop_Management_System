@@ -8,6 +8,7 @@ namespace Dan_Junkshop_Management_System.Inventories
 {
     public class SellableDetails
     {
+        public string ItemID { get; set; }
         public string SellableName { get; set; }
         public string ItemClassName { get; set; }
         public decimal SellableQuantity { get; set; }

@@ -56,6 +56,23 @@ namespace Dan_Junkshop_Management_System.Deliveries
             ConnectionObjects.dataTable = null;
         }
 
+        public void GetVehicleList(ComboBox cbVehicles, decimal requiredScale)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT VehicleName FROM Vehicles WHERE Availability = 1 AND VehicleCapacity >= @itemrequiredscale", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@itemrequiredscale", requiredScale);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while (ConnectionObjects.reader.Read())
+            {
+                cbVehicles.Items.Add(ConnectionObjects.reader.GetString(0));
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+
         public bool VehicleExistChecker(VehicleDetails details)
         {
             ConnectionObjects.conn.Open();

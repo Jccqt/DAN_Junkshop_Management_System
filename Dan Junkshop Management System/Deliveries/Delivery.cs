@@ -12,6 +12,7 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Delivery : UserControl
     {
+
         public DataGridView DeliveryGrid { get { return gridDeliverables; } }
         public DataGridView VehicleGrid { get { return gridVehicles; } }
 
@@ -43,6 +44,28 @@ namespace Dan_Junkshop_Management_System
             }
             Queries.VehicleQuery.DisplayVehicles();
             GC.Collect(); // optimization purposes
+        }
+
+        private void gridDeliverables_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(gridDeliverables.Rows.Count > 0)
+            {
+                if(gridDeliverables.CurrentCell.ColumnIndex == 4)
+                {
+
+                    using(PageObjects.deliveryDetails = new frmDeliveryDetails())
+                    {
+                        using(Form form = new Form())
+                        {
+                            FormAnimation.ShowFocus(form);
+                            PageObjects.deliveryDetails.Owner = form;
+                            PageObjects.deliveryDetails.ShowDialog();
+                            form.Close();
+                        }
+                    }
+                    GC.Collect(); // optimization purposes
+                }
+            }
         }
     }
 }

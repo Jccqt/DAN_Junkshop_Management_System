@@ -44,7 +44,7 @@ namespace Dan_Junkshop_Management_System
             cbPosition.Text = EmployeeDetails.Position;
             txtFirstName.Text = EmployeeDetails.FirstName;
             txtLastName.Text = EmployeeDetails.LastName;
-            txtMiddleInitial.Text = EmployeeDetails.MiddleName;
+            txtMiddleName.Text = EmployeeDetails.MiddleName;
             cbGender.Text = EmployeeDetails.Gender;
             dtBirthDate.Value = Convert.ToDateTime(EmployeeDetails.Birthdate);
             txtContact.Text = EmployeeDetails.Contact;
@@ -101,17 +101,24 @@ namespace Dan_Junkshop_Management_System
             DialogResult updateEmp = MessageBox.Show("Are you sure you want to update details for this employee?",
                 "Employee Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            txtFirstName.Text = txtFirstName.Text.Trim();
+            txtLastName.Text = txtLastName.Text.Trim();
+            txtMiddleName.Text = txtMiddleName.Text.Trim();
+            txtUsername.Text = txtUsername.Text.Trim();
+            txtPassword.Text = txtPassword.Text.Trim();
+
             if (updateEmp == DialogResult.Yes)
             {
                 EmployeeDetails.FirstName = txtFirstName.Text;
                 EmployeeDetails.LastName = txtLastName.Text;
-                EmployeeDetails.MiddleName = txtMiddleInitial.Text;
+                EmployeeDetails.MiddleName = txtMiddleName.Text;
                 EmployeeDetails.Contact = txtContact.Text;
                 EmployeeDetails.Birthdate = dtBirthDate.Value.ToString("yyyy-MM-dd");
                 EmployeeDetails.Gender = cbGender.Text;
                 EmployeeDetails.Username = txtUsername.Text;
                 EmployeeDetails.Password = txtPassword.Text;
                 EmployeeDetails.Address = txtAddress.Text;
+                EmployeeDetails.Status = lblStatus.Text;
 
                 // will check if the employee details are complete
                 // will check if both employee name and username was already existing
@@ -299,7 +306,7 @@ namespace Dan_Junkshop_Management_System
 
         private void txtMiddleInitial_TextChanged(object sender, EventArgs e)
         {
-            if (txtMiddleInitial.Text == middleName)
+            if (txtMiddleName.Text == middleName)
             {
                 middleNameChanged = false;
             }

@@ -51,13 +51,14 @@
             this.dtBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtContact = new System.Windows.Forms.TextBox();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtMiddleInitial = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnUpdate = new OrganizationProfile.CustomButton();
             this.btnRestoreOriginal = new OrganizationProfile.CustomButton();
             this.btnCancel = new OrganizationProfile.CustomButton();
+            this.txtMiddleName = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 41);
+            this.panel1.Size = new System.Drawing.Size(902, 41);
             this.panel1.TabIndex = 15;
             // 
             // label1
@@ -86,18 +87,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(704, 148);
+            this.label7.Location = new System.Drawing.Point(595, 228);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(32, 16);
+            this.label7.Size = new System.Drawing.Size(37, 16);
             this.label7.TabIndex = 65;
-            this.label7.Text = "Age";
+            this.label7.Text = "Age*";
             // 
             // txtAge
             // 
             this.txtAge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAge.Enabled = false;
             this.txtAge.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAge.Location = new System.Drawing.Point(707, 168);
+            this.txtAge.Location = new System.Drawing.Point(598, 248);
             this.txtAge.Name = "txtAge";
             this.txtAge.ShortcutsEnabled = false;
             this.txtAge.Size = new System.Drawing.Size(86, 29);
@@ -109,9 +110,9 @@
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(456, 150);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 16);
+            this.label12.Size = new System.Drawing.Size(63, 16);
             this.label12.TabIndex = 63;
-            this.label12.Text = "Position";
+            this.label12.Text = "Position*";
             // 
             // cbPosition
             // 
@@ -145,9 +146,9 @@
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(456, 310);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(68, 16);
+            this.label11.Size = new System.Drawing.Size(73, 16);
             this.label11.TabIndex = 61;
-            this.label11.Text = "Password";
+            this.label11.Text = "Password*";
             // 
             // txtPassword
             // 
@@ -165,9 +166,9 @@
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(194, 310);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 16);
+            this.label10.Size = new System.Drawing.Size(76, 16);
             this.label10.TabIndex = 60;
-            this.label10.Text = "Username";
+            this.label10.Text = "Username*";
             // 
             // txtUsername
             // 
@@ -183,11 +184,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(540, 228);
+            this.label9.Location = new System.Drawing.Point(704, 150);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(54, 16);
+            this.label9.Size = new System.Drawing.Size(59, 16);
             this.label9.TabIndex = 59;
-            this.label9.Text = "Gender";
+            this.label9.Text = "Gender*";
             // 
             // cbGender
             // 
@@ -197,9 +198,9 @@
             this.cbGender.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(543, 247);
+            this.cbGender.Location = new System.Drawing.Point(707, 170);
             this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(250, 28);
+            this.cbGender.Size = new System.Drawing.Size(181, 28);
             this.cbGender.TabIndex = 47;
             this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
             // 
@@ -219,9 +220,9 @@
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(194, 228);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(85, 16);
+            this.label6.Size = new System.Drawing.Size(90, 16);
             this.label6.TabIndex = 57;
-            this.label6.Text = "Date of birth";
+            this.label6.Text = "Date of birth*";
             // 
             // label5
             // 
@@ -229,9 +230,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(194, 150);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 16);
+            this.label5.Size = new System.Drawing.Size(114, 16);
             this.label5.TabIndex = 56;
-            this.label5.Text = "Contact Number";
+            this.label5.Text = "Contact Number*";
             // 
             // label4
             // 
@@ -239,9 +240,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(456, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.Size = new System.Drawing.Size(79, 16);
             this.label4.TabIndex = 55;
-            this.label4.Text = "Last Name";
+            this.label4.Text = "Last Name*";
             // 
             // label3
             // 
@@ -249,9 +250,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(704, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 16);
+            this.label3.Size = new System.Drawing.Size(91, 16);
             this.label3.TabIndex = 54;
-            this.label3.Text = "M.I";
+            this.label3.Text = "Middle Name";
             // 
             // label2
             // 
@@ -259,9 +260,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(194, 72);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 16);
+            this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 53;
-            this.label2.Text = "First Name";
+            this.label2.Text = "First Name*";
             // 
             // txtAddress
             // 
@@ -270,7 +271,7 @@
             this.txtAddress.Location = new System.Drawing.Point(197, 399);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(596, 84);
+            this.txtAddress.Size = new System.Drawing.Size(691, 84);
             this.txtAddress.TabIndex = 50;
             this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
@@ -306,17 +307,6 @@
             this.txtLastName.TabIndex = 42;
             this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
-            // txtMiddleInitial
-            // 
-            this.txtMiddleInitial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMiddleInitial.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddleInitial.Location = new System.Drawing.Point(707, 92);
-            this.txtMiddleInitial.Name = "txtMiddleInitial";
-            this.txtMiddleInitial.ShortcutsEnabled = false;
-            this.txtMiddleInitial.Size = new System.Drawing.Size(86, 29);
-            this.txtMiddleInitial.TabIndex = 43;
-            this.txtMiddleInitial.TextChanged += new System.EventHandler(this.txtMiddleInitial_TextChanged);
-            // 
             // txtFirstName
             // 
             this.txtFirstName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -335,7 +325,7 @@
             this.btnSwitchStatus.Checked = true;
             this.btnSwitchStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(716, 330);
+            this.btnSwitchStatus.Location = new System.Drawing.Point(720, 330);
             this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -423,12 +413,34 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // txtMiddleName
+            // 
+            this.txtMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMiddleName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddleName.Location = new System.Drawing.Point(707, 91);
+            this.txtMiddleName.Name = "txtMiddleName";
+            this.txtMiddleName.ShortcutsEnabled = false;
+            this.txtMiddleName.Size = new System.Drawing.Size(181, 29);
+            this.txtMiddleName.TabIndex = 71;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(35, 212);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 32);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Details that has (*) \r\nis required to fill.";
+            // 
             // frmEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(830, 504);
+            this.ClientSize = new System.Drawing.Size(901, 504);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtMiddleName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRestoreOriginal);
             this.Controls.Add(this.btnUpdate);
@@ -455,7 +467,6 @@
             this.Controls.Add(this.dtBirthDate);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtMiddleInitial);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -496,12 +507,13 @@
         private System.Windows.Forms.DateTimePicker dtBirthDate;
         private System.Windows.Forms.TextBox txtContact;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtMiddleInitial;
         private System.Windows.Forms.TextBox txtFirstName;
         private WindowsFormsApp2.CustomButton.activeAndInactive btnSwitchStatus;
         private System.Windows.Forms.Label lblStatus;
         private OrganizationProfile.CustomButton btnUpdate;
         private OrganizationProfile.CustomButton btnRestoreOriginal;
         private OrganizationProfile.CustomButton btnCancel;
+        private System.Windows.Forms.TextBox txtMiddleName;
+        private System.Windows.Forms.Label label13;
     }
 }

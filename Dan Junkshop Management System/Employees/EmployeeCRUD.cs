@@ -43,6 +43,22 @@ namespace Dan_Junkshop_Management_System.Employees
             GC.Collect();
         }
 
+        public void GetDriverList(ComboBox cbEmployees)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, LastName, MiddleName FROM Employees WHERE Position = 'Driver'", ConnectionObjects.conn);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while (ConnectionObjects.reader.Read())
+            {
+                cbEmployees.Items.Add($"{ConnectionObjects.reader.GetString(0)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(1)}");
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+
         public bool EmployeeExistChecker(EmployeeDetails details)
         {
             nameExist = false;
@@ -158,7 +174,7 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("UPDATE Employees SET FirstName = @firstname, LastName = @lastname, MiddleName = @middlename, " +
-                "Contact = @contact, Birthdate = @birthdate, Gender = @gender, Address = @address WHERE EmpID = @empid", ConnectionObjects.conn);
+                "Contact = @contact, Birthdate = @birthdate, Gender = @gender, Address = @address, Status = @status WHERE EmpID = @empid", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@firstname", details.FirstName);
             ConnectionObjects.cmd.Parameters.AddWithValue("@lastname", details.LastName);
@@ -167,6 +183,16 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd.Parameters.AddWithValue("@birthdate", Convert.ToDateTime(details.Birthdate));
             ConnectionObjects.cmd.Parameters.AddWithValue("@gender", details.Gender);
             ConnectionObjects.cmd.Parameters.AddWithValue("@address", details.Address);
+
+            if(details.Status == "Active")
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
+            }
+            else
+            {
+                ConnectionObjects.cmd.Parameters.AddWithValue("@status", 0);
+            }
+
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -248,17 +274,36 @@ namespace Dan_Junkshop_Management_System.Employees
         }
         public bool EmployeeDetailsChecker(EmployeeDetails details)
         {
-            if(details.Position == "" || details.FirstName == "" || details.LastName == "" || details.MiddleName == "" || 
-                details.Gender == "" || details.Contact == "" || details.Address == "" || details.Username == "" || details.Password == "")
+            if(details.Position == "Driver")
             {
-                MessageBox.Show("Employee details was incomplete!" +
-                    "\nPlease complete the employee details to save", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                detailsComplete = false;
+                if (details.Position == "" || details.FirstName == "" || details.LastName == "" ||
+                details.Gender == "" || details.Contact == "")
+                {
+                    MessageBox.Show("Employee details was incomplete!" +
+                        "\nPlease complete the employee details to save", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    detailsComplete = false;
+                }
+                else
+                {
+                    detailsComplete = true;
+                }
             }
             else
             {
-                detailsComplete = true;
+                if (details.Position == "" || details.FirstName == "" || details.LastName == "" ||
+                details.Gender == "" || details.Contact == "" || details.Username == "" || details.Password == "")
+                {
+                    MessageBox.Show("Employee details was incomplete!" +
+                        "\nPlease complete the employee details to save", "Employee Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    detailsComplete = false;
+                }
+                else
+                {
+                    detailsComplete = true;
+                }
             }
+
+            
             return detailsComplete;
         }
     }

@@ -78,18 +78,19 @@ namespace Dan_Junkshop_Management_System.Inventories
         {
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, I.ItemClassName, S.SellableQuantity, S.Status " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableID, S.SellableName, I.ItemClassName, S.SellableQuantity, S.Status " +
                 "FROM SellableItems S JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE SellableName = @sellablename", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", PageObjects.inventory.ItemName);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             if (ConnectionObjects.reader.Read())
             {
-                details.SellableName = ConnectionObjects.reader.GetString(0);
-                details.ItemClassName = ConnectionObjects.reader.GetString(1);
-                details.SellableQuantity = ConnectionObjects.reader.GetDecimal(2);
+                details.ItemID = ConnectionObjects.reader.GetString(0);
+                details.SellableName = ConnectionObjects.reader.GetString(1);
+                details.ItemClassName = ConnectionObjects.reader.GetString(2);
+                details.SellableQuantity = ConnectionObjects.reader.GetDecimal(3);
                 
-                if(ConnectionObjects.reader.GetInt32(3) == 1)
+                if(ConnectionObjects.reader.GetInt32(4) == 1)
                 {
                     details.Status = "Active";
                 }
@@ -211,7 +212,8 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("UPDATE SellableItems SET SellableName = @sellablename, ItemClassID = @itemclassid, " +
-                "SellableQuantity = @sellablequantity, Status = @status", ConnectionObjects.conn);
+                "SellableQuantity = @sellablequantity, Status = @status WHERE SellableID = @sellableid", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellableid", details.ItemID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", details.SellableName);
             ConnectionObjects.cmd.Parameters.AddWithValue("@itemclassid", classID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@sellablequantity", details.SellableQuantity);

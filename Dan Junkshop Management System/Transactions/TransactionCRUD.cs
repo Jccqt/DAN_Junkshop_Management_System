@@ -14,7 +14,7 @@ namespace Dan_Junkshop_Management_System.Transactions
 {
     public class TransactionCRUD
     {
-        private int idcount;
+        private int idCount;
         public void DisplayItems(int status)
         {
             PageObjects.newBuyTransaction.ItemNamesArray.Clear();
@@ -102,21 +102,21 @@ namespace Dan_Junkshop_Management_System.Transactions
 
         public int GetTransactionIDCount()
         {
-            idcount = 1000;
+            idCount = 1000;
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(TransactionID) FROM Transactions", ConnectionObjects.conn);
-            idcount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+            idCount += Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
 
             ConnectionObjects.conn.Close();
 
-            idcount += 1;
-            return idcount;
+            idCount += 1;
+            return idCount;
         }
 
         public void ProcessTransaction(bool isSupplier)
         {
-            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
 
             ConnectionObjects.conn.Open();
 

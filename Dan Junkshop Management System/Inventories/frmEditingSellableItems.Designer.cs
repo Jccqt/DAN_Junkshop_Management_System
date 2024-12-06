@@ -176,6 +176,7 @@
             this.btnSwitchStatus.TabIndex = 63;
             this.btnSwitchStatus.Text = "activeAndInactive1";
             this.btnSwitchStatus.UseVisualStyleBackColor = true;
+            this.btnSwitchStatus.CheckedChanged += new System.EventHandler(this.btnSwitchStatus_CheckedChanged);
             this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
             // 
             // btnCancel

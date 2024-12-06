@@ -47,7 +47,7 @@ namespace Dan_Junkshop_Management_System
             }
             else
             {
-                status = "Active";
+                status = "Inactive";
                 lblStatus.Text = "Inactive";
                 btnSwitchStatus.Checked = false;
             }
@@ -71,6 +71,7 @@ namespace Dan_Junkshop_Management_System
                 ItemDetails.SellableName = txtSellableName.Text;
                 ItemDetails.ItemClassName = cbClass.Text;
                 ItemDetails.SellableQuantity = Convert.ToDecimal(txtScale.Text);
+                ItemDetails.Status = lblStatus.Text;
 
                 if (sellableNameChanged)
                 {
@@ -97,6 +98,11 @@ namespace Dan_Junkshop_Management_System
         private void btnRestoreOriginal_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnSwitchStatus_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

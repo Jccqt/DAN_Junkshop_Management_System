@@ -35,6 +35,8 @@ namespace Dan_Junkshop_Management_System
                 txtCapacity.Text = "0.00";
             }
 
+            txtPlateNumber.Text = txtCapacity.Text.Trim().ToUpper();
+
             VehicleDetails details = new VehicleDetails
             {
                 VehicleName = txtVehicleName.Text,
