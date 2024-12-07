@@ -73,6 +73,7 @@
             this.btnSwitchStatus.TabIndex = 3;
             this.btnSwitchStatus.Text = "activeAndInactive1";
             this.btnSwitchStatus.UseVisualStyleBackColor = false;
+            this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
             // 
             // btnAddEmployee
             // 

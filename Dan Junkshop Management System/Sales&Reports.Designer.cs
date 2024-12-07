@@ -34,9 +34,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblTable = new System.Windows.Forms.Label();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridTopReports = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTopReports)).BeginInit();
             this.SuspendLayout();
             // 
             // btnReport1
@@ -64,7 +64,7 @@
             this.btnReport2.Name = "btnReport2";
             this.btnReport2.Size = new System.Drawing.Size(120, 37);
             this.btnReport2.TabIndex = 1;
-            this.btnReport2.Text = "Transaction";
+            this.btnReport2.Text = "Top Items";
             this.btnReport2.UseVisualStyleBackColor = false;
             this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
@@ -78,7 +78,7 @@
             this.btnReport3.Name = "btnReport3";
             this.btnReport3.Size = new System.Drawing.Size(120, 37);
             this.btnReport3.TabIndex = 2;
-            this.btnReport3.Text = "Delivery";
+            this.btnReport3.Text = "Top Partners";
             this.btnReport3.UseVisualStyleBackColor = false;
             this.btnReport3.Click += new System.EventHandler(this.btnReport3_Click);
             // 
@@ -106,29 +106,32 @@
             this.lblTable.Text = "Top Sale";
             this.lblTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // gridTopReports
             // 
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridTopReports.AllowUserToAddRows = false;
+            this.gridTopReports.AllowUserToDeleteRows = false;
+            this.gridTopReports.AllowUserToResizeColumns = false;
+            this.gridTopReports.AllowUserToResizeRows = false;
+            this.gridTopReports.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 188);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(873, 454);
-            this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.gridTopReports.BackgroundColor = System.Drawing.Color.White;
+            this.gridTopReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTopReports.Location = new System.Drawing.Point(31, 188);
+            this.gridTopReports.Margin = new System.Windows.Forms.Padding(2);
+            this.gridTopReports.Name = "gridTopReports";
+            this.gridTopReports.ReadOnly = true;
+            this.gridTopReports.RowHeadersWidth = 51;
+            this.gridTopReports.RowTemplate.Height = 24;
+            this.gridTopReports.Size = new System.Drawing.Size(873, 454);
+            this.gridTopReports.TabIndex = 9;
+            this.gridTopReports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Sales_Reports
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridTopReports);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnReport3);
             this.Controls.Add(this.btnReport2);
@@ -138,7 +141,7 @@
             this.Load += new System.EventHandler(this.Sales_Reports_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridTopReports)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,6 +154,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblTable;
         private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridTopReports;
     }
 }

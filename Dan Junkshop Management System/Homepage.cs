@@ -147,12 +147,12 @@ namespace Dan_Junkshop_Management_System
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
-            lblPageHeader.Text = "Delivery";
+            lblPageHeader.Text = "To Pickup";
             resetIconColor(); // will reset the color of homepage icons
             selectedButton = lblPageHeader.Text;
             
             ContentsPanel.Controls.Clear();
-            ContentsPanel.Controls.Add(PageObjects.delivery); // will display delivery page
+            ContentsPanel.Controls.Add(PageObjects.pickup); // will display delivery page
         }
 
         public void resetIconColor()
@@ -188,8 +188,8 @@ namespace Dan_Junkshop_Management_System
                     PageObjects.partners.Dispose();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
                     break;
-                case "Delivery":
-                    PageObjects.delivery.Dispose();
+                case "To Pickup":
+                    PageObjects.pickup.Dispose();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
                     break;
             }
@@ -225,8 +225,8 @@ namespace Dan_Junkshop_Management_System
                     PageObjects.partners = new Partners();
                     btnPartners.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedPartners;
                     break;
-                case "Delivery":
-                    PageObjects.delivery = new Delivery();
+                case "To Pickup":
+                    PageObjects.pickup = new ToPickUp();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedDelive;
                     break;
             }

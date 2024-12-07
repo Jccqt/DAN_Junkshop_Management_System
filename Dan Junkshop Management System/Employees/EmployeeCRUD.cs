@@ -134,7 +134,7 @@ namespace Dan_Junkshop_Management_System.Employees
         {
             empIDCount += 1000;
 
-            var localDate = DateTime.Now.ToString("yyyy-MM-dd");
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO Employees VALUES (@EmpID, @Position, @FirstName, @LastName, " +
@@ -150,6 +150,16 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd.Parameters.AddWithValue("@Address", details.Address);
             ConnectionObjects.cmd.Parameters.AddWithValue("@HireDate", localDate);
             ConnectionObjects.cmd.Parameters.AddWithValue("@Status", 1);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} added an employee with ID: {details.Position.ToUpper()}{empIDCount + 1}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -171,6 +181,8 @@ namespace Dan_Junkshop_Management_System.Employees
         }
         public void UpdateEmployee(EmployeeDetails details)
         {
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
+
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("UPDATE Employees SET FirstName = @firstname, LastName = @lastname, MiddleName = @middlename, " +
@@ -193,6 +205,16 @@ namespace Dan_Junkshop_Management_System.Employees
                 ConnectionObjects.cmd.Parameters.AddWithValue("@status", 0);
             }
 
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} updated the details of an employee with ID: {PageObjects.employee.EmployeeID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -274,7 +296,7 @@ namespace Dan_Junkshop_Management_System.Employees
         }
         public bool EmployeeDetailsChecker(EmployeeDetails details)
         {
-            if(details.Position == "Driver")
+            if(details.Position == "Worker")
             {
                 if (details.Position == "" || details.FirstName == "" || details.LastName == "" ||
                 details.Gender == "" || details.Contact == "")

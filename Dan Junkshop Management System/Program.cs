@@ -1,6 +1,9 @@
-﻿using Dan_Junkshop_Management_System.Deliveries;
-using Dan_Junkshop_Management_System.Employees;
+﻿using Dan_Junkshop_Management_System.Employees;
 using Dan_Junkshop_Management_System.Inventories;
+using Dan_Junkshop_Management_System.Partner;
+using Dan_Junkshop_Management_System.PickupItems;
+using Dan_Junkshop_Management_System.Price_Configuration;
+using Dan_Junkshop_Management_System.Reports;
 using Dan_Junkshop_Management_System.Transactions;
 using System;
 using System.Collections.Generic;
@@ -33,8 +36,10 @@ namespace Dan_Junkshop_Management_System
         public static EmployeeCRUD EmployeeQuery = new EmployeeCRUD();
         public static SellableCRUD SellableQuery = new SellableCRUD();
         public static TransactionCRUD TransactionQuery = new TransactionCRUD();
-        public static DeliveryCRUD DeliveryQuery = new DeliveryCRUD();
-        public static VehicleCRUD VehicleQuery = new VehicleCRUD();
+        public static PickupCRUD PickupQuery = new PickupCRUD();
+        public static ItemClassCRUD ItemClassQuery = new ItemClassCRUD();
+        public static PartnerCRUD PartnerQuery = new PartnerCRUD();
+        public static DashboardCRUD DashboardQuery = new DashboardCRUD();
     }
 
     public class PageObjects
@@ -48,6 +53,7 @@ namespace Dan_Junkshop_Management_System
         public static Employee employee;
         public static Partners partners;
         public static Transaction transaction;
+        public static ToPickUp pickup;
 
         // Employee Objects
         public static frmEditEmployee editEmployee;
@@ -66,12 +72,8 @@ namespace Dan_Junkshop_Management_System
         // Price Config Objects
         public static frmAddItemPriceConfig addItemPrice;
 
-        // Delivers Objects
-        public static Delivery delivery;
-        public static frmDeliveryDetails deliveryDetails;
-
-        // Vehicle Objects
-        public static frmAddingVehicle addVehicle;
+        // Pickup Objects
+        public static frmAddPickUp addPickup;
 
     }
 

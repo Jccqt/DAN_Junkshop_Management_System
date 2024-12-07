@@ -297,9 +297,8 @@
             this.cbPosition.FormattingEnabled = true;
             this.cbPosition.Items.AddRange(new object[] {
             "Admin",
-            "Manager",
             "Cashier",
-            "Driver"});
+            "Worker"});
             this.cbPosition.Location = new System.Drawing.Point(459, 169);
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Size = new System.Drawing.Size(224, 28);

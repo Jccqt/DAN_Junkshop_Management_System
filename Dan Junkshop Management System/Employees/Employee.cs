@@ -42,6 +42,7 @@ namespace Dan_Junkshop_Management_System
                 }
             }
             Queries.EmployeeQuery.DisplayEmployee(1);
+           
             GC.Collect();
         }
 
@@ -56,19 +57,54 @@ namespace Dan_Junkshop_Management_System
         private void EditEmployee_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            empId = btn.Tag.ToString();
-            using(PageObjects.editEmployee = new frmEditEmployee())
+
+            if(PageObjects.homepage.EmpID == btn.Tag.ToString())
             {
-                using(Form form = new Form())
-                {
-                    FormAnimation.ShowFocus(form);
-                    PageObjects.editEmployee.Owner = form;
-                    PageObjects.editEmployee.ShowDialog();
-                    form.Close();
-                }
+                MessageBox.Show("You cannot edit your own details since you are currently logged in", "Employee Notification", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            Queries.EmployeeQuery.DisplayEmployee(1);
-            GC.Collect();
+            else
+            {
+                empId = btn.Tag.ToString();
+                using (PageObjects.editEmployee = new frmEditEmployee())
+                {
+                    using (Form form = new Form())
+                    {
+                        FormAnimation.ShowFocus(form);
+                        PageObjects.editEmployee.Owner = form;
+                        PageObjects.editEmployee.ShowDialog();
+                        form.Close();
+                    }
+                }
+                if (lblStatus.Text == "Active Employees")
+                {
+                    Queries.EmployeeQuery.DisplayEmployee(1);
+                }
+                else
+                {
+                    Queries.EmployeeQuery.DisplayEmployee(0);
+                }
+
+                GC.Collect();
+            }
+
+            
+        }
+
+        private void btnSwitchStatus_Click(object sender, EventArgs e)
+        {
+            if (!btnSwitchStatus.Checked)
+            {
+                lblStatus.Text = "Inactive Employees";
+                btnAddEmployee.Visible = false;
+                Queries.EmployeeQuery.DisplayEmployee(0);
+            }
+            else
+            {
+                lblStatus.Text = "Active Employees";
+                btnAddEmployee.Visible = true;
+                Queries.EmployeeQuery.DisplayEmployee(1);
+            }
         }
     }
 

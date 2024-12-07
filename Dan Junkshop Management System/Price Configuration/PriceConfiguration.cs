@@ -21,9 +21,7 @@ namespace Dan_Junkshop_Management_System
          
             this.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Top;
             this.Dock = DockStyle.Fill;
-         
-           
-
+ 
         }
 
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -50,23 +48,22 @@ namespace Dan_Junkshop_Management_System
         {
             ConnectionObjects.dataTable = new DataTable();
             ConnectionObjects.dataTable.Columns.Add("Class Name", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Plant Price", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Profit", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Buy price", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Required scale for delivery", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Plant Price\\kg", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Buy price\\kg", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Profit\\kg", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Edit", typeof(Image));
 
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT ItemClassName, ItemClassPlantPrice, " +
-                "ItemClassProfit, ItemClassRequiredScale FROM ItemClass", ConnectionObjects.conn);
+                "ItemClassProfit FROM ItemClass", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while(ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
-                    "PHP " + ConnectionObjects.reader.GetDecimal(1), "PHP " + ConnectionObjects.reader.GetDecimal(2), "PHP " + (ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2)),
-                    ConnectionObjects.reader.GetDecimal(3) + "kg", Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
+                   "PHP " + (ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2)), "PHP " + ConnectionObjects.reader.GetDecimal(1), "PHP " + ConnectionObjects.reader.GetDecimal(2), 
+                    Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
             }
 
             gridViewItemClass.DataSource = ConnectionObjects.dataTable;
@@ -77,5 +74,6 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Close();
             ConnectionObjects.dataTable = null;
         }
+
     }
 }

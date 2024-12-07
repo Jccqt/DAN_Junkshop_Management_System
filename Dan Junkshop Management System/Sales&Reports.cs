@@ -13,7 +13,8 @@ namespace Dan_Junkshop_Management_System
     public partial class Sales_Reports : UserControl
     {
        
-        
+        public DataGridView TopReportGrid { get { return gridTopReports; } }
+
         public Sales_Reports()
         {
             InitializeComponent();
@@ -29,10 +30,11 @@ namespace Dan_Junkshop_Management_System
 
         private void Sales_Reports_Load(object sender, EventArgs e)
         {
+            btnReport1_Click(sender, e);
             // will load report table based on the element that was clicked on dashboard
             switch (DashboardPanel.ReportLabel)
             {
-                case "Report1": btnReport1_Click(sender, e); break;
+                case "Report1": btnReport1_Click(sender, e);  break;
                 case "Report2": btnReport2_Click(sender, e); break;
                 case "Report3": btnReport3_Click(sender, e); break;
             }
@@ -41,6 +43,8 @@ namespace Dan_Junkshop_Management_System
 
         private void btnReport1_Click(object sender, EventArgs e)
         {
+            this.gridTopReports.DataSource = null;
+            Queries.DashboardQuery.DisplayTopSales();
             lblTable.Text = btnReport1.Text;
             btnReport2.BackColor = Color.White;
             btnReport2.ForeColor = Color.Black;
@@ -52,6 +56,8 @@ namespace Dan_Junkshop_Management_System
 
         private void btnReport2_Click(object sender, EventArgs e)
         {
+            this.gridTopReports.DataSource = null;
+            Queries.DashboardQuery.DisplayTopItems();
             lblTable.Text = btnReport2.Text;
             btnReport1.BackColor = Color.White;
             btnReport1.ForeColor = Color.Black;
@@ -63,6 +69,7 @@ namespace Dan_Junkshop_Management_System
 
         private void btnReport3_Click(object sender, EventArgs e)
         {
+            this.gridTopReports.DataSource = null;
             lblTable.Text = btnReport3.Text;
             btnReport2.BackColor = Color.White;
             btnReport2.ForeColor = Color.Black;

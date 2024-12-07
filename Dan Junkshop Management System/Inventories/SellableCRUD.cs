@@ -12,10 +12,10 @@ namespace Dan_Junkshop_Management_System.Inventories
 {
     public class SellableCRUD
     {
-        private decimal itemPrice;
+        private decimal itemPrice, totalOwnedQuantity;
         private bool detailsComplete, itemExist;
         private int idCount;
-        private string classID;
+        private string classID, sellableID;
         public void DisplayItems(int status, bool isSearching)
         {
             PageObjects.inventory.ItemNameArray.Clear();
@@ -192,6 +192,8 @@ namespace Dan_Junkshop_Management_System.Inventories
         }
         public void AddItem(SellableDetails details)
         {
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
+
             idCount += 1000;
 
             ConnectionObjects.conn.Open();
@@ -204,11 +206,23 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.cmd.Parameters.AddWithValue("@status", 1);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} added an sellable item with ID: SCRAP{idCount + 1}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
             ConnectionObjects.conn.Close();
         }
 
         public void UpdateItem(SellableDetails details)
         {
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
+
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("UPDATE SellableItems SET SellableName = @sellablename, ItemClassID = @itemclassid, " +
@@ -226,10 +240,64 @@ namespace Dan_Junkshop_Management_System.Inventories
             {
                 ConnectionObjects.cmd.Parameters.AddWithValue("@status", 0);
             }
+            ConnectionObjects.cmd.ExecuteNonQuery();
 
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} updated an sellable item with ID: {details.ItemID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
         }
+
+        public void GetItemList(ComboBox cbItems)
+        {
+            cbItems.Items.Clear();
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT SellableName FROM SellableItems WHERE Status = 1", ConnectionObjects.conn);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while (ConnectionObjects.reader.Read())
+            {
+                cbItems.Items.Add(ConnectionObjects.reader.GetString(0));
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+
+        public decimal GetTotalOwnedQuantity(string itemName)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT SellableQuantity FROM SellableItems WHERE SellableName = @sellablename", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", itemName);
+            totalOwnedQuantity = Convert.ToDecimal(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.conn.Close();
+
+            return totalOwnedQuantity;
+        }
+
+        public string GetSellableID(string itemName)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT SellableID FROM SellableItems WHERE SellableName = @sellablename", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@sellablename", itemName);
+            sellableID = ConnectionObjects.cmd.ExecuteScalar().ToString();
+
+            ConnectionObjects.conn.Close();
+
+            return sellableID;
+        }
+
     }
 }

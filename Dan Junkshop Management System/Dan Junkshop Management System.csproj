@@ -70,31 +70,13 @@
     <Compile Include="ActivityLog.Designer.cs">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deliveries\DeliveryCRUD.cs" />
     <Compile Include="Employees\EmployeeCRUD.cs" />
     <Compile Include="Employees\EmployeeDetails.cs" />
-    <Compile Include="Deliveries\frmAddingVehicle.cs">
+    <Compile Include="Partner\PartnerCRUD.cs" />
+    <Compile Include="PickupItems\frmAddPickUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Deliveries\frmAddingVehicle.Designer.cs">
-      <DependentUpon>frmAddingVehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Deliveries\frmDeliveryDetails.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Deliveries\frmDeliveryDetails.Designer.cs">
-      <DependentUpon>frmDeliveryDetails.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddNewDelivery.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddNewDelivery.Designer.cs">
-      <DependentUpon>frmAddNewDelivery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmAddPickUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAddPickUp.Designer.cs">
+    <Compile Include="PickupItems\frmAddPickUp.Designer.cs">
       <DependentUpon>frmAddPickUp.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDescription.cs">
@@ -103,18 +85,22 @@
     <Compile Include="frmDescription.Designer.cs">
       <DependentUpon>frmDescription.cs</DependentUpon>
     </Compile>
+    <Compile Include="PickupItems\PickupCRUD.cs" />
+    <Compile Include="PickupItems\PickupDetails.cs" />
     <Compile Include="Price Configuration\frmPriceHistory.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Price Configuration\frmPriceHistory.Designer.cs">
       <DependentUpon>frmPriceHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="ToPickUp.cs">
+    <Compile Include="PickupItems\ToPickUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ToPickUp.Designer.cs">
+    <Compile Include="PickupItems\ToPickUp.Designer.cs">
       <DependentUpon>ToPickUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Price Configuration\ItemClassCRUD.cs" />
+    <Compile Include="Reports\DashboardCRUD.cs" />
     <Compile Include="Transactions\frmTransactionOverview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,17 +133,11 @@
     <Compile Include="Components\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Reports\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Reports\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Deliveries\Delivery.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Deliveries\Delivery.Designer.cs">
-      <DependentUpon>Delivery.cs</DependentUpon>
     </Compile>
     <Compile Include="DeliveryMetals.cs">
       <SubType>UserControl</SubType>
@@ -283,21 +263,10 @@
     <Compile Include="Transactions\Orders.Designer.cs">
       <DependentUpon>Orders.cs</DependentUpon>
     </Compile>
-    <Compile Include="Deliveries\VehicleCRUD.cs" />
-    <Compile Include="Deliveries\VehicleDetails.cs" />
     <EmbeddedResource Include="ActivityLog.resx">
       <DependentUpon>ActivityLog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Deliveries\frmAddingVehicle.resx">
-      <DependentUpon>frmAddingVehicle.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Deliveries\frmDeliveryDetails.resx">
-      <DependentUpon>frmDeliveryDetails.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddNewDelivery.resx">
-      <DependentUpon>frmAddNewDelivery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAddPickUp.resx">
+    <EmbeddedResource Include="PickupItems\frmAddPickUp.resx">
       <DependentUpon>frmAddPickUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDescription.resx">
@@ -306,7 +275,7 @@
     <EmbeddedResource Include="Price Configuration\frmPriceHistory.resx">
       <DependentUpon>frmPriceHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ToPickUp.resx">
+    <EmbeddedResource Include="PickupItems\ToPickUp.resx">
       <DependentUpon>ToPickUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frmTransactionOverview.resx">
@@ -318,11 +287,8 @@
     <EmbeddedResource Include="Inventories\frmAddingSellableItems.resx">
       <DependentUpon>frmAddingSellableItems.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Reports\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Deliveries\Delivery.resx">
-      <DependentUpon>Delivery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeliveryMetals.resx">
       <DependentUpon>DeliveryMetals.cs</DependentUpon>
