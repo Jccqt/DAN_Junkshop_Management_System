@@ -14,6 +14,8 @@ namespace Dan_Junkshop_Management_System
     {
         public ToPickUp()
         {
+            this.Anchor = AnchorStyles.Right | AnchorStyles.Left | AnchorStyles.Top | AnchorStyles.Bottom;
+            this.Dock = DockStyle.Fill;
             InitializeComponent();
         }
 

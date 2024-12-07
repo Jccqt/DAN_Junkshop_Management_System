@@ -67,6 +67,7 @@
             // 
             // Report3Panel
             // 
+            this.Report3Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Report3Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Report3Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
             this.Report3Panel.BorderRadius = 30;
@@ -170,6 +171,7 @@
             // 
             // Report2Panel
             // 
+            this.Report2Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Report2Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Report2Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
             this.Report2Panel.BorderRadius = 30;
@@ -218,6 +220,7 @@
             // 
             // ChartPanel
             // 
+            this.ChartPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ChartPanel.BackColor = System.Drawing.Color.White;
             this.ChartPanel.BorderRadius = 30;
             this.ChartPanel.Color = System.Drawing.Color.BurlyWood;
@@ -257,6 +260,7 @@
             // 
             // Report1Panel
             // 
+            this.Report1Panel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Report1Panel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Report1Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.Report1Panel.BorderRadius = 30;
