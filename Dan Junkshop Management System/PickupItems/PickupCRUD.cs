@@ -18,7 +18,7 @@ namespace Dan_Junkshop_Management_System.PickupItems
 
             ConnectionObjects.dataTable.Columns.Add("ID", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Sellable Item Name", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("Partner", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Sold to", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Scale Quantity", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Total Amount", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Date", typeof(DateTime));
@@ -66,10 +66,11 @@ namespace Dan_Junkshop_Management_System.PickupItems
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO Pickups VALUES (@pickupid, @sellableid, @partnerid, " +
-                "@scale, @amount, @date)", ConnectionObjects.conn);
+                "@empid, @scale, @amount, @date)", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@pickupid", details.PickupID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@sellableid", details.SellableID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@partnerid", details.PartnerID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@scale", details.ScaleQuantity);
             ConnectionObjects.cmd.Parameters.AddWithValue("@amount", details.Amount);
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);

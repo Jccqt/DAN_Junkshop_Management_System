@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnExit = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new OrganizationProfile.CustomButton();
-            this.btnSave = new OrganizationProfile.CustomButton();
+            this.btnCancel = new OrganizationProfile.CustomButton();
+            this.btnUpdate = new OrganizationProfile.CustomButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -41,36 +40,23 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
-            this.txtMiddleInitial = new System.Windows.Forms.TextBox();
+            this.txtMiddleName = new System.Windows.Forms.TextBox();
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.roundPictureBox1 = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblStatus = new System.Windows.Forms.Label();
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(830, 41);
+            this.panel1.Size = new System.Drawing.Size(948, 41);
             this.panel1.TabIndex = 49;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.exit1;
-            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Location = new System.Drawing.Point(798, 9);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(20, 21);
-            this.btnExit.TabIndex = 1;
-            this.btnExit.TabStop = false;
             // 
             // label1
             // 
@@ -83,45 +69,46 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Edit Partners";
             // 
-            // btnClear
+            // btnCancel
             // 
-            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
-            this.btnClear.BorderColor = System.Drawing.Color.Transparent;
-            this.btnClear.BorderRadius = 20;
-            this.btnClear.BorderSize = 0;
-            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
-            this.btnClear.Location = new System.Drawing.Point(17, 279);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(143, 32);
-            this.btnClear.TabIndex = 62;
-            this.btnClear.Text = "Clear";
-            this.btnClear.TextColor = System.Drawing.Color.Transparent;
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
+            this.btnCancel.BorderColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 20;
+            this.btnCancel.BorderSize = 0;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Location = new System.Drawing.Point(17, 265);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(143, 32);
+            this.btnCancel.TabIndex = 62;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextColor = System.Drawing.Color.Transparent;
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnSave
+            // btnUpdate
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnSave.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
-            this.btnSave.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSave.BorderRadius = 20;
-            this.btnSave.BorderSize = 0;
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSave.Location = new System.Drawing.Point(17, 241);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(143, 32);
-            this.btnSave.TabIndex = 61;
-            this.btnSave.Text = "Save";
-            this.btnSave.TextColor = System.Drawing.Color.Transparent;
-            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
+            this.btnUpdate.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.BorderRadius = 20;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.Location = new System.Drawing.Point(17, 227);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(143, 32);
+            this.btnUpdate.TabIndex = 61;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.TextColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -150,8 +137,9 @@
             this.txtAddress.Location = new System.Drawing.Point(196, 227);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(596, 84);
+            this.txtAddress.Size = new System.Drawing.Size(697, 84);
             this.txtAddress.TabIndex = 58;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // txtContact
             // 
@@ -162,6 +150,7 @@
             this.txtContact.ShortcutsEnabled = false;
             this.txtContact.Size = new System.Drawing.Size(228, 29);
             this.txtContact.TabIndex = 57;
+            this.txtContact.TextChanged += new System.EventHandler(this.txtContact_TextChanged);
             // 
             // label4
             // 
@@ -179,9 +168,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(703, 72);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 16);
+            this.label3.Size = new System.Drawing.Size(91, 16);
             this.label3.TabIndex = 55;
-            this.label3.Text = "M.I";
+            this.label3.Text = "Middle Name";
             // 
             // label2
             // 
@@ -202,16 +191,18 @@
             this.txtLastName.ShortcutsEnabled = false;
             this.txtLastName.Size = new System.Drawing.Size(224, 29);
             this.txtLastName.TabIndex = 52;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
             // 
-            // txtMiddleInitial
+            // txtMiddleName
             // 
-            this.txtMiddleInitial.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMiddleInitial.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMiddleInitial.Location = new System.Drawing.Point(706, 92);
-            this.txtMiddleInitial.Name = "txtMiddleInitial";
-            this.txtMiddleInitial.ShortcutsEnabled = false;
-            this.txtMiddleInitial.Size = new System.Drawing.Size(86, 29);
-            this.txtMiddleInitial.TabIndex = 53;
+            this.txtMiddleName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMiddleName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMiddleName.Location = new System.Drawing.Point(706, 92);
+            this.txtMiddleName.Name = "txtMiddleName";
+            this.txtMiddleName.ShortcutsEnabled = false;
+            this.txtMiddleName.Size = new System.Drawing.Size(187, 29);
+            this.txtMiddleName.TabIndex = 53;
+            this.txtMiddleName.TextChanged += new System.EventHandler(this.txtMiddleName_TextChanged);
             // 
             // txtFirstName
             // 
@@ -222,6 +213,7 @@
             this.txtFirstName.ShortcutsEnabled = false;
             this.txtFirstName.Size = new System.Drawing.Size(228, 29);
             this.txtFirstName.TabIndex = 51;
+            this.txtFirstName.TextChanged += new System.EventHandler(this.txtFirstName_TextChanged);
             // 
             // roundPictureBox1
             // 
@@ -234,15 +226,15 @@
             this.roundPictureBox1.TabIndex = 50;
             this.roundPictureBox1.TabStop = false;
             // 
-            // label13
+            // lblStatus
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(455, 139);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 16);
-            this.label13.TabIndex = 71;
-            this.label13.Text = "Active";
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(455, 139);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(46, 16);
+            this.lblStatus.TabIndex = 71;
+            this.lblStatus.Text = "Active";
             // 
             // btnSwitchStatus
             // 
@@ -251,7 +243,7 @@
             this.btnSwitchStatus.Checked = true;
             this.btnSwitchStatus.CheckState = System.Windows.Forms.CheckState.Checked;
             this.btnSwitchStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSwitchStatus.Location = new System.Drawing.Point(454, 158);
+            this.btnSwitchStatus.Location = new System.Drawing.Point(458, 158);
             this.btnSwitchStatus.MinimumSize = new System.Drawing.Size(45, 22);
             this.btnSwitchStatus.Name = "btnSwitchStatus";
             this.btnSwitchStatus.OffBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
@@ -262,18 +254,19 @@
             this.btnSwitchStatus.TabIndex = 70;
             this.btnSwitchStatus.Text = "ActiveInactive";
             this.btnSwitchStatus.UseVisualStyleBackColor = false;
+            this.btnSwitchStatus.Click += new System.EventHandler(this.btnSwitchStatus_Click);
             // 
             // frmEditPartners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(830, 333);
-            this.Controls.Add(this.label13);
+            this.ClientSize = new System.Drawing.Size(906, 333);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.btnSwitchStatus);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnClear);
-            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtAddress);
@@ -282,15 +275,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLastName);
-            this.Controls.Add(this.txtMiddleInitial);
+            this.Controls.Add(this.txtMiddleName);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.roundPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditPartners";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditPartners";
+            this.Load += new System.EventHandler(this.frmEditPartners_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,10 +294,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnExit;
         private System.Windows.Forms.Label label1;
-        private OrganizationProfile.CustomButton btnClear;
-        private OrganizationProfile.CustomButton btnSave;
+        private OrganizationProfile.CustomButton btnCancel;
+        private OrganizationProfile.CustomButton btnUpdate;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddress;
@@ -312,10 +305,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtLastName;
-        private System.Windows.Forms.TextBox txtMiddleInitial;
+        private System.Windows.Forms.TextBox txtMiddleName;
         private System.Windows.Forms.TextBox txtFirstName;
         private Components.RoundPictureBox roundPictureBox1;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblStatus;
         private WindowsFormsApp2.CustomButton.activeAndInactive btnSwitchStatus;
     }
 }

@@ -68,9 +68,11 @@ namespace Dan_Junkshop_Management_System
 
         // Partner Objects
         public static frmAddingPartner addPartner;
+        public static frmEditPartners editPartner;
 
         // Price Config Objects
         public static frmAddItemPriceConfig addItemPrice;
+        public static frmEditPriceConfigItem editItemPrice;
 
         // Pickup Objects
         public static frmAddPickUp addPickup;

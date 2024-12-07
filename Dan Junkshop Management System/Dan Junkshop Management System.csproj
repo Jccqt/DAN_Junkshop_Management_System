@@ -87,12 +87,6 @@
     </Compile>
     <Compile Include="PickupItems\PickupCRUD.cs" />
     <Compile Include="PickupItems\PickupDetails.cs" />
-    <Compile Include="Price Configuration\frmPriceHistory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Price Configuration\frmPriceHistory.Designer.cs">
-      <DependentUpon>frmPriceHistory.cs</DependentUpon>
-    </Compile>
     <Compile Include="PickupItems\ToPickUp.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -271,9 +265,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDescription.resx">
       <DependentUpon>frmDescription.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Price Configuration\frmPriceHistory.resx">
-      <DependentUpon>frmPriceHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PickupItems\ToPickUp.resx">
       <DependentUpon>ToPickUp.cs</DependentUpon>

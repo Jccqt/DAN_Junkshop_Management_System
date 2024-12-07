@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
+            this.EditButton = new OrganizationProfile.CustomButton();
             this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.lblContact = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
-            this.customButton1 = new OrganizationProfile.CustomButton();
             this.panelBorder1.SuspendLayout();
             this.panelBorder2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EmployeePicture)).BeginInit();
@@ -47,7 +47,7 @@
             this.panelBorder1.BackColor = System.Drawing.Color.White;
             this.panelBorder1.BorderRadius = 50;
             this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder1.Controls.Add(this.customButton1);
+            this.panelBorder1.Controls.Add(this.EditButton);
             this.panelBorder1.Controls.Add(this.panelBorder2);
             this.panelBorder1.Controls.Add(this.lblFullName);
             this.panelBorder1.Controls.Add(this.EmployeePicture);
@@ -56,6 +56,24 @@
             this.panelBorder1.Name = "panelBorder1";
             this.panelBorder1.Size = new System.Drawing.Size(225, 272);
             this.panelBorder1.TabIndex = 1;
+            // 
+            // EditButton
+            // 
+            this.EditButton.BackColor = System.Drawing.Color.Transparent;
+            this.EditButton.BackgroundColor = System.Drawing.Color.Transparent;
+            this.EditButton.BorderColor = System.Drawing.Color.Transparent;
+            this.EditButton.BorderRadius = 27;
+            this.EditButton.BorderSize = 0;
+            this.EditButton.FlatAppearance.BorderSize = 0;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.ForeColor = System.Drawing.Color.Transparent;
+            this.EditButton.Image = global::Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit;
+            this.EditButton.Location = new System.Drawing.Point(184, 12);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(30, 29);
+            this.EditButton.TabIndex = 4;
+            this.EditButton.TextColor = System.Drawing.Color.Transparent;
+            this.EditButton.UseVisualStyleBackColor = false;
             // 
             // panelBorder2
             // 
@@ -133,24 +151,6 @@
             this.EmployeePicture.TabIndex = 0;
             this.EmployeePicture.TabStop = false;
             // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.Transparent;
-            this.customButton1.BackgroundColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 27;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit;
-            this.customButton1.Location = new System.Drawing.Point(184, 12);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(30, 29);
-            this.customButton1.TabIndex = 4;
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
-            // 
             // DisplayPartners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -178,6 +178,6 @@
         public System.Windows.Forms.Label lblContact;
         public System.Windows.Forms.Label lblFullName;
         private Components.RoundPictureBox EmployeePicture;
-        private OrganizationProfile.CustomButton customButton1;
+        public OrganizationProfile.CustomButton EditButton;
     }
 }

@@ -97,12 +97,39 @@ namespace Dan_Junkshop_Management_System
 
         private void btnRestoreOriginal_Click(object sender, EventArgs e)
         {
-            
+            DialogResult restoreDetails = MessageBox.Show("Are you sure you want to restore original details?",
+                "Sellable Item Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(restoreDetails == DialogResult.Yes)
+            {
+                txtSellableName.Text = ItemDetails.SellableName;
+                cbClass.Text = ItemDetails.ItemClassName;
+                txtScale.Text = ItemDetails.SellableQuantity.ToString();
+
+                if(ItemDetails.Status == "Active")
+                {
+                    lblStatus.Text = "Active";
+                    btnSwitchStatus.Checked = true;
+                }
+                else
+                {
+                    lblStatus.Text = "Inactive";
+                    btnSwitchStatus.Checked = false;
+                }
+            }
         }
 
         private void btnSwitchStatus_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtScale_Leave(object sender, EventArgs e)
+        {
+            if(txtScale.Text == "")
+            {
+                txtScale.Text = "0.00";
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -134,7 +161,7 @@ namespace Dan_Junkshop_Management_System
         }
         private void txtScale_TextChanged(object sender, EventArgs e)
         {
-            if (Convert.ToDecimal(txtScale.Text) == scaleQuantity)
+            if (txtScale.Text == scaleQuantity.ToString())
             {
                 scaleQuantityChanged = false;
             }

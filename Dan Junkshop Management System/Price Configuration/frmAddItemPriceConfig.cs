@@ -39,9 +39,11 @@ namespace Dan_Junkshop_Management_System
 
         private void btnAddItem_Click(object sender, EventArgs e)
         {
+            txtClassName.Text = txtClassName.Text.Trim();
+
             if(txtClassName.Text == "" || txtPlantPrice.Text == "" || txtCapital.Text == "")
             {
-                MessageBox.Show("Item class details is incomplete!" +
+                MessageBox.Show("Item class details was incomplete!" +
                     "\nPlease complete item class details to save", "Item Class Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 saveIndicator = false;
             }

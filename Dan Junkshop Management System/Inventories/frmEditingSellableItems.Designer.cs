@@ -109,6 +109,7 @@
             this.txtScale.TabIndex = 59;
             this.txtScale.TextChanged += new System.EventHandler(this.txtScale_TextChanged);
             this.txtScale.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScale_KeyPress);
+            this.txtScale.Leave += new System.EventHandler(this.txtScale_Leave);
             // 
             // txtSellableName
             // 

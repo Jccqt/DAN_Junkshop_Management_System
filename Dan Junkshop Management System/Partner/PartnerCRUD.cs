@@ -12,6 +12,35 @@ namespace Dan_Junkshop_Management_System.Partner
     {
         private string partnerID;
 
+        public void DisplayPartners(int status)
+        {
+            PageObjects.partners.PartnersFLP.Controls.Clear();
+
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT PartnerID, FirstName, MiddleName, LastName, Contact FROM Partners " +
+                "WHERE Status = @status", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@status", status);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            while(ConnectionObjects.reader.Read())
+            {
+                DisplayPartners displayPartners = new DisplayPartners();
+
+                displayPartners.EditButton.Tag = ConnectionObjects.reader.GetString(0);
+                displayPartners.lblFullName.Text = $"{ConnectionObjects.reader.GetString(1)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(3)}";
+                displayPartners.lblContact.Text = ConnectionObjects.reader.GetString(4);
+
+                PageObjects.partners.PartnersFLP.Controls.Add(displayPartners);
+
+                displayPartners.EditButton.Click += new EventHandler(PageObjects.partners.ClickEdit);
+            }
+
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+
+        }
+
         public void GetPartnerList(ComboBox cbPartner)
         {
             cbPartner.Items.Clear();

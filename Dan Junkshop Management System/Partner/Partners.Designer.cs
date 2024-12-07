@@ -31,7 +31,7 @@
             this.btnStatusSwitch = new WindowsFormsApp2.CustomButton.activeAndInactive();
             this.btnAddPartners = new OrganizationProfile.CustomButton();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.flpDisplayPartners = new System.Windows.Forms.FlowLayoutPanel();
+            this.PartnersPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // btnStatusSwitch
@@ -84,24 +84,25 @@
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Active partners";
             // 
-            // flpDisplayPartners
+            // PartnersPanel
             // 
-            this.flpDisplayPartners.Location = new System.Drawing.Point(13, 114);
-            this.flpDisplayPartners.Name = "flpDisplayPartners";
-            this.flpDisplayPartners.Size = new System.Drawing.Size(911, 592);
-            this.flpDisplayPartners.TabIndex = 7;
+            this.PartnersPanel.Location = new System.Drawing.Point(13, 114);
+            this.PartnersPanel.Name = "PartnersPanel";
+            this.PartnersPanel.Size = new System.Drawing.Size(911, 592);
+            this.PartnersPanel.TabIndex = 7;
             // 
             // Partners
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.flpDisplayPartners);
+            this.Controls.Add(this.PartnersPanel);
             this.Controls.Add(this.btnStatusSwitch);
             this.Controls.Add(this.btnAddPartners);
             this.Controls.Add(this.lblStatus);
             this.Name = "Partners";
             this.Size = new System.Drawing.Size(938, 736);
+            this.Load += new System.EventHandler(this.Partners_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +113,6 @@
         private WindowsFormsApp2.CustomButton.activeAndInactive btnStatusSwitch;
         private OrganizationProfile.CustomButton btnAddPartners;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.FlowLayoutPanel flpDisplayPartners;
+        private System.Windows.Forms.FlowLayoutPanel PartnersPanel;
     }
 }
