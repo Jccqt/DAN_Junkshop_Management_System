@@ -101,8 +101,8 @@
             this.customButton1.ForeColor = System.Drawing.Color.Transparent;
             this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.logWhite;
             this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(26, 647);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.customButton1.Location = new System.Drawing.Point(26, 643);
+            this.customButton1.Margin = new System.Windows.Forms.Padding(5);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(302, 62);
             this.customButton1.TabIndex = 29;
@@ -126,7 +126,7 @@
             this.btnLogout.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newLogOut;
             this.btnLogout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Location = new System.Drawing.Point(27, 737);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(5);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(302, 62);
             this.btnLogout.TabIndex = 28;
@@ -149,8 +149,8 @@
             this.btnDelivery.ForeColor = System.Drawing.Color.Transparent;
             this.btnDelivery.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
             this.btnDelivery.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelivery.Location = new System.Drawing.Point(29, 575);
-            this.btnDelivery.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDelivery.Location = new System.Drawing.Point(29, 571);
+            this.btnDelivery.Margin = new System.Windows.Forms.Padding(5);
             this.btnDelivery.Name = "btnDelivery";
             this.btnDelivery.Size = new System.Drawing.Size(302, 62);
             this.btnDelivery.TabIndex = 27;
@@ -173,8 +173,8 @@
             this.btnPartners.ForeColor = System.Drawing.Color.Transparent;
             this.btnPartners.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPartners;
             this.btnPartners.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPartners.Location = new System.Drawing.Point(28, 507);
-            this.btnPartners.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnPartners.Location = new System.Drawing.Point(28, 503);
+            this.btnPartners.Margin = new System.Windows.Forms.Padding(5);
             this.btnPartners.Name = "btnPartners";
             this.btnPartners.Size = new System.Drawing.Size(302, 62);
             this.btnPartners.TabIndex = 26;
@@ -197,8 +197,8 @@
             this.btnInventory.ForeColor = System.Drawing.Color.Transparent;
             this.btnInventory.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewInventory;
             this.btnInventory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventory.Location = new System.Drawing.Point(29, 439);
-            this.btnInventory.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnInventory.Location = new System.Drawing.Point(29, 435);
+            this.btnInventory.Margin = new System.Windows.Forms.Padding(5);
             this.btnInventory.Name = "btnInventory";
             this.btnInventory.Size = new System.Drawing.Size(302, 62);
             this.btnInventory.TabIndex = 25;
@@ -221,8 +221,8 @@
             this.btnPriceSetup.ForeColor = System.Drawing.Color.Transparent;
             this.btnPriceSetup.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewPriceSetup;
             this.btnPriceSetup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPriceSetup.Location = new System.Drawing.Point(29, 371);
-            this.btnPriceSetup.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnPriceSetup.Location = new System.Drawing.Point(29, 367);
+            this.btnPriceSetup.Margin = new System.Windows.Forms.Padding(5);
             this.btnPriceSetup.Name = "btnPriceSetup";
             this.btnPriceSetup.Size = new System.Drawing.Size(302, 62);
             this.btnPriceSetup.TabIndex = 24;
@@ -245,8 +245,8 @@
             this.btnTransaction.ForeColor = System.Drawing.Color.Transparent;
             this.btnTransaction.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewTransaction;
             this.btnTransaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTransaction.Location = new System.Drawing.Point(28, 303);
-            this.btnTransaction.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTransaction.Location = new System.Drawing.Point(28, 235);
+            this.btnTransaction.Margin = new System.Windows.Forms.Padding(5);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(302, 62);
             this.btnTransaction.TabIndex = 23;
@@ -269,8 +269,8 @@
             this.btnEmployee.ForeColor = System.Drawing.Color.Transparent;
             this.btnEmployee.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewEmployee;
             this.btnEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEmployee.Location = new System.Drawing.Point(28, 235);
-            this.btnEmployee.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnEmployee.Location = new System.Drawing.Point(28, 304);
+            this.btnEmployee.Margin = new System.Windows.Forms.Padding(5);
             this.btnEmployee.Name = "btnEmployee";
             this.btnEmployee.Size = new System.Drawing.Size(302, 62);
             this.btnEmployee.TabIndex = 22;
@@ -293,8 +293,8 @@
             this.btnSales.ForeColor = System.Drawing.Color.Transparent;
             this.btnSales.Image = global::Dan_Junkshop_Management_System.Properties.Resources.NewSales;
             this.btnSales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSales.Location = new System.Drawing.Point(28, 167);
-            this.btnSales.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnSales.Location = new System.Drawing.Point(28, 163);
+            this.btnSales.Margin = new System.Windows.Forms.Padding(5);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(302, 62);
             this.btnSales.TabIndex = 21;
@@ -317,8 +317,8 @@
             this.btnHome.ForeColor = System.Drawing.Color.Transparent;
             this.btnHome.Image = global::Dan_Junkshop_Management_System.Properties.Resources.newRedHome;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(28, 99);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnHome.Location = new System.Drawing.Point(28, 95);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(5);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(302, 62);
             this.btnHome.TabIndex = 20;
