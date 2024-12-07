@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Homepage));
             this.ContentsPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customButton1 = new OrganizationProfile.CustomButton();
+            this.btnActivityLog = new OrganizationProfile.CustomButton();
             this.btnLogout = new OrganizationProfile.CustomButton();
             this.btnDelivery = new OrganizationProfile.CustomButton();
             this.btnPartners = new OrganizationProfile.CustomButton();
@@ -71,7 +71,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.customButton1);
+            this.panel1.Controls.Add(this.btnActivityLog);
             this.panel1.Controls.Add(this.btnLogout);
             this.panel1.Controls.Add(this.btnDelivery);
             this.panel1.Controls.Add(this.btnPartners);
@@ -87,29 +87,29 @@
             this.panel1.Size = new System.Drawing.Size(328, 1025);
             this.panel1.TabIndex = 0;
             // 
-            // customButton1
+            // btnActivityLog
             // 
-            this.customButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            this.customButton1.BorderColor = System.Drawing.Color.Transparent;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customButton1.ForeColor = System.Drawing.Color.Transparent;
-            this.customButton1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.logWhite;
-            this.customButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.customButton1.Location = new System.Drawing.Point(26, 643);
-            this.customButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(302, 62);
-            this.customButton1.TabIndex = 29;
-            this.customButton1.Text = "Activity Log";
-            this.customButton1.TextColor = System.Drawing.Color.Transparent;
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            this.btnActivityLog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnActivityLog.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.btnActivityLog.BorderColor = System.Drawing.Color.Transparent;
+            this.btnActivityLog.BorderRadius = 40;
+            this.btnActivityLog.BorderSize = 0;
+            this.btnActivityLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActivityLog.FlatAppearance.BorderSize = 0;
+            this.btnActivityLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActivityLog.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActivityLog.ForeColor = System.Drawing.Color.Transparent;
+            this.btnActivityLog.Image = global::Dan_Junkshop_Management_System.Properties.Resources.logWhite;
+            this.btnActivityLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActivityLog.Location = new System.Drawing.Point(26, 643);
+            this.btnActivityLog.Margin = new System.Windows.Forms.Padding(5);
+            this.btnActivityLog.Name = "btnActivityLog";
+            this.btnActivityLog.Size = new System.Drawing.Size(302, 62);
+            this.btnActivityLog.TabIndex = 29;
+            this.btnActivityLog.Text = "Activity Log";
+            this.btnActivityLog.TextColor = System.Drawing.Color.Transparent;
+            this.btnActivityLog.UseVisualStyleBackColor = false;
+            this.btnActivityLog.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // btnLogout
             // 
@@ -453,15 +453,15 @@
         private System.Windows.Forms.PictureBox btnMinimize;
         private OrganizationProfile.CustomButton btnHome;
         private OrganizationProfile.CustomButton btnSales;
-        private OrganizationProfile.CustomButton btnEmployee;
         private OrganizationProfile.CustomButton btnTransaction;
-        private OrganizationProfile.CustomButton btnPriceSetup;
-        private OrganizationProfile.CustomButton btnInventory;
-        private OrganizationProfile.CustomButton btnPartners;
-        private OrganizationProfile.CustomButton btnDelivery;
         private OrganizationProfile.CustomButton btnLogout;
         private System.Windows.Forms.Label lblPageHeader;
-        private OrganizationProfile.CustomButton customButton1;
+        public OrganizationProfile.CustomButton btnEmployee;
+        public OrganizationProfile.CustomButton btnPriceSetup;
+        public OrganizationProfile.CustomButton btnInventory;
+        public OrganizationProfile.CustomButton btnPartners;
+        public OrganizationProfile.CustomButton btnDelivery;
+        public OrganizationProfile.CustomButton btnActivityLog;
     }
 }
 

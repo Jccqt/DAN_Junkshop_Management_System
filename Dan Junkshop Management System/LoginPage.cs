@@ -81,7 +81,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Open(); // will open sql connection
 
             // will select username, password from credentials table and status from employees table
-            ConnectionObjects.cmd = new SqlCommand("SELECT C.Username, C.Password, C.EmpID FROM " +
+            ConnectionObjects.cmd = new SqlCommand("SELECT C.Username, C.Password, C.EmpID, E.Position FROM " +
                 "Credentials C JOIN Employees E ON C.EmpID = E.EmpID WHERE Status = 1", ConnectionObjects.conn);
             SqlDataReader reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -98,6 +98,26 @@ namespace Dan_Junkshop_Management_System
                     PageObjects.homepage = new Homepage();
                     PageObjects.homepage.EmpID = reader.GetString(2);
                     this.ShowInTaskbar = false;
+
+                    if(reader.GetString(3) == "Cashier")
+                    {
+                        PageObjects.homepage.btnEmployee.Visible = false;
+                        PageObjects.homepage.btnInventory.Visible = false;
+                        PageObjects.homepage.btnPriceSetup.Visible = false;
+                        PageObjects.homepage.btnPartners.Visible = false;
+                        PageObjects.homepage.btnDelivery.Visible = false;
+                        PageObjects.homepage.btnActivityLog.Visible = false;
+                    }
+                    else
+                    {
+                        PageObjects.homepage.btnEmployee.Visible = true;
+                        PageObjects.homepage.btnInventory.Visible = true;
+                        PageObjects.homepage.btnPriceSetup.Visible = true;
+                        PageObjects.homepage.btnPartners.Visible = true;
+                        PageObjects.homepage.btnDelivery.Visible = true;
+                        PageObjects.homepage.btnActivityLog.Visible = true;
+                    }
+
                     PageObjects.homepage.Show();
                     txtPassword.Clear();
                     reader.Close();
