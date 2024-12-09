@@ -33,7 +33,7 @@
             this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblEmployeeID = new System.Windows.Forms.Label();
+            this.lblPartnerID = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
             this.lblFullName = new System.Windows.Forms.Label();
             this.EmployeePicture = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
@@ -82,7 +82,7 @@
             this.panelBorder2.Color = System.Drawing.Color.Transparent;
             this.panelBorder2.Controls.Add(this.label3);
             this.panelBorder2.Controls.Add(this.label1);
-            this.panelBorder2.Controls.Add(this.lblEmployeeID);
+            this.panelBorder2.Controls.Add(this.lblPartnerID);
             this.panelBorder2.Controls.Add(this.lblContact);
             this.panelBorder2.ForeColor = System.Drawing.Color.Black;
             this.panelBorder2.Location = new System.Drawing.Point(8, 157);
@@ -110,15 +110,15 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Partner ID:";
             // 
-            // lblEmployeeID
+            // lblPartnerID
             // 
-            this.lblEmployeeID.AutoSize = true;
-            this.lblEmployeeID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeID.Location = new System.Drawing.Point(86, 11);
-            this.lblEmployeeID.Name = "lblEmployeeID";
-            this.lblEmployeeID.Size = new System.Drawing.Size(29, 14);
-            this.lblEmployeeID.TabIndex = 4;
-            this.lblEmployeeID.Text = "<ID>";
+            this.lblPartnerID.AutoSize = true;
+            this.lblPartnerID.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartnerID.Location = new System.Drawing.Point(86, 11);
+            this.lblPartnerID.Name = "lblPartnerID";
+            this.lblPartnerID.Size = new System.Drawing.Size(29, 14);
+            this.lblPartnerID.TabIndex = 4;
+            this.lblPartnerID.Text = "<ID>";
             // 
             // lblContact
             // 
@@ -174,7 +174,7 @@
         private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Label lblEmployeeID;
+        public System.Windows.Forms.Label lblPartnerID;
         public System.Windows.Forms.Label lblContact;
         public System.Windows.Forms.Label lblFullName;
         private Components.RoundPictureBox EmployeePicture;

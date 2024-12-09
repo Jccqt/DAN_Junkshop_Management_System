@@ -37,7 +37,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddItem = new OrganizationProfile.CustomButton();
             this.gridViewInventory = new System.Windows.Forms.DataGridView();
-            this.cbType = new System.Windows.Forms.ComboBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnSwitchStatus = new WindowsFormsApp2.CustomButton.activeAndInactive();
@@ -157,23 +156,6 @@
             this.gridViewInventory.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellMouseEnter);
             this.gridViewInventory.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewInventory_CellMouseLeave);
             // 
-            // cbType
-            // 
-            this.cbType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbType.BackColor = System.Drawing.Color.White;
-            this.cbType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbType.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbType.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.cbType.ForeColor = System.Drawing.Color.Black;
-            this.cbType.FormattingEnabled = true;
-            this.cbType.ItemHeight = 25;
-            this.cbType.Items.AddRange(new object[] {
-            ""});
-            this.cbType.Location = new System.Drawing.Point(653, 44);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(154, 33);
-            this.cbType.TabIndex = 0;
-            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -259,7 +241,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
-            this.Controls.Add(this.cbType);
             this.Controls.Add(this.btnSwitchStatus);
             this.Controls.Add(this.gridViewInventory);
             this.Controls.Add(this.panel1);
@@ -286,7 +267,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView gridViewInventory;
         private WindowsFormsApp2.CustomButton.activeAndInactive btnSwitchStatus;
-        private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private OrganizationProfile.CustomButton btnAddItem;
         private System.Windows.Forms.Timer timer1;

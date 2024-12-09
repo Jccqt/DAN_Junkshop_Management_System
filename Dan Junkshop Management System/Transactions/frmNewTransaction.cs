@@ -157,5 +157,10 @@ namespace Dan_Junkshop_Management_System
         {
             this.Close();
         }
+
+        private void panelBorder2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

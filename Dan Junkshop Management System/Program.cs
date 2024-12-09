@@ -54,6 +54,7 @@ namespace Dan_Junkshop_Management_System
         public static Partners partners;
         public static Transaction transaction;
         public static ToPickUp pickup;
+        public static ActivityLog activityLog;
 
         // Employee Objects
         public static frmEditEmployee editEmployee;

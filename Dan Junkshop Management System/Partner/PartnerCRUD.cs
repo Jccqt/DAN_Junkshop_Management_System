@@ -28,6 +28,7 @@ namespace Dan_Junkshop_Management_System.Partner
                 DisplayPartners displayPartners = new DisplayPartners();
 
                 displayPartners.EditButton.Tag = ConnectionObjects.reader.GetString(0);
+                displayPartners.lblPartnerID.Text = ConnectionObjects.reader.GetString(0);
                 displayPartners.lblFullName.Text = $"{ConnectionObjects.reader.GetString(1)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(3)}";
                 displayPartners.lblContact.Text = ConnectionObjects.reader.GetString(4);
 

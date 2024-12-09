@@ -38,12 +38,9 @@ namespace Dan_Junkshop_Management_System
 
         private void Inventory_Load(object sender, EventArgs e)
         {
-            cbType.Text = "Available Sellable Items";
             btnAddItem.Visible = true;
 
             Queries.SellableQuery.DisplayItems(1, isSearching);
-            Queries.SellableQuery.GetItemClasses(cbType);
-            cbType.Text = "All";
         }
 
 

@@ -99,5 +99,16 @@ namespace Dan_Junkshop_Management_System
         {
             InputValidation.FloatingNumbersOnly(sender, e);
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            DialogResult cancelPickup = MessageBox.Show("Are you sure you want to cancel the pickup?", "Pickup Notification",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(cancelPickup == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

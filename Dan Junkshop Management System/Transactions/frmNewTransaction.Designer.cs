@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnExit = new System.Windows.Forms.PictureBox();
             this.headerLabel = new System.Windows.Forms.Label();
@@ -54,10 +54,6 @@
             this.lblDate = new System.Windows.Forms.Label();
             this.lblTransaction = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panelBorder1 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.panelBorder2 = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnProcessTransaction = new OrganizationProfile.CustomButton();
             this.btnCancelTransaction = new OrganizationProfile.CustomButton();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -75,9 +71,6 @@
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelBorder1.SuspendLayout();
-            this.panelBorder2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,23 +120,23 @@
             this.gridViewItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridViewItems.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gridViewItems.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 10.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridViewItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Black", 10.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewItems.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridViewItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridViewItems.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridViewItems.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridViewItems.EnableHeadersVisualStyles = false;
             this.gridViewItems.Location = new System.Drawing.Point(22, 249);
             this.gridViewItems.Name = "gridViewItems";
@@ -377,52 +370,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // panelBorder1
-            // 
-            this.panelBorder1.BackColor = System.Drawing.Color.Black;
-            this.panelBorder1.BorderRadius = 30;
-            this.panelBorder1.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder1.Controls.Add(this.panelBorder2);
-            this.panelBorder1.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder1.Location = new System.Drawing.Point(137, 163);
-            this.panelBorder1.Name = "panelBorder1";
-            this.panelBorder1.Size = new System.Drawing.Size(365, 40);
-            this.panelBorder1.TabIndex = 20;
-            // 
-            // panelBorder2
-            // 
-            this.panelBorder2.BackColor = System.Drawing.Color.White;
-            this.panelBorder2.BorderRadius = 30;
-            this.panelBorder2.Color = System.Drawing.Color.BurlyWood;
-            this.panelBorder2.Controls.Add(this.pictureBox2);
-            this.panelBorder2.Controls.Add(this.textBox1);
-            this.panelBorder2.ForeColor = System.Drawing.Color.Black;
-            this.panelBorder2.Location = new System.Drawing.Point(1, 0);
-            this.panelBorder2.Name = "panelBorder2";
-            this.panelBorder2.Size = new System.Drawing.Size(364, 39);
-            this.panelBorder2.TabIndex = 21;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Dan_Junkshop_Management_System.Properties.Resources.search;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(8, 8);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 24);
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.textBox1.Location = new System.Drawing.Point(39, 8);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 24);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "Search";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnProcessTransaction
             // 
             this.btnProcessTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -548,7 +495,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.OrdersPanel);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panelBorder1);
             this.Controls.Add(this.lblTransaction);
             this.Controls.Add(this.btnProcessTransaction);
             this.Controls.Add(this.btnCancelTransaction);
@@ -585,10 +531,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelBorder1.ResumeLayout(false);
-            this.panelBorder2.ResumeLayout(false);
-            this.panelBorder2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.ResumeLayout(false);
@@ -623,10 +565,6 @@
         private System.Windows.Forms.Label lblTransaction;
         private System.Windows.Forms.Label lblTotalCost;
         private System.Windows.Forms.Label lblTotalItems;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder1;
-        private WindowsFormsApp2.CustomButton.PanelBorder panelBorder2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label11;

@@ -35,8 +35,6 @@
             this.btnReport3 = new System.Windows.Forms.PictureBox();
             this.lblReport3Value = new System.Windows.Forms.Label();
             this.lblReport3 = new System.Windows.Forms.Label();
-            this.ActivityPanel = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.label5 = new System.Windows.Forms.Label();
             this.DatePanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label4 = new System.Windows.Forms.Label();
             this.Calendar = new System.Windows.Forms.MonthCalendar();
@@ -54,7 +52,6 @@
             this.lblReport1 = new System.Windows.Forms.Label();
             this.Report3Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).BeginInit();
-            this.ActivityPanel.SuspendLayout();
             this.DatePanel.SuspendLayout();
             this.Report2Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReport2)).BeginInit();
@@ -113,30 +110,6 @@
             this.lblReport3.Size = new System.Drawing.Size(154, 15);
             this.lblReport3.TabIndex = 0;
             this.lblReport3.Text = "Total pickup count today";
-            // 
-            // ActivityPanel
-            // 
-            this.ActivityPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ActivityPanel.BackColor = System.Drawing.Color.White;
-            this.ActivityPanel.BorderRadius = 30;
-            this.ActivityPanel.Color = System.Drawing.Color.BurlyWood;
-            this.ActivityPanel.Controls.Add(this.label5);
-            this.ActivityPanel.ForeColor = System.Drawing.Color.Black;
-            this.ActivityPanel.Location = new System.Drawing.Point(684, 278);
-            this.ActivityPanel.Name = "ActivityPanel";
-            this.ActivityPanel.Size = new System.Drawing.Size(243, 410);
-            this.ActivityPanel.TabIndex = 8;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(45, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(155, 23);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Latest Activities";
             // 
             // DatePanel
             // 
@@ -245,7 +218,7 @@
             this.ChartReport.Text = " ";
             title1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
-            title1.Text = "Top items";
+            title1.Text = "Top items from Transactions";
             this.ChartReport.Titles.Add(title1);
             // 
             // pictureBox4
@@ -326,7 +299,6 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.Report3Panel);
-            this.Controls.Add(this.ActivityPanel);
             this.Controls.Add(this.DatePanel);
             this.Controls.Add(this.Report2Panel);
             this.Controls.Add(this.ChartPanel);
@@ -337,8 +309,6 @@
             this.Report3Panel.ResumeLayout(false);
             this.Report3Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).EndInit();
-            this.ActivityPanel.ResumeLayout(false);
-            this.ActivityPanel.PerformLayout();
             this.DatePanel.ResumeLayout(false);
             this.DatePanel.PerformLayout();
             this.Report2Panel.ResumeLayout(false);
@@ -360,11 +330,9 @@
         private System.Windows.Forms.Label lblReport1;
         private System.Windows.Forms.Label lblReport1Value;
         private System.Windows.Forms.Label label2;
-        private WindowsFormsApp2.CustomButton.PanelBorder ActivityPanel;
         private WindowsFormsApp2.CustomButton.PanelBorder DatePanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MonthCalendar Calendar;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnReport1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private WindowsFormsApp2.CustomButton.PanelBorder Report2Panel;

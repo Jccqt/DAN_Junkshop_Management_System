@@ -111,6 +111,16 @@ namespace Dan_Junkshop_Management_System
             ContentsPanel.Controls.Add(PageObjects.transaction); // will display transaction page
         }
 
+        private void btnActivityLog_Click(object sender, EventArgs e)
+        {
+            lblPageHeader.Text = "Activity Log";
+            resetIconColor();
+            selectedButton = lblPageHeader.Text;
+
+            ContentsPanel.Controls.Clear();
+            ContentsPanel.Controls.Add(PageObjects.activityLog);
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             DialogResult logoutDialog = MessageBox.Show("Are you sure you want to logout?" +
@@ -192,6 +202,11 @@ namespace Dan_Junkshop_Management_System
                     PageObjects.pickup.Dispose();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.NewDelivery;
                     break;
+                case "Activity Log":
+                    PageObjects.activityLog.Dispose();
+                    btnActivityLog.Image = Dan_Junkshop_Management_System.Properties.Resources.logWhite;
+                    break;
+
             }
 
             // will set the homepage icons color to red
@@ -229,14 +244,12 @@ namespace Dan_Junkshop_Management_System
                     PageObjects.pickup = new ToPickUp();
                     btnDelivery.Image = Dan_Junkshop_Management_System.Properties.Resources.newRedDelive;
                     break;
+                case "Activity Log":
+                    PageObjects.activityLog = new ActivityLog();
+                    btnActivityLog.Image = Dan_Junkshop_Management_System.Properties.Resources.logRed;
+                    break;
             }
 
-
-        }
-
-        private void customButton1_Click(object sender, EventArgs e)
-        {
-         
         }
     }
   

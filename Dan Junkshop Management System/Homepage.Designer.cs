@@ -109,7 +109,7 @@
             this.btnActivityLog.Text = "Activity Log";
             this.btnActivityLog.TextColor = System.Drawing.Color.Transparent;
             this.btnActivityLog.UseVisualStyleBackColor = false;
-            this.btnActivityLog.Click += new System.EventHandler(this.customButton1_Click);
+            this.btnActivityLog.Click += new System.EventHandler(this.btnActivityLog_Click);
             // 
             // btnLogout
             // 
