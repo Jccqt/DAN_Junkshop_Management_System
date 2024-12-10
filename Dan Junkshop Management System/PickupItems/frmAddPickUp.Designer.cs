@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@
             this.btnCancel = new OrganizationProfile.CustomButton();
             this.btnProcess = new OrganizationProfile.CustomButton();
             this.lblPickupID = new System.Windows.Forms.Label();
-            this.lblDate = new System.Windows.Forms.Label();
             this.cbSellableItems = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTotalOwned = new System.Windows.Forms.TextBox();
@@ -74,16 +72,6 @@
             this.label1.Size = new System.Drawing.Size(208, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Add Item to Pick-up";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 19);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Date:";
             // 
             // label3
             // 
@@ -232,16 +220,6 @@
             this.lblPickupID.TabIndex = 40;
             this.lblPickupID.Text = "< PickupID >";
             // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            this.lblDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.Location = new System.Drawing.Point(136, 100);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.Size = new System.Drawing.Size(70, 19);
-            this.lblDate.TabIndex = 41;
-            this.lblDate.Text = "< Date >";
-            // 
             // cbSellableItems
             // 
             this.cbSellableItems.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -316,7 +294,6 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTotalOwned);
             this.Controls.Add(this.cbSellableItems);
-            this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblPickupID);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnProcess);
@@ -329,7 +306,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddPickUp";
@@ -347,7 +323,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -360,7 +335,6 @@
         private OrganizationProfile.CustomButton btnCancel;
         private OrganizationProfile.CustomButton btnProcess;
         private System.Windows.Forms.Label lblPickupID;
-        private System.Windows.Forms.Label lblDate;
         private System.Windows.Forms.ComboBox cbSellableItems;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtTotalOwned;

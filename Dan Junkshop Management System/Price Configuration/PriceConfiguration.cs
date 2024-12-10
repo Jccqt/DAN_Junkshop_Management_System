@@ -67,7 +67,8 @@ namespace Dan_Junkshop_Management_System
             while(ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0),
-                   "PHP " + (ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2)), "PHP " + ConnectionObjects.reader.GetDecimal(1), "PHP " + ConnectionObjects.reader.GetDecimal(2), 
+                    "PHP " + ConnectionObjects.reader.GetDecimal(1), 
+                   "PHP " + (ConnectionObjects.reader.GetDecimal(1) - ConnectionObjects.reader.GetDecimal(2)), "PHP " + ConnectionObjects.reader.GetDecimal(2), 
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
 
                 itemClassList.Add(ConnectionObjects.reader.GetString(0));

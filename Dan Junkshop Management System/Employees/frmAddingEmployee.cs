@@ -107,7 +107,11 @@ namespace Dan_Junkshop_Management_System
                     Queries.EmployeeQuery.GetEmpIDCount(details); // will get the current employee ID count
                     Queries.EmployeeQuery.GetAccIDCount(); // will get the current acc ID count
                     Queries.EmployeeQuery.AddEmployee(details);
-                    Queries.EmployeeQuery.AddAccount(details);
+
+                    if(details.Position != "Worker")
+                    {
+                        Queries.EmployeeQuery.AddAccount(details);
+                    }
 
                     ClearDetails();
                     details = null;
@@ -142,6 +146,24 @@ namespace Dan_Junkshop_Management_System
         private void txtMiddleInitial_KeyPress(object sender, KeyPressEventArgs e)
         {
             InputValidation.CharactersOnly(sender, e);
+        }
+
+        private void cbPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbPosition.Text == "Worker")
+            {
+                lblUserNotAvailable.Visible = true;
+                lblPassNotAvailable.Visible = true;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
+            }
+            else
+            {
+                lblUserNotAvailable.Visible = false;
+                lblPassNotAvailable.Visible = false;
+                txtUsername.Enabled = true;
+                txtPassword.Enabled = true;
+            }
         }
 
         private void txtAge_KeyPress(object sender, KeyPressEventArgs e)

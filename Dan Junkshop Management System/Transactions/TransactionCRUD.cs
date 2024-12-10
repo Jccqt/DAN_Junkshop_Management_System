@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Collections;
+using System.Drawing.Drawing2D;
 
 namespace Dan_Junkshop_Management_System.Transactions
 {
@@ -184,7 +185,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable = new DataTable();
 
             ConnectionObjects.dataTable.Columns.Add("TransactID", typeof(string));
-            ConnectionObjects.dataTable.Columns.Add("EmpID", typeof(string));
+            ConnectionObjects.dataTable.Columns.Add("Process by", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Type", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
             ConnectionObjects.dataTable.Columns.Add("Amount", typeof(string));
@@ -192,22 +193,25 @@ namespace Dan_Junkshop_Management_System.Transactions
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT TransactionID, EmpID, TransactionType, TransactionQuantity, TransactionAmount, " +
-                "TransactionDate FROM Transactions", ConnectionObjects.conn);
+            ConnectionObjects.cmd = new SqlCommand("SELECT T.TransactionID, E.FirstName, E.MiddleName, E.LastName, T.TransactionType, T.TransactionQuantity, T.TransactionAmount, " +
+                "T.TransactionDate FROM Transactions T JOIN Employees E ON T.EmpID = E.EmpID", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while(ConnectionObjects.reader.Read())
             {
-                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1),
-                    ConnectionObjects.reader.GetString(2), ConnectionObjects.reader.GetInt32(3), "PHP " + ConnectionObjects.reader.GetDecimal(4),
-                    ConnectionObjects.reader.GetValue(5));
+                ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), $"{ConnectionObjects.reader.GetString(1)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(3)}", 
+                    ConnectionObjects.reader.GetString(4), ConnectionObjects.reader.GetInt32(5), ConnectionObjects.reader.GetDecimal(6), ConnectionObjects.reader.GetValue(7));
             }
 
             PageObjects.transaction.TransactionGrid.DataSource = ConnectionObjects.dataTable;
-
+ 
             PageObjects.transaction.TransactionGrid.AutoResizeColumn(0, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.transaction.TransactionGrid.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            PageObjects.transaction.TransactionGrid.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            PageObjects.transaction.TransactionGrid.Columns[5].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            PageObjects.transaction.TransactionGrid.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
-            foreach(DataGridViewColumn column in PageObjects.transaction.TransactionGrid.Columns)
+            foreach (DataGridViewColumn column in PageObjects.transaction.TransactionGrid.Columns)
             {
                 column.SortMode = DataGridViewColumnSortMode.NotSortable;
             }

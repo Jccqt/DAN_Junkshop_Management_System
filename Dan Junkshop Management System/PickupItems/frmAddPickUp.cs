@@ -21,7 +21,6 @@ namespace Dan_Junkshop_Management_System
         private void frmAddPickUp_Load(object sender, EventArgs e)
         {
             lblPickupID.Text = $"PICKUP{Queries.PickupQuery.GetPickupIDCount()}";
-            lblDate.Text = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
             Queries.SellableQuery.GetItemList(cbSellableItems);
             Queries.PartnerQuery.GetPartnerList(cbPartners);
         }
@@ -89,6 +88,7 @@ namespace Dan_Junkshop_Management_System
 
                 Queries.PickupQuery.ProcessPickup(pickupDetails);
                 Queries.PickupQuery.DeductToInventory(pickupDetails);
+
 
                 MessageBox.Show("Pickup has been successfully processed!", "Pickup Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();

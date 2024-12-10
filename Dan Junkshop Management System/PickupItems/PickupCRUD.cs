@@ -76,6 +76,16 @@ namespace Dan_Junkshop_Management_System.PickupItems
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Process a pick-up with ID: {details.PickupID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
             ConnectionObjects.conn.Close();
         }
 

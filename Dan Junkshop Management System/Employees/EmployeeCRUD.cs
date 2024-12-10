@@ -43,22 +43,6 @@ namespace Dan_Junkshop_Management_System.Employees
             GC.Collect();
         }
 
-        public void GetDriverList(ComboBox cbEmployees)
-        {
-            ConnectionObjects.conn.Open();
-
-            ConnectionObjects.cmd = new SqlCommand("SELECT FirstName, LastName, MiddleName FROM Employees WHERE Position = 'Driver'", ConnectionObjects.conn);
-            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-            while (ConnectionObjects.reader.Read())
-            {
-                cbEmployees.Items.Add($"{ConnectionObjects.reader.GetString(0)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(1)}");
-            }
-
-            ConnectionObjects.reader.Close();
-            ConnectionObjects.conn.Close();
-        }
-
         public bool EmployeeExistChecker(EmployeeDetails details)
         {
             nameExist = false;
@@ -88,26 +72,29 @@ namespace Dan_Junkshop_Management_System.Employees
 
         public bool AccExistChecker(EmployeeDetails details)
         {
-            ConnectionObjects.conn.Open();
-
-            // will check if the username was already existing
-            ConnectionObjects.cmd = new SqlCommand("SELECT Username FROM Credentials WHERE Username = @username", ConnectionObjects.conn);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
-            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
-
-            if (ConnectionObjects.reader.Read())
+            if(details.Username != "")
             {
-                MessageBox.Show("Employee username was already existing! Please use another username", "Employee Notification",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                accExist = true;
-            }
-            else
-            {
-                accExist = false;
-            }
+                ConnectionObjects.conn.Open();
 
-            ConnectionObjects.reader.Close();
-            ConnectionObjects.conn.Close();
+                // will check if the username was already existing
+                ConnectionObjects.cmd = new SqlCommand("SELECT Username FROM Credentials WHERE Username = @username", ConnectionObjects.conn);
+                ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
+                ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+                if (ConnectionObjects.reader.Read())
+                {
+                    MessageBox.Show("Employee username was already existing! Please use another username", "Employee Notification",
+                        MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    accExist = true;
+                }
+                else
+                {
+                    accExist = false;
+                }
+
+                ConnectionObjects.reader.Close();
+                ConnectionObjects.conn.Close();
+            }
             return accExist;
         }
 
@@ -158,7 +145,7 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} added an employee with ID: {details.Position.ToUpper()}{empIDCount + 1}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Added an employee details with ID: {details.Position.ToUpper()}{empIDCount + 1}.");
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
@@ -167,6 +154,7 @@ namespace Dan_Junkshop_Management_System.Employees
         public void AddAccount(EmployeeDetails details)
         {
             accIDCount += 1000;
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
 
             ConnectionObjects.conn.Open();
 
@@ -175,6 +163,16 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
             ConnectionObjects.cmd.Parameters.AddWithValue("@password", details.Password);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empID", $"{details.Position.ToUpper()}{empIDCount + 1}");
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Added an account details with ID: USER{accIDCount + 1}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -213,7 +211,7 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} updated the details of an employee with ID: {PageObjects.employee.EmployeeID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Updated the details of an employee with ID: {PageObjects.employee.EmployeeID}.");
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
@@ -221,12 +219,24 @@ namespace Dan_Junkshop_Management_System.Employees
         }
         public void UpdateCredential(EmployeeDetails details)
         {
+            var localDate = DateTime.Now.ToString("yyyy-MM-dd hh:mm tt");
+
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("UPDATE Credentials SET Username = @username, Password = @password WHERE EmpID = @empid", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
             ConnectionObjects.cmd.Parameters.AddWithValue("@username", details.Username);
             ConnectionObjects.cmd.Parameters.AddWithValue("@password", details.Password);
+            ConnectionObjects.cmd.ExecuteNonQuery();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(ActivityID) FROM ActivityLogs", ConnectionObjects.conn);
+            int actCount = 1000 + Convert.ToInt32(ConnectionObjects.cmd.ExecuteScalar());
+
+            ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Updated the details of an account of employee with ID: {PageObjects.employee.EmployeeID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
             ConnectionObjects.conn.Close();
@@ -236,8 +246,7 @@ namespace Dan_Junkshop_Management_System.Employees
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT E.FirstName, E.LastName, E.MiddleName, E.Gender, E.Birthdate, " +
-                "E.Contact, E.Address, E.Status, C.Username, C.Password, E.Position FROM Employees E JOIN Credentials C " +
-                "ON E.EmpID = C.EmpID WHERE E.EmpID = @empid", ConnectionObjects.conn);
+                "E.Contact, E.Address, E.Status, E.Position FROM Employees E WHERE E.EmpID = @empid", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
@@ -259,14 +268,30 @@ namespace Dan_Junkshop_Management_System.Employees
                 {
                     details.Status = "Inactive";
                 }
-                details.Username = ConnectionObjects.reader.GetString(8);
-                details.Password = ConnectionObjects.reader.GetString(9);
-                details.Position = ConnectionObjects.reader.GetString(10);
+                details.Position = ConnectionObjects.reader.GetString(8);
             }
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
         }
+
+        public void GetCredentials(EmployeeDetails details)
+        {
+            ConnectionObjects.conn.Open();
+
+            ConnectionObjects.cmd = new SqlCommand("SELECT Username, Password FROM Credentials WHERE EmpID = @empid", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.employee.EmployeeID);
+            ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
+
+            if(ConnectionObjects.reader.Read())
+            {
+                details.Username = ConnectionObjects.reader.GetString(0);
+                details.Password = ConnectionObjects.reader.GetString(1);
+            }
+            ConnectionObjects.reader.Close();
+            ConnectionObjects.conn.Close();
+        }
+        
         public DateTime GetLegalAge()
         {
             var localDate = DateTime.Now.ToString("yyyy-MM-dd");

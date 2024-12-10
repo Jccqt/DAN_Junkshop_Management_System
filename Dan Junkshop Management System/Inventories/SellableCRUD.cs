@@ -212,7 +212,7 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} added an sellable item with ID: SCRAP{idCount + 1}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Added an sellable item with ID: SCRAP{idCount + 1}.");
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 
@@ -248,7 +248,7 @@ namespace Dan_Junkshop_Management_System.Inventories
             ConnectionObjects.cmd = new SqlCommand("INSERT INTO ActivityLogs VALUES(@activityid, @empid, @description, @date)", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@activityid", $"ACT{actCount + 1}");
             ConnectionObjects.cmd.Parameters.AddWithValue("@empid", PageObjects.homepage.EmpID);
-            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"{PageObjects.homepage.EmpID} updated an sellable item with ID: {details.ItemID}.");
+            ConnectionObjects.cmd.Parameters.AddWithValue("@description", $"Updated an sellable item with ID: {details.ItemID}.");
             ConnectionObjects.cmd.Parameters.AddWithValue("@date", localDate);
             ConnectionObjects.cmd.ExecuteNonQuery();
 

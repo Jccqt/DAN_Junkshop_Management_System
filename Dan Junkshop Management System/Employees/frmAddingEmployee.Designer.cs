@@ -53,10 +53,13 @@
             this.cbPosition = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnClear = new OrganizationProfile.CustomButton();
             this.btnSave = new OrganizationProfile.CustomButton();
             this.roundPictureBox1 = new Dan_Junkshop_Management_System.Components.RoundPictureBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblUserNotAvailable = new System.Windows.Forms.Label();
+            this.lblPassNotAvailable = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
@@ -303,6 +306,7 @@
             this.cbPosition.Name = "cbPosition";
             this.cbPosition.Size = new System.Drawing.Size(224, 28);
             this.cbPosition.TabIndex = 5;
+            this.cbPosition.SelectedIndexChanged += new System.EventHandler(this.cbPosition_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -325,6 +329,26 @@
             this.txtAge.Size = new System.Drawing.Size(86, 29);
             this.txtAge.TabIndex = 39;
             this.txtAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAge_KeyPress);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(35, 212);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(125, 32);
+            this.label13.TabIndex = 41;
+            this.label13.Text = "Details that has (*) \r\nis required to fill.";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(14, 310);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(168, 48);
+            this.label14.TabIndex = 42;
+            this.label14.Text = "Username and Password \r\nare not available for\r\n worker position.";
             // 
             // btnClear
             // 
@@ -379,15 +403,29 @@
             this.roundPictureBox1.TabIndex = 35;
             this.roundPictureBox1.TabStop = false;
             // 
-            // label13
+            // lblUserNotAvailable
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(35, 212);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 32);
-            this.label13.TabIndex = 41;
-            this.label13.Text = "Details that has (*) \r\nis required to fill.";
+            this.lblUserNotAvailable.AutoSize = true;
+            this.lblUserNotAvailable.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNotAvailable.ForeColor = System.Drawing.Color.Red;
+            this.lblUserNotAvailable.Location = new System.Drawing.Point(276, 310);
+            this.lblUserNotAvailable.Name = "lblUserNotAvailable";
+            this.lblUserNotAvailable.Size = new System.Drawing.Size(96, 16);
+            this.lblUserNotAvailable.TabIndex = 43;
+            this.lblUserNotAvailable.Text = "Not Available!";
+            this.lblUserNotAvailable.Visible = false;
+            // 
+            // lblPassNotAvailable
+            // 
+            this.lblPassNotAvailable.AutoSize = true;
+            this.lblPassNotAvailable.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassNotAvailable.ForeColor = System.Drawing.Color.Red;
+            this.lblPassNotAvailable.Location = new System.Drawing.Point(535, 310);
+            this.lblPassNotAvailable.Name = "lblPassNotAvailable";
+            this.lblPassNotAvailable.Size = new System.Drawing.Size(96, 16);
+            this.lblPassNotAvailable.TabIndex = 44;
+            this.lblPassNotAvailable.Text = "Not Available!";
+            this.lblPassNotAvailable.Visible = false;
             // 
             // frmAddingEmployee
             // 
@@ -396,6 +434,9 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(232)))), ((int)(((byte)(240)))));
             this.ClientSize = new System.Drawing.Size(927, 504);
+            this.Controls.Add(this.lblPassNotAvailable);
+            this.Controls.Add(this.lblUserNotAvailable);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtAge);
@@ -470,5 +511,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtAge;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblUserNotAvailable;
+        private System.Windows.Forms.Label lblPassNotAvailable;
     }
 }

@@ -37,8 +37,23 @@ namespace Dan_Junkshop_Management_System
             birthdate = EmployeeDetails.Birthdate;
             contact = EmployeeDetails.Contact;
             address = EmployeeDetails.Address;
-            username = EmployeeDetails.Username;
-            password = EmployeeDetails.Password;
+            
+            if(EmployeeDetails.Position != "Worker")
+            {
+                Queries.EmployeeQuery.GetCredentials(EmployeeDetails);
+
+                username = EmployeeDetails.Username;
+                password = EmployeeDetails.Password;
+                txtUsername.Text = EmployeeDetails.Username;
+                txtPassword.Text = EmployeeDetails.Password;
+            }
+            else
+            {
+                lblUserNotAvailable.Visible = true;
+                lblPassNotAvailable.Visible = true;
+                txtUsername.Enabled = false;
+                txtPassword.Enabled = false;
+            }
 
 
             cbPosition.Text = EmployeeDetails.Position;
@@ -49,8 +64,7 @@ namespace Dan_Junkshop_Management_System
             dtBirthDate.Value = Convert.ToDateTime(EmployeeDetails.Birthdate);
             txtContact.Text = EmployeeDetails.Contact;
             txtAddress.Text = EmployeeDetails.Address;
-            txtUsername.Text = EmployeeDetails.Username;
-            txtPassword.Text = EmployeeDetails.Password;
+            
 
             if (EmployeeDetails.Status == "Active")
             {
