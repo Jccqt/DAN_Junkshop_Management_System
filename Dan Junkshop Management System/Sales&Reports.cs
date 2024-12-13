@@ -88,5 +88,13 @@ namespace Dan_Junkshop_Management_System
         {
 
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            using(MonthlyTopSales topSalesPage = new MonthlyTopSales())
+            {
+                topSalesPage.ShowDialog();
+            }
+        }
     }
 }
