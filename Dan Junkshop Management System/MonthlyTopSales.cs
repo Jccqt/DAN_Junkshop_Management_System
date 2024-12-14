@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WebForms;
 
 namespace Dan_Junkshop_Management_System
 {
@@ -26,19 +27,25 @@ namespace Dan_Junkshop_Management_System
                 "JOIN SellableItems S ON P.SellableID = S.SellableID GROUP BY S.SellableID ,S.SellableName", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
+            List <Sales> sales = new List<Sales>();
+
             while(ConnectionObjects.reader.Read())
             {
-                this.salesBindingSource.DataSource = new Sales()
+                sales.Add(new Sales
                 {
                     sellableid = ConnectionObjects.reader.GetString(0),
                     sellablename = ConnectionObjects.reader.GetString(1),
                     quantity = ConnectionObjects.reader.GetDecimal(2),
-                    amount = ConnectionObjects.reader.GetDecimal(3),
-                };
-
+                    amount = ConnectionObjects.reader.GetDecimal(3)
+                });
             }
+         
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
+
+            this.reportViewer1.LocalReport.ReportPath = @"C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\RLDC Reports\TopSales.rdlc";
+
+            this.salesBindingSource.DataSource = sales;
 
             this.reportViewer1.RefreshReport();
         }

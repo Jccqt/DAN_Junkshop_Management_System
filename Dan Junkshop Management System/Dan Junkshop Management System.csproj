@@ -305,7 +305,9 @@
     <EmbeddedResource Include="PickupItems\ToPickUp.resx">
       <DependentUpon>ToPickUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RLDC Reports\TopSales.rdlc" />
+    <EmbeddedResource Include="RLDC Reports\TopSales.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transactions\frmTransactionOverview.resx">
       <DependentUpon>frmTransactionOverview.cs</DependentUpon>
     </EmbeddedResource>
