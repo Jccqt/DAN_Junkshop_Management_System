@@ -30,10 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.salesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.salesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // salesBindingSource
+            // 
+            this.salesBindingSource.DataSource = typeof(Dan_Junkshop_Management_System.Sales);
             // 
             // reportViewer1
             // 
@@ -41,24 +45,18 @@
             reportDataSource1.Value = this.salesBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Dan_Junkshop_Management_System.RLDC Reports.TopSales.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(197, 35);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.reportViewer1.Location = new System.Drawing.Point(53, 28);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(736, 452);
+            this.reportViewer1.Size = new System.Drawing.Size(719, 368);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // salesBindingSource
-            // 
-            this.salesBindingSource.DataSource = typeof(Dan_Junkshop_Management_System.Sales);
             // 
             // MonthlyTopSales
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MonthlyTopSales";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MonthlyTopSales";

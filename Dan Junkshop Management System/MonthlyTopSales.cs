@@ -22,10 +22,11 @@ namespace Dan_Junkshop_Management_System
 
         private void MonthlyTopSales_Load(object sender, EventArgs e)
         {
+       
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableID, S.SellableName, SUM(P.Scale), SUM(P.Amount) FROM Pickups P " +
-                "JOIN SellableItems S ON P.SellableID = S.SellableID GROUP BY S.SellableID ,S.SellableName", ConnectionObjects.conn);
+                "JOIN SellableItems S ON P.SellableID = S.SellableID WHERE MONTH(P.date) = 12 GROUP BY S.SellableID ,S.SellableName", ConnectionObjects.conn);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             List <Sales> sales = new List<Sales>();
@@ -45,7 +46,6 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Close();
 
             this.reportViewer1.LocalReport.ReportPath = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + @"\RLDC Reports\TopSales.rdlc";
-
             this.salesBindingSource.DataSource = sales;
 
             this.reportViewer1.RefreshReport();

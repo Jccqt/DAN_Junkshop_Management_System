@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Dan_Junkshop_Management_System
 {
@@ -30,6 +32,7 @@ namespace Dan_Junkshop_Management_System
 
         private void Sales_Reports_Load(object sender, EventArgs e)
         {
+            cbMonths.Text = "December";
             btnReport1_Click(sender, e);
             // will load report table based on the element that was clicked on dashboard
             switch (DashboardPanel.ReportLabel)
@@ -43,8 +46,9 @@ namespace Dan_Junkshop_Management_System
 
         private void btnReport1_Click(object sender, EventArgs e)
         {
+            int monthNumerical = DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month;
             this.gridTopReports.DataSource = null;
-            Queries.DashboardQuery.DisplayTopSales();
+            Queries.DashboardQuery.DisplayTopSales(monthNumerical);
             lblTable.Text = btnReport1.Text;
             btnReport2.BackColor = Color.White;
             btnReport2.ForeColor = Color.Black;
@@ -95,6 +99,11 @@ namespace Dan_Junkshop_Management_System
             {
                 topSalesPage.ShowDialog();
             }
+        }
+
+        private void cbMonths_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btnReport1_Click(sender, e);
         }
     }
 }

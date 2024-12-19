@@ -68,7 +68,7 @@ namespace Dan_Junkshop_Management_System.Reports
             ConnectionObjects.conn.Close();
         }
 
-        public void DisplayTopSales()
+        public void DisplayTopSales(int month)
         {
             ConnectionObjects.dataTable = new DataTable();
 
@@ -81,7 +81,8 @@ namespace Dan_Junkshop_Management_System.Reports
 
             ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableID, S.SellableName, I.ItemClassName, SUM(P.Amount) FROM Pickups P JOIN " +
                 "SellableItems S ON P.SellableID = S.SellableID " +
-                "JOIN ItemClass I ON S.ItemClassID = I.ItemClassID GROUP BY S.SellableID, S.SellableName, I.ItemClassName", ConnectionObjects.conn);
+                "JOIN ItemClass I ON S.ItemClassID = I.ItemClassID WHERE MONTH(P.date) = @month GROUP BY S.SellableID, S.SellableName, I.ItemClassName", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@month", month);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while (ConnectionObjects.reader.Read())
