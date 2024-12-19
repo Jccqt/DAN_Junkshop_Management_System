@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using Microsoft.Reporting.WebForms;
+using System.IO;
 
 namespace Dan_Junkshop_Management_System
 {
@@ -43,7 +44,7 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();
 
-            this.reportViewer1.LocalReport.ReportPath = @"C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\RLDC Reports\TopSales.rdlc";
+            this.reportViewer1.LocalReport.ReportPath = Directory.GetParent(System.Environment.CurrentDirectory).Parent.FullName + @"\RLDC Reports\TopSales.rdlc";
 
             this.salesBindingSource.DataSource = sales;
 

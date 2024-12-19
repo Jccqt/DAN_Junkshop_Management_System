@@ -1,21 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\",
+  "WorkspaceRootPath": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|c:\\users\\nicol\\onedrive\\documents\\jc\\dan_junkshop_management_system\\dan junkshop management system\\rldc reports\\topsales.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|e:\\jc\\app dev junkshop system\\dan_junkshop_management_system\\dan junkshop management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|e:\\jc\\app dev junkshop system\\dan_junkshop_management_system\\dan junkshop management system\\rldc reports\\topsales.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\rldc reports\\topsales.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\dan junkshop management system\\rldc reports\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\monthlytopsales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\dan junkshop management system\\rldc reports\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB22AA49-2EF6-4F16-9162-38FECAFA0BE1}|Dan Junkshop Management System\\Dan Junkshop Management System.csproj|solutionrelative:dan junkshop management system\\rldc reports\\sales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -38,11 +42,24 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
+              "RelativeDocumentMoniker": "Dan Junkshop Management System\\Program.cs",
+              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\Program.cs",
+              "RelativeToolTip": "Dan Junkshop Management System\\Program.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T10:49:00.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "TopSales.rdlc [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc",
+              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc [Design]",
+              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc [Design]",
               "RelativeToolTip": "Dan Junkshop Management System\\RLDC Reports\\TopSales.rdlc [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
               "WhenOpened": "2024-12-14T14:02:33.594Z",
@@ -50,24 +67,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MonthlyTopSales.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
+              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\MonthlyTopSales.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
+              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\MonthlyTopSales.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAAC0AAAC3AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAC4AAACGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:52:40.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "MonthlyTopSales.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
+              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\MonthlyTopSales.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs [Design]",
+              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\MonthlyTopSales.cs [Design]",
               "RelativeToolTip": "Dan Junkshop Management System\\MonthlyTopSales.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-12T02:51:49.731Z",
@@ -75,11 +92,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Sales.cs",
-              "DocumentMoniker": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
+              "DocumentMoniker": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
               "RelativeDocumentMoniker": "Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
-              "ToolTip": "C:\\Users\\Nicol\\OneDrive\\Documents\\Jc\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
+              "ToolTip": "E:\\Jc\\App Dev Junkshop System\\DAN_Junkshop_Management_System\\Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
               "RelativeToolTip": "Dan Junkshop Management System\\RLDC Reports\\Sales.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -94,10 +111,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{007a3a6b-b5b2-454d-a2bd-cf929f989be2}"
             },
             {
               "$type": "Bookmark",
