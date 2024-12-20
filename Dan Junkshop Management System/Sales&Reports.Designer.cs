@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnReport1 = new System.Windows.Forms.Button();
             this.btnReport2 = new System.Windows.Forms.Button();
             this.btnReport3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbMonths = new System.Windows.Forms.ComboBox();
             this.lblTable = new System.Windows.Forms.Label();
             this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
             this.gridTopReports = new System.Windows.Forms.DataGridView();
             this.btnGenerate = new System.Windows.Forms.Button();
-            this.cbMonths = new System.Windows.Forms.ComboBox();
+            this.cbYear = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridTopReports)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.cbYear);
             this.panel1.Controls.Add(this.cbMonths);
             this.panel1.Controls.Add(this.lblTable);
             this.panel1.Location = new System.Drawing.Point(31, 154);
@@ -98,13 +100,37 @@
             this.panel1.Size = new System.Drawing.Size(873, 34);
             this.panel1.TabIndex = 3;
             // 
+            // cbMonths
+            // 
+            this.cbMonths.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMonths.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMonths.FormattingEnabled = true;
+            this.cbMonths.Items.AddRange(new object[] {
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"});
+            this.cbMonths.Location = new System.Drawing.Point(428, 5);
+            this.cbMonths.Name = "cbMonths";
+            this.cbMonths.Size = new System.Drawing.Size(161, 24);
+            this.cbMonths.TabIndex = 1;
+            this.cbMonths.SelectedIndexChanged += new System.EventHandler(this.cbMonths_SelectedIndexChanged);
+            // 
             // lblTable
             // 
             this.lblTable.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTable.AutoSize = true;
             this.lblTable.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTable.ForeColor = System.Drawing.Color.White;
-            this.lblTable.Location = new System.Drawing.Point(287, 8);
+            this.lblTable.Location = new System.Drawing.Point(235, 8);
             this.lblTable.Name = "lblTable";
             this.lblTable.Size = new System.Drawing.Size(187, 18);
             this.lblTable.TabIndex = 0;
@@ -123,23 +149,23 @@
             this.gridTopReports.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTopReports.BackgroundColor = System.Drawing.Color.White;
             this.gridTopReports.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridTopReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(43)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridTopReports.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.gridTopReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 14.25F);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridTopReports.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 14.25F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridTopReports.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridTopReports.EnableHeadersVisualStyles = false;
             this.gridTopReports.Location = new System.Drawing.Point(31, 188);
             this.gridTopReports.Margin = new System.Windows.Forms.Padding(2);
@@ -164,12 +190,12 @@
             this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
             // 
-            // cbMonths
+            // cbYear
             // 
-            this.cbMonths.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMonths.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMonths.FormattingEnabled = true;
-            this.cbMonths.Items.AddRange(new object[] {
+            this.cbYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbYear.FormattingEnabled = true;
+            this.cbYear.Items.AddRange(new object[] {
             "January",
             "February",
             "March",
@@ -182,11 +208,11 @@
             "October",
             "November",
             "December"});
-            this.cbMonths.Location = new System.Drawing.Point(480, 5);
-            this.cbMonths.Name = "cbMonths";
-            this.cbMonths.Size = new System.Drawing.Size(161, 24);
-            this.cbMonths.TabIndex = 1;
-            this.cbMonths.SelectedIndexChanged += new System.EventHandler(this.cbMonths_SelectedIndexChanged);
+            this.cbYear.Location = new System.Drawing.Point(595, 5);
+            this.cbYear.Name = "cbYear";
+            this.cbYear.Size = new System.Drawing.Size(117, 24);
+            this.cbYear.TabIndex = 2;
+            this.cbYear.SelectedIndexChanged += new System.EventHandler(this.cbYear_SelectedIndexChanged);
             // 
             // Sales_Reports
             // 
@@ -220,5 +246,6 @@
         private System.Windows.Forms.DataGridView gridTopReports;
         private System.Windows.Forms.Button btnGenerate;
         private System.Windows.Forms.ComboBox cbMonths;
+        private System.Windows.Forms.ComboBox cbYear;
     }
 }

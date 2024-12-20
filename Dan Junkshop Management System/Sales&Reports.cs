@@ -16,6 +16,8 @@ namespace Dan_Junkshop_Management_System
     {
        
         public DataGridView TopReportGrid { get { return gridTopReports; } }
+        public int GetMonth { get { return DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month; } }
+        public int GetYear { get { return Convert.ToInt32(cbYear.Text); } }
 
         public Sales_Reports()
         {
@@ -32,7 +34,17 @@ namespace Dan_Junkshop_Management_System
 
         private void Sales_Reports_Load(object sender, EventArgs e)
         {
+            cbYear.Items.Clear();
+            int currentYear = DateTime.Now.Year;
+
+            for(int i = 2000; i <= currentYear; i++)
+            {
+                cbYear.Items.Add(i);
+            }
+
             cbMonths.Text = "December";
+            cbYear.Text = currentYear.ToString();
+
             btnReport1_Click(sender, e);
             // will load report table based on the element that was clicked on dashboard
             switch (DashboardPanel.ReportLabel)
@@ -48,7 +60,7 @@ namespace Dan_Junkshop_Management_System
         {
             int monthNumerical = DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month;
             this.gridTopReports.DataSource = null;
-            Queries.DashboardQuery.DisplayTopSales(monthNumerical);
+            Queries.DashboardQuery.DisplayTopSales(monthNumerical, Convert.ToInt32(cbYear.Text));
             lblTable.Text = btnReport1.Text;
             btnReport2.BackColor = Color.White;
             btnReport2.ForeColor = Color.Black;
@@ -103,7 +115,18 @@ namespace Dan_Junkshop_Management_System
 
         private void cbMonths_SelectedIndexChanged(object sender, EventArgs e)
         {
-            btnReport1_Click(sender, e);
+            if (cbYear.Text != "")
+            {
+                btnReport1_Click(sender, e);
+            }
+        }
+
+        private void cbYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbYear.Text != "")
+            {
+                btnReport1_Click(sender, e);
+            }
         }
     }
 }
