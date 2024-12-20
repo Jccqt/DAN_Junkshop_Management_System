@@ -53,7 +53,7 @@ namespace Dan_Junkshop_Management_System.Inventories
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), ConnectionObjects.reader.GetString(1), ConnectionObjects.reader.GetString(2),
                     "PHP " + ConnectionObjects.reader.GetDecimal(3) , ConnectionObjects.reader.GetValue(4) + "kg",
-                    "PHP " + (ConnectionObjects.reader.GetDecimal(3) * ConnectionObjects.reader.GetDecimal(4)),
+                    "PHP " + (ConnectionObjects.reader.GetDecimal(3) * ConnectionObjects.reader.GetDecimal(4)).ToString("0.00"),
                     Dan_Junkshop_Management_System.Properties.Resources.icon_park_solid_edit);
 
                 PageObjects.inventory.ItemNameArray.Add(ConnectionObjects.reader.GetString(1));
@@ -61,6 +61,8 @@ namespace Dan_Junkshop_Management_System.Inventories
             }
 
             PageObjects.inventory.InventoryGrid.DataSource = ConnectionObjects.dataTable;
+
+            PageObjects.inventory.InventoryGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             PageObjects.inventory.InventoryGrid.AutoResizeColumn(6, DataGridViewAutoSizeColumnMode.AllCells);
 

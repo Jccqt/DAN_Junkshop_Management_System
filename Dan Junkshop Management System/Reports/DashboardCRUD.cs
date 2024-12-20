@@ -35,7 +35,7 @@ namespace Dan_Junkshop_Management_System.Reports
             ConnectionObjects.conn.Open();
 
             ConnectionObjects.cmd = new SqlCommand("SELECT COUNT(TransactionID) FROM Transactions WHERE DAY(TransactionDate) = @day AND " +
-                "MONTH(TransactionDate) = @month AND YEAR(TransactionDate) = @year GROUP BY TransactionDate", ConnectionObjects.conn);
+                "MONTH(TransactionDate) = @month AND YEAR(TransactionDate) = @year", ConnectionObjects.conn);
             ConnectionObjects.cmd.Parameters.AddWithValue("@day", day);
             ConnectionObjects.cmd.Parameters.AddWithValue("@month", month);
             ConnectionObjects.cmd.Parameters.AddWithValue("@year", year);

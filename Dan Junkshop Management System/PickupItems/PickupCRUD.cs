@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Dan_Junkshop_Management_System.PickupItems
 {
@@ -38,6 +39,8 @@ namespace Dan_Junkshop_Management_System.PickupItems
             }
 
             PageObjects.pickup.PickupGrid.DataSource = ConnectionObjects.dataTable;
+
+            PageObjects.pickup.PickupGrid.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             ConnectionObjects.reader.Close();
             ConnectionObjects.conn.Close();

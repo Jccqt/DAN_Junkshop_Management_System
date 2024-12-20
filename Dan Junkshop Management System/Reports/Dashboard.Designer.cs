@@ -32,34 +32,28 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.Report3Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.btnReport3 = new System.Windows.Forms.PictureBox();
             this.lblReport3Value = new System.Windows.Forms.Label();
             this.lblReport3 = new System.Windows.Forms.Label();
             this.DatePanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.label4 = new System.Windows.Forms.Label();
             this.Calendar = new System.Windows.Forms.MonthCalendar();
             this.Report2Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.btnReport2 = new System.Windows.Forms.PictureBox();
             this.lblReport2Value = new System.Windows.Forms.Label();
             this.lblReport2 = new System.Windows.Forms.Label();
             this.ChartPanel = new WindowsFormsApp2.CustomButton.PanelBorder();
             this.ChartReport = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.Report1Panel = new WindowsFormsApp2.CustomButton.PanelBorder();
-            this.btnReport1 = new System.Windows.Forms.PictureBox();
             this.lblReport1Value = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblReport1 = new System.Windows.Forms.Label();
             this.Report3Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).BeginInit();
             this.DatePanel.SuspendLayout();
             this.Report2Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport2)).BeginInit();
             this.ChartPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ChartReport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Report1Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport1)).BeginInit();
             this.SuspendLayout();
             // 
             // Report3Panel
@@ -69,7 +63,6 @@
             this.Report3Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(102)))), ((int)(((byte)(110)))));
             this.Report3Panel.BorderRadius = 30;
             this.Report3Panel.Color = System.Drawing.Color.BurlyWood;
-            this.Report3Panel.Controls.Add(this.btnReport3);
             this.Report3Panel.Controls.Add(this.lblReport3Value);
             this.Report3Panel.Controls.Add(this.lblReport3);
             this.Report3Panel.ForeColor = System.Drawing.Color.Black;
@@ -77,17 +70,6 @@
             this.Report3Panel.Name = "Report3Panel";
             this.Report3Panel.Size = new System.Drawing.Size(212, 134);
             this.Report3Panel.TabIndex = 7;
-            // 
-            // btnReport3
-            // 
-            this.btnReport3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport3.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.btnReport3.Location = new System.Drawing.Point(178, 3);
-            this.btnReport3.Name = "btnReport3";
-            this.btnReport3.Size = new System.Drawing.Size(23, 23);
-            this.btnReport3.TabIndex = 3;
-            this.btnReport3.TabStop = false;
-            this.btnReport3.Click += new System.EventHandler(this.btnReport3_Click);
             // 
             // lblReport3Value
             // 
@@ -149,7 +131,6 @@
             this.Report2Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(83)))), ((int)(((byte)(87)))));
             this.Report2Panel.BorderRadius = 30;
             this.Report2Panel.Color = System.Drawing.Color.BurlyWood;
-            this.Report2Panel.Controls.Add(this.btnReport2);
             this.Report2Panel.Controls.Add(this.lblReport2Value);
             this.Report2Panel.Controls.Add(this.lblReport2);
             this.Report2Panel.ForeColor = System.Drawing.Color.Black;
@@ -157,17 +138,6 @@
             this.Report2Panel.Name = "Report2Panel";
             this.Report2Panel.Size = new System.Drawing.Size(212, 134);
             this.Report2Panel.TabIndex = 7;
-            // 
-            // btnReport2
-            // 
-            this.btnReport2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport2.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.btnReport2.Location = new System.Drawing.Point(178, 3);
-            this.btnReport2.Name = "btnReport2";
-            this.btnReport2.Size = new System.Drawing.Size(23, 23);
-            this.btnReport2.TabIndex = 3;
-            this.btnReport2.TabStop = false;
-            this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
             // lblReport2Value
             // 
@@ -218,7 +188,7 @@
             this.ChartReport.Text = " ";
             title1.Font = new System.Drawing.Font("Arial Black", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
-            title1.Text = "Top items from Transactions";
+            title1.Text = "Top selling items today";
             this.ChartReport.Titles.Add(title1);
             // 
             // pictureBox4
@@ -238,7 +208,6 @@
             this.Report1Panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(135)))), ((int)(((byte)(118)))));
             this.Report1Panel.BorderRadius = 30;
             this.Report1Panel.Color = System.Drawing.Color.BurlyWood;
-            this.Report1Panel.Controls.Add(this.btnReport1);
             this.Report1Panel.Controls.Add(this.lblReport1Value);
             this.Report1Panel.Controls.Add(this.label2);
             this.Report1Panel.Controls.Add(this.lblReport1);
@@ -247,17 +216,6 @@
             this.Report1Panel.Name = "Report1Panel";
             this.Report1Panel.Size = new System.Drawing.Size(212, 134);
             this.Report1Panel.TabIndex = 6;
-            // 
-            // btnReport1
-            // 
-            this.btnReport1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReport1.Image = global::Dan_Junkshop_Management_System.Properties.Resources.expand11;
-            this.btnReport1.Location = new System.Drawing.Point(178, 4);
-            this.btnReport1.Name = "btnReport1";
-            this.btnReport1.Size = new System.Drawing.Size(23, 23);
-            this.btnReport1.TabIndex = 3;
-            this.btnReport1.TabStop = false;
-            this.btnReport1.Click += new System.EventHandler(this.btnReport1_Click);
             // 
             // lblReport1Value
             // 
@@ -308,18 +266,15 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.Report3Panel.ResumeLayout(false);
             this.Report3Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport3)).EndInit();
             this.DatePanel.ResumeLayout(false);
             this.DatePanel.PerformLayout();
             this.Report2Panel.ResumeLayout(false);
             this.Report2Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport2)).EndInit();
             this.ChartPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ChartReport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Report1Panel.ResumeLayout(false);
             this.Report1Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnReport1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,14 +288,11 @@
         private WindowsFormsApp2.CustomButton.PanelBorder DatePanel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.MonthCalendar Calendar;
-        private System.Windows.Forms.PictureBox btnReport1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private WindowsFormsApp2.CustomButton.PanelBorder Report2Panel;
-        private System.Windows.Forms.PictureBox btnReport2;
         private System.Windows.Forms.Label lblReport2Value;
         private System.Windows.Forms.Label lblReport2;
         private WindowsFormsApp2.CustomButton.PanelBorder Report3Panel;
-        private System.Windows.Forms.PictureBox btnReport3;
         private System.Windows.Forms.Label lblReport3Value;
         private System.Windows.Forms.Label lblReport3;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChartReport;

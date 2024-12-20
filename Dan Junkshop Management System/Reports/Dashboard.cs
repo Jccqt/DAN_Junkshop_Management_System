@@ -26,19 +26,24 @@ namespace Dan_Junkshop_Management_System
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            int day = DateTime.Now.Day;
+            int month = DateTime.Now.Month;
+            int year = DateTime.Now.Year;
+
             ConnectionObjects.conn.Close();
             Calendar.MaxSelectionCount = 1;
             
-
             Series series = ChartReport.Series.Add("Sales");
             series.ChartType = SeriesChartType.Pie;
             series.Font = new System.Drawing.Font("Arial", 8);
 
             ConnectionObjects.conn.Open();
 
-            ConnectionObjects.cmd = new SqlCommand("SELECT I.ItemName, SUM(I.Subtotal) FROM Transactions " +
-                "CROSS APPLY OPENJSON(Items, '$.Items') " +
-                "WITH (ItemName NVARCHAR(50) '$.Item', Subtotal decimal(18,2) '$.Subtotal') I GROUP BY Itemname", ConnectionObjects.conn);
+            ConnectionObjects.cmd = new SqlCommand("SELECT S.SellableName, P.Amount FROM Pickups P JOIN SellableItems S " +
+                "ON P.SellableID = S.SellableID WHERE DAY(P.date) = @day AND MONTH(P.date) = @month AND YEAR(P.date) = @year GROUP BY S.SellableName, P.Amount", ConnectionObjects.conn);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@day", day);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@month", month);
+            ConnectionObjects.cmd.Parameters.AddWithValue("@year", year);
             ConnectionObjects.reader = ConnectionObjects.cmd.ExecuteReader();
 
             while (ConnectionObjects.reader.Read())
@@ -50,40 +55,13 @@ namespace Dan_Junkshop_Management_System
             ConnectionObjects.conn.Close();
 
             // will display total sales today
-            Queries.DashboardQuery.DisplayReport1(Calendar.SelectionRange.Start.Day,
-                Calendar.SelectionRange.Start.Month, Calendar.SelectionRange.Start.Year,
-                lblReport1Value);
+            Queries.DashboardQuery.DisplayReport1(day, month, year, lblReport1Value);
 
             // will display total transaction count today
-            Queries.DashboardQuery.DisplayReport2(Calendar.SelectionRange.Start.Day,
-                Calendar.SelectionRange.Start.Month, Calendar.SelectionRange.Start.Year,
-                lblReport2Value);
+            Queries.DashboardQuery.DisplayReport2(day, month, year, lblReport2Value);
 
             // will display total pickup count today
-            Queries.DashboardQuery.DisplayReport3(Calendar.SelectionRange.Start.Day,
-                Calendar.SelectionRange.Start.Month, Calendar.SelectionRange.Start.Year,
-                lblReport3Value);
-        }
-
-        private void btnReport1_Click(object sender, EventArgs e)
-        {
-            ReportLabel = "Report1";
-            PageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
-            ReportLabel = "";
-        }
-
-        private void btnReport2_Click(object sender, EventArgs e)
-        {
-            ReportLabel = "Report2";
-            PageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
-            ReportLabel = "";
-        }
-
-        private void btnReport3_Click(object sender, EventArgs e)
-        {
-            ReportLabel = "Report3";
-            PageObjects.homepage.btnSales_Click(sender, e); // will display sales and reports page
-            ReportLabel = "";
+            Queries.DashboardQuery.DisplayReport3(day, month, year, lblReport3Value);
         }
 
     }

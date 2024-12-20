@@ -45,66 +45,11 @@ namespace Dan_Junkshop_Management_System
             cbMonths.Text = "December";
             cbYear.Text = currentYear.ToString();
 
-            btnReport1_Click(sender, e);
-            // will load report table based on the element that was clicked on dashboard
-            switch (DashboardPanel.ReportLabel)
-            {
-                case "Report1": btnReport1_Click(sender, e);  break;
-                case "Report2": btnReport2_Click(sender, e); break;
-                case "Report3": btnReport3_Click(sender, e); break;
-            }
-        }
-
-
-        private void btnReport1_Click(object sender, EventArgs e)
-        {
             int monthNumerical = DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month;
             this.gridTopReports.DataSource = null;
             Queries.DashboardQuery.DisplayTopSales(monthNumerical, Convert.ToInt32(cbYear.Text));
-            lblTable.Text = btnReport1.Text;
-            btnReport2.BackColor = Color.White;
-            btnReport2.ForeColor = Color.Black;
-            btnReport3.BackColor = Color.White;
-            btnReport3.ForeColor = Color.Black;
-            btnReport1.ForeColor = Color.White;
-            btnReport1.BackColor = Color.FromArgb(255, 83, 87);
-        }
-
-        private void btnReport2_Click(object sender, EventArgs e)
-        {
-            this.gridTopReports.DataSource = null;
-            Queries.DashboardQuery.DisplayTopItems();
-            lblTable.Text = btnReport2.Text;
-            btnReport1.BackColor = Color.White;
-            btnReport1.ForeColor = Color.Black;
-            btnReport3.BackColor = Color.White;
-            btnReport3.ForeColor = Color.Black;
-            btnReport2.ForeColor = Color.White;
-            btnReport2.BackColor = Color.FromArgb(255, 83, 87);
-        }
-
-        private void btnReport3_Click(object sender, EventArgs e)
-        {
-            this.gridTopReports.DataSource = null;
-            lblTable.Text = btnReport3.Text;
-            btnReport2.BackColor = Color.White;
-            btnReport2.ForeColor = Color.Black;
-            btnReport1.BackColor = Color.White;
-            btnReport1.ForeColor = Color.Black;
-            btnReport3.ForeColor = Color.White;
-            btnReport3.BackColor = Color.FromArgb(255, 83, 87);
-        }
-
-        void ChangeTable()
-        {
 
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnGenerate_Click(object sender, EventArgs e)
         {
             using(MonthlyTopSales topSalesPage = new MonthlyTopSales())
@@ -117,7 +62,9 @@ namespace Dan_Junkshop_Management_System
         {
             if (cbYear.Text != "")
             {
-                btnReport1_Click(sender, e);
+                int monthNumerical = DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month;
+                this.gridTopReports.DataSource = null;
+                Queries.DashboardQuery.DisplayTopSales(monthNumerical, Convert.ToInt32(cbYear.Text));
             }
         }
 
@@ -125,7 +72,9 @@ namespace Dan_Junkshop_Management_System
         {
             if(cbYear.Text != "")
             {
-                btnReport1_Click(sender, e);
+                int monthNumerical = DateTime.ParseExact(cbMonths.Text, "MMMM", CultureInfo.CurrentCulture).Month;
+                this.gridTopReports.DataSource = null;
+                Queries.DashboardQuery.DisplayTopSales(monthNumerical, Convert.ToInt32(cbYear.Text));
             }
         }
     }
