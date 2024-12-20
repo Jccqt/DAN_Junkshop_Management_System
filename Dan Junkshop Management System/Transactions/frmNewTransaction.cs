@@ -1,4 +1,5 @@
 ﻿
+using Dan_Junkshop_Management_System.Transactions;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -138,6 +139,12 @@ namespace Dan_Junkshop_Management_System
                 {
                     Queries.TransactionQuery.ProcessTransaction(isSupplier);
                     Queries.TransactionQuery.AddToInventory();
+                    
+                    using(TransactionReceiptPage receiptPage = new TransactionReceiptPage())
+                    {
+                        receiptPage.ShowDialog();
+                    }
+
                     orderList.Clear();
                     scaleList.Clear();
                     priceList.Clear();

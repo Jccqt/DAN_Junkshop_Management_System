@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dan_Junkshop_Management_System.Transactions;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +15,10 @@ namespace Dan_Junkshop_Management_System
 {
     public partial class Transaction : UserControl
     {
+        string id;
 
         public DataGridView TransactionGrid { get { return gridTransactions; } }
+        public string TransactionID { get { return id; } }
 
         public Transaction()
         {
@@ -47,7 +50,24 @@ namespace Dan_Junkshop_Management_System
 
         private void gridTransactions_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(gridTransactions.Rows.Count > 0)
+            {
+                if(gridTransactions.CurrentCell.ColumnIndex == 6)
+                {
+                    id = gridTransactions.Rows[gridTransactions.CurrentCell.RowIndex].Cells[0].Value.ToString();
+                    Console.WriteLine(id);
+                    using(ReceiptView receiptPage = new ReceiptView())
+                    {
+                        using(Form form = new Form())
+                        {
+                            FormAnimation.ShowFocus(form);
+                            receiptPage.Owner = form;
+                            receiptPage.ShowDialog();
+                            form.Close();
+                        }
+                    }
+                }
+            }
         }
 
         private void Transaction_Load(object sender, EventArgs e)

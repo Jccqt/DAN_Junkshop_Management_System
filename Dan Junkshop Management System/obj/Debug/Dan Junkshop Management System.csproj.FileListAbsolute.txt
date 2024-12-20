@@ -176,7 +176,6 @@ E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Manage
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmDescription.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Orders.resources
 D:\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmTransactionOverview.resources
-E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmTransactionOverview.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmTransactionOverview.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.frmAddPickUp.resources
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.ToPickUp.resources
@@ -377,3 +376,5 @@ C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.MonthlyTopSales.resources
 C:\Users\Nicol\OneDrive\Documents\Jc\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan Junk.3B76B3FB.Up2Date
 E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\bin\Debug\RLDC Reports\TopSales.rdlc
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transactions.TransactionReceiptPage.resources
+E:\Jc\App Dev Junkshop System\DAN_Junkshop_Management_System\Dan Junkshop Management System\obj\Debug\Dan_Junkshop_Management_System.Transactions.ReceiptView.resources

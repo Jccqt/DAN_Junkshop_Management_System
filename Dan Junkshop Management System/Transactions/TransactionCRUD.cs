@@ -190,6 +190,7 @@ namespace Dan_Junkshop_Management_System.Transactions
             ConnectionObjects.dataTable.Columns.Add("Quantity", typeof(int));
             ConnectionObjects.dataTable.Columns.Add("Amount", typeof(string));
             ConnectionObjects.dataTable.Columns.Add("Date", typeof(DateTime));
+            ConnectionObjects.dataTable.Columns.Add("View Reciept", typeof(Image));
 
             ConnectionObjects.conn.Open();
 
@@ -200,12 +201,14 @@ namespace Dan_Junkshop_Management_System.Transactions
             while(ConnectionObjects.reader.Read())
             {
                 ConnectionObjects.dataTable.Rows.Add(ConnectionObjects.reader.GetString(0), $"{ConnectionObjects.reader.GetString(1)} {ConnectionObjects.reader.GetString(2)} {ConnectionObjects.reader.GetString(3)}", 
-                    ConnectionObjects.reader.GetString(4), ConnectionObjects.reader.GetInt32(5), ConnectionObjects.reader.GetDecimal(6), ConnectionObjects.reader.GetValue(7));
+                    ConnectionObjects.reader.GetString(4), ConnectionObjects.reader.GetInt32(5), ConnectionObjects.reader.GetDecimal(6), ConnectionObjects.reader.GetValue(7), 
+                    Dan_Junkshop_Management_System.Properties.Resources.overview);
             }
 
             PageObjects.transaction.TransactionGrid.DataSource = ConnectionObjects.dataTable;
  
             PageObjects.transaction.TransactionGrid.AutoResizeColumn(0, DataGridViewAutoSizeColumnMode.AllCells);
+            PageObjects.transaction.TransactionGrid.AutoResizeColumn(6, DataGridViewAutoSizeColumnMode.AllCells);
             PageObjects.transaction.TransactionGrid.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             PageObjects.transaction.TransactionGrid.Columns[0].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             PageObjects.transaction.TransactionGrid.Columns[5].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
