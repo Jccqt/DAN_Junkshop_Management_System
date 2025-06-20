@@ -11,6 +11,7 @@ Junkshop Management System for Application Development Project
 - [Jc Calayag][Jc Calayag github link] (Back-end Developer)
 - [Adrianne Villa][Adrianne Villa github link] (Front-end Developer / Designer)
 - [Jan Nathan Yumol][Nathan Yumol github link] (System Analyst / Manager)
+- Harvey Duque (QA / Tester)
 - [Miguel Fangon][Miguel Fangon github link] (Documentation)
 
 **Sections**
